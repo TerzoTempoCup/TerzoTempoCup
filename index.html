@@ -307,12 +307,12 @@ footer em{color:var(--rd);font-style:normal}
     <div class="nav-brand-name">Terzo Tempo Cup<small>Torneo Estivo 2025</small></div>
   </div>
   <ul class="nav-links">
-    <li><a class="act" onclick="showSec('home')">🏠 Home</a></li>
-    <li><a onclick="showSec('squadre')">👕 Squadre</a></li>
-    <li><a onclick="showSec('statistiche')">📊 Statistiche</a></li>
-    <li><a onclick="showSec('mvp')">⭐ MVP</a></li>
-    <li><a onclick="showSec('galleria')">📸 Galleria</a></li>
-    <li><a onclick="showSec('regolamento')">📋 Regolamento</a></li>
+    <li><a href="#" class="act" data-sec="home" onclick="showSec('home');return false;">🏠 Home</a></li>
+    <li><a href="#" data-sec="squadre" onclick="showSec('squadre');return false;">👕 Squadre</a></li>
+    <li><a href="#" data-sec="statistiche" onclick="showSec('statistiche');return false;">📊 Statistiche</a></li>
+    <li><a href="#" data-sec="mvp" onclick="showSec('mvp');return false;">⭐ MVP</a></li>
+    <li><a href="#" data-sec="galleria" onclick="showSec('galleria');return false;">📸 Galleria</a></li>
+    <li><a href="#" data-sec="regolamento" onclick="showSec('regolamento');return false;">📋 Regolamento</a></li>
   </ul>
 </nav>
 
@@ -565,11 +565,12 @@ function showSec(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
   document.querySelectorAll('.botnav-item').forEach(b=>b.classList.remove('act'));
-  document.getElementById(id).classList.add('act');
-  const nl=document.querySelector('.nav-links a[onclick*="\''+id+'\'"]');
-  if(nl)nl.classList.add('act');
+  const target=document.getElementById(id);
+  if(target) target.classList.add('act');
+  const nl=document.querySelector('.nav-links a[data-sec="'+id+'"]');
+  if(nl) nl.classList.add('act');
   const bi=document.querySelector('.botnav-item[data-sec="'+id+'"]');
-  if(bi)bi.classList.add('act');
+  if(bi) bi.classList.add('act');
   window.scrollTo(0,0);
 }
 function jumpTo(id){
@@ -618,8 +619,11 @@ function showMatchDetail(id){
   const icon=ev=>ev.et==='goal'?'⚽':ev.et==='card'?(ev.type==='R'?'🟥':'🟨'):'❌';
   const tl=evs.length
     ?'<div class="tl-heads"><div class="tl-hh">'+m.home+'</div><div class="tl-hm"></div><div class="tl-ha">'+m.away+'</div></div>'
-      +evs.map(ev=>{const h=ev.team===m.home,lb=icon(ev)+' '+lastName(ev.name);
-        return'<div class="tl-row"><div class="tl-h">'+(h?lb:'')+'</div><div class="tl-m">'+ev.min+"'</div><div class="tl-a">"+(!h?lb:'')+'</div></div>';}).join('')
+      +evs.map(function(ev){
+        const h=ev.team===m.home;
+        const lb=icon(ev)+' '+lastName(ev.name);
+        return "<div class=\"tl-row\"><div class=\"tl-h\">"+(h?lb:'')+"</div><div class=\"tl-m\">"+ev.min+"'</div><div class=\"tl-a\">"+(!h?lb:'')+"</div></div>";
+      }).join('')
     :'<div class="md-noevent">Dettagli non disponibili</div>';
   document.getElementById('modalBox').className='modal wide';
   document.getElementById('modalBox').innerHTML=
@@ -762,7 +766,9 @@ function renderGalleryTabs(){
     '<button class="gal-btn'+(i===0?' act':'')+'" onclick="showGalMatchday('+g.matchday+',this)">Giornata '+g.matchday+' · '+g.date+'</button>').join('');
 }
 function showGalMatchday(md,btn){
-  if(btn){document.querySelectorAll('.gal-btn').forEach(b=>b.classList.remove('act'));btn.classList.add('act')}
+  const tabs=document.querySelectorAll('.gal-btn');
+  if(btn){tabs.forEach(b=>b.classList.remove('act'));btn.classList.add('act')}
+  else if(tabs.length){tabs.forEach(b=>b.classList.remove('act'));tabs[0].classList.add('act')}
   const gd=GALLERY.find(g=>g.matchday===md);if(!gd)return;
   document.getElementById('galGrid').innerHTML=gd.matches.map(m=>
     '<a class="card gal-item" href="'+m.link+'" target="_blank">'
@@ -771,8 +777,12 @@ function showGalMatchday(md,btn){
 }
 
 // ── INIT ──
-function init(){renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderMVP();renderGalleryTabs();showGalMatchday(1,null)}
-document.addEventListener('DOMContentLoaded',init);
+function init(){renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderMVP();renderGalleryTabs();showGalMatchday(GALLERY[0]?.matchday||1,null)}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',init);
+}else{
+  init();
+}
 </script>
 </body>
 </html>
