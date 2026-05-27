@@ -11,7 +11,7 @@
   --bl:#1230c8;   /* blu logo vivido */
   --bldk:#000e3a; /* sfondo navy scuro */
   --rd:#c80000;   /* rosso logo vivido */
-  --gr:#187020;   /* verde logo ricco */
+  --gr:#187020;   /* verde logo ricco */ 
   --wh:#fff;
   --gl:rgba(255,255,255,.08);
   --glb:rgba(255,255,255,.14);
@@ -29,22 +29,22 @@ body::before{
     radial-gradient(ellipse 55% 45% at 55% 50%,  rgba(24,112,32,.2)  0%,transparent 55%);
 }
 
-/* ── TOPNAV (solo desktop) ── */
+/* ── TOPNAV (solo desktop - SIDEBAR SX VERTICALE) ── */
 nav.topnav{
-  position:fixed;top:0;left:0;right:0;height:60px;z-index:900;
+  position:fixed;top:0;left:0;bottom:0;width:200px;z-index:900;
   background:rgba(0,14,58,.92);backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--glb);
-  display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;
+  border-right:1px solid var(--glb);
+  display:flex;flex-direction:column;align-items:center;padding:1.5rem 1rem;gap:2rem;
 }
-.nav-brand{display:flex;align-items:center;gap:.7rem;cursor:pointer}
-.nav-brand img{height:40px;width:40px;object-fit:contain}
-.nav-brand-name{font-family:var(--ft);font-size:1.1rem;line-height:1.15}
-.nav-brand-name small{display:block;font-family:var(--fb);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
-.nav-links{display:flex;gap:.1rem;list-style:none}
+.nav-brand{display:flex;flex-direction:column;align-items:center;gap:.5rem;cursor:pointer;text-align:center}
+.nav-brand img{height:60px;width:60px;object-fit:contain}
+.nav-brand-name{font-family:var(--ft);font-size:.95rem;line-height:1.15}
+.nav-brand-name small{display:block;font-family:var(--fb);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+.nav-links{display:flex;flex-direction:column;gap:.3rem;list-style:none;width:100%}
 .nav-links a{
-  display:flex;align-items:center;gap:.3rem;padding:.38rem .72rem;border-radius:8px;
-  font-size:.8rem;font-weight:700;color:var(--mu);cursor:pointer;transition:.2s;
-  white-space:nowrap;border:1px solid transparent;
+  display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.5rem .6rem;border-radius:8px;
+  font-size:.75rem;font-weight:700;color:var(--mu);cursor:pointer;transition:.2s;
+  white-space:normal;border:1px solid transparent;text-decoration:none;text-align:center;flex-direction:column;
 }
 .nav-links a:hover{color:var(--wh);background:rgba(200,0,0,.18);border-color:rgba(200,0,0,.35)}
 .nav-links a.act{color:var(--wh);background:rgba(200,0,0,.5);border-color:rgba(200,0,0,.75)}
@@ -64,7 +64,7 @@ nav.botnav{
 .botnav-item .bl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 
 /* ── LAYOUT ── */
-main{padding-top:60px;position:relative;z-index:1}
+main{padding-left:200px;position:relative;z-index:1}
 .sec{display:none;min-height:100vh;padding:1.5rem;max-width:1100px;margin:0 auto;animation:fadeUp .28s ease}
 .sec.act{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -74,11 +74,9 @@ main{padding-top:60px;position:relative;z-index:1}
 
 /* ── HOME QUICK NAV ── */
 .home-qnav{
-  position:sticky;top:60px;z-index:50;
-  margin:0 -1.5rem 2rem;padding:.7rem 1.5rem;
-  background:rgba(0,14,58,.9);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--glb);
-  display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;
+  display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap;
+  padding:.7rem 1.5rem;
+  background:transparent;
 }
 .home-qnav::-webkit-scrollbar{display:none}
 .hqbtn{
@@ -141,7 +139,7 @@ main{padding-top:60px;position:relative;z-index:1}
 .sq-card{padding:1.2rem .875rem;text-align:center;cursor:pointer;transition:.2s;border-radius:14px}
 .sq-card:hover{background:rgba(24,112,32,.18);transform:translateY(-3px);border-color:rgba(24,112,32,.5)}
 .sq-em{font-size:2.2rem;margin-bottom:.4rem}
-.sq-name{font-weight:800;font-size:.87rem;margin-bottom:.3rem;line-height:1.2}
+.sq-name{font-weight:800;font-size:.87rem;margin-bottom:.3rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sq-gb{display:inline-block;padding:.15rem .5rem;border-radius:100px;font-size:.65rem;font-weight:700}
 .sga{background:rgba(200,0,0,.4);border:1px solid rgba(200,0,0,.7)}
 .sgb{background:rgba(24,112,32,.4);border:1px solid rgba(24,112,32,.7)}
@@ -287,9 +285,9 @@ footer em{color:var(--rd);font-style:normal}
 @media(max-width:700px){
   nav.topnav{display:none}          /* topnav nascosta su mobile */
   nav.botnav{display:block}
-  main{padding-top:0;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  main{padding-left:0;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   .sec{padding:1.2rem .875rem}
-  .home-qnav{top:0;margin:0 -.875rem 1.75rem;padding:.6rem .875rem}
+  .home-qnav{margin:0 -.875rem 1.75rem;padding:.6rem .875rem}
   .gironi-wrap{grid-template-columns:1fr}
   .match-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
@@ -304,7 +302,7 @@ footer em{color:var(--rd);font-style:normal}
 <nav class="topnav">
   <div class="nav-brand" onclick="showSec('home')">
     <img src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.8rem>🏆</span>'">
-    <div class="nav-brand-name">Terzo Tempo Cup<small>Torneo Estivo 2025</small></div>
+    <div class="nav-brand-name">Terzo Tempo Cup</div>
   </div>
   <ul class="nav-links">
     <li><a href="#" class="act" data-sec="home" onclick="showSec('home');return false;">🏠 Home</a></li>
@@ -337,7 +335,7 @@ footer em{color:var(--rd);font-style:normal}
       <img src="logo.png" alt="Terzo Tempo Cup" onerror="this.outerHTML='<div style=font-size:4.5rem>🏆</div>'">
     </div>
     <h1>Terzo Tempo Cup</h1>
-    <div class="hero-sub">Torneo Estivo di Calcio a 5 · 2025</div>
+    <div class="hero-sub">Inserire Slogan</div>
     <div class="hero-pill"><span class="dot-live"></span> In corso · Giornata 3 in programma</div>
   </div>
   <div class="home-qnav">
@@ -442,10 +440,42 @@ footer em{color:var(--rd);font-style:normal}
   <div class="modal" id="modalBox"></div>
 </div>
 
-<footer><strong>Terzo Tempo Cup 2025</strong> · Fatto con ❤️ per il calcio e <em>l'amicizia</em></footer>
+<footer><strong>Terzo Tempo Cup 2026</strong> · Made by <em>Umberto Nasta</em></footer>
 
 <script>
-const TEAMS=[
+/* External data support
+   - By default `DATA_SOURCE` loads local `data.json`.
+   - If you deploy a Google Sheets Apps Script that returns the same JSON shape,
+     set `SHEET_JSON_URL` to that webapp URL and it will be tried first.
+*/
+const DATA_SOURCE='data.json';
+const SHEET_JSON_URL=''; // set this to your Google Apps Script Web App URL (optional)
+async function loadExternalData(){
+  const urlsToTry = [];
+  if(SHEET_JSON_URL && SHEET_JSON_URL.trim()) urlsToTry.push(SHEET_JSON_URL);
+  urlsToTry.push(DATA_SOURCE);
+  for(const url of urlsToTry){
+    try{
+      const res = await fetch(url);
+      if(!res.ok) throw new Error(res.status+' '+res.statusText);
+      const data = await res.json();
+      if(typeof data !== 'object') throw new Error('Invalid JSON from '+url);
+      if(data.TEAMS !== undefined) TEAMS = data.TEAMS;
+      if(data.GROUPS !== undefined) GROUPS = data.GROUPS;
+      if(data.RECENT !== undefined) RECENT = data.RECENT;
+      if(data.DETAILS !== undefined) DETAILS = data.DETAILS;
+      if(data.UPCOMING !== undefined) UPCOMING = data.UPCOMING;
+      if(data.MVP_DATA !== undefined) MVP_DATA = data.MVP_DATA;
+      if(data.GALLERY !== undefined) GALLERY = data.GALLERY;
+      console.log('External data loaded from', url);
+      return;
+    }catch(err){
+      console.warn('Failed to load data from', url, err);
+    }
+  }
+  console.warn('Could not load external data; using defaults.');
+}
+let TEAMS=[
   {id:'aquile',name:'Aquile FC',group:'A',emoji:'🦅',players:[
     {n:1,name:'Matteo Ferretti',role:'Portiere',g:0,a:0,y:0,r:0,gp:2},
     {n:4,name:'Luca De Angelis',role:'Difensore',g:1,a:2,y:1,r:0,gp:2},
@@ -519,12 +549,12 @@ const TEAMS=[
     {n:10,name:'Armando Bassi',role:'Terzino DX',g:1,a:0,y:0,r:0,gp:2},
     {n:9,name:'Ivano Riva',role:'Pivot',g:1,a:0,y:3,r:1,gp:2}]}
 ];
-const GROUPS={
+let GROUPS={
   A:[{id:'aquile',pts:6,w:2,d:0,l:0,gf:8,ga:3},{id:'tigres',pts:3,w:1,d:0,l:1,gf:5,ga:5},{id:'stella',pts:3,w:1,d:0,l:1,gf:4,ga:6},{id:'panthers',pts:0,w:0,d:0,l:2,gf:2,ga:5}],
   B:[{id:'vendetta',pts:4,w:1,d:1,l:0,gf:5,ga:2},{id:'gladiatori',pts:4,w:1,d:1,l:0,gf:5,ga:3},{id:'thunder',pts:1,w:0,d:1,l:1,gf:3,ga:6},{id:'amigos',pts:1,w:0,d:1,l:1,gf:2,ga:4}],
   C:[{id:'guardia',pts:6,w:2,d:0,l:0,gf:7,ga:2},{id:'frecce',pts:3,w:1,d:0,l:1,gf:4,ga:3},{id:'locos',pts:3,w:1,d:0,l:1,gf:5,ga:6},{id:'iron',pts:0,w:0,d:0,l:2,gf:1,ga:6}]
 };
-const RECENT=[
+let RECENT=[
   {id:'r1',home:'Aquile FC',away:'Stella Rossa',sh:4,sa:2,group:'A',date:'18 Mag',yt:'#'},
   {id:'r2',home:'Los Tigres',away:'Black Panthers',sh:3,sa:0,group:'A',date:'18 Mag',yt:'#'},
   {id:'r3',home:'Vendetta FC',away:'I Gladiatori',sh:1,sa:1,group:'B',date:'18 Mag',yt:'#'},
@@ -532,7 +562,7 @@ const RECENT=[
   {id:'r5',home:'Vecchia Guardia',away:'Los Locos',sh:3,sa:2,group:'C',date:'18 Mag',yt:'#'},
   {id:'r6',home:'Frecce Azzurre',away:'Iron FC',sh:2,sa:0,group:'C',date:'18 Mag',yt:'#'}
 ];
-const DETAILS={
+let DETAILS={
   r1:{scorers:[{name:'Davide Esposito',team:'Aquile FC',min:7},{name:'Mario Pinto',team:'Stella Rossa',min:12},{name:'Davide Esposito',team:'Aquile FC',min:23},{name:'Claudio Riva',team:'Stella Rossa',min:28},{name:'Simone Mancini',team:'Aquile FC',min:34},{name:'Davide Esposito',team:'Aquile FC',min:38}],cards:[{name:'Claudio Riva',team:'Stella Rossa',min:20,type:'Y'},{name:'Luca De Angelis',team:'Aquile FC',min:27,type:'Y'},{name:'Vincenzo Palma',team:'Stella Rossa',min:31,type:'Y'},{name:'Claudio Riva',team:'Stella Rossa',min:35,type:'R'}],penalties:[]},
   r2:{scorers:[{name:'Antonio Greco',team:'Los Tigres',min:9},{name:'Roberto Caruso',team:'Los Tigres',min:22},{name:'Antonio Greco',team:'Los Tigres',min:36}],cards:[{name:'Marco Vitale',team:'Los Tigres',min:15,type:'Y'},{name:'Paolo Ferrara',team:'Black Panthers',min:19,type:'Y'},{name:'Nicola Testa',team:'Black Panthers',min:30,type:'Y'},{name:'Paolo Ferrara',team:'Black Panthers',min:38,type:'Y'}],penalties:[{name:'Paolo Ferrara',team:'Black Panthers',min:25}]},
   r3:{scorers:[{name:'Lorenzo Sartori',team:'Vendetta FC',min:14},{name:'Enrico Cattaneo',team:'I Gladiatori',min:33}],cards:[{name:'Riccardo Boni',team:'Vendetta FC',min:21,type:'Y'},{name:'Christian Bassi',team:'I Gladiatori',min:26,type:'Y'},{name:'Christian Bassi',team:'I Gladiatori',min:37,type:'Y'}],penalties:[]},
@@ -540,7 +570,7 @@ const DETAILS={
   r5:{scorers:[{name:'Aurelio Turchi',team:'Vecchia Guardia',min:5},{name:'Salvatore Lago',team:'Los Locos',min:15},{name:'Aurelio Turchi',team:'Vecchia Guardia',min:22},{name:'Cesare Montagna',team:'Vecchia Guardia',min:30},{name:'Ciro Penna',team:'Los Locos',min:37}],cards:[{name:'Gianni Proietti',team:'Los Locos',min:18,type:'Y'},{name:'Valentino Spada',team:'Vecchia Guardia',min:25,type:'Y'},{name:'Gianni Proietti',team:'Los Locos',min:32,type:'Y'},{name:'Ciro Penna',team:'Los Locos',min:39,type:'R'}],penalties:[]},
   r6:{scorers:[{name:'Tiziano Riva',team:'Frecce Azzurre',min:16},{name:'Fabrizio Nardi',team:'Frecce Azzurre',min:29}],cards:[{name:'Aldo Caputo',team:'Frecce Azzurre',min:12,type:'Y'},{name:'Ennio Luca',team:'Iron FC',min:22,type:'Y'},{name:'Ivano Riva',team:'Iron FC',min:31,type:'Y'},{name:'Ivano Riva',team:'Iron FC',min:38,type:'Y'}],penalties:[{name:'Armando Bassi',team:'Iron FC',min:20}]}
 };
-const UPCOMING=[
+let UPCOMING=[
   {home:'Aquile FC',away:'Black Panthers',group:'A',date:'25 Mag',time:'20:00'},
   {home:'Los Tigres',away:'Stella Rossa',group:'A',date:'25 Mag',time:'20:30'},
   {home:'Vendetta FC',away:'Thunder Boys',group:'B',date:'25 Mag',time:'21:00'},
@@ -548,8 +578,8 @@ const UPCOMING=[
   {home:'Vecchia Guardia',away:'Iron FC',group:'C',date:'25 Mag',time:'20:00'},
   {home:'Frecce Azzurre',away:'Los Locos',group:'C',date:'25 Mag',time:'20:30'}
 ];
-const MVP_DATA={matchday:2,winner:{name:'Davide Esposito',team:'Aquile FC',pct:74},candidates:[{name:'Davide Esposito',team:'Aquile FC',pct:74,note:'3 gol'},{name:'Aurelio Turchi',team:'Vecchia Guardia',pct:18,note:'2 gol + 1 assist'},{name:'Antonio Greco',team:'Los Tigres',pct:8,note:'2 gol'}]};
-const GALLERY=[
+let MVP_DATA={matchday:2,winner:{name:'Davide Esposito',team:'Aquile FC',pct:74},candidates:[{name:'Davide Esposito',team:'Aquile FC',pct:74,note:'3 gol'},{name:'Aurelio Turchi',team:'Vecchia Guardia',pct:18,note:'2 gol + 1 assist'},{name:'Antonio Greco',team:'Los Tigres',pct:8,note:'2 gol'}]};
+let GALLERY=[
   {matchday:1,date:'11 Mag',matches:[{name:'Aquile FC vs Los Tigres',link:'#',count:24},{name:'Stella Rossa vs Black Panthers',link:'#',count:18},{name:'Vendetta FC vs Real Amigos',link:'#',count:22},{name:'I Gladiatori vs Thunder Boys',link:'#',count:15},{name:'Vecchia Guardia vs Frecce Azzurre',link:'#',count:20},{name:'Los Locos vs Iron FC',link:'#',count:12}]},
   {matchday:2,date:'18 Mag',matches:[{name:'Aquile FC vs Stella Rossa',link:'#',count:28},{name:'Los Tigres vs Black Panthers',link:'#',count:19},{name:'Vendetta FC vs I Gladiatori',link:'#',count:23},{name:'Real Amigos vs Thunder Boys',link:'#',count:17},{name:'Vecchia Guardia vs Los Locos',link:'#',count:25},{name:'Frecce Azzurre vs Iron FC',link:'#',count:14}]}
 ];
@@ -558,6 +588,7 @@ const GALLERY=[
 const getTeam=id=>TEAMS.find(t=>t.id===id);
 const tName=id=>{const t=getTeam(id);return t?t.name:id};
 const tEmoji=id=>{const t=getTeam(id);return t?t.emoji:'⚽'};
+const teamLogo='<img src="logo_squadre.png" alt="" style="height:1.2em;width:1.2em;object-fit:contain;vertical-align:text-bottom;">';
 const lastName=n=>{const p=n.split(' ');return p[p.length-1]};
 
 // ── NAV ──
@@ -584,7 +615,7 @@ function renderGironi(){
     const rows=GROUPS[g];
     return'<div class="card girone-card"><div class="girone-head"><div class="gir-b g'+g.toLowerCase()+'">'+g+'</div>Girone '+g+'</div>'
       +'<table class="st"><thead><tr><th>Squadra</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>Pt</th></tr></thead><tbody>'
-      +rows.map((r,i)=>'<tr><td><span class="rk rk'+(i+1)+'">'+(i+1)+'</span>'+tEmoji(r.id)+' '+tName(r.id)+'</td><td>'+(r.w+r.d+r.l)+'</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td class="pts">'+r.pts+'</td></tr>').join('')
+      +rows.map((r,i)=>'<tr><td><span class="rk rk'+(i+1)+'">"+(i+1)+"</span>'+teamLogo+' '+tName(r.id)+'</td><td>"+(r.w+r.d+r.l)+"</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td class="pts">'+r.pts+'</td></tr>').join('')
       +'</tbody></table></div>';
   }).join('');
 }
@@ -609,8 +640,8 @@ function renderRecent(){
 function showMatchDetail(id){
   const m=RECENT.find(r=>r.id===id);if(!m)return;
   const d=DETAILS[id]||{scorers:[],cards:[],penalties:[]};
-  const hE=TEAMS.find(t=>t.name===m.home)?.emoji||'⚽';
-  const aE=TEAMS.find(t=>t.name===m.away)?.emoji||'⚽';
+  const hE=teamLogo;
+  const aE=teamLogo;
   const evs=[];
   d.scorers.forEach(s=>evs.push({...s,et:'goal'}));
   d.cards.forEach(c=>evs.push({...c,et:'card'}));
@@ -641,7 +672,7 @@ function renderTeams(f){
   const list=f==='all'?TEAMS:TEAMS.filter(t=>t.group===f);
   document.getElementById('teamsGrid').innerHTML=list.map(t=>
     '<div class="card sq-card" onclick="showTeam(\''+t.id+'\')">'
-    +'<div class="sq-em">'+t.emoji+'</div><div class="sq-name">'+t.name+'</div>'
+    +'<div class="sq-em">'+teamLogo+'</div><div class="sq-name">'+t.name+'</div>'
     +'<span class="sq-gb sg'+t.group.toLowerCase()+'">Girone '+t.group+'</span></div>'
   ).join('');
 }
@@ -656,7 +687,7 @@ function showTeam(id){
   const det=document.getElementById('teamDetail');
   det.classList.add('act');
   det.innerHTML='<button class="back-btn" onclick="hideTeam()">← Torna alle Squadre</button>'
-    +'<div class="td-header"><div class="td-em">'+t.emoji+'</div><div>'
+    +'<div class="td-header"><div class="td-em">'+teamLogo+'</div><div>'
     +'<div class="td-name">'+t.name+'</div><div class="td-meta">'
     +'<span class="td-pill">Girone '+t.group+'</span>'
     +'<span class="td-pill">🏆 '+(st.pts||0)+' pt</span>'
@@ -712,7 +743,7 @@ function showTab(tab,btn){
   btn.classList.add('act');document.getElementById('tab-'+tab).classList.add('act');
 }
 function renderStats(){
-  const all=[];TEAMS.forEach(t=>t.players.forEach(p=>all.push({...p,tName:t.name,tEmoji:t.emoji})));
+  const all=[];TEAMS.forEach(t=>t.players.forEach(p=>all.push({...p,tName:t.name,tEmoji:teamLogo})));
   const rnk=(list,unit,vf)=>'<div class="rank-list">'+list.map((p,i)=>
     '<div class="card rank-item"><div class="ri-pos'+(i<3?' top':'')+'">'+( i+1)+'</div>'
     +'<div class="ri-info"><div class="ri-name">'+p.name+'</div><div class="ri-team">'+p.tEmoji+' '+p.tName+'</div></div>'
@@ -728,7 +759,7 @@ function renderStats(){
     +'<div class="cbadge cr" style="padding:.2rem .5rem;font-size:.78rem">🟥'+p.r+'</div>'
     +'<div style="font-family:var(--ft);font-size:1.4rem;margin-left:.3rem;color:#ffd080">'+p.sc+'</div>'
     +'</div></div>').join('')+'</div>';
-  const disc=TEAMS.map(t=>({name:t.name,emoji:t.emoji,y:t.players.reduce((s,p)=>s+p.y,0),r:t.players.reduce((s,p)=>s+p.r,0)}))
+  const disc=TEAMS.map(t=>({name:t.name,emoji:teamLogo,y:t.players.reduce((s,p)=>s+p.y,0),r:t.players.reduce((s,p)=>s+p.r,0)}))
     .map(t=>({...t,tot:t.y+t.r*2})).sort((a,b)=>b.tot-a.tot);
   document.getElementById('tab-disciplina').innerHTML='<div class="card" style="overflow:hidden"><table class="disc-table"><thead><tr>'
     +'<th>Squadra</th><th>🟨 Gialli</th><th>🟥 Rossi</th><th>Totale</th>'
@@ -745,14 +776,14 @@ function renderMVP(){
     +'<div class="card mvp-card"><div class="mvp-bg">⭐</div>'
     +'<div class="mvp-gday">🏆 Giocatore della Giornata '+mv.matchday+'</div>'
     +'<div class="mvp-name">'+w.name+'</div>'
-    +'<div class="mvp-team">'+(TEAMS.find(t=>t.name===w.team)?.emoji||'')+' '+w.team+'</div>'
+    +'<div class=\"mvp-team\">'+teamLogo+' '+w.team+'</div>'
     +'<div class="mvp-bar-w"><div class="mvp-bar" id="mvpBar" style="width:0%"></div></div>'
     +'<div class="mvp-pct">'+w.pct+'% dei voti</div>'
     +'<div class="mvp-note">Votazione Instagram Stories · Chiusa</div></div>'
     +'<div class="cands-head">Candidati Giornata '+mv.matchday+'</div>'
     +'<div class="cands-grid">'+mv.candidates.map(c=>
       '<div class="card cand-card"><div class="cand-name">'+c.name+'</div>'
-      +'<div class="cand-team">'+(TEAMS.find(t=>t.name===c.team)?.emoji||'')+' '+c.team+'</div>'
+      +'<div class=\"cand-team\">'+teamLogo+' '+c.team+'</div>'
       +'<div class="cand-note">'+c.note+'</div>'
       +'<div class="cand-bw"><div class="cand-bf'+(c.pct===mx?' w':'')+'" style="width:'+c.pct+'%"></div></div>'
       +'<div class="cand-pct">'+c.pct+'%</div></div>').join('')
@@ -777,7 +808,7 @@ function showGalMatchday(md,btn){
 }
 
 // ── INIT ──
-function init(){renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderMVP();renderGalleryTabs();showGalMatchday(GALLERY[0]?.matchday||1,null)}
+async function init(){await loadExternalData();renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderMVP();renderGalleryTabs();showGalMatchday(GALLERY[0]?.matchday||1,null)}
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',init);
 }else{
