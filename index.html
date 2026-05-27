@@ -615,7 +615,7 @@ function renderGironi(){
     const rows=GROUPS[g];
     return'<div class="card girone-card"><div class="girone-head"><div class="gir-b g'+g.toLowerCase()+'">'+g+'</div>Girone '+g+'</div>'
       +'<table class="st"><thead><tr><th>Squadra</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>Pt</th></tr></thead><tbody>'
-      +rows.map((r,i)=>'<tr><td><span class="rk rk'+(i+1)+'">"+(i+1)+"</span>'+teamLogo+' '+tName(r.id)+'</td><td>"+(r.w+r.d+r.l)+"</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td class="pts">'+r.pts+'</td></tr>').join('')
+      +rows.map((r,i)=>'<tr><td><span class="rk rk'+(i+1)+'">'+(i+1)+'</span>'+teamLogo+' '+tName(r.id)+'</td><td>'+(r.w+r.d+r.l)+'</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td class="pts">'+r.pts+'</td></tr>').join('')
       +'</tbody></table></div>';
   }).join('');
 }
