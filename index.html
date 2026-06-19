@@ -642,11 +642,13 @@ function showSec(id){
   const bi=document.querySelector('.botnav-item[data-sec="'+id+'"]');
   if(bi) bi.classList.add('act');
   window.scrollTo(0,0);
+  document.documentElement.scrollTop=0;
+  document.body.scrollTop=0;
   window.dispatchEvent(new Event('scroll')); // ← aggiungi solo questa riga
 }
 function jumpTo(id){
   const el=document.getElementById(id);if(!el)return;
-  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
 }
 
 function homeJumpTo(id){
