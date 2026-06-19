@@ -232,6 +232,12 @@ main{padding-left:200px;position:relative;z-index:1}
 }
 footer{text-align:center;padding:1.5rem 1rem;color:var(--mu);font-size:.78rem;font-weight:600;position:relative;z-index:1}
 footer em{color:var(--rd);font-style:normal}
+.topbar-qnav{display:none;flex:1;gap:.4rem;overflow-x:auto;scrollbar-width:none;align-items:center}
+.topbar-qnav::-webkit-scrollbar{display:none}
+.tq-btn{padding:.35rem .7rem;border-radius:100px;border:1px solid rgba(200,0,0,.75);background:var(--rd);color:#fff;font-weight:700;font-size:.75rem;cursor:pointer;white-space:nowrap;font-family:var(--fb)}
+.mobile-topbar.scrolled .mobile-brand-name{display:none}
+.mobile-topbar.scrolled .topbar-qnav{display:flex}
+@media(max-width:700px){.home-qnav{display:none}}
 @media(max-width:980px){.sq-grid{grid-template-columns:repeat(3,minmax(150px,1fr))}}
 @media(max-width:760px){.sq-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){
@@ -240,7 +246,7 @@ footer em{color:var(--rd);font-style:normal}
   nav.botnav{display:block}
   main{padding-left:0;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   .sec{padding:1.2rem .875rem}
-  .home-qnav{margin:0 -.875rem 1.75rem;padding:.8rem .875rem}
+  .home-qnav{margin:0 -.875rem 1.75rem;padding:.8rem .875rem;top:calc(2rem + 2.8rem);z-index:940}
   .gironi-wrap{grid-template-columns:1fr}
   .match-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
@@ -254,6 +260,11 @@ footer em{color:var(--rd);font-style:normal}
 <div class="mobile-topbar" onclick="showSec('home')">
   <img class="mobile-logo" src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.6rem>🏆</span>'">
   <div class="mobile-brand-name">Terzo Tempo Cup</div>
+  <div class="topbar-qnav">
+    <button class="tq-btn" onclick="jumpTo('s-gironi')">🏆 Classifiche</button>
+    <button class="tq-btn" onclick="jumpTo('s-upcoming')">📅 Prossime</button>
+    <button class="tq-btn" onclick="jumpTo('s-recent')">⚽ Risultati</button>
+  </div>
 </div>
 
 <nav class="topnav">
@@ -878,6 +889,10 @@ if(document.readyState==='loading'){
 }else{
   init();
 }
+window.addEventListener('scroll',function(){
+  const tb=document.querySelector('.mobile-topbar');
+  if(tb) tb.classList.toggle('scrolled', window.scrollY > 80);
+},{passive:true});
 </script>
 </body>
 </html>
