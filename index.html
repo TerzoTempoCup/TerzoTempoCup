@@ -241,7 +241,7 @@ footer em{color:var(--rd);font-style:normal}
 .topbar-qnav::-webkit-scrollbar{display:none}
 .tq-btn{padding:.35rem .7rem;border-radius:100px;border:1px solid rgba(200,0,0,.75);background:var(--rd);color:#fff;font-weight:700;font-size:.75rem;cursor:pointer;white-space:nowrap;font-family:var(--fb)}
 .mobile-brand-name{transition:opacity .25s ease}
-.mobile-topbar.scrolled .mobile-brand-name{opacity:0;pointer-events:none}
+.mobile-topbar.scrolled .mobile-brand-name{opacity:0;pointer-events:none;width:0;overflow:hidden}
 .mobile-topbar.scrolled .topbar-qnav{opacity:1;pointer-events:all;transform:translateY(0)}
 @media(max-width:700px){.home-qnav{display:none}}
 @media(max-width:980px){.sq-grid{grid-template-columns:repeat(3,minmax(150px,1fr))}}
@@ -642,6 +642,7 @@ function showSec(id){
   const bi=document.querySelector('.botnav-item[data-sec="'+id+'"]');
   if(bi) bi.classList.add('act');
   window.scrollTo(0,0);
+  window.dispatchEvent(new Event('scroll')); // ← aggiungi solo questa riga
 }
 function jumpTo(id){
   const el=document.getElementById(id);if(!el)return;
@@ -908,11 +909,9 @@ if(document.readyState==='loading'){
 }
 window.addEventListener('scroll',function(){
   const tb=document.querySelector('.mobile-topbar');
-  if(tb) tb.classList.toggle('scrolled', window.scrollY > 80);
-},{passive:true});
-window.addEventListener('scroll',function(){
-  const tb=document.querySelector('.mobile-topbar');
-  if(tb) tb.classList.toggle('scrolled', window.scrollY > 80);
+  if(!tb)return;
+  const onHome=document.getElementById('home').classList.contains('act');
+  tb.classList.toggle('scrolled', window.scrollY>80 && onHome);
 },{passive:true});
 </script>
 </body>
