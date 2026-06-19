@@ -1,0 +1,340 @@
+{
+  "TEAM_NAMES": {
+    "aquile":    "3P NEXT GEN",
+    "tigres":    "Los Tigres",
+    "stella":    "Stella Rossa",
+    "panthers":  "Black Panthers",
+    "vendetta":  "Vendetta FC",
+    "gladiatori":"I Gladiatori",
+    "amigos":    "Real Amigos",
+    "thunder":   "Thunder Boys",
+    "guardia":   "Vecchia Guardia",
+    "frecce":    "Frecce Azzurre",
+    "locos":     "Los Locos",
+    "iron":      "Iron FC"
+  },
+  "PLAYER_NAMES": {
+    "Matteo Ferretti":    "Matteo Ferretti",
+    "Luca De Angelis":    "Luca De Angelis",
+    "Simone Mancini":     "Simone Mancini",
+    "Andrea Ricci":       "Andrea Ricci",
+    "Davide Esposito":    "Davide Esposito",
+    "Francesco Lombardo": "Francesco Lombardo",
+    "Marco Vitale":       "Marco Vitale",
+    "Roberto Caruso":     "Roberto Caruso",
+    "Giuseppe Bruno":     "Giuseppe Bruno",
+    "Antonio Greco":      "Antonio Greco",
+    "Vincenzo Palma":     "Vincenzo Palma",
+    "Salvatore Foti":     "Salvatore Foti",
+    "Daniele Serra":      "Daniele Serra",
+    "Claudio Riva":       "Claudio Riva",
+    "Mario Pinto":        "Mario Pinto",
+    "Alessandro Carli":   "Alessandro Carli",
+    "Nicola Testa":       "Nicola Testa",
+    "Fabio Monti":        "Fabio Monti",
+    "Stefano Longo":      "Stefano Longo",
+    "Paolo Ferrara":      "Paolo Ferrara",
+    "Emanuele Costa":     "Emanuele Costa",
+    "Gianluca Sordi":     "Gianluca Sordi",
+    "Riccardo Boni":      "Riccardo Boni",
+    "Massimo Amato":      "Massimo Amato",
+    "Lorenzo Sartori":    "Lorenzo Sartori",
+    "Tommaso Galli":      "Tommaso Galli",
+    "Christian Bassi":    "Christian Bassi",
+    "Federico Negri":     "Federico Negri",
+    "Pierluigi Marchi":   "Pierluigi Marchi",
+    "Enrico Cattaneo":    "Enrico Cattaneo",
+    "Alfredo Izzo":       "Alfredo Izzo",
+    "Corrado Fabbri":     "Corrado Fabbri",
+    "Renato Sala":        "Renato Sala",
+    "Danilo Messina":     "Danilo Messina",
+    "Sergio Tosi":        "Sergio Tosi",
+    "Vito Marini":        "Vito Marini",
+    "Diego Conti":        "Diego Conti",
+    "Pasquale Levi":      "Pasquale Levi",
+    "Luca Bianchi":       "Luca Bianchi",
+    "Bruno Moro":         "Bruno Moro",
+    "Sandro Pellegrini":  "Sandro Pellegrini",
+    "Pietro Farina":      "Pietro Farina",
+    "Cesare Montagna":    "Cesare Montagna",
+    "Valentino Spada":    "Valentino Spada",
+    "Aurelio Turchi":     "Gennaro Agrelli",
+    "Aldo Caputo":        "Aldo Caputo",
+    "Ugo Gentile":        "Ugo Gentile",
+    "Tiziano Riva":       "Tiziano Riva",
+    "Massimiliano Serra": "Massimiliano Serra",
+    "Fabrizio Nardi":     "Fabrizio Nardi",
+    "Gianni Proietti":    "Gianni Proietti",
+    "Ottavio Carbone":    "Ottavio Carbone",
+    "Nino Trevi":         "Nino Trevi",
+    "Ciro Penna":         "Ciro Penna",
+    "Salvatore Lago":     "Salvatore Lago",
+    "Beniamino Marini":   "Beniamino Marini",
+    "Dario Poggi":        "Dario Poggi",
+    "Ennio Luca":         "Ennio Luca",
+    "Armando Bassi":      "Armando Bassi",
+    "Ivano Riva":         "Ivano Riva",
+    "Carlo Monti":        "Carlo Monti",
+    "Gabriele Ferri":     "Gabriele Ferri",
+    "Michele Fontana":    "Michele Fontana",
+    "Antonio Riva":       "Antonio Riva",
+    "Paolo Leone":        "Paolo Leone",
+    "Luca Serra":         "Luca Serra",
+    "Marco Villa":        "Marco Villa",
+    "Davide Russo":       "Davide Russo",
+    "Enzo Galli":         "Enzo Galli",
+    "Francesco De Luca":  "Francesco De Luca",
+    "Stefano Bianchi":    "Stefano Bianchi",
+    "Matteo Riva":        "Matteo Riva",
+    "Marco Esposito":     "Marco Esposito",
+    "Bruno Romano":       "Bruno Romano",
+    "Nicola Costa":       "Nicola Costa",
+    "Daniele Bruno":      "Daniele Bruno",
+    "Luca Greco":         "Luca Greco",
+    "Stefano Moretti":    "Stefano Moretti",
+    "Paolo Marchetti":    "Paolo Marchetti",
+    "Giorgio Caputo":     "Giorgio Caputo",
+    "Emilio Bassi":       "Emilio Bassi",
+    "Marco Neri":         "Marco Neri",
+    "Alessio Conti":      "Alessio Conti",
+    "Giacomo Ferri":      "Giacomo Ferri",
+    "Fabio Russo":        "Fabio Russo"
+  },
+  "TEAMS": [
+    {"id":"aquile","name":"Aquile FC","group":"A","emoji":"🦅","players":[
+      {"n":1,"name":"Matteo Ferretti","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":4,"name":"Luca De Angelis","role":"Difensore","g":1,"a":2,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Simone Mancini","role":"Terzino SX","g":2,"a":1,"y":0,"r":0,"gp":2},
+      {"n":11,"name":"Andrea Ricci","role":"Terzino DX","g":1,"a":3,"y":1,"r":0,"gp":2},
+      {"n":9,"name":"Davide Esposito","role":"Pivot","g":6,"a":1,"y":2,"r":0,"gp":2}
+    ]},
+    {"id":"tigres","name":"Los Tigres","group":"A","emoji":"🐯","players":[
+      {"n":1,"name":"Francesco Lombardo","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":5,"name":"Marco Vitale","role":"Difensore","g":0,"a":1,"y":2,"r":0,"gp":2},
+      {"n":8,"name":"Roberto Caruso","role":"Terzino SX","g":2,"a":0,"y":0,"r":0,"gp":2},
+      {"n":10,"name":"Giuseppe Bruno","role":"Terzino DX","g":1,"a":2,"y":1,"r":0,"gp":2},
+      {"n":9,"name":"Antonio Greco","role":"Pivot","g":4,"a":0,"y":1,"r":0,"gp":2}
+    ]},
+    {"id":"stella","name":"Stella Rossa","group":"A","emoji":"⭐","players":[
+      {"n":1,"name":"Vincenzo Palma","role":"Portiere","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":3,"name":"Salvatore Foti","role":"Difensore","g":0,"a":1,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Daniele Serra","role":"Terzino SX","g":1,"a":1,"y":0,"r":0,"gp":2},
+      {"n":11,"name":"Claudio Riva","role":"Terzino DX","g":2,"a":0,"y":2,"r":1,"gp":2},
+      {"n":9,"name":"Mario Pinto","role":"Pivot","g":3,"a":1,"y":0,"r":0,"gp":2}
+    ]},
+    {"id":"panthers","name":"Black Panthers","group":"A","emoji":"🐆","players":[
+      {"n":1,"name":"Alessandro Carli","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":4,"name":"Nicola Testa","role":"Difensore","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":6,"name":"Fabio Monti","role":"Terzino SX","g":1,"a":0,"y":1,"r":0,"gp":2},
+      {"n":8,"name":"Stefano Longo","role":"Terzino DX","g":0,"a":1,"y":0,"r":0,"gp":2},
+      {"n":9,"name":"Paolo Ferrara","role":"Pivot","g":1,"a":0,"y":3,"r":0,"gp":2}
+    ]},
+    {"id":"vendetta","name":"Vendetta FC","group":"B","emoji":"⚡","players":[
+      {"n":1,"name":"Emanuele Costa","role":"Portiere","g":0,"a":1,"y":0,"r":0,"gp":2},
+      {"n":5,"name":"Gianluca Sordi","role":"Difensore","g":0,"a":2,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Riccardo Boni","role":"Terzino SX","g":2,"a":1,"y":1,"r":0,"gp":2},
+      {"n":10,"name":"Massimo Amato","role":"Terzino DX","g":1,"a":2,"y":0,"r":0,"gp":2},
+      {"n":9,"name":"Lorenzo Sartori","role":"Pivot","g":4,"a":1,"y":1,"r":0,"gp":2}
+    ]},
+    {"id":"gladiatori","name":"I Gladiatori","group":"B","emoji":"🛡️","players":[
+      {"n":1,"name":"Tommaso Galli","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":4,"name":"Christian Bassi","role":"Difensore","g":1,"a":1,"y":2,"r":0,"gp":2},
+      {"n":7,"name":"Federico Negri","role":"Terzino SX","g":2,"a":0,"y":0,"r":0,"gp":2},
+      {"n":11,"name":"Pierluigi Marchi","role":"Terzino DX","g":1,"a":2,"y":1,"r":0,"gp":2},
+      {"n":9,"name":"Enrico Cattaneo","role":"Pivot","g":3,"a":1,"y":1,"r":1,"gp":2}
+    ]},
+    {"id":"amigos","name":"Real Amigos","group":"B","emoji":"🤝","players":[
+      {"n":1,"name":"Alfredo Izzo","role":"Portiere","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":3,"name":"Corrado Fabbri","role":"Difensore","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Renato Sala","role":"Terzino SX","g":1,"a":1,"y":0,"r":0,"gp":2},
+      {"n":10,"name":"Danilo Messina","role":"Terzino DX","g":0,"a":1,"y":1,"r":0,"gp":2},
+      {"n":9,"name":"Sergio Tosi","role":"Pivot","g":2,"a":0,"y":2,"r":0,"gp":2}
+    ]},
+    {"id":"thunder","name":"Thunder Boys","group":"B","emoji":"🌩️","players":[
+      {"n":1,"name":"Vito Marini","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":5,"name":"Diego Conti","role":"Difensore","g":0,"a":1,"y":2,"r":0,"gp":2},
+      {"n":8,"name":"Pasquale Levi","role":"Terzino SX","g":1,"a":0,"y":1,"r":0,"gp":2},
+      {"n":10,"name":"Luca Bianchi","role":"Terzino DX","g":1,"a":1,"y":0,"r":0,"gp":2},
+      {"n":9,"name":"Bruno Moro","role":"Pivot","g":2,"a":0,"y":1,"r":0,"gp":2}
+    ]},
+    {"id":"guardia","name":"Vecchia Guardia","group":"C","emoji":"🏰","players":[
+      {"n":1,"name":"Sandro Pellegrini","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":4,"name":"Pietro Farina","role":"Difensore","g":1,"a":2,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Cesare Montagna","role":"Terzino SX","g":2,"a":1,"y":0,"r":0,"gp":2},
+      {"n":11,"name":"Valentino Spada","role":"Terzino DX","g":1,"a":2,"y":2,"r":0,"gp":2},
+      {"n":9,"name":"Aurelio Turchi","role":"Pivot","g":5,"a":0,"y":1,"r":0,"gp":2}
+    ]},
+    {"id":"frecce","name":"Frecce Azzurre","group":"C","emoji":"🏹","players":[
+      {"n":1,"name":"Aldo Caputo","role":"Portiere","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":5,"name":"Ugo Gentile","role":"Difensore","g":0,"a":1,"y":0,"r":0,"gp":2},
+      {"n":7,"name":"Tiziano Riva","role":"Terzino SX","g":2,"a":1,"y":1,"r":0,"gp":2},
+      {"n":10,"name":"Massimiliano Serra","role":"Terzino DX","g":1,"a":0,"y":0,"r":0,"gp":2},
+      {"n":9,"name":"Fabrizio Nardi","role":"Pivot","g":3,"a":1,"y":2,"r":0,"gp":2}
+    ]},
+    {"id":"locos","name":"Los Locos","group":"C","emoji":"🌀","players":[
+      {"n":1,"name":"Gianni Proietti","role":"Portiere","g":0,"a":0,"y":2,"r":0,"gp":2},
+      {"n":4,"name":"Ottavio Carbone","role":"Difensore","g":0,"a":1,"y":1,"r":0,"gp":2},
+      {"n":8,"name":"Nino Trevi","role":"Terzino SX","g":1,"a":2,"y":0,"r":0,"gp":2},
+      {"n":10,"name":"Ciro Penna","role":"Terzino DX","g":2,"a":0,"y":1,"r":1,"gp":2},
+      {"n":9,"name":"Salvatore Lago","role":"Pivot","g":3,"a":1,"y":1,"r":0,"gp":2}
+    ]},
+    {"id":"iron","name":"Iron FC","group":"C","emoji":"⚙️","players":[
+      {"n":1,"name":"Beniamino Marini","role":"Portiere","g":0,"a":0,"y":0,"r":0,"gp":2},
+      {"n":3,"name":"Dario Poggi","role":"Difensore","g":0,"a":0,"y":1,"r":0,"gp":2},
+      {"n":7,"name":"Ennio Luca","role":"Terzino SX","g":0,"a":1,"y":2,"r":0,"gp":2},
+      {"n":10,"name":"Armando Bassi","role":"Terzino DX","g":1,"a":0,"y":0,"r":0,"gp":2},
+      {"n":9,"name":"Ivano Riva","role":"Pivot","g":1,"a":0,"y":3,"r":1,"gp":2}
+    ]}
+  ],
+  "GROUPS": {
+    "A": [
+      {"id":"aquile","pts":6,"w":2,"d":0,"l":0,"gf":8,"ga":3},
+      {"id":"tigres","pts":3,"w":1,"d":0,"l":1,"gf":5,"ga":5},
+      {"id":"stella","pts":3,"w":1,"d":0,"l":1,"gf":4,"ga":6},
+      {"id":"panthers","pts":0,"w":0,"d":0,"l":2,"gf":2,"ga":5}
+    ],
+    "B": [
+      {"id":"vendetta","pts":4,"w":1,"d":1,"l":0,"gf":5,"ga":2},
+      {"id":"gladiatori","pts":4,"w":1,"d":1,"l":0,"gf":5,"ga":3},
+      {"id":"thunder","pts":1,"w":0,"d":1,"l":1,"gf":3,"ga":6},
+      {"id":"amigos","pts":1,"w":0,"d":1,"l":1,"gf":2,"ga":4}
+    ],
+    "C": [
+      {"id":"guardia","pts":6,"w":2,"d":0,"l":0,"gf":7,"ga":2},
+      {"id":"frecce","pts":3,"w":1,"d":0,"l":1,"gf":4,"ga":3},
+      {"id":"locos","pts":3,"w":1,"d":0,"l":1,"gf":5,"ga":6},
+      {"id":"iron","pts":0,"w":0,"d":0,"l":2,"gf":1,"ga":6}
+    ]
+  },
+  "RECENT": [
+    {"id":"r1","home":"Aquile FC","away":"Stella Rossa","sh":4,"sa":2,"group":"A","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"},
+    {"id":"r2","home":"Los Tigres","away":"Black Panthers","sh":3,"sa":0,"group":"A","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"},
+    {"id":"r3","home":"Vendetta FC","away":"I Gladiatori","sh":1,"sa":1,"group":"B","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"},
+    {"id":"r4","home":"Real Amigos","away":"Thunder Boys","sh":1,"sa":2,"group":"B","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"},
+    {"id":"r5","home":"Vecchia Guardia","away":"Los Locos","sh":3,"sa":2,"group":"C","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"},
+    {"id":"r6","home":"Frecce Azzurre","away":"Iron FC","sh":2,"sa":0,"group":"C","date":"18 Mag","yt":"https://www.youtube.com/@TerzoTempoCup"}
+  ],
+  "DETAILS": {
+    "r1": {
+      "scorers": [
+        {"name":"Davide Esposito","team":"Aquile FC","min":7},
+        {"name":"Mario Pinto","team":"Stella Rossa","min":12},
+        {"name":"Davide Esposito","team":"Aquile FC","min":23},
+        {"name":"Claudio Riva","team":"Stella Rossa","min":28},
+        {"name":"Simone Mancini","team":"Aquile FC","min":34},
+        {"name":"Davide Esposito","team":"Aquile FC","min":38}
+      ],
+      "cards": [
+        {"name":"Claudio Riva","team":"Stella Rossa","min":20,"type":"Y"},
+        {"name":"Luca De Angelis","team":"Aquile FC","min":27,"type":"Y"},
+        {"name":"Vincenzo Palma","team":"Stella Rossa","min":31,"type":"Y"},
+        {"name":"Claudio Riva","team":"Stella Rossa","min":35,"type":"R"}
+      ],
+      "penalties": []
+    },
+    "r2": {
+      "scorers": [
+        {"name":"Antonio Greco","team":"Los Tigres","min":9},
+        {"name":"Roberto Caruso","team":"Los Tigres","min":22},
+        {"name":"Antonio Greco","team":"Los Tigres","min":36}
+      ],
+      "cards": [
+        {"name":"Marco Vitale","team":"Los Tigres","min":15,"type":"Y"},
+        {"name":"Paolo Ferrara","team":"Black Panthers","min":19,"type":"Y"},
+        {"name":"Nicola Testa","team":"Black Panthers","min":30,"type":"Y"},
+        {"name":"Paolo Ferrara","team":"Black Panthers","min":38,"type":"Y"}
+      ],
+      "penalties": [{"name":"Paolo Ferrara","team":"Black Panthers","min":25}]
+    },
+    "r3": {
+      "scorers": [
+        {"name":"Lorenzo Sartori","team":"Vendetta FC","min":14},
+        {"name":"Enrico Cattaneo","team":"I Gladiatori","min":33}
+      ],
+      "cards": [
+        {"name":"Riccardo Boni","team":"Vendetta FC","min":21,"type":"Y"},
+        {"name":"Christian Bassi","team":"I Gladiatori","min":26,"type":"Y"},
+        {"name":"Christian Bassi","team":"I Gladiatori","min":37,"type":"Y"}
+      ],
+      "penalties": []
+    },
+    "r4": {
+      "scorers": [
+        {"name":"Sergio Tosi","team":"Real Amigos","min":11},
+        {"name":"Pasquale Levi","team":"Thunder Boys","min":24},
+        {"name":"Bruno Moro","team":"Thunder Boys","min":36}
+      ],
+      "cards": [
+        {"name":"Alfredo Izzo","team":"Real Amigos","min":18,"type":"Y"},
+        {"name":"Diego Conti","team":"Thunder Boys","min":29,"type":"Y"}
+      ],
+      "penalties": [{"name":"Danilo Messina","team":"Real Amigos","min":32}]
+    },
+    "r5": {
+      "scorers": [
+        {"name":"Aurelio Turchi","team":"Vecchia Guardia","min":5},
+        {"name":"Salvatore Lago","team":"Los Locos","min":15},
+        {"name":"Aurelio Turchi","team":"Vecchia Guardia","min":22},
+        {"name":"Cesare Montagna","team":"Vecchia Guardia","min":30},
+        {"name":"Ciro Penna","team":"Los Locos","min":37}
+      ],
+      "cards": [
+        {"name":"Gianni Proietti","team":"Los Locos","min":18,"type":"Y"},
+        {"name":"Valentino Spada","team":"Vecchia Guardia","min":25,"type":"Y"},
+        {"name":"Gianni Proietti","team":"Los Locos","min":32,"type":"Y"},
+        {"name":"Ciro Penna","team":"Los Locos","min":39,"type":"R"}
+      ],
+      "penalties": []
+    },
+    "r6": {
+      "scorers": [
+        {"name":"Tiziano Riva","team":"Frecce Azzurre","min":16},
+        {"name":"Fabrizio Nardi","team":"Frecce Azzurre","min":29}
+      ],
+      "cards": [
+        {"name":"Aldo Caputo","team":"Frecce Azzurre","min":12,"type":"Y"},
+        {"name":"Ennio Luca","team":"Iron FC","min":22,"type":"Y"},
+        {"name":"Ivano Riva","team":"Iron FC","min":31,"type":"Y"},
+        {"name":"Ivano Riva","team":"Iron FC","min":38,"type":"Y"}
+      ],
+      "penalties": [{"name":"Armando Bassi","team":"Iron FC","min":20}]
+    }
+  },
+  "UPCOMING": [
+    {"home":"Aquile FC","away":"Black Panthers","group":"A","date":"25 Mag","time":"20:00"},
+    {"home":"Los Tigres","away":"Stella Rossa","group":"A","date":"25 Mag","time":"20:30"},
+    {"home":"Vendetta FC","away":"Thunder Boys","group":"B","date":"25 Mag","time":"21:00"},
+    {"home":"I Gladiatori","away":"Real Amigos","group":"B","date":"25 Mag","time":"21:30"},
+    {"home":"Vecchia Guardia","away":"Iron FC","group":"C","date":"25 Mag","time":"20:00"},
+    {"home":"Frecce Azzurre","away":"Los Locos","group":"C","date":"25 Mag","time":"20:30"}
+  ],
+  "MVP_DATA": {
+    "matchday": 2,
+    "closed": true,
+    "igHandle": "@terzotempocup",
+    "winner": {"name":"Davide Esposito","team":"Aquile FC","pct":74},
+    "candidates": [
+      {"name":"Davide Esposito","team":"Aquile FC","pct":74,"note":"3 gol"},
+      {"name":"Aurelio Turchi","team":"Vecchia Guardia","pct":18,"note":"2 gol + 1 assist"},
+      {"name":"Antonio Greco","team":"Los Tigres","pct":8,"note":"2 gol"}
+    ]
+  },
+  "GALLERY": [
+    {"matchday":1,"date":"11 Mag","matches":[
+      {"name":"Aquile FC vs Los Tigres","link":"https://drive.google.com/drive/folders/1myrpNpAcx-AqierxYQzdorPSG9Fg9Ci_?usp=sharing","count":24},
+      {"name":"Stella Rossa vs Black Panthers","link":"#","count":18},
+      {"name":"Vendetta FC vs Real Amigos","link":"#","count":22},
+      {"name":"I Gladiatori vs Thunder Boys","link":"#","count":15},
+      {"name":"Vecchia Guardia vs Frecce Azzurre","link":"#","count":20},
+      {"name":"Los Locos vs Iron FC","link":"#","count":12}
+    ]},
+    {"matchday":2,"date":"18 Mag","matches":[
+      {"name":"Aquile FC vs Stella Rossa","link":"#","count":28},
+      {"name":"Los Tigres vs Black Panthers","link":"#","count":19},
+      {"name":"Vendetta FC vs I Gladiatori","link":"#","count":23},
+      {"name":"Real Amigos vs Thunder Boys","link":"#","count":17},
+      {"name":"Vecchia Guardia vs Los Locos","link":"#","count":25},
+      {"name":"Frecce Azzurre vs Iron FC","link":"#","count":14}
+    ]}
+  ]
+}
