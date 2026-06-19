@@ -232,11 +232,17 @@ main{padding-left:200px;position:relative;z-index:1}
 }
 footer{text-align:center;padding:1.5rem 1rem;color:var(--mu);font-size:.78rem;font-weight:600;position:relative;z-index:1}
 footer em{color:var(--rd);font-style:normal}
-.topbar-qnav{display:none;flex:1;gap:.4rem;overflow-x:auto;scrollbar-width:none;align-items:center}
+.topbar-qnav{
+  display:flex;flex:1;gap:.4rem;overflow-x:auto;scrollbar-width:none;
+  align-items:center;opacity:0;pointer-events:none;
+  transform:translateY(-5px);
+  transition:opacity .25s ease,transform .25s ease;
+}
 .topbar-qnav::-webkit-scrollbar{display:none}
 .tq-btn{padding:.35rem .7rem;border-radius:100px;border:1px solid rgba(200,0,0,.75);background:var(--rd);color:#fff;font-weight:700;font-size:.75rem;cursor:pointer;white-space:nowrap;font-family:var(--fb)}
-.mobile-topbar.scrolled .mobile-brand-name{display:none}
-.mobile-topbar.scrolled .topbar-qnav{display:flex}
+.mobile-brand-name{transition:opacity .25s ease}
+.mobile-topbar.scrolled .mobile-brand-name{opacity:0;pointer-events:none}
+.mobile-topbar.scrolled .topbar-qnav{opacity:1;pointer-events:all;transform:translateY(0)}
 @media(max-width:700px){.home-qnav{display:none}}
 @media(max-width:980px){.sq-grid{grid-template-columns:repeat(3,minmax(150px,1fr))}}
 @media(max-width:760px){.sq-grid{grid-template-columns:repeat(2,1fr)}}
@@ -257,13 +263,15 @@ footer em{color:var(--rd);font-style:normal}
 </head>
 <body>
 
-<div class="mobile-topbar" onclick="showSec('home')">
-  <img class="mobile-logo" src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.6rem>🏆</span>'">
-  <div class="mobile-brand-name">Terzo Tempo Cup</div>
+<div class="mobile-topbar">
+  <div style="display:flex;align-items:center;gap:.75rem;cursor:pointer" onclick="showSec('home')">
+    <img class="mobile-logo" src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.6rem>🏆</span>'">
+    <div class="mobile-brand-name">Terzo Tempo Cup</div>
+  </div>
   <div class="topbar-qnav">
-    <button class="tq-btn" onclick="jumpTo('s-gironi')">🏆 Classifiche</button>
-    <button class="tq-btn" onclick="jumpTo('s-upcoming')">📅 Prossime</button>
-    <button class="tq-btn" onclick="jumpTo('s-recent')">⚽ Risultati</button>
+    <button class="tq-btn" onclick="homeJumpTo('s-gironi')">🏆 Classifiche</button>
+    <button class="tq-btn" onclick="homeJumpTo('s-upcoming')">📅 Prossime</button>
+    <button class="tq-btn" onclick="homeJumpTo('s-recent')">⚽ Risultati</button>
   </div>
 </div>
 
@@ -301,9 +309,9 @@ footer em{color:var(--rd);font-style:normal}
     <div class="hero-pill"><span class="dot-live"></span> In attesa dei sorteggi</div>
   </div>
   <div class="home-qnav">
-    <button class="hqbtn" onclick="jumpTo('s-gironi')">🏆 Classifiche</button>
-    <button class="hqbtn" onclick="jumpTo('s-upcoming')">📅 Prossime Partite</button>
-    <button class="hqbtn" onclick="jumpTo('s-recent')">⚽ Ultimi Risultati</button>
+    <button class="hqbtn" onclick="homeJumpTo('s-gironi')">🏆 Classifiche</button>
+    <button class="hqbtn" onclick="homeJumpTo('s-upcoming')">📅 Prossime Partite</button>
+    <button class="hqbtn" onclick="homeJumpTo('s-recent')">⚽ Ultimi Risultati</button>
   </div>
   <div id="s-gironi" class="sec-title">🏆 Classifiche Gironi</div>
   <div class="gironi-wrap" id="gironiWrap"></div>
@@ -640,6 +648,15 @@ function jumpTo(id){
   window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'});
 }
 
+function homeJumpTo(id){
+  if(!document.getElementById('home').classList.contains('act')){
+    showSec('home');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>jumpTo(id)));
+  } else {
+    jumpTo(id);
+  }
+}
+
 // ── HOME ──
 function renderGironi(){
   document.getElementById('gironiWrap').innerHTML=['A','B','C'].map(g=>{
@@ -889,6 +906,10 @@ if(document.readyState==='loading'){
 }else{
   init();
 }
+window.addEventListener('scroll',function(){
+  const tb=document.querySelector('.mobile-topbar');
+  if(tb) tb.classList.toggle('scrolled', window.scrollY > 80);
+},{passive:true});
 window.addEventListener('scroll',function(){
   const tb=document.querySelector('.mobile-topbar');
   if(tb) tb.classList.toggle('scrolled', window.scrollY > 80);
