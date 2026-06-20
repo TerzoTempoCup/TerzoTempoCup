@@ -1,0 +1,20 @@
+{
+  "name": "Terzo Tempo Cup",
+  "short_name": "TTC",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000e3a",
+  "theme_color": "#000e3a",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
