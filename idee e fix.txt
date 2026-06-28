@@ -2,6 +2,8 @@
 
 
 AGGIUNGERE OPZIONE 0/0 TRA I MARCATORI
+PER PRONOSTICI PARTITE VEDERE SOLO LE SQUADRE E FRECCETTA CHE SE PREMI APRE SPAZIO PRONOSTICO
+SISTEMARE SU TELEFONO PERCH[ SI MANGIA LA PARTE DI SOPRA]
 
 - Togliere la scritta riserve da quelli in panchina e metterci il ruolo
 - Sezione "Eliminazione Diretta" in stile tabellone/bracket (capire come fare su mobile)
