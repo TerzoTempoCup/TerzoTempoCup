@@ -1,6 +1,10 @@
 !!! TRATTARE DIVERSAMENTE VERSIONE DESKTOP E MOBILE !!!
+
+
+AGGIUNGERE OPZIONE 0/0 TRA I MARCATORI
+
+- Togliere la scritta riserve da quelli in panchina e metterci il ruolo
 - Sezione "Eliminazione Diretta" in stile tabellone/bracket (capire come fare su mobile)
 - per sezione elminiazione diretta : tenerla sfocata con un conto alla rovescia fino all'inizio
-- Sezione Calendario dopo sezione squadre, con tasto highlights
 - in regolamento avere i titoli (tipo formato del torneo, durata partita) inseriti anche come legenda in alto in modo da raggiungerli rapidamente, tenendoli fissi quando si scorre in modo da migliorare efficienza e allargando il blocco e centrando le scritte
 COME ULTIMA COSA: - Chiedere di crearmi una interfaccia grafica intuitiva per aggiornare i dati del sito (Partite, Risultati, Marcatori)

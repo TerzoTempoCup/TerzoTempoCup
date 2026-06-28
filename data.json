@@ -973,10 +973,10 @@
       "date": "11 Mag",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 2,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r1"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c2",
@@ -987,10 +987,10 @@
       "date": "11 Mag",
       "time": "20:40",
       "location": "Campo Nord",
-      "sh": 1,
-      "sa": 0,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r2"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c3",
@@ -1001,10 +1001,10 @@
       "date": "11 Mag",
       "time": "21:20",
       "location": "Campo Sud",
-      "sh": 2,
-      "sa": 2,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r3"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c4",
@@ -1015,10 +1015,10 @@
       "date": "11 Mag",
       "time": "22:00",
       "location": "Campo Sud",
-      "sh": 1,
-      "sa": 3,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r4"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c5",
@@ -1029,10 +1029,10 @@
       "date": "11 Mag",
       "time": "22:40",
       "location": "Campo Est",
-      "sh": 0,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r5"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c6",
@@ -1043,10 +1043,10 @@
       "date": "11 Mag",
       "time": "23:20",
       "location": "Campo Est",
-      "sh": 2,
-      "sa": 2,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r6"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c7",
@@ -1057,10 +1057,10 @@
       "date": "18 Mag",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 1,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r7"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c8",
@@ -1071,10 +1071,10 @@
       "date": "18 Mag",
       "time": "20:40",
       "location": "Campo Nord",
-      "sh": 2,
-      "sa": 0,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r8"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c9",
@@ -1085,10 +1085,10 @@
       "date": "18 Mag",
       "time": "21:20",
       "location": "Campo Sud",
-      "sh": 2,
-      "sa": 0,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r9"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c10",
@@ -1099,10 +1099,10 @@
       "date": "18 Mag",
       "time": "22:00",
       "location": "Campo Sud",
-      "sh": 1,
-      "sa": 2,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r10"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c11",
@@ -1113,10 +1113,10 @@
       "date": "18 Mag",
       "time": "22:40",
       "location": "Campo Est",
-      "sh": 1,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r11"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c12",
@@ -1127,10 +1127,10 @@
       "date": "18 Mag",
       "time": "23:20",
       "location": "Campo Est",
-      "sh": 2,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r12"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c13",
@@ -1141,10 +1141,10 @@
       "date": "25 Mag",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 3,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r13"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c14",
@@ -1155,10 +1155,10 @@
       "date": "25 Mag",
       "time": "20:40",
       "location": "Campo Nord",
-      "sh": 1,
-      "sa": 2,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r14"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c15",
@@ -1169,10 +1169,10 @@
       "date": "25 Mag",
       "time": "21:20",
       "location": "Campo Sud",
-      "sh": 1,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r15"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c16",
@@ -1183,10 +1183,10 @@
       "date": "25 Mag",
       "time": "22:00",
       "location": "Campo Sud",
-      "sh": 2,
-      "sa": 1,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r16"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c17",
@@ -1197,10 +1197,10 @@
       "date": "25 Mag",
       "time": "22:40",
       "location": "Campo Est",
-      "sh": 2,
-      "sa": 0,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r17"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "c18",
@@ -1211,1205 +1211,169 @@
       "date": "25 Mag",
       "time": "23:20",
       "location": "Campo Est",
-      "sh": 1,
-      "sa": 2,
-      "yt": "https://www.youtube.com/@TerzoTempoCup",
-      "detailId": "r18"
+      "sh": null,
+      "sa": null,
+      "yt": "#",
+      "detailId": null
     },
     {
       "id": "qf1",
       "round": "Quarti di Finale",
       "group": null,
-      "home": "redstorm",
-      "away": "titans",
+      "home": null,
+      "away": null,
       "date": "1 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 2,
-      "sa": 1,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r19"
+      "detailId": null
     },
     {
       "id": "qf2",
       "round": "Quarti di Finale",
       "group": null,
-      "home": "sparta",
-      "away": "kings",
+      "home": null,
+      "away": null,
       "date": "1 Giugno",
       "time": "21:30",
       "location": "Campo Sud",
-      "sh": 2,
-      "sa": 0,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r20"
+      "detailId": null
     },
     {
       "id": "qf3",
       "round": "Quarti di Finale",
       "group": null,
-      "home": "falcons",
-      "away": "golden",
+      "home": null,
+      "away": null,
       "date": "2 Giugno",
       "time": "20:00",
       "location": "Campo Est",
-      "sh": 0,
-      "sa": 1,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r21"
+      "detailId": null
     },
     {
       "id": "qf4",
       "round": "Quarti di Finale",
       "group": null,
-      "home": "dragons",
-      "away": "phoenix",
+      "home": null,
+      "away": null,
       "date": "2 Giugno",
       "time": "21:30",
       "location": "Campo Nord",
-      "sh": 2,
-      "sa": 1,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r22"
+      "detailId": null
     },
     {
       "id": "sf1",
       "round": "Semifinali",
       "group": null,
-      "home": "redstorm",
-      "away": "sparta",
+      "home": null,
+      "away": null,
       "date": "8 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 3,
-      "sa": 2,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r23"
+      "detailId": null
     },
     {
       "id": "sf2",
       "round": "Semifinali",
       "group": null,
-      "home": "golden",
-      "away": "dragons",
+      "home": null,
+      "away": null,
       "date": "8 Giugno",
       "time": "21:45",
       "location": "Campo Sud",
-      "sh": 1,
-      "sa": 2,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r24"
+      "detailId": null
     },
     {
       "id": "final",
       "round": "Finale",
       "group": null,
-      "home": "redstorm",
-      "away": "dragons",
+      "home": null,
+      "away": null,
       "date": "15 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": 2,
-      "sa": 1,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "r25"
+      "detailId": null
     }
   ],
-  "DETAILS": {
-    "r1": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Andrea Sala",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Riccardo Bellini",
-          "team": "bluefire",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Giacomo Ferri",
-          "team": "bluefire",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Giacomo Ferri",
-          "team": "bluefire",
-          "min": 27,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r2": {
-      "scorers": [
-        {
-          "name": "Matteo Villa",
-          "team": "golden",
-          "min": 7
-        }
-      ],
-      "assists": [
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 7
-        }
-      ],
-      "cards": [
-        {
-          "name": "Lorenzo Riva",
-          "team": "wolves",
-          "min": 34,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r3": {
-      "scorers": [
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Alessio Gatti",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Manuel Esposito",
-          "team": "titans",
-          "min": 22
-        },
-        {
-          "name": "Ivan Bruno",
-          "team": "titans",
-          "min": 31
-        }
-      ],
-      "assists": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Ivan Romano",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 22
-        },
-        {
-          "name": "Davide Sala",
-          "team": "titans",
-          "min": 31
-        }
-      ],
-      "cards": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 21,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r4": {
-      "scorers": [
-        {
-          "name": "Daniele Serra",
-          "team": "legends",
-          "min": 7
-        },
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 14
-        },
-        {
-          "name": "Marco De Luca",
-          "team": "sparta",
-          "min": 22
-        },
-        {
-          "name": "Luca Rossetti",
-          "team": "sparta",
-          "min": 31
-        }
-      ],
-      "assists": [
-        {
-          "name": "Francesco Lombardi",
-          "team": "legends",
-          "min": 7
-        },
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 14
-        },
-        {
-          "name": "Luca Rossetti",
-          "team": "sparta",
-          "min": 22
-        },
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 31
-        }
-      ],
-      "cards": [
-        {
-          "name": "Francesco Lombardi",
-          "team": "legends",
-          "min": 25,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r5": {
-      "scorers": [
-        {
-          "name": "Lorenzo Vitali",
-          "team": "falcons",
-          "min": 7
-        }
-      ],
-      "assists": [
-        {
-          "name": "Giorgio Sala",
-          "team": "falcons",
-          "min": 7
-        }
-      ],
-      "cards": [
-        {
-          "name": "Stefano Bruni",
-          "team": "phoenix",
-          "min": 20,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r6": {
-      "scorers": [
-        {
-          "name": "Davide Pini",
-          "team": "kings",
-          "min": 7
-        },
-        {
-          "name": "Leonardo Villa",
-          "team": "kings",
-          "min": 14
-        },
-        {
-          "name": "Marco Neri",
-          "team": "sharks",
-          "min": 22
-        },
-        {
-          "name": "Thomas Carli",
-          "team": "sharks",
-          "min": 31
-        }
-      ],
-      "assists": [
-        {
-          "name": "Andrea Moretti",
-          "team": "kings",
-          "min": 7
-        },
-        {
-          "name": "Samuel Ricci",
-          "team": "kings",
-          "min": 14
-        },
-        {
-          "name": "Filippo Serra",
-          "team": "sharks",
-          "min": 22
-        },
-        {
-          "name": "Luca Ferri",
-          "team": "sharks",
-          "min": 31
-        }
-      ],
-      "cards": [
-        {
-          "name": "Filippo Serra",
-          "team": "sharks",
-          "min": 30,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r7": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Matteo Villa",
-          "team": "golden",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 14
-        }
-      ],
-      "cards": [
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 28,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r8": {
-      "scorers": [
-        {
-          "name": "Riccardo Bellini",
-          "team": "bluefire",
-          "min": 7
-        },
-        {
-          "name": "Federico Moretti",
-          "team": "bluefire",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Giacomo Ferri",
-          "team": "bluefire",
-          "min": 7
-        },
-        {
-          "name": "Simone Costa",
-          "team": "bluefire",
-          "min": 14
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r9": {
-      "scorers": [
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Alessio Gatti",
-          "team": "dragons",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Ivan Romano",
-          "team": "dragons",
-          "min": 14
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r10": {
-      "scorers": [
-        {
-          "name": "Manuel Esposito",
-          "team": "titans",
-          "min": 7
-        },
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 14
-        },
-        {
-          "name": "Marco De Luca",
-          "team": "sparta",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 7
-        },
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 14
-        },
-        {
-          "name": "Luca Rossetti",
-          "team": "sparta",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 25,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r11": {
-      "scorers": [
-        {
-          "name": "Stefano Bruni",
-          "team": "phoenix",
-          "min": 7
-        },
-        {
-          "name": "Davide Pini",
-          "team": "kings",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Cristian Fabbri",
-          "team": "phoenix",
-          "min": 7
-        },
-        {
-          "name": "Andrea Moretti",
-          "team": "kings",
-          "min": 14
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r12": {
-      "scorers": [
-        {
-          "name": "Lorenzo Vitali",
-          "team": "falcons",
-          "min": 7
-        },
-        {
-          "name": "Davide Marino",
-          "team": "falcons",
-          "min": 14
-        },
-        {
-          "name": "Marco Neri",
-          "team": "sharks",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Giorgio Sala",
-          "team": "falcons",
-          "min": 7
-        },
-        {
-          "name": "Alberto Rizzi",
-          "team": "falcons",
-          "min": 14
-        },
-        {
-          "name": "Filippo Serra",
-          "team": "sharks",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Luca Ferri",
-          "team": "sharks",
-          "min": 33,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r13": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Andrea Sala",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 22
-        },
-        {
-          "name": "Edoardo Pini",
-          "team": "wolves",
-          "min": 31
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 22
-        },
-        {
-          "name": "Lorenzo Riva",
-          "team": "wolves",
-          "min": 31
-        }
-      ],
-      "cards": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 25,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r14": {
-      "scorers": [
-        {
-          "name": "Riccardo Bellini",
-          "team": "bluefire",
-          "min": 7
-        },
-        {
-          "name": "Matteo Villa",
-          "team": "golden",
-          "min": 14
-        },
-        {
-          "name": "Tommaso Riva",
-          "team": "golden",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Giacomo Ferri",
-          "team": "bluefire",
-          "min": 7
-        },
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 14
-        },
-        {
-          "name": "Andrea Gori",
-          "team": "golden",
-          "min": 22
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r15": {
-      "scorers": [
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 14
-        }
-      ],
-      "cards": [
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 39,
-          "type": "R"
-        }
-      ],
-      "penalties": []
-    },
-    "r16": {
-      "scorers": [
-        {
-          "name": "Manuel Esposito",
-          "team": "titans",
-          "min": 7
-        },
-        {
-          "name": "Ivan Bruno",
-          "team": "titans",
-          "min": 14
-        },
-        {
-          "name": "Daniele Serra",
-          "team": "legends",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 7
-        },
-        {
-          "name": "Davide Sala",
-          "team": "titans",
-          "min": 14
-        },
-        {
-          "name": "Francesco Lombardi",
-          "team": "legends",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 25,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r17": {
-      "scorers": [
-        {
-          "name": "Stefano Bruni",
-          "team": "phoenix",
-          "min": 7
-        },
-        {
-          "name": "Nicolò Ferrari",
-          "team": "phoenix",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Cristian Fabbri",
-          "team": "phoenix",
-          "min": 7
-        },
-        {
-          "name": "Gabriele Monti",
-          "team": "phoenix",
-          "min": 14
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r18": {
-      "scorers": [
-        {
-          "name": "Lorenzo Vitali",
-          "team": "falcons",
-          "min": 7
-        },
-        {
-          "name": "Davide Pini",
-          "team": "kings",
-          "min": 14
-        },
-        {
-          "name": "Leonardo Villa",
-          "team": "kings",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Giorgio Sala",
-          "team": "falcons",
-          "min": 7
-        },
-        {
-          "name": "Andrea Moretti",
-          "team": "kings",
-          "min": 14
-        },
-        {
-          "name": "Samuel Ricci",
-          "team": "kings",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Samuel Ricci",
-          "team": "kings",
-          "min": 33,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r19": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Andrea Sala",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Manuel Esposito",
-          "team": "titans",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Enrico Rota",
-          "team": "titans",
-          "min": 30,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r20": {
-      "scorers": [
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 7
-        },
-        {
-          "name": "Marco De Luca",
-          "team": "sparta",
-          "min": 14
-        }
-      ],
-      "assists": [
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 7
-        },
-        {
-          "name": "Luca Rossetti",
-          "team": "sparta",
-          "min": 14
-        }
-      ],
-      "cards": [
-        {
-          "name": "Andrea Moretti",
-          "team": "kings",
-          "min": 25,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r21": {
-      "scorers": [
-        {
-          "name": "Matteo Villa",
-          "team": "golden",
-          "min": 7
-        }
-      ],
-      "assists": [
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 7
-        }
-      ],
-      "cards": [],
-      "penalties": []
-    },
-    "r22": {
-      "scorers": [
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Alessio Gatti",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Stefano Bruni",
-          "team": "phoenix",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 7
-        },
-        {
-          "name": "Ivan Romano",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Cristian Fabbri",
-          "team": "phoenix",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Cristian Fabbri",
-          "team": "phoenix",
-          "min": 33,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r23": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Andrea Sala",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 22
-        },
-        {
-          "name": "Tommaso Leoni",
-          "team": "sparta",
-          "min": 31
-        },
-        {
-          "name": "Marco De Luca",
-          "team": "sparta",
-          "min": 38
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 22
-        },
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 31
-        },
-        {
-          "name": "Luca Rossetti",
-          "team": "sparta",
-          "min": 38
-        }
-      ],
-      "cards": [
-        {
-          "name": "Roberto Mancini",
-          "team": "sparta",
-          "min": 29,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r24": {
-      "scorers": [
-        {
-          "name": "Matteo Villa",
-          "team": "golden",
-          "min": 7
-        },
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Alessio Gatti",
-          "team": "dragons",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 7
-        },
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 14
-        },
-        {
-          "name": "Ivan Romano",
-          "team": "dragons",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Nicola Serra",
-          "team": "golden",
-          "min": 31,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    },
-    "r25": {
-      "scorers": [
-        {
-          "name": "Luca Bianchi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Andrea Sala",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Simone Testa",
-          "team": "dragons",
-          "min": 22
-        }
-      ],
-      "assists": [
-        {
-          "name": "Matteo Rinaldi",
-          "team": "redstorm",
-          "min": 7
-        },
-        {
-          "name": "Marco Rossi",
-          "team": "redstorm",
-          "min": 14
-        },
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 22
-        }
-      ],
-      "cards": [
-        {
-          "name": "Daniele Fabbri",
-          "team": "dragons",
-          "min": 35,
-          "type": "Y"
-        }
-      ],
-      "penalties": []
-    }
-  },
+  "DETAILS": {},
   "MVP_DATA": {
-    "matchday": 3,
-    "closed": true,
+    "matchday": 1,
+    "closed": false,
     "igHandle": "@terzotempocup",
     "winner": {
-      "name": "Marco Rossi",
-      "team": "redstorm",
-      "pct": 58
+      "name": null,
+      "team": null,
+      "pct": 0
     },
-    "candidates": [
-      {
-        "name": "Marco Rossi",
-        "team": "redstorm",
-        "pct": 0,
-        "note": "Gol decisivi e assist nel torneo"
-      },
-      {
-        "name": "Tommaso Leoni",
-        "team": "sparta",
-        "pct": 0,
-        "note": "Prestazioni costanti"
-      },
-      {
-        "name": "Simone Testa",
-        "team": "dragons",
-        "pct": 0,
-        "note": "Trascinatore fino alla finale"
-      },
-      {
-        "name": "Matteo Villa",
-        "team": "golden",
-        "pct": 0,
-        "note": "Gol e assist pesanti"
-      }
-    ]
+    "candidates": []
   },
-  "GALLERY": [
+  "GALLERY": [],
+  "PREDICTION_ROUNDS": [
     {
-      "matchday": 1,
-      "date": "11 Mag",
-      "matches": [
-        {
-          "name": "Giornata 1 - Tutte le foto",
-          "link": "#",
-          "count": 84
-        }
-      ]
+      "round": "Giornata 1",
+      "label": "Giornata 1",
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
-      "matchday": 2,
-      "date": "18 Mag",
-      "matches": [
-        {
-          "name": "Giornata 2 - Tutte le foto",
-          "link": "#",
-          "count": 76
-        }
-      ]
+      "round": "Giornata 2",
+      "label": "Giornata 2",
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
-      "matchday": 3,
-      "date": "25 Mag",
-      "matches": [
-        {
-          "name": "Giornata 3 - Tutte le foto",
-          "link": "#",
-          "count": 91
-        }
-      ]
+      "round": "Giornata 3",
+      "label": "Giornata 3",
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
-      "matchday": 4,
-      "date": "Fasi finali",
-      "matches": [
-        {
-          "name": "Fasi finali - Foto e highlights",
-          "link": "#",
-          "count": 120
-        }
-      ]
+      "round": "Quarti di Finale",
+      "label": "Quarti di Finale",
+      "lockAt": null,
+      "status": "draft"
+    },
+    {
+      "round": "Semifinali",
+      "label": "Semifinali",
+      "lockAt": null,
+      "status": "draft"
+    },
+    {
+      "round": "Finale",
+      "label": "Finale",
+      "lockAt": null,
+      "status": "draft"
     }
-  ]
+  ],
+  "PREDICTION_FINAL_AWARDS": {
+    "bestGoalkeeper": {
+      "name": null,
+      "team": null
+    },
+    "bestPlayer": {
+      "name": null,
+      "team": null
+    }
+  }
 }
