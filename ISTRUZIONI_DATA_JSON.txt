@@ -1,10 +1,18 @@
 # ISTRUZIONI DATA.JSON — Terzo Tempo Cup
 
-Questa guida è aggiornata alla versione attuale del sito.
+Guida pratica per aggiornare il sito durante il torneo.
 
-## Regola principale
+Questa guida è pensata per modificare `data.json` senza dover toccare il codice di `index.html`.
+Il file `data.json` è l'archivio principale del sito: squadre, giocatori, calendario, risultati, tabellini, MVP, foto e highlights vengono letti da lì.
 
-Il sito usa `data.json` come archivio dati. Tu devi modificare soprattutto:
+IMPORTANTE: `data.json` deve restare un JSON valido. Non inserire commenti dentro `data.json`.
+Per scrivere note, usa questo file di istruzioni o un file separato.
+
+---
+
+## 0. Regola principale
+
+Nella gestione ordinaria del torneo devi modificare soprattutto queste sezioni:
 
 - `TEAMS`
 - `TEAM_RESERVES`
@@ -13,19 +21,43 @@ Il sito usa `data.json` come archivio dati. Tu devi modificare soprattutto:
 - `MVP_DATA`
 - `GALLERY`
 
-Non devi modificare manualmente, salvo casi particolari:
+Il sito invece calcola automaticamente da solo:
 
-- `GROUPS`
-- `RECENT`
-- `UPCOMING`
+- `GROUPS` / classifiche dei gironi
+- `RECENT` / ultimi risultati in home
+- `UPCOMING` / prossime partite in home
+- gol, assist, cartellini e partite giocate dei giocatori
+- disciplina squadre
+- classifiche statistiche
 
-perché l'`index.html` li ricalcola automaticamente da `CALENDAR`.
+Quindi, nella versione attuale del sito, NON serve compilare manualmente `GROUPS`, `RECENT` e `UPCOMING`: vengono ricavati automaticamente da `CALENDAR` e `DETAILS`.
 
 ---
 
-## 1. TEAMS — Squadre e giocatori
+## 1. Struttura generale di data.json
 
-Ogni squadra deve avere:
+Il file `data.json` deve avere questa struttura principale:
+
+```json
+{
+  "TEAMS": [],
+  "TEAM_RESERVES": {},
+  "CALENDAR": [],
+  "DETAILS": {},
+  "MVP_DATA": {},
+  "GALLERY": []
+}
+```
+
+L'ordine può anche cambiare, ma per chiarezza conviene tenerlo così.
+
+---
+
+## 2. TEAMS — Squadre e giocatori
+
+La sezione `TEAMS` contiene tutte le squadre del torneo e i giocatori principali.
+
+### Esempio completo di squadra
 
 ```json
 {
@@ -34,6 +66,16 @@ Ogni squadra deve avere:
   "group": "A",
   "emoji": "🔴",
   "players": [
+    {
+      "n": 1,
+      "name": "Alessandro Fontana",
+      "role": "Portiere",
+      "g": 0,
+      "a": 0,
+      "y": 0,
+      "r": 0,
+      "gp": 0
+    },
     {
       "n": 10,
       "name": "Marco Rossi",
@@ -48,19 +90,46 @@ Ogni squadra deve avere:
 }
 ```
 
+### Campi della squadra
+
+- `id`: identificativo tecnico della squadra. Deve essere unico e senza spazi.
+  - Esempi corretti: `redstorm`, `bluefire`, `real_morazzone`, `team1`
+  - Esempi da evitare: `Red Storm`, `red storm`, `red-storm!`
+- `name`: nome visibile nel sito.
+- `group`: girone della squadra. Di solito `A`, `B` o `C`.
+- `emoji`: campo ancora presente nei dati. Nella versione attuale il sito usa soprattutto `logo_squadre.png`, ma puoi lasciarlo compilato.
+- `players`: lista dei giocatori principali della squadra.
+
+### Campi del giocatore
+
+- `n`: numero di maglia.
+- `name`: nome e cognome del giocatore.
+- `role`: ruolo. Usa preferibilmente uno di questi:
+  - `Portiere`
+  - `Difensore`
+  - `Centrocampista`
+  - `Attaccante`
+- `g`: gol.
+- `a`: assist.
+- `y`: cartellini gialli.
+- `r`: cartellini rossi.
+- `gp`: partite giocate.
+
 ### Cosa devi modificare tu
 
-- `id`: identificativo tecnico della squadra, senza spazi. Esempio: `redstorm`, `nextgen`, `titans`.
-- `name`: nome visibile nel sito.
-- `group`: girone, di solito `A`, `B` o `C`.
-- `players`: lista giocatori.
-- `n`: numero maglia.
-- `name`: nome giocatore.
-- `role`: ruolo.
+Quando ricevi squadre e liste giocatori devi modificare:
+
+- `id`
+- `name`
+- `group`
+- `players`
+- `n`
+- `name` del giocatore
+- `role`
 
 ### Cosa NON devi aggiornare manualmente
 
-I valori qui sotto possono restare a `0`:
+Questi valori possono restare sempre a `0` quando prepari le squadre:
 
 ```json
 "g": 0,
@@ -70,13 +139,17 @@ I valori qui sotto possono restare a `0`:
 "gp": 0
 ```
 
-Il sito li aggiorna automaticamente da `CALENDAR` e `DETAILS`.
+Il sito li aggiorna automaticamente leggendo `CALENDAR` e `DETAILS`.
 
 ---
 
-## 2. TEAM_RESERVES — Riserve
+## 3. TEAM_RESERVES — Riserve
 
-Se vuoi mostrare riserve nella scheda squadra, aggiorna questo blocco:
+La sezione `TEAM_RESERVES` contiene le riserve delle squadre.
+
+La chiave dentro `TEAM_RESERVES` deve essere uguale all'`id` della squadra.
+
+### Esempio completo
 
 ```json
 "TEAM_RESERVES": {
@@ -90,20 +163,117 @@ Se vuoi mostrare riserve nella scheda squadra, aggiorna questo blocco:
       "y": 0,
       "r": 0,
       "gp": 0
+    },
+    {
+      "n": 14,
+      "name": "Riserva Red 2",
+      "role": "Riserva",
+      "g": 0,
+      "a": 0,
+      "y": 0,
+      "r": 0,
+      "gp": 0
     }
   ]
 }
 ```
 
-La chiave deve combaciare con l'`id` della squadra.
+### Regole importanti
+
+- Se la squadra ha id `redstorm`, la sezione riserve deve chiamarsi `"redstorm"`.
+- Se una squadra non ha riserve, puoi usare un array vuoto:
+
+```json
+"redstorm": []
+```
+
+- Anche per le riserve puoi lasciare `g`, `a`, `y`, `r`, `gp` a `0`.
 
 ---
 
-## 3. CALENDAR — Calendario, risultati e fasi
+## 4. CALENDAR — Calendario, risultati e highlights
 
-Questa è la sezione più importante per classifiche, home e calendario.
+`CALENDAR` è la sezione più importante del file.
+Da qui il sito ricava:
 
-Esempio partita:
+- calendario della pagina Calendario;
+- classifiche dei gironi;
+- prossime partite in home;
+- ultimi risultati in home;
+- partite giocate dei giocatori;
+- collegamento ai tabellini;
+- link agli highlights.
+
+---
+
+### 4.1 Esempio di partita non ancora giocata
+
+```json
+{
+  "id": "c1",
+  "round": "Giornata 1",
+  "group": "A",
+  "home": "redstorm",
+  "away": "bluefire",
+  "date": "11 Mag",
+  "time": "20:00",
+  "location": "Campo Nord",
+  "sh": null,
+  "sa": null,
+  "yt": "#",
+  "detailId": null
+}
+```
+
+### Significato dei campi
+
+- `id`: id tecnico della partita nel calendario. Deve essere unico.
+- `round`: giornata o fase del torneo.
+  - Esempi:
+    - `Giornata 1`
+    - `Giornata 2`
+    - `Giornata 3`
+    - `Quarti di Finale`
+    - `Semifinali`
+    - `Finale`
+- `group`: girone della partita.
+  - Usa `"A"`, `"B"`, `"C"` per partite dei gironi.
+  - Usa `null` per quarti, semifinali e finale.
+- `home`: id della prima squadra.
+- `away`: id della seconda squadra.
+- `date`: data visibile nel sito.
+- `time`: orario visibile nel sito.
+- `location`: campo o luogo della partita.
+- `sh`: gol della squadra `home`.
+- `sa`: gol della squadra `away`.
+- `yt`: link agli highlights.
+- `detailId`: id del tabellino dentro `DETAILS`.
+
+Nota: anche se nel sito compaiono i campi `home` e `away`, nel torneo non indicano vero fattore casa/trasferta. Servono solo per stabilire la posizione sinistra/destra della partita.
+
+---
+
+### 4.2 Come indicare una partita non giocata
+
+Per una partita non ancora giocata usa sempre:
+
+```json
+"sh": null,
+"sa": null,
+"detailId": null
+```
+
+Se non hai ancora il link highlights usa:
+
+```json
+"yt": "#"
+```
+
+---
+
+### 4.3 Come aggiornare una partita giocata
+
+Quando una partita viene giocata devi aggiornare la riga in `CALENDAR` così:
 
 ```json
 {
@@ -122,64 +292,42 @@ Esempio partita:
 }
 ```
 
-### Campi importanti
+Poi devi creare anche il tabellino `r1` dentro `DETAILS`.
 
-- `id`: id tecnico della riga calendario.
-- `round`: fase/giornata. Esempi:
-  - `Giornata 1`
-  - `Giornata 2`
-  - `Giornata 3`
-  - `Quarti di Finale`
-  - `Semifinali`
-  - `Finale`
-- `group`: `A`, `B`, `C` per la fase a gironi. Usa `null` per fasi finali.
-- `home`: id squadra casa.
-- `away`: id squadra trasferta.
-- `date`: data visibile.
-- `time`: orario visibile.
-- `location`: campo.
-- `sh`: gol squadra home.
-- `sa`: gol squadra away.
-- `yt`: link highlights, oppure `#` se non disponibile.
-- `detailId`: id del tabellino in `DETAILS`.
+Regola pratica:
 
-### Partita non ancora giocata
-
-Usa:
-
-```json
-"sh": null,
-"sa": null,
-"detailId": null
-```
-
-### Partita giocata
-
-Usa:
-
-```json
-"sh": 2,
-"sa": 1,
-"detailId": "r1"
-```
-
-Poi devi creare anche il blocco `r1` dentro `DETAILS`.
+- se `sh` e `sa` sono numeri, la partita è giocata;
+- se `detailId` è `"r1"`, deve esistere anche `DETAILS.r1`;
+- se `yt` è un link vero, il sito mostra il pulsante highlights;
+- se `yt` è `"#"`, il pulsante highlights non viene mostrato.
 
 ---
 
-## 4. DETAILS — Marcatori, assist, cartellini
+## 5. DETAILS — Tabellini, gol, assist, cartellini e rigori
 
-Ogni tabellino deve avere lo stesso id indicato in `CALENDAR.detailId`.
+`DETAILS` contiene i tabellini delle partite.
+Ogni tabellino deve avere lo stesso id indicato nel campo `detailId` della partita in `CALENDAR`.
 
 Esempio:
+
+- in `CALENDAR` hai `"detailId": "r1"`;
+- in `DETAILS` devi avere una sezione chiamata `"r1"`.
+
+---
+
+### 5.1 Esempio completo di tabellino
 
 ```json
 "r1": {
   "scorers": [
-    { "name": "Marco Rossi", "team": "redstorm", "min": 8 }
+    { "name": "Luca Bianchi", "team": "redstorm", "min": 7 },
+    { "name": "Andrea Sala", "team": "redstorm", "min": 14 },
+    { "name": "Riccardo Bellini", "team": "bluefire", "min": 22 }
   ],
   "assists": [
-    { "name": "Luca Bianchi", "team": "redstorm", "min": 8 }
+    { "name": "Matteo Rinaldi", "team": "redstorm", "min": 7 },
+    { "name": "Marco Rossi", "team": "redstorm", "min": 14 },
+    { "name": "Giacomo Ferri", "team": "bluefire", "min": 22 }
   ],
   "cards": [
     { "name": "Giacomo Ferri", "team": "bluefire", "min": 27, "type": "Y" }
@@ -188,9 +336,11 @@ Esempio:
 }
 ```
 
-### Marcatori
+---
 
-Ogni riga in `scorers` vale 1 gol.
+### 5.2 Marcatori — scorers
+
+Ogni riga dentro `scorers` vale 1 gol.
 
 Se un giocatore segna 2 gol, devi inserirlo 2 volte:
 
@@ -201,35 +351,130 @@ Se un giocatore segna 2 gol, devi inserirlo 2 volte:
 ]
 ```
 
-### Assist
+Regola importante:
 
-Ogni riga in `assists` vale 1 assist.
-
-### Cartellini
-
-Usa:
-
-```json
-"type": "Y"
-```
-
-per giallo.
-
-Usa:
-
-```json
-"type": "R"
-```
-
-per rosso.
+- Il numero totale di righe in `scorers` deve essere uguale alla somma dei gol della partita.
+- Se la partita finisce 2-1, in `scorers` devono esserci 3 righe.
+- I gol segnati da `home` devono essere uguali a `sh`.
+- I gol segnati da `away` devono essere uguali a `sa`.
 
 ---
 
-## 5. MVP_DATA — MVP manuale
+### 5.3 Assist — assists
 
-L'MVP resta manuale.
+Ogni riga dentro `assists` vale 1 assist.
 
 Esempio:
+
+```json
+"assists": [
+  { "name": "Matteo Rinaldi", "team": "redstorm", "min": 7 },
+  { "name": "Marco Rossi", "team": "redstorm", "min": 14 }
+]
+```
+
+Nella versione attuale del sito, gli assist vengono mostrati accanto al gol:
+
+- per la squadra a sinistra, l'assist appare a sinistra del gol;
+- per la squadra a destra, l'assist appare a destra del gol.
+
+Per abbinare bene assist e gol, conviene usare lo stesso minuto del gol.
+
+Esempio:
+
+```json
+"scorers": [
+  { "name": "Luca Bianchi", "team": "redstorm", "min": 7 }
+],
+"assists": [
+  { "name": "Matteo Rinaldi", "team": "redstorm", "min": 7 }
+]
+```
+
+Se un gol non ha assist, semplicemente non inserire nessuna riga assist per quel gol.
+
+---
+
+### 5.4 Cartellini — cards
+
+Esempio cartellino giallo:
+
+```json
+{ "name": "Giacomo Ferri", "team": "bluefire", "min": 27, "type": "Y" }
+```
+
+Esempio cartellino rosso:
+
+```json
+{ "name": "Roberto Mancini", "team": "sparta", "min": 39, "type": "R" }
+```
+
+Regole:
+
+- `type: "Y"` = giallo.
+- `type: "R"` = rosso.
+- Il nome del giocatore deve essere identico a quello presente in `TEAMS`.
+- Il team deve essere l'`id` della squadra.
+
+---
+
+### 5.5 Rigori — penalties
+
+La sezione `penalties` è già prevista nella struttura del sito.
+
+Se non ci sono rigori, lascia:
+
+```json
+"penalties": []
+```
+
+Se vuoi registrare un rigore sbagliato o un evento rigore, puoi usare questa struttura:
+
+```json
+"penalties": [
+  { "name": "Marco Rossi", "team": "redstorm", "min": 35 }
+]
+```
+
+Nota: nella versione attuale il rigore viene trattato come evento nel tabellino, ma non aggiunge automaticamente un gol. Se il rigore è segnato, va inserito anche in `scorers`.
+
+---
+
+## 6. Highlights — campo yt
+
+Ogni partita in `CALENDAR` ha il campo `yt`.
+
+### Nessun highlights disponibile
+
+```json
+"yt": "#"
+```
+
+### Highlights disponibile
+
+```json
+"yt": "https://www.youtube.com/watch?v=ID_VIDEO"
+```
+
+oppure:
+
+```json
+"yt": "https://www.youtube.com/@TerzoTempoCup"
+```
+
+Quando `yt` contiene un link vero, il sito mostra il pulsante per guardare gli highlights:
+
+- nella home, sugli ultimi risultati;
+- nella pagina dettaglio della partita dal calendario.
+
+---
+
+## 7. MVP_DATA — MVP manuale
+
+L'MVP non viene calcolato automaticamente.
+Va aggiornato manualmente.
+
+### Esempio completo
 
 ```json
 "MVP_DATA": {
@@ -247,21 +492,41 @@ Esempio:
       "team": "redstorm",
       "pct": 0,
       "note": "Gol decisivi e assist nel torneo"
+    },
+    {
+      "name": "Tommaso Leoni",
+      "team": "sparta",
+      "pct": 0,
+      "note": "Prestazioni costanti"
     }
   ]
 }
 ```
 
-### `closed`
+### Campi principali
 
-- `true`: mostra il vincitore.
-- `false`: puoi usarlo per fase votazione aperta.
+- `matchday`: giornata o numero votazione MVP.
+- `closed`:
+  - `true` = votazione chiusa, mostra il vincitore;
+  - `false` = votazione aperta o non ancora conclusa.
+- `igHandle`: profilo Instagram mostrato nel sito.
+- `winner`: vincitore MVP.
+- `candidates`: candidati MVP.
+
+### Regole pratiche
+
+- `winner.name` deve essere il nome del giocatore vincitore.
+- `winner.team` deve essere l'id della squadra.
+- `winner.pct` è la percentuale voti mostrata nel sito.
+- Nei candidati, `team` deve sempre essere l'id della squadra.
 
 ---
 
-## 6. GALLERY — Foto e cartelle
+## 8. GALLERY — Foto e album
 
-Esempio:
+`GALLERY` contiene le sezioni della galleria foto.
+
+### Esempio completo
 
 ```json
 "GALLERY": [
@@ -275,67 +540,464 @@ Esempio:
         "count": 84
       }
     ]
+  },
+  {
+    "matchday": 4,
+    "date": "Fasi finali",
+    "matches": [
+      {
+        "name": "Fasi finali - Foto e highlights",
+        "link": "https://drive.google.com/album-esempio",
+        "count": 120
+      }
+    ]
   }
 ]
 ```
 
-### Campi
+### Campi principali
 
-- `matchday`: numero giornata o gruppo foto.
-- `date`: testo visibile.
-- `name`: nome della cartella.
-- `link`: link Google Drive/album/foto. Usa `#` se non disponibile.
-- `count`: numero foto.
+- `matchday`: numero della giornata o gruppo foto.
+- `date`: testo visibile nel pulsante della galleria.
+- `matches`: lista di album/cartelle.
+- `name`: nome visibile dell'album.
+- `link`: link a Google Drive, album foto o pagina esterna.
+- `count`: numero foto mostrato nel sito.
+
+Se il link non è ancora disponibile, usa:
+
+```json
+"link": "#"
+```
 
 ---
 
-## 7. Workflow consigliato durante il torneo
+## 9. Workflow consigliato durante il torneo
 
-### Prima del torneo
+### 9.1 Prima del torneo
 
-1. Aggiorna `TEAMS` con squadre, gironi e giocatori.
-2. Aggiorna `TEAM_RESERVES` se vuoi usare riserve.
-3. Aggiorna `CALENDAR` con tutte le partite programmate.
-4. Lascia `sh`, `sa` e `detailId` a `null` per partite non giocate.
+1. Apri `data.json`.
+2. Vai in `TEAMS`.
+3. Inserisci tutte le squadre con:
+   - `id`
+   - `name`
+   - `group`
+   - lista `players`
+4. Vai in `TEAM_RESERVES`.
+5. Inserisci le riserve, se presenti.
+6. Lascia tutti i valori statistici dei giocatori a `0`:
+   - `g`
+   - `a`
+   - `y`
+   - `r`
+   - `gp`
 
-### Dopo ogni partita
+---
+
+### 9.2 Dopo il sorteggio dei gironi
+
+1. Aggiorna il campo `group` di ogni squadra in `TEAMS`.
+2. Controlla che ogni squadra abbia il girone corretto:
+   - `A`
+   - `B`
+   - `C`
+3. Crea o aggiorna le partite dei gironi in `CALENDAR`.
+4. Per ogni partita dei gironi imposta:
+
+```json
+"group": "A"
+```
+
+oppure `B` / `C` in base al girone.
+
+5. Per le partite non ancora giocate lascia:
+
+```json
+"sh": null,
+"sa": null,
+"detailId": null,
+"yt": "#"
+```
+
+---
+
+### 9.3 Prima di ogni giornata
+
+Controlla in `CALENDAR` che le partite della giornata abbiano:
+
+- `round` corretto;
+- `group` corretto;
+- `home` e `away` compilati con id squadra esistenti;
+- `date` corretta;
+- `time` corretto;
+- `location` corretta;
+- `sh` e `sa` a `null` se la partita non è ancora stata giocata.
+
+---
+
+### 9.4 Dopo ogni partita
+
+Per ogni partita appena conclusa:
 
 1. Vai in `CALENDAR`.
-2. Inserisci risultato:
+2. Trova la partita corretta.
+3. Inserisci risultato:
+
+```json
+"sh": 2,
+"sa": 1
+```
+
+4. Inserisci un `detailId`, per esempio:
+
+```json
+"detailId": "r10"
+```
+
+5. Se hai il link highlights, aggiorna `yt`:
+
+```json
+"yt": "https://www.youtube.com/watch?v=ID_VIDEO"
+```
+
+6. Vai in `DETAILS`.
+7. Crea il blocco `r10`.
+8. Inserisci:
+   - marcatori in `scorers`;
+   - assist in `assists`;
+   - cartellini in `cards`;
+   - rigori o eventi speciali in `penalties`, se servono.
+9. Controlla che il numero di gol nel tabellino sia coerente con il risultato.
+
+Il sito aggiornerà automaticamente:
+
+- classifiche gironi;
+- ultimi risultati;
+- prossime partite;
+- statistiche giocatori;
+- cartellini;
+- disciplina squadre;
+- schede giocatore;
+- dettaglio partita.
+
+---
+
+### 9.5 Dopo le fasi finali
+
+Per quarti, semifinali e finale:
+
+1. Inserisci le partite in `CALENDAR`.
+2. Usa:
+
+```json
+"group": null
+```
+
+3. Usa `round` coerente:
+
+```json
+"round": "Quarti di Finale"
+```
+
+oppure:
+
+```json
+"round": "Semifinali"
+```
+
+oppure:
+
+```json
+"round": "Finale"
+```
+
+4. Aggiorna risultato e tabellino come per le partite dei gironi.
+5. Aggiorna eventuali highlights.
+6. Aggiorna `GALLERY` se hai foto o album delle fasi finali.
+7. Aggiorna `MVP_DATA` se vuoi mostrare l'MVP finale o della giornata.
+
+---
+
+## 10. Errori da evitare
+
+### 10.1 Cambiare id squadra dopo averlo usato
+
+Se una squadra ha questo id:
+
+```json
+"id": "redstorm"
+```
+
+allora in `CALENDAR`, `DETAILS`, `TEAM_RESERVES` e `MVP_DATA` devi sempre usare:
+
+```json
+"redstorm"
+```
+
+Non usare varianti come:
+
+```json
+"RedStorm"
+```
+
+```json
+"red storm"
+```
+
+```json
+"Red Storm"
+```
+
+---
+
+### 10.2 Scrivere nomi giocatori diversi
+
+Se in `TEAMS` il giocatore si chiama:
+
+```json
+"Marco Rossi"
+```
+
+in `DETAILS` devi scrivere esattamente:
+
+```json
+"Marco Rossi"
+```
+
+Non scrivere:
+
+```json
+"M. Rossi"
+```
+
+```json
+"Rossi Marco"
+```
+
+```json
+"Marco rossi"
+```
+
+Altrimenti il sito potrebbe non aggiornare correttamente statistiche e schede giocatore.
+
+---
+
+### 10.3 Risultato inserito senza tabellino
+
+Se in `CALENDAR` scrivi:
 
 ```json
 "sh": 2,
 "sa": 1,
-"detailId": "r10"
+"detailId": "r1"
 ```
 
-3. Vai in `DETAILS`.
-4. Crea il tabellino `r10` con gol, assist, cartellini.
+allora in `DETAILS` deve esistere:
 
-Il sito aggiornerà automaticamente:
+```json
+"r1": {
+  "scorers": [],
+  "assists": [],
+  "cards": [],
+  "penalties": []
+}
+```
 
-- classifiche;
-- home;
-- ultimi risultati;
-- prossime partite;
-- statistiche;
-- disciplina squadre;
-- modali giocatore.
-
----
-
-## 8. Errori da evitare
-
-- Non cambiare un `id` squadra se è già usato in `CALENDAR` o `DETAILS`.
-- Non scrivere nomi giocatori diversi tra `TEAMS` e `DETAILS`.
-  - Esempio sbagliato: `Marco Rossi` in `TEAMS`, `M. Rossi` in `DETAILS`.
-- Non mettere commenti dentro `data.json`: JSON non supporta commenti.
-- Non lasciare virgole finali dopo l'ultimo elemento di un array o oggetto.
-- Non modificare manualmente `GROUPS`, `RECENT`, `UPCOMING` se stai usando la sync.
+Meglio ancora: compila subito il tabellino reale.
 
 ---
 
-## 9. File da tenere nella cartella principale
+### 10.4 Tabellino non coerente col risultato
+
+Se la partita finisce 2-1:
+
+```json
+"sh": 2,
+"sa": 1
+```
+
+allora in `DETAILS` devi avere:
+
+- 2 gol della squadra `home`;
+- 1 gol della squadra `away`;
+- 3 righe totali in `scorers`.
+
+---
+
+### 10.5 Partita giocata lasciata con sh/sa null
+
+Sbagliato:
+
+```json
+"sh": null,
+"sa": null,
+"detailId": "r1"
+```
+
+Corretto:
+
+```json
+"sh": 2,
+"sa": 1,
+"detailId": "r1"
+```
+
+---
+
+### 10.6 Partita non giocata con detailId compilato
+
+Se una partita non è stata giocata, meglio lasciare:
+
+```json
+"sh": null,
+"sa": null,
+"detailId": null
+```
+
+---
+
+### 10.7 Commenti dentro data.json
+
+Sbagliato:
+
+```json
+{
+  // questa è una squadra
+  "id": "redstorm"
+}
+```
+
+Corretto:
+
+```json
+{
+  "id": "redstorm"
+}
+```
+
+Il formato JSON non supporta commenti.
+
+---
+
+### 10.8 Virgole finali
+
+Sbagliato:
+
+```json
+{
+  "id": "redstorm",
+  "name": "Red Storm",
+}
+```
+
+Corretto:
+
+```json
+{
+  "id": "redstorm",
+  "name": "Red Storm"
+}
+```
+
+Sbagliato anche negli array:
+
+```json
+"players": [
+  { "name": "Marco Rossi" },
+]
+```
+
+Corretto:
+
+```json
+"players": [
+  { "name": "Marco Rossi" }
+]
+```
+
+---
+
+### 10.9 Dimenticare le virgolette
+
+Sbagliato:
+
+```json
+"group": A
+```
+
+Corretto:
+
+```json
+"group": "A"
+```
+
+Eccezione importante: `null`, `true`, `false` e i numeri non vogliono virgolette.
+
+Corretti:
+
+```json
+"group": null,
+"closed": true,
+"sh": 2
+```
+
+---
+
+## 11. Checklist rapida prima di salvare data.json
+
+Ogni volta che aggiorni `data.json`, controlla questa lista.
+
+### Squadre e giocatori
+
+- [ ] Ogni squadra ha un `id` unico.
+- [ ] Ogni squadra ha `name`, `group`, `players`.
+- [ ] Ogni giocatore ha `n`, `name`, `role`.
+- [ ] I nomi dei giocatori sono scritti sempre nello stesso modo.
+- [ ] Le statistiche dei giocatori possono restare a `0`.
+
+### Riserve
+
+- [ ] Ogni chiave in `TEAM_RESERVES` corrisponde all'id di una squadra.
+- [ ] Le squadre senza riserve hanno array vuoto oppure non vengono mostrate con riserve.
+
+### Calendario
+
+- [ ] Ogni partita ha un `id` unico.
+- [ ] `round` è scritto correttamente.
+- [ ] `group` è `A`, `B`, `C` per i gironi e `null` per le fasi finali.
+- [ ] `home` e `away` sono id squadra esistenti.
+- [ ] Le partite non giocate hanno `sh`, `sa`, `detailId` a `null`.
+- [ ] Le partite giocate hanno `sh` e `sa` numerici.
+- [ ] Le partite giocate hanno un `detailId` esistente in `DETAILS`.
+
+### Tabellini
+
+- [ ] Ogni `detailId` usato in `CALENDAR` esiste in `DETAILS`.
+- [ ] Ogni tabellino ha `scorers`, `assists`, `cards`, `penalties`.
+- [ ] Il numero di gol in `scorers` corrisponde al risultato.
+- [ ] I nomi dei giocatori in `DETAILS` corrispondono a quelli in `TEAMS`.
+- [ ] I team nei tabellini sono id squadra, non nomi visibili.
+
+### Highlights, MVP e foto
+
+- [ ] Se non hai highlights, `yt` è `"#"`.
+- [ ] Se hai highlights, `yt` è un link valido.
+- [ ] `MVP_DATA` usa id squadra corretti.
+- [ ] `GALLERY` usa link validi oppure `"#"`.
+
+### Validità JSON
+
+- [ ] Nessun commento dentro `data.json`.
+- [ ] Nessuna virgola finale.
+- [ ] Tutte le stringhe sono tra virgolette doppie.
+- [ ] Il file si apre senza errori in VS Code.
+- [ ] Se il sito appare vuoto, controlla subito la console del browser e la validità di `data.json`.
+
+---
+
+## 12. File necessari nella cartella principale del sito
+
+Nella cartella principale devono esserci almeno:
 
 ```text
 index.html
@@ -345,4 +1007,105 @@ logo_squadre.png
 manifest.json
 ```
 
-Gli altri file vanno in `backup`, `docs` o `debug`.
+Se uno di questi file manca o ha un nome diverso, alcune parti del sito possono non funzionare correttamente.
+
+---
+
+## 13. Mini esempio: aggiornare una partita da zero
+
+### Prima della partita
+
+In `CALENDAR`:
+
+```json
+{
+  "id": "c1",
+  "round": "Giornata 1",
+  "group": "A",
+  "home": "redstorm",
+  "away": "bluefire",
+  "date": "11 Mag",
+  "time": "20:00",
+  "location": "Campo Nord",
+  "sh": null,
+  "sa": null,
+  "yt": "#",
+  "detailId": null
+}
+```
+
+### Dopo la partita, risultato 2-1
+
+In `CALENDAR`:
+
+```json
+{
+  "id": "c1",
+  "round": "Giornata 1",
+  "group": "A",
+  "home": "redstorm",
+  "away": "bluefire",
+  "date": "11 Mag",
+  "time": "20:00",
+  "location": "Campo Nord",
+  "sh": 2,
+  "sa": 1,
+  "yt": "https://www.youtube.com/@TerzoTempoCup",
+  "detailId": "r1"
+}
+```
+
+In `DETAILS`:
+
+```json
+"r1": {
+  "scorers": [
+    { "name": "Luca Bianchi", "team": "redstorm", "min": 7 },
+    { "name": "Andrea Sala", "team": "redstorm", "min": 14 },
+    { "name": "Riccardo Bellini", "team": "bluefire", "min": 22 }
+  ],
+  "assists": [
+    { "name": "Matteo Rinaldi", "team": "redstorm", "min": 7 },
+    { "name": "Marco Rossi", "team": "redstorm", "min": 14 },
+    { "name": "Giacomo Ferri", "team": "bluefire", "min": 22 }
+  ],
+  "cards": [
+    { "name": "Giacomo Ferri", "team": "bluefire", "min": 27, "type": "Y" }
+  ],
+  "penalties": []
+}
+```
+
+Checklist dell'esempio:
+
+- `sh` = 2, quindi ci sono 2 gol di `redstorm`.
+- `sa` = 1, quindi c'è 1 gol di `bluefire`.
+- Totale righe in `scorers` = 3.
+- `detailId` è `r1` e in `DETAILS` esiste `"r1"`.
+- Gli assist hanno lo stesso minuto dei gol collegati.
+- Il link highlights è compilato.
+
+---
+
+## 14. Consiglio finale
+
+Il modo più sicuro per usare il sito durante il torneo è questo:
+
+1. Inserisci squadre e giocatori in `TEAMS`.
+2. Inserisci riserve in `TEAM_RESERVES`.
+3. Inserisci tutte le partite in `CALENDAR` con risultati a `null`.
+4. Dopo ogni partita aggiorna solo:
+   - risultato in `CALENDAR`;
+   - `detailId` in `CALENDAR`;
+   - tabellino in `DETAILS`;
+   - highlights in `yt`, se disponibile.
+5. Lascia che il sito calcoli automaticamente classifiche, home e statistiche.
+
+Se il sito diventa vuoto o non carica dati, quasi sempre il problema è uno di questi:
+
+- JSON non valido;
+- virgola finale;
+- commento dentro `data.json`;
+- id squadra scritto male;
+- `detailId` indicato ma non presente in `DETAILS`;
+- nome giocatore non identico a quello in `TEAMS`.
