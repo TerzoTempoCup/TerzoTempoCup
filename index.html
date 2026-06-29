@@ -3,7 +3,7 @@
 <head>
 <link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#000e3a">
 <title>Terzo Tempo Cup</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -184,99 +184,86 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 
 
 /* =========================================================
+   PRONOSTICI - UX v9: Nessuno + card partita espandibile
+   ========================================================= */
+.pred-match-card.compact{padding:0;overflow:hidden;transition:.18s ease}
+.pred-match-toggle{width:100%;border:0;background:transparent;color:#fff;text-align:left;padding:1rem;cursor:pointer;font-family:var(--fb)}
+.pred-match-toggle:hover{background:rgba(255,255,255,.045)}
+.pred-match-toggle .pred-match-top{margin-bottom:0}
+.pred-expand-hint{margin-top:.45rem;color:var(--mu);font-weight:900;font-size:.74rem}
+.pred-expand-icon{font-family:var(--ft);font-size:1.4rem;color:#ffd080;min-width:1.6rem;text-align:center}
+.pred-pron-area{padding:0 1rem 1rem;border-top:1px solid rgba(255,255,255,.08);animation:predOpen .16s ease-out}
+.pred-none-player{background:rgba(245,158,11,.16)!important;border-color:rgba(245,158,11,.45)!important}
+.pred-none-player.sel{background:rgba(245,158,11,.34)!important;border-color:rgba(245,158,11,.85)!important}
+.pred-selected-scorer.none{background:linear-gradient(135deg,rgba(245,158,11,.20),rgba(200,0,0,.10));border:1px solid rgba(245,158,11,.48)}
+@keyframes predOpen{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* =========================================================
    PRONOSTICI - FIX MOBILE v11 DEFINITIVO
    La topbar mobile diventa fixed e il main riceve padding-top.
    Il box Pronostici entra nel normale flusso pagina e non può più
    finire sotto logo/nome torneo.
    ========================================================= */
 @media(max-width:700px){
-  .mobile-topbar{
-    position:fixed !important;
-    top:0 !important;
-    left:0 !important;
-    right:0 !important;
-    height:58px !important;
-    min-height:58px !important;
-    z-index:3000 !important;
-    display:flex !important;
-  }
-
-  main{
-    padding-top:58px !important;
-  }
-
-  .sec{
-    padding-top:1rem !important;
-  }
-
-  #pronostici{
-    padding-top:1rem !important;
-  }
-
-  #pronostici .sec-title{
-    margin-top:0 !important;
-    margin-bottom:.85rem !important;
-    padding-top:0 !important;
-    position:relative !important;
-    z-index:1 !important;
-  }
-
-  #pronostici .pred-shell{
-    min-height:auto !important;
-    padding-top:0 !important;
-    padding-bottom:1rem !important;
-    position:relative !important;
-    z-index:1 !important;
-  }
-
-  #pronostici .pred-overlay{
-    position:static !important;
-    inset:auto !important;
-    top:auto !important;
-    right:auto !important;
-    bottom:auto !important;
-    left:auto !important;
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    display:block !important;
-    align-items:initial !important;
-    justify-content:initial !important;
-    background:transparent !important;
-    backdrop-filter:none !important;
-    padding:0 !important;
-    margin:.65rem 0 1rem !important;
-    border-radius:0 !important;
-    z-index:auto !important;
-  }
-
-  #pronostici .pred-pop{
-    position:relative !important;
-    width:100% !important;
-    max-height:none !important;
-    overflow:visible !important;
-    margin:0 !important;
-    padding:1rem !important;
-    border-radius:18px !important;
-    z-index:1 !important;
-  }
-
-  #pronostici .pred-pop-title{
-    font-size:1.45rem !important;
-    line-height:1.1 !important;
-    margin-bottom:.55rem !important;
-  }
+  .mobile-topbar{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;height:58px !important;min-height:58px !important;z-index:3000 !important;display:flex !important;}
+  main{padding-top:58px !important;}
+  .sec{padding-top:1rem !important;}
+  #pronostici{padding-top:1rem !important;}
+  #pronostici .sec-title{margin-top:0 !important;margin-bottom:.85rem !important;padding-top:0 !important;position:relative !important;z-index:1 !important;}
+  #pronostici .pred-shell{min-height:auto !important;padding-top:0 !important;padding-bottom:1rem !important;position:relative !important;z-index:1 !important;}
+  #pronostici .pred-overlay{position:static !important;inset:auto !important;top:auto !important;right:auto !important;bottom:auto !important;left:auto !important;width:100% !important;height:auto !important;min-height:0 !important;display:block !important;align-items:initial !important;justify-content:initial !important;background:transparent !important;backdrop-filter:none !important;padding:0 !important;margin:.65rem 0 1rem !important;border-radius:0 !important;z-index:auto !important;}
+  #pronostici .pred-pop{position:relative !important;width:100% !important;max-height:none !important;overflow:visible !important;margin:0 !important;padding:1rem !important;border-radius:18px !important;z-index:1 !important;}
+  #pronostici .pred-pop-title{font-size:1.45rem !important;line-height:1.1 !important;margin-bottom:.55rem !important;}
+}
+@media(max-width:420px){
+  .mobile-topbar{height:56px !important;min-height:56px !important;}
+  main{padding-top:56px !important;}
 }
 
-@media(max-width:420px){
-  .mobile-topbar{
-    height:56px !important;
-    min-height:56px !important;
-  }
 
-  main{
-    padding-top:56px !important;
-  }
+/* =========================================================
+   MOBILE SAFE LOCK v12
+   Blocca movimento orizzontale pagina e riduce zoom,
+   mantenendo scroll verticale e scorrimenti interni necessari.
+   ========================================================= */
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  overscroll-behavior-x:none;
+}
+
+main,
+.sec{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.pred-round-tabs,
+.pred-team-filter,
+.cal-tabs,
+.cal-desk-nav,
+.sq-filter,
+.tabs,
+.gal-tabs{
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+}
+
+.pred-pop,
+.pred-choice-grid,
+.pred-player-grid{
+  -webkit-overflow-scrolling:touch;
+  touch-action:pan-y;
+}
+
+*{
+  -webkit-tap-highlight-color:transparent;
 }
 
 </style>
@@ -711,12 +698,18 @@ function allPlayers(teamId,onlyGk=false){const t=getTeam(teamId);if(!t)return[];
 function allTournamentPlayers(onlyGk=false){return TEAMS.flatMap(t=>allPlayers(t.id,onlyGk));}
 function playerKey(team,name){return encodeURIComponent(team)+'|'+encodeURIComponent(name)}
 function parsePlayerKey(v){if(!v)return{name:null,team:null};const [team,name]=String(v).split('|');return{team:decodeURIComponent(team||''),name:decodeURIComponent(name||'')}}
+const NONE_SCORER_TEAM='__NONE__';
+const NONE_SCORER_NAME='Nessuno';
+function noneScorerKey(){return playerKey(NONE_SCORER_TEAM,NONE_SCORER_NAME)}
+function isNoneScorer(name,team){return name===NONE_SCORER_NAME&&team===NONE_SCORER_TEAM}
+function scorerDisplayName(name,team){return isNoneScorer(name,team)?'Nessuno (corretto se 0-0)':(name?name+' · '+tName(team):'Nessun marcatore selezionato')}
+
 function getRoundCfg(round){return(PREDICTION_ROUNDS||[]).find(r=>r.round===round)||{round,label:round,lockAt:null,status:'draft'}}
 function isRoundLocked(round){const cfg=getRoundCfg(round);if(!cfg.lockAt)return true;return new Date()>=new Date(cfg.lockAt)}
 function roundLockText(round){const cfg=getRoundCfg(round);if(!cfg.lockAt)return'Pronostici non ancora aperti';const d=new Date(cfg.lockAt);return isRoundLocked(round)?'Pronostici chiusi':'Modificabile fino al '+d.toLocaleString('it-IT',{dateStyle:'short',timeStyle:'short'})}
 function playedMatch(m){return m&&m.sh!==null&&m.sa!==null&&m.sh!==undefined&&m.sa!==undefined}
 function outcome(h,a){h=Number(h);a=Number(a);return h>a?'1':h<a?'2':'X'}
-function calcMatchPoints(pred){const m=CALENDAR.find(x=>x.id===pred.match_id);if(!playedMatch(m))return{points:0,base:0,exact:false,outcome:false,scorer:false};const ph=Number(pred.home_score),pa=Number(pred.away_score),rh=Number(m.sh),ra=Number(m.sa);const okOutcome=outcome(ph,pa)===outcome(rh,ra);const exact=ph===rh&&pa===ra;let base=0;if(okOutcome)base+=3;if(exact)base+=5;const d=DETAILS[m.detailId]||{};const scorer=!!(pred.predicted_scorer_name&&pred.predicted_scorer_team&&(d.scorers||[]).some(s=>s.name===pred.predicted_scorer_name&&s.team===pred.predicted_scorer_team));return{points:base>0&&scorer?base*2:base,base,exact,outcome:okOutcome,scorer}}
+function calcMatchPoints(pred){const m=CALENDAR.find(x=>x.id===pred.match_id);if(!playedMatch(m))return{points:0,base:0,exact:false,outcome:false,scorer:false};const ph=Number(pred.home_score),pa=Number(pred.away_score),rh=Number(m.sh),ra=Number(m.sa);const okOutcome=outcome(ph,pa)===outcome(rh,ra);const exact=ph===rh&&pa===ra;let base=0;if(okOutcome)base+=3;if(exact)base+=5;const d=DETAILS[m.detailId]||{};const pickedNone=isNoneScorer(pred.predicted_scorer_name,pred.predicted_scorer_team);const scorer=pickedNone?(rh===0&&ra===0):!!(pred.predicted_scorer_name&&pred.predicted_scorer_team&&(d.scorers||[]).some(s=>s.name===pred.predicted_scorer_name&&s.team===pred.predicted_scorer_team));return{points:base>0&&scorer?base*2:base,base,exact,outcome:okOutcome,scorer}}
 function computeWinnerTeam(){const final=(CALENDAR||[]).find(m=>String(m.round).toLowerCase()==='finale'&&playedMatch(m));if(!final||Number(final.sh)===Number(final.sa))return null;return Number(final.sh)>Number(final.sa)?final.home:final.away}
 function computeTopScorer(){const counts={};Object.values(DETAILS||{}).forEach(d=>(d.scorers||[]).forEach(s=>{const k=s.team+'|'+s.name;counts[k]=(counts[k]||0)+1;}));let best=null;Object.entries(counts).forEach(([k,v])=>{if(!best||v>best.goals){const [team,name]=k.split('|');best={team,name,goals:v}}});return best}
 function calcPrePoints(pre){if(!pre)return{points:0,items:0};let points=0,items=0;const winner=computeWinnerTeam();if(winner&&pre.winner_team_id===winner){points+=15;items++}const top=computeTopScorer();if(top&&pre.top_scorer_name===top.name&&pre.top_scorer_team===top.team){points+=10;items++}const bg=PREDICTION_FINAL_AWARDS.bestGoalkeeper||{};if(bg.name&&pre.best_goalkeeper_name===bg.name&&pre.best_goalkeeper_team===bg.team){points+=10;items++}const bp=PREDICTION_FINAL_AWARDS.bestPlayer||{};if(bp.name&&pre.best_player_name===bp.name&&pre.best_player_team===bp.team){points+=10;items++}return{points,items}}
@@ -738,19 +731,48 @@ function preDisplay(pre){if(!pre)return{winner:'-',top:'-',gk:'-',best:'-'};retu
 function preTournamentWizard(){const step=window.predWizardStep||0;const dots=[0,1,2,3,4].map(i=>'<div class="pred-dot '+(i<=step?'act':'')+'"></div>').join('');let body='';if(step===0){body='<div class="pred-w-title">🏆 Chi vincerà il torneo?</div><div class="pred-msg">Vale 15 punti. Puoi modificare questa scelta fino all’inizio della prima partita.</div><div class="pred-choice-grid">'+TEAMS.map(t=>wizardChoiceCard('winner',t.id,teamLogo+' '+esc(t.name),'Girone '+esc(t.group))).join('')+'</div>'}if(step===1){body='<div class="pred-w-title">⚽ Chi sarà il capocannoniere?</div><div class="pred-msg">Su mobile scorri in orizzontale le squadre, poi seleziona il giocatore.</div>'+wizardTeamFilter('topScorer')+'<div class="pred-choice-grid">'+wizardFilteredPlayers('topScorer',false).map(p=>wizardPlayerCard('topScorer',p)).join('')+'</div>'}if(step===2){body='<div class="pred-w-title">🧤 Chi sarà il miglior portiere?</div><div class="pred-msg">Vale 10 punti. Sono mostrati solo i giocatori con ruolo Portiere.</div><div class="pred-choice-grid">'+allTournamentPlayers(true).map(p=>wizardPlayerCard('bestGk',p)).join('')+'</div>'}if(step===3){body='<div class="pred-w-title">⭐ Chi sarà il miglior giocatore?</div><div class="pred-msg">Su mobile scorri in orizzontale le squadre, poi seleziona il giocatore.</div>'+wizardTeamFilter('bestPlayer')+'<div class="pred-choice-grid">'+wizardFilteredPlayers('bestPlayer',false).map(p=>wizardPlayerCard('bestPlayer',p)).join('')+'</div>'}if(step===4){const d=preDisplay(preFromWizard());body='<div class="pred-w-title">✅ Riepilogo pre-torneo</div><div class="pred-summary"><div class="pred-summary-item"><b>Vincitrice · 15 pt</b>'+esc(d.winner)+'</div><div class="pred-summary-item"><b>Capocannoniere · 10 pt</b>'+esc(d.top)+'</div><div class="pred-summary-item"><b>Miglior portiere · 10 pt</b>'+esc(d.gk)+'</div><div class="pred-summary-item"><b>Miglior giocatore · 10 pt</b>'+esc(d.best)+'</div></div>'}const nextDisabled=(step===0&&!(window.predWizard||{}).winner)||(step===1&&!(window.predWizard||{}).topScorer)||(step===2&&!(window.predWizard||{}).bestGk)||(step===3&&!(window.predWizard||{}).bestPlayer);const actions='<div class="pred-actions">'+(step>0?'<button class="pred-btn secondary" onclick="window.predWizardStep--;renderPronostici()">Indietro</button>':'')+(step<4?'<button class="pred-btn" '+(nextDisabled?'disabled':'')+' onclick="window.predWizardStep++;renderPronostici()">Avanti</button>':'<button class="pred-btn secondary" onclick="window.predWizardStep=0;renderPronostici()">Modifica</button><button class="pred-btn" onclick="saveWizardPre()">Conferma e vai ai pronostici</button>')+'</div><div id="preMsg" class="pred-msg"></div>';return '<div class="pred-wizard">'+dots+body+actions+'</div>'}
 async function saveWizardPre(){if(!currentUser)return;const row={p_session_token:getSessionToken(),...preFromWizard()};const{error}=await sb.rpc('save_pre_tournament_prediction',row);const msg=document.getElementById('preMsg');if(error){if(msg){msg.className='pred-msg err';msg.textContent=error.message}return}window.predWizardStep=null;window.predWizard={};window.predWizardTeamFilters={};await loadPredictionData();renderPronostici();}
 async function saveMatchPrediction(matchId){if(!currentUser)return;cacheMatchDraft(matchId);const m=CALENDAR.find(x=>x.id===matchId);if(!m||isRoundLocked(m.round))return;const hs=draftScoreValue(matchId,'h',document.getElementById('ph_'+matchId)?.value),as=draftScoreValue(matchId,'a',document.getElementById('pa_'+matchId)?.value);const sc=parsePlayerKey((window.predScorers||{})[matchId]);if(hs===''||as===''||hs===undefined||as===undefined){alert('Inserisci il risultato.');return}const row={p_session_token:getSessionToken(),p_match_id:matchId,p_round:m.round,p_home_score:Number(hs),p_away_score:Number(as),p_scorer_name:sc.name||null,p_scorer_team:sc.team||null};const{error}=await sb.rpc('save_match_prediction',row);window.predSaveMsg=window.predSaveMsg||{};if(error){window.predSaveMsg[matchId]='Errore: '+error.message}else{window.predSaveMsg[matchId]='Il tuo pronostico è stato salvato';window.predDraftScores=window.predDraftScores||{};delete window.predDraftScores[matchId]}await loadPredictionData();renderPronostici();}
-function editSavedPrediction(matchId,round){window.predTab='now';window.predRound=round;window.predEditMatchId=matchId;renderPronostici();setTimeout(()=>{const el=document.getElementById('predmatch_'+matchId);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},60)}
+function editSavedPrediction(matchId,round){window.predTab='now';window.predRound=round;window.predEditMatchId=matchId;window.predOpenMatchId=matchId;renderPronostici();setTimeout(()=>{const el=document.getElementById('predmatch_'+matchId);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},60)}
+function togglePredMatch(matchId){if(window.predOpenMatchId===matchId){cacheMatchDraft(matchId);window.predOpenMatchId=null}else{window.predOpenMatchId=matchId}renderPronostici()}
 function openPredictableMatches(){return CALENDAR.filter(m=>!playedMatch(m)&&m.home&&m.away&&getRoundCfg(m.round).lockAt)}
 function roundsForMatches(ms){return [...new Set(ms.map(m=>m.round))]}
 function roundButtons(rounds,active,varName){if(!rounds.length)return'';if(!active||!rounds.includes(active))active=rounds[0];return '<div class="pred-round-tabs">'+rounds.map(r=>'<button class="pred-round-chip '+(r===active?'act':'')+'" onclick="window.'+varName+'=\''+esc(r)+'\';renderPronostici()">'+esc(r)+'</button>').join('')+'</div>'}
 function preCard(){const pre=getOwnPre();const d=preDisplay(pre);const open=!isRoundLocked('Giornata 1');return '<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">🏆 Pronostici pre-torneo</div><div class="pred-muted">Le tue scelte bonus salvate.</div></div>'+(open?'<button class="pred-btn secondary" onclick="window.predWizardTeamFilters={};window.predWizardStep=0;window.predWizard={winner:\''+(pre?.winner_team_id||'')+'\',topScorer:\''+(pre?.top_scorer_team?playerKey(pre.top_scorer_team,pre.top_scorer_name):'')+'\',bestGk:\''+(pre?.best_goalkeeper_team?playerKey(pre.best_goalkeeper_team,pre.best_goalkeeper_name):'')+'\',bestPlayer:\''+(pre?.best_player_team?playerKey(pre.best_player_team,pre.best_player_name):'')+'\'};renderPronostici()">Modifica</button>':'')+'</div><div class="pred-pre-compact"><div class="pred-mini"><b>Vincitrice</b>'+esc(d.winner)+'</div><div class="pred-mini"><b>Capocannoniere</b>'+esc(d.top)+'</div><div class="pred-mini"><b>Miglior portiere</b>'+esc(d.gk)+'</div><div class="pred-mini"><b>Miglior giocatore</b>'+esc(d.best)+'</div></div></div>'}
-function matchPredCard(m){const locked=isRoundLocked(m.round);const pred=allPredictions.find(p=>p.user_id===currentUser?.participant_id&&p.match_id===m.id)||{};window.predScorers=window.predScorers||{};if(pred.predicted_scorer_team&&pred.predicted_scorer_name&&!window.predScorers[m.id])window.predScorers[m.id]=playerKey(pred.predicted_scorer_team,pred.predicted_scorer_name);const chosen=window.predScorers[m.id]||'';const ch=parsePlayerKey(chosen);const chosenText=ch.name?(ch.name+' · '+tName(ch.team)):'Nessun marcatore selezionato';const players=[...allPlayers(m.home),...allPlayers(m.away)];const hv=draftScoreValue(m.id,'h',pred.home_score),av=draftScoreValue(m.id,'a',pred.away_score);const editing=window.predEditMatchId===m.id;return '<div id="predmatch_'+m.id+'" class="card pred-match-card '+(editing?'editing':'')+'"><div class="pred-match-top"><div><div class="pred-vs">'+esc(tName(m.home))+' vs '+esc(tName(m.away))+'</div><div class="pred-msg">'+esc(m.date||'')+' · '+esc(m.time||'')+' · '+esc(m.location||'')+'</div></div><div class="pred-lock">'+esc(roundLockText(m.round))+'</div></div>'+(locked?'<div class="pred-msg">Pronostici non ancora aperti oppure già chiusi per questa giornata.</div>':'<div class="pred-score"><label>Risultato</label><input class="pred-input" id="ph_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(hv)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'h\',this.value)"><span style="text-align:center;font-weight:950">-</span><input class="pred-input" id="pa_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(av)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'a\',this.value)"></div><div class="pred-selected-scorer '+(ch.name?'has':'')+'"><span>🎯 Marcatore scelto</span><b>'+esc(chosenText)+'</b></div><div class="pred-scorer-title">Scegli marcatore</div><div class="pred-player-grid">'+players.map(p=>'<button class="pred-player '+(chosen===playerKey(p.team,p.name)?'sel':'')+'" onclick="selectPredScorer(\''+m.id+'\',\''+playerKey(p.team,p.name)+'\')">'+esc(p.name)+'<small>'+esc(tName(p.team))+'</small></button>').join('')+'</div><div class="pred-actions"><button class="pred-btn" onclick="saveMatchPrediction(\''+m.id+'\')">Salva pronostico</button></div>'+(window.predSaveMsg&&window.predSaveMsg[m.id]?'<div class="pred-save-msg">'+esc(window.predSaveMsg[m.id])+'</div>':'') )+'</div>'}
+function matchPredCard(m){const locked=isRoundLocked(m.round);const pred=allPredictions.find(p=>p.user_id===currentUser?.participant_id&&p.match_id===m.id)||{};window.predScorers=window.predScorers||{};if(pred.predicted_scorer_team&&pred.predicted_scorer_name&&!window.predScorers[m.id])window.predScorers[m.id]=playerKey(pred.predicted_scorer_team,pred.predicted_scorer_name);const chosen=window.predScorers[m.id]||'';const ch=parsePlayerKey(chosen);const chosenText=scorerDisplayName(ch.name,ch.team);const players=[{name:NONE_SCORER_NAME,team:NONE_SCORER_TEAM,teamName:'0-0',none:true},...allPlayers(m.home),...allPlayers(m.away)];const hv=draftScoreValue(m.id,'h',pred.home_score),av=draftScoreValue(m.id,'a',pred.away_score);const editing=window.predEditMatchId===m.id;const expanded=window.predOpenMatchId===m.id||editing;const hasSaved=pred.home_score!==undefined&&pred.away_score!==undefined;const cardCls='card pred-match-card compact '+(editing?'editing ':'')+(expanded?'open':'');const savedMini=hasSaved?'<div class="pred-expand-hint">Salvato: <b>'+pred.home_score+' - '+pred.away_score+'</b> · 🎯 '+esc(scorerDisplayName(pred.predicted_scorer_name,pred.predicted_scorer_team))+'</div>':'<div class="pred-expand-hint">Clicca per inserire risultato e marcatore</div>';const header='<button class="pred-match-toggle" onclick="togglePredMatch(\''+m.id+'\')"><div class="pred-match-top"><div><div class="pred-vs">'+esc(tName(m.home))+' vs '+esc(tName(m.away))+'</div><div class="pred-msg">'+esc(m.date||'')+' · '+esc(m.time||'')+' · '+esc(m.location||'')+'</div>'+savedMini+'</div><div class="pred-expand-icon">'+(expanded?'−':'+')+'</div></div></button>';if(locked)return '<div id="predmatch_'+m.id+'" class="'+cardCls+'">'+header+'<div class="pred-pron-area"><div class="pred-msg">Pronostici non ancora aperti oppure già chiusi per questa giornata.</div></div></div>';if(!expanded)return '<div id="predmatch_'+m.id+'" class="'+cardCls+'">'+header+'</div>';return '<div id="predmatch_'+m.id+'" class="'+cardCls+'">'+header+'<div class="pred-pron-area"><div class="pred-score"><label>Risultato</label><input class="pred-input" id="ph_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(hv)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'h\',this.value)"><span style="text-align:center;font-weight:950">-</span><input class="pred-input" id="pa_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(av)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'a\',this.value)"></div><div class="pred-selected-scorer '+(isNoneScorer(ch.name,ch.team)?'none ':ch.name?'has ':'')+'"><span>🎯 Marcatore scelto</span><b>'+esc(chosenText)+'</b></div><div class="pred-scorer-title">Scegli marcatore</div><div class="pred-player-grid">'+players.map(p=>{const key=playerKey(p.team,p.name);return '<button class="pred-player '+(p.none?'pred-none-player ':'')+(chosen===key?'sel':'')+'" onclick="selectPredScorer(\''+m.id+'\',\''+key+'\')">'+(p.none?'🚫 ':'')+esc(p.name)+'<small>'+(p.none?'Corretto se la partita finisce 0-0':esc(tName(p.team)))+'</small></button>'}).join('')+'</div><div class="pred-actions"><button class="pred-btn" onclick="saveMatchPrediction(\''+m.id+'\')">Salva pronostico</button></div>'+(window.predSaveMsg&&window.predSaveMsg[m.id]?'<div class="pred-save-msg">'+esc(window.predSaveMsg[m.id])+'</div>':'')+'</div></div>'}
 function pronosticaOraTab(){const matches=openPredictableMatches();const rounds=roundsForMatches(matches);if(!window.predRound||!rounds.includes(window.predRound))window.predRound=rounds[0]||null;const active=window.predRound;const filtered=active?matches.filter(m=>m.round===active):[];return '<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">⚽ Pronostica ora</div><div class="pred-muted">Scegli una giornata e compila risultato + marcatore. Dopo il salvataggio vedrai un messaggio di conferma.</div></div></div>'+roundButtons(rounds,active,'predRound')+(filtered.length?filtered.map(matchPredCard).join(''):'<div class="pred-empty"><b>Nessuna partita pronosticabile.</b><div class="pred-msg">Controlla PREDICTION_ROUNDS in data.json.</div></div>')+'</div>'}
-function savedPredictionRow(p){const m=CALENDAR.find(x=>x.id===p.match_id);if(!m)return'';return '<div class="pred-saved-row"><div><div class="pred-saved-match">'+esc(tName(m.home))+' vs '+esc(tName(m.away))+'</div><div class="pred-saved-extra">'+esc(m.round)+' · '+esc(m.date||'')+'</div><div class="pred-saved-scorer">🎯 '+(p.predicted_scorer_name?esc(p.predicted_scorer_name+' · '+tName(p.predicted_scorer_team)):'Nessun marcatore')+'</div></div><div><div class="pred-saved-value">'+p.home_score+' - '+p.away_score+'</div><button class="pred-btn secondary" style="margin-top:.45rem" onclick="editSavedPrediction(\''+m.id+'\',\''+esc(m.round)+'\')">Modifica</button></div></div>'}
+function savedPredictionRow(p){const m=CALENDAR.find(x=>x.id===p.match_id);if(!m)return'';return '<div class="pred-saved-row"><div><div class="pred-saved-match">'+esc(tName(m.home))+' vs '+esc(tName(m.away))+'</div><div class="pred-saved-extra">'+esc(m.round)+' · '+esc(m.date||'')+'</div><div class="pred-saved-scorer">🎯 '+esc(scorerDisplayName(p.predicted_scorer_name,p.predicted_scorer_team))+'</div></div><div><div class="pred-saved-value">'+p.home_score+' - '+p.away_score+'</div><button class="pred-btn secondary" style="margin-top:.45rem" onclick="editSavedPrediction(\''+m.id+'\',\''+esc(m.round)+'\')">Modifica</button></div></div>'}
 function savedPredictionsTab(){const mine=allPredictions.filter(p=>p.user_id===currentUser?.participant_id&&CALENDAR.find(m=>m.id===p.match_id)).sort((a,b)=>String(a.round).localeCompare(String(b.round))||String(a.match_id).localeCompare(String(b.match_id)));const rounds=roundsForMatches(mine.map(p=>CALENDAR.find(m=>m.id===p.match_id)).filter(Boolean));if(!window.predSavedRound||!rounds.includes(window.predSavedRound))window.predSavedRound=rounds[0]||null;const active=window.predSavedRound;const filtered=active?mine.filter(p=>p.round===active):mine;return preCard()+'<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">🧾 I miei pronostici</div><div class="pred-muted">Qui puoi verificare e modificare i pronostici partita che hai già salvato.</div></div></div>'+roundButtons(rounds,active,'predSavedRound')+(filtered.length?'<div class="pred-saved-list">'+filtered.map(savedPredictionRow).join('')+'</div>':'<div class="pred-empty"><b>Non hai ancora pronostici partita salvati.</b><div class="pred-msg">Vai su “Pronostica ora”, salva una partita e tornerà qui.</div></div>')+'</div>'}
 function rankingTab(){const rows=buildRanking();return '<div class="card pred-card"><h3>📈 Classifica generale</h3>'+(rows.length?rows.map((r,i)=>'<div class="card pred-rank-row"><div class="pred-rank-pos">'+(i+1)+'</div><div class="pred-rank-info"><div class="pred-rank-name">'+esc(r.nickname)+'</div><div class="pred-rank-meta">'+r.count+' pronostici · '+r.exact+' risultati esatti · '+r.scorers+' marcatori · '+r.pre+' pt pre-torneo</div></div><div class="pred-rank-points">'+r.points+'</div></div>').join(''):'<div class="md-noevent">Classifica ancora vuota.</div>')+'</div>'}
-function rulesTab(){return '<div class="card pred-card"><h3>📋 Regolamento pronostici</h3><div class="pred-rule-list"><p><strong>Partite:</strong> 3 punti per il segno corretto, +5 punti per il risultato esatto. Se il marcatore scelto segna almeno un gol, i punti ottenuti nella partita vengono raddoppiati.</p><p><strong>Pre-torneo:</strong> squadra vincitrice 15 punti, capocannoniere 10 punti, miglior portiere 10 punti, miglior giocatore 10 punti.</p><p><strong>Blocco:</strong> i pronostici di ogni giornata si chiudono all’inizio della prima partita della giornata. I pre-torneo si chiudono all’inizio della prima partita del torneo.</p><p><strong>Privacy:</strong> in classifica compare solo il nome utente. Nome e cognome restano privati e servono solo per un eventuale premio.</p></div></div>'}
+function rulesTab(){return '<div class="card pred-card"><h3>📋 Regolamento pronostici</h3><div class="pred-rule-list"><p><strong>Partite:</strong> 3 punti per il segno corretto, +5 punti per il risultato esatto. Se il marcatore scelto segna almeno un gol, i punti ottenuti nella partita vengono raddoppiati. L’opzione “Nessuno” vale come marcatore corretto solo se la partita finisce 0-0.</p><p><strong>Pre-torneo:</strong> squadra vincitrice 15 punti, capocannoniere 10 punti, miglior portiere 10 punti, miglior giocatore 10 punti.</p><p><strong>Blocco:</strong> i pronostici di ogni giornata si chiudono all’inizio della prima partita della giornata. I pre-torneo si chiudono all’inizio della prima partita del torneo.</p><p><strong>Privacy:</strong> in classifica compare solo il nome utente. Nome e cognome restano privati e servono solo per un eventuale premio.</p></div></div>'}
 function renderPronostici(){const root=document.getElementById('predictionsContent');if(!root)return;initSupabase();if(!sb){root.innerHTML='<div class="card pred-card"><div class="pred-msg err">Supabase non caricato.</div></div>';return}const isLogged=!!(currentUser&&currentProfile);const rank=ownRankInfo();const tab=window.predTab||'now';let content='<div class="pred-shell">';if(!isLogged){root.innerHTML=content+predIntroOverlay()+'</div>';return}content+='<div class="pred-home-head"><div class="pred-home-left"><div class="pred-avatar">🔮</div><div><div class="pred-home-name">Ciao '+esc(currentProfile.nickname)+'</div><div class="pred-home-sub">Area pronostici TTC</div></div></div><div class="pred-home-actions"><span class="pred-small-pill"><b>'+rank.points+'</b> punti</span><span class="pred-small-pill"><b>'+rank.position+'</b> posizione</span><button class="pred-btn ghost" onclick="predLogout()">Logout</button></div></div>';if(!getOwnPre()||window.predWizardStep!==null&&window.predWizardStep!==undefined){root.innerHTML=content+'<div class="pred-overlay"><div class="pred-pop"><div class="pred-pop-title">🏆 Pronostici pre-torneo</div><p>Completa queste scelte iniziali. Potrai modificarle fino all’inizio della prima partita.</p>'+preTournamentWizard()+'</div></div></div>';return}content+='<div class="pred-tabs"><button class="pred-tab '+(tab==='now'?'act':'')+'" onclick="window.predTab=\'now\';renderPronostici()">Pronostica ora</button><button class="pred-tab '+(tab==='saved'?'act':'')+'" onclick="window.predTab=\'saved\';renderPronostici()">I miei pronostici</button><button class="pred-tab '+(tab==='rank'?'act':'')+'" onclick="window.predTab=\'rank\';renderPronostici()">Classifica</button><button class="pred-tab '+(tab==='rules'?'act':'')+'" onclick="window.predTab=\'rules\';renderPronostici()">Regolamento</button></div>'+(tab==='saved'?savedPredictionsTab():tab==='rank'?rankingTab():tab==='rules'?rulesTab():pronosticaOraTab())+'</div>';root.innerHTML=content;}
 function renderMvpInline(){const mv=MVP_DATA||{},w=mv.winner||{};if(!w.name)return '';return '<div class="card mvp-inline"><div class="mvp-inline-title">⭐ Giocatore della giornata</div><div class="mvp-inline-main">'+esc(w.name)+'</div><div class="mvp-inline-sub">'+(w.team?teamLogo+' '+esc(tName(w.team)):'')+(w.pct?' · '+w.pct+'% dei voti':'')+'</div></div>'}
+
+
+// =========================================================
+// BLOCCO ZOOM / GESTURE MOBILE - SAFE v12
+// Mantiene lo scroll normale a un dito e gli scroll interni.
+// =========================================================
+document.addEventListener('gesturestart', function(e){
+  e.preventDefault();
+});
+document.addEventListener('gesturechange', function(e){
+  e.preventDefault();
+});
+document.addEventListener('gestureend', function(e){
+  e.preventDefault();
+});
+document.addEventListener('touchmove', function(e){
+  if(e.touches && e.touches.length > 1){
+    e.preventDefault();
+  }
+}, { passive:false });
+let ttcLastTouchEnd = 0;
+document.addEventListener('touchend', function(e){
+  const now = Date.now();
+  if(now - ttcLastTouchEnd <= 300){
+    e.preventDefault();
+  }
+  ttcLastTouchEnd = now;
+}, { passive:false });
 
 async function init(){await loadExternalData();buildDerivedData();syncStats();renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderGalleryTabs();if(GALLERY.length)showGalMatchday(GALLERY[0].matchday,null);renderCalendario();await refreshAuth();renderPronostici();if(sb)sb.auth.onAuthStateChange(async()=>{await refreshAuth();renderPronostici();});}document.addEventListener('DOMContentLoaded',init);
 </script>
