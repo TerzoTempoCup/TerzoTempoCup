@@ -1,9 +1,6 @@
 !!! TRATTARE DIVERSAMENTE VERSIONE DESKTOP E MOBILE !!!
 
 
-AGGIUNGERE OPZIONE NESSUNO (che vince se la partita finisce 0-0) TRA I MARCATORI
-PER PRONOSTICI PARTITE VEDERE SOLO La partita e che se clicchi si espande con SPAZIO PRONOSTICO
-SISTEMARE SU TELEFONO PERCHè SI MANGIA LA PARTE DI SOPRA
 
 - Togliere la scritta riserve da quelli in panchina e metterci il ruolo
 - Sezione "Eliminazione Diretta" in stile tabellone/bracket (capire come fare su mobile)
