@@ -1,114 +1,14 @@
 {
-  "TEAM_NAMES": {
-    "redstorm": "Squadra 1",
-    "bluefire": "Squadra 2",
-    "golden": "Squadra 3",
-    "wolves": "Squadra 4",
-    "dragons": "Squadra 5",
-    "titans": "Squadra 6",
-    "legends": "Squadra 7",
-    "sparta": "Squadra 8",
-    "phoenix": "Squadra 9",
-    "falcons": "Squadra 10",
-    "kings": "Squadra 11",
-    "sharks": "Squadra 12"
-  },
-  "PLAYER_NAMES": {
-    "Giocatore 1": "Giocatore 1",
-    "Giocatore 2": "Giocatore 2",
-    "Giocatore 3": "Giocatore 3",
-    "Giocatore 4": "Giocatore 4",
-    "Giocatore 5": "Giocatore 5",
-    "Giocatore 8": "Giocatore 8",
-    "Giocatore 9": "Giocatore 9",
-    "Giocatore 10": "Giocatore 10",
-    "Giocatore 11": "Giocatore 11",
-    "Giocatore 12": "Giocatore 12",
-    "Giocatore 15": "Giocatore 15",
-    "Giocatore 16": "Giocatore 16",
-    "Giocatore 17": "Giocatore 17",
-    "Giocatore 18": "Giocatore 18",
-    "Giocatore 19": "Giocatore 19",
-    "Giocatore 22": "Giocatore 22",
-    "Giocatore 23": "Giocatore 23",
-    "Giocatore 24": "Giocatore 24",
-    "Giocatore 25": "Giocatore 25",
-    "Giocatore 26": "Giocatore 26",
-    "Giocatore 29": "Giocatore 29",
-    "Giocatore 30": "Giocatore 30",
-    "Giocatore 31": "Giocatore 31",
-    "Giocatore 32": "Giocatore 32",
-    "Giocatore 33": "Giocatore 33",
-    "Giocatore 36": "Giocatore 36",
-    "Giocatore 37": "Giocatore 37",
-    "Giocatore 38": "Giocatore 38",
-    "Giocatore 39": "Giocatore 39",
-    "Giocatore 40": "Giocatore 40",
-    "Giocatore 43": "Giocatore 43",
-    "Giocatore 44": "Giocatore 44",
-    "Giocatore 45": "Giocatore 45",
-    "Giocatore 46": "Giocatore 46",
-    "Giocatore 47": "Giocatore 47",
-    "Giocatore 50": "Giocatore 50",
-    "Giocatore 51": "Giocatore 51",
-    "Giocatore 52": "Giocatore 52",
-    "Giocatore 53": "Giocatore 53",
-    "Giocatore 54": "Giocatore 54",
-    "Giocatore 57": "Giocatore 57",
-    "Giocatore 58": "Giocatore 58",
-    "Giocatore 59": "Giocatore 59",
-    "Giocatore 60": "Giocatore 60",
-    "Giocatore 61": "Giocatore 61",
-    "Giocatore 64": "Giocatore 64",
-    "Giocatore 65": "Giocatore 65",
-    "Giocatore 66": "Giocatore 66",
-    "Giocatore 67": "Giocatore 67",
-    "Giocatore 68": "Giocatore 68",
-    "Giocatore 71": "Giocatore 71",
-    "Giocatore 72": "Giocatore 72",
-    "Giocatore 73": "Giocatore 73",
-    "Giocatore 74": "Giocatore 74",
-    "Giocatore 75": "Giocatore 75",
-    "Giocatore 78": "Giocatore 78",
-    "Giocatore 79": "Giocatore 79",
-    "Giocatore 80": "Giocatore 80",
-    "Giocatore 81": "Giocatore 81",
-    "Giocatore 82": "Giocatore 82",
-    "Giocatore 6": "Giocatore 6",
-    "Giocatore 7": "Giocatore 7",
-    "Giocatore 13": "Giocatore 13",
-    "Giocatore 14": "Giocatore 14",
-    "Giocatore 20": "Giocatore 20",
-    "Giocatore 21": "Giocatore 21",
-    "Giocatore 27": "Giocatore 27",
-    "Giocatore 28": "Giocatore 28",
-    "Giocatore 34": "Giocatore 34",
-    "Giocatore 35": "Giocatore 35",
-    "Giocatore 41": "Giocatore 41",
-    "Giocatore 42": "Giocatore 42",
-    "Giocatore 48": "Giocatore 48",
-    "Giocatore 49": "Giocatore 49",
-    "Giocatore 55": "Giocatore 55",
-    "Giocatore 56": "Giocatore 56",
-    "Giocatore 62": "Giocatore 62",
-    "Giocatore 63": "Giocatore 63",
-    "Giocatore 69": "Giocatore 69",
-    "Giocatore 70": "Giocatore 70",
-    "Giocatore 76": "Giocatore 76",
-    "Giocatore 77": "Giocatore 77",
-    "Giocatore 83": "Giocatore 83",
-    "Giocatore 84": "Giocatore 84"
-  },
   "TEAMS": [
     {
       "id": "redstorm",
-      "name": "Squadra 1",
+      "name": "Red Storm",
       "group": "A",
-      "emoji": "🏆",
+      "emoji": "🔴",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 1",
+          "name": "Alessandro Fontana",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -118,7 +18,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 2",
+          "name": "Matteo Rinaldi",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -128,7 +28,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 3",
+          "name": "Luca Bianchi",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -138,7 +38,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 4",
+          "name": "Marco Rossi",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -148,7 +48,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 5",
+          "name": "Andrea Sala",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -160,13 +60,13 @@
     },
     {
       "id": "bluefire",
-      "name": "Squadra 2",
+      "name": "Blue Fire",
       "group": "A",
-      "emoji": "🏆",
+      "emoji": "🔵",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 8",
+          "name": "Davide Neri",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -175,8 +75,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 9",
+          "n": 5,
+          "name": "Giacomo Ferri",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -185,8 +85,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 10",
+          "n": 8,
+          "name": "Riccardo Bellini",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -195,8 +95,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 11",
+          "n": 11,
+          "name": "Simone Costa",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -206,7 +106,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 12",
+          "name": "Federico Moretti",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -218,13 +118,13 @@
     },
     {
       "id": "golden",
-      "name": "Squadra 3",
+      "name": "Golden FC",
       "group": "A",
-      "emoji": "🏆",
+      "emoji": "🟡",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 15",
+          "name": "Pietro Greco",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -233,8 +133,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 16",
+          "n": 3,
+          "name": "Nicola Serra",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -243,8 +143,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 17",
+          "n": 6,
+          "name": "Matteo Villa",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -254,7 +154,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 18",
+          "name": "Andrea Gori",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -264,7 +164,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 19",
+          "name": "Tommaso Riva",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -276,13 +176,13 @@
     },
     {
       "id": "wolves",
-      "name": "Squadra 4",
+      "name": "Black Wolves",
       "group": "A",
-      "emoji": "🏆",
+      "emoji": "⚫",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 22",
+          "name": "Fabio Conti",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -292,7 +192,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 23",
+          "name": "Lorenzo Riva",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -302,7 +202,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 24",
+          "name": "Edoardo Pini",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -311,8 +211,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 25",
+          "n": 11,
+          "name": "Christian Bruno",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -322,7 +222,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 26",
+          "name": "Michele Sarti",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -334,13 +234,13 @@
     },
     {
       "id": "dragons",
-      "name": "Squadra 5",
+      "name": "Dragons",
       "group": "B",
-      "emoji": "🏆",
+      "emoji": "🐉",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 29",
+          "name": "Paolo Greco",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -349,8 +249,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 30",
+          "n": 5,
+          "name": "Daniele Fabbri",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -360,7 +260,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 31",
+          "name": "Simone Testa",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -370,7 +270,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 32",
+          "name": "Ivan Romano",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -380,7 +280,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 33",
+          "name": "Alessio Gatti",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -392,13 +292,13 @@
     },
     {
       "id": "titans",
-      "name": "Squadra 6",
+      "name": "Titans",
       "group": "B",
-      "emoji": "🏆",
+      "emoji": "🛡️",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 36",
+          "name": "Giorgio Sala",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -408,7 +308,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 37",
+          "name": "Enrico Rota",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -417,8 +317,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 38",
+          "n": 8,
+          "name": "Manuel Esposito",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -427,8 +327,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 39",
+          "n": 11,
+          "name": "Davide Sala",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -438,7 +338,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 40",
+          "name": "Ivan Bruno",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -450,13 +350,13 @@
     },
     {
       "id": "legends",
-      "name": "Squadra 7",
+      "name": "Legends",
       "group": "B",
-      "emoji": "🏆",
+      "emoji": "⭐",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 43",
+          "name": "Nicola Grassi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -465,8 +365,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 44",
+          "n": 3,
+          "name": "Francesco Lombardi",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -475,8 +375,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 45",
+          "n": 6,
+          "name": "Daniele Serra",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -486,7 +386,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 46",
+          "name": "Mattia Leone",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -496,7 +396,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 47",
+          "name": "Filippo Galli",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -508,13 +408,13 @@
     },
     {
       "id": "sparta",
-      "name": "Squadra 8",
+      "name": "Sparta",
       "group": "B",
-      "emoji": "🏆",
+      "emoji": "🏛️",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 50",
+          "name": "Franco Lodi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -523,8 +423,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 51",
+          "n": 5,
+          "name": "Roberto Mancini",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -534,7 +434,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 52",
+          "name": "Tommaso Leoni",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -543,8 +443,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 53",
+          "n": 11,
+          "name": "Luca Rossetti",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -554,7 +454,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 54",
+          "name": "Marco De Luca",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -566,13 +466,13 @@
     },
     {
       "id": "phoenix",
-      "name": "Squadra 9",
+      "name": "Phoenix",
       "group": "C",
-      "emoji": "🏆",
+      "emoji": "🔥",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 57",
+          "name": "Emanuele Rizzo",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -582,7 +482,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 58",
+          "name": "Cristian Fabbri",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -591,8 +491,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 59",
+          "n": 8,
+          "name": "Stefano Bruni",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -602,7 +502,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 60",
+          "name": "Gabriele Monti",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -612,7 +512,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 61",
+          "name": "Nicolò Ferrari",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -624,13 +524,13 @@
     },
     {
       "id": "falcons",
-      "name": "Squadra 10",
+      "name": "Falcons",
       "group": "C",
-      "emoji": "🏆",
+      "emoji": "🦅",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 64",
+          "name": "Matteo Gatti",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -639,8 +539,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 65",
+          "n": 5,
+          "name": "Giorgio Sala",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -650,7 +550,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 66",
+          "name": "Lorenzo Vitali",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -659,8 +559,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 67",
+          "n": 11,
+          "name": "Alberto Rizzi",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -670,7 +570,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 68",
+          "name": "Davide Marino",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -682,13 +582,13 @@
     },
     {
       "id": "kings",
-      "name": "Squadra 11",
+      "name": "Kings",
       "group": "C",
-      "emoji": "🏆",
+      "emoji": "👑",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 71",
+          "name": "Pietro Guidi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -697,8 +597,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 72",
+          "n": 3,
+          "name": "Andrea Moretti",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -707,8 +607,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 73",
+          "n": 6,
+          "name": "Davide Pini",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -718,7 +618,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 74",
+          "name": "Samuel Ricci",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -728,7 +628,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 75",
+          "name": "Leonardo Villa",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -740,13 +640,13 @@
     },
     {
       "id": "sharks",
-      "name": "Squadra 12",
+      "name": "Sharks",
       "group": "C",
-      "emoji": "🏆",
+      "emoji": "🦈",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 78",
+          "name": "Matteo Rizzi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -756,7 +656,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 79",
+          "name": "Filippo Serra",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -765,8 +665,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 80",
+          "n": 8,
+          "name": "Marco Neri",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -775,8 +675,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 81",
+          "n": 11,
+          "name": "Luca Ferri",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -786,7 +686,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 82",
+          "name": "Thomas Carli",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -801,7 +701,7 @@
     "redstorm": [
       {
         "n": 12,
-        "name": "Giocatore 6",
+        "name": "Riserva Red 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -811,7 +711,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 7",
+        "name": "Riserva Red 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -823,7 +723,7 @@
     "bluefire": [
       {
         "n": 12,
-        "name": "Giocatore 13",
+        "name": "Riserva Blue 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -833,7 +733,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 14",
+        "name": "Riserva Blue 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -845,7 +745,7 @@
     "golden": [
       {
         "n": 12,
-        "name": "Giocatore 20",
+        "name": "Riserva Golden 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -855,7 +755,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 21",
+        "name": "Riserva Golden 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -867,7 +767,7 @@
     "wolves": [
       {
         "n": 12,
-        "name": "Giocatore 27",
+        "name": "Riserva Black 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -877,7 +777,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 28",
+        "name": "Riserva Black 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -889,7 +789,7 @@
     "dragons": [
       {
         "n": 12,
-        "name": "Giocatore 34",
+        "name": "Riserva Dragons 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -899,7 +799,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 35",
+        "name": "Riserva Dragons 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -911,7 +811,7 @@
     "titans": [
       {
         "n": 12,
-        "name": "Giocatore 41",
+        "name": "Riserva Titans 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -921,7 +821,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 42",
+        "name": "Riserva Titans 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -933,7 +833,7 @@
     "legends": [
       {
         "n": 12,
-        "name": "Giocatore 48",
+        "name": "Riserva Legends 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -943,7 +843,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 49",
+        "name": "Riserva Legends 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -955,7 +855,7 @@
     "sparta": [
       {
         "n": 12,
-        "name": "Giocatore 55",
+        "name": "Riserva Sparta 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -965,7 +865,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 56",
+        "name": "Riserva Sparta 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -977,7 +877,7 @@
     "phoenix": [
       {
         "n": 12,
-        "name": "Giocatore 62",
+        "name": "Riserva Phoenix 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -987,7 +887,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 63",
+        "name": "Riserva Phoenix 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -999,7 +899,7 @@
     "falcons": [
       {
         "n": 12,
-        "name": "Giocatore 69",
+        "name": "Riserva Falcons 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1009,7 +909,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 70",
+        "name": "Riserva Falcons 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1021,7 +921,7 @@
     "kings": [
       {
         "n": 12,
-        "name": "Giocatore 76",
+        "name": "Riserva Kings 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1031,7 +931,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 77",
+        "name": "Riserva Kings 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1043,7 +943,7 @@
     "sharks": [
       {
         "n": 12,
-        "name": "Giocatore 83",
+        "name": "Riserva Sharks 1",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1053,7 +953,7 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 84",
+        "name": "Riserva Sharks 2",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1415,34 +1315,35 @@
       "detailId": null
     }
   ],
+  
   "DETAILS": {
     "d_c1": {
       "scorers": [
         {
           "min": 8,
           "team": "redstorm",
-          "name": "Giocatore 4",
+          "name": "Marco Rossi",
           "assist": {
             "team": "redstorm",
-            "name": "Giocatore 3"
+            "name": "Luca Bianchi"
           }
         },
         {
           "min": 17,
           "team": "bluefire",
-          "name": "Giocatore 12",
+          "name": "Federico Moretti",
           "assist": {
             "team": "bluefire",
-            "name": "Giocatore 10"
+            "name": "Riccardo Bellini"
           }
         },
         {
           "min": 31,
           "team": "redstorm",
-          "name": "Giocatore 5",
+          "name": "Andrea Sala",
           "assist": {
             "team": "redstorm",
-            "name": "Giocatore 4"
+            "name": "Marco Rossi"
           }
         }
       ],
@@ -1450,7 +1351,7 @@
         {
           "min": 24,
           "team": "bluefire",
-          "name": "Giocatore 9",
+          "name": "Giacomo Ferri",
           "type": "Y"
         }
       ],
@@ -1462,13 +1363,13 @@
         {
           "min": 15,
           "team": "golden",
-          "name": "Giocatore 16",
+          "name": "Nicola Serra",
           "type": "Y"
         },
         {
           "min": 28,
           "team": "wolves",
-          "name": "Giocatore 23",
+          "name": "Lorenzo Riva",
           "type": "Y"
         }
       ],
@@ -1479,37 +1380,37 @@
         {
           "min": 6,
           "team": "titans",
-          "name": "Giocatore 40",
+          "name": "Ivan Bruno",
           "assist": {
             "team": "titans",
-            "name": "Giocatore 39"
+            "name": "Davide Sala"
           }
         },
         {
           "min": 19,
           "team": "dragons",
-          "name": "Giocatore 33",
+          "name": "Alessio Gatti",
           "assist": {
             "team": "dragons",
-            "name": "Giocatore 32"
+            "name": "Ivan Romano"
           }
         },
         {
           "min": 27,
           "team": "titans",
-          "name": "Giocatore 38",
+          "name": "Manuel Esposito",
           "assist": {
             "team": "titans",
-            "name": "Giocatore 40"
+            "name": "Ivan Bruno"
           }
         },
         {
           "min": 34,
           "team": "titans",
-          "name": "Giocatore 40",
+          "name": "Ivan Bruno",
           "assist": {
             "team": "titans",
-            "name": "Giocatore 38"
+            "name": "Manuel Esposito"
           }
         }
       ],
@@ -1517,7 +1418,7 @@
         {
           "min": 22,
           "team": "dragons",
-          "name": "Giocatore 30",
+          "name": "Daniele Fabbri",
           "type": "Y"
         }
       ],
@@ -1528,37 +1429,37 @@
         {
           "min": 5,
           "team": "legends",
-          "name": "Giocatore 47",
+          "name": "Filippo Galli",
           "assist": {
             "team": "legends",
-            "name": "Giocatore 46"
+            "name": "Mattia Leone"
           }
         },
         {
           "min": 13,
           "team": "sparta",
-          "name": "Giocatore 54",
+          "name": "Marco De Luca",
           "assist": {
             "team": "sparta",
-            "name": "Giocatore 53"
+            "name": "Luca Rossetti"
           }
         },
         {
           "min": 25,
           "team": "legends",
-          "name": "Giocatore 46",
+          "name": "Mattia Leone",
           "assist": {
             "team": "legends",
-            "name": "Giocatore 45"
+            "name": "Daniele Serra"
           }
         },
         {
           "min": 38,
           "team": "sparta",
-          "name": "Giocatore 52",
+          "name": "Tommaso Leoni",
           "assist": {
             "team": "sparta",
-            "name": "Giocatore 54"
+            "name": "Marco De Luca"
           }
         }
       ],
@@ -1570,37 +1471,37 @@
         {
           "min": 4,
           "team": "phoenix",
-          "name": "Giocatore 61",
+          "name": "Nicolò Ferrari",
           "assist": {
             "team": "phoenix",
-            "name": "Giocatore 60"
+            "name": "Gabriele Monti"
           }
         },
         {
           "min": 16,
           "team": "phoenix",
-          "name": "Giocatore 60",
+          "name": "Gabriele Monti",
           "assist": {
             "team": "phoenix",
-            "name": "Giocatore 59"
+            "name": "Stefano Bruni"
           }
         },
         {
           "min": 23,
           "team": "falcons",
-          "name": "Giocatore 68",
+          "name": "Davide Marino",
           "assist": {
             "team": "falcons",
-            "name": "Giocatore 66"
+            "name": "Lorenzo Vitali"
           }
         },
         {
           "min": 36,
           "team": "phoenix",
-          "name": "Giocatore 61",
+          "name": "Nicolò Ferrari",
           "assist": {
             "team": "phoenix",
-            "name": "Giocatore 58"
+            "name": "Cristian Fabbri"
           }
         }
       ],
@@ -1608,7 +1509,7 @@
         {
           "min": 30,
           "team": "falcons",
-          "name": "Giocatore 65",
+          "name": "Giorgio Sala",
           "type": "Y"
         }
       ],
@@ -1619,19 +1520,19 @@
         {
           "min": 11,
           "team": "sharks",
-          "name": "Giocatore 82",
+          "name": "Thomas Carli",
           "assist": {
             "team": "sharks",
-            "name": "Giocatore 81"
+            "name": "Luca Ferri"
           }
         },
         {
           "min": 29,
           "team": "sharks",
-          "name": "Giocatore 80",
+          "name": "Marco Neri",
           "assist": {
             "team": "sharks",
-            "name": "Giocatore 82"
+            "name": "Thomas Carli"
           }
         }
       ],
@@ -1639,13 +1540,14 @@
         {
           "min": 18,
           "team": "kings",
-          "name": "Giocatore 72",
+          "name": "Andrea Moretti",
           "type": "Y"
         }
       ],
       "penalties": []
     }
   },
+
   "MVP_DATA": {
     "matchday": 1,
     "closed": false,
@@ -1663,32 +1565,32 @@
       "date": "11 Mag",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 2",
+          "name": "Red Storm vs Blue Fire",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 3 vs Squadra 4",
+          "name": "Golden FC vs Black Wolves",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 5 vs Squadra 6",
+          "name": "Dragons vs Titans",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 7 vs Squadra 8",
+          "name": "Legends vs Sparta",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 9 vs Squadra 10",
+          "name": "Phoenix vs Falcons",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 11 vs Squadra 12",
+          "name": "Kings vs Sharks",
           "link": "",
           "count": 0
         }
@@ -1699,32 +1601,32 @@
       "date": "18 Mag",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 3",
+          "name": "Red Storm vs Golden FC",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 2 vs Squadra 4",
+          "name": "Blue Fire vs Black Wolves",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 5 vs Squadra 7",
+          "name": "Dragons vs Legends",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 6 vs Squadra 8",
+          "name": "Titans vs Sparta",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 9 vs Squadra 11",
+          "name": "Phoenix vs Kings",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 10 vs Squadra 12",
+          "name": "Falcons vs Sharks",
           "link": "",
           "count": 0
         }
@@ -1735,32 +1637,32 @@
       "date": "25 Mag",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 4",
+          "name": "Red Storm vs Black Wolves",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 2 vs Squadra 3",
+          "name": "Blue Fire vs Golden FC",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 5 vs Squadra 8",
+          "name": "Dragons vs Sparta",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 6 vs Squadra 7",
+          "name": "Titans vs Legends",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 9 vs Squadra 12",
+          "name": "Phoenix vs Sharks",
           "link": "",
           "count": 0
         },
         {
-          "name": "Squadra 10 vs Squadra 11",
+          "name": "Falcons vs Kings",
           "link": "",
           "count": 0
         }
