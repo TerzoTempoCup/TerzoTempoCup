@@ -3,7 +3,7 @@
 <head>
 <link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#000e3a">
 <title>Terzo Tempo Cup</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -678,6 +678,46 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
   }
 }
 
+
+/* =========================================================
+   UX v26: mobile no auto-zoom sui campi pronostici/registrazione
+   - Evita lo zoom automatico iOS quando si mette focus sugli input.
+   - Mantiene lo scroll normale nelle sezioni e nei popup.
+   ========================================================= */
+@media(max-width:760px){
+  input,
+  select,
+  textarea,
+  button,
+  .pred-input,
+  .pred-eye{
+    font-size:16px!important;
+  }
+  input,
+  select,
+  textarea,
+  .pred-input{
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+  .pred-pop,
+  .modal,
+  body{
+    overscroll-behavior-x:none;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  .pred-choice,
+  .pred-team-chip,
+  .pred-round-chip,
+  .botnav-item{
+    touch-action:manipulation;
+  }
+}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -1302,5 +1342,21 @@ function renderMvpInline(){const mv=MVP_DATA||{},w=mv.winner||{};if(!w.name)retu
 
 async function init(){await loadExternalData();buildDerivedData();syncStats();renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderGalleryTabs();if(GALLERY.length)showGalMatchday(GALLERY[0].matchday,null);renderCalendario();await refreshAuth();renderPronostici();if(sb)sb.auth.onAuthStateChange(async()=>{await refreshAuth();renderPronostici();});}document.addEventListener('DOMContentLoaded',init);
 </script>
+
+<script>
+/* UX v26: blocco zoom involontario su mobile senza bloccare lo scroll */
+(function(){
+  let lastTouchEnd = 0;
+  document.addEventListener('gesturestart', function(e){ e.preventDefault(); }, {passive:false});
+  document.addEventListener('gesturechange', function(e){ e.preventDefault(); }, {passive:false});
+  document.addEventListener('gestureend', function(e){ e.preventDefault(); }, {passive:false});
+  document.addEventListener('touchend', function(e){
+    const now = Date.now();
+    if(now - lastTouchEnd <= 300){ e.preventDefault(); }
+    lastTouchEnd = now;
+  }, {passive:false});
+})();
+</script>
+
 </body>
 </html>
