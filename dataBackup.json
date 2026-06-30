@@ -1070,13 +1070,13 @@
       "group": "A",
       "home": "redstorm",
       "away": "bluefire",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c1"
     },
     {
       "id": "c2",
@@ -1084,13 +1084,13 @@
       "group": "A",
       "home": "golden",
       "away": "wolves",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "20:40",
       "location": "Campo Nord",
-      "sh": null,
-      "sa": null,
+      "sh": 0,
+      "sa": 0,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c2"
     },
     {
       "id": "c3",
@@ -1098,13 +1098,13 @@
       "group": "B",
       "home": "dragons",
       "away": "titans",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "21:20",
       "location": "Campo Sud",
-      "sh": null,
-      "sa": null,
+      "sh": 1,
+      "sa": 3,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c3"
     },
     {
       "id": "c4",
@@ -1112,13 +1112,13 @@
       "group": "B",
       "home": "legends",
       "away": "sparta",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "22:00",
       "location": "Campo Sud",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c4"
     },
     {
       "id": "c5",
@@ -1126,13 +1126,13 @@
       "group": "C",
       "home": "phoenix",
       "away": "falcons",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "22:40",
       "location": "Campo Est",
-      "sh": null,
-      "sa": null,
+      "sh": 3,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c5"
     },
     {
       "id": "c6",
@@ -1140,13 +1140,13 @@
       "group": "C",
       "home": "kings",
       "away": "sharks",
-      "date": "01 Lug",
+      "date": "11 Mag",
       "time": "23:20",
       "location": "Campo Est",
-      "sh": null,
-      "sa": null,
+      "sh": 0,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c6"
     },
     {
       "id": "c7",
@@ -1154,7 +1154,7 @@
       "group": "A",
       "home": "redstorm",
       "away": "golden",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "20:00",
       "location": "Campo Nord",
       "sh": null,
@@ -1168,7 +1168,7 @@
       "group": "A",
       "home": "bluefire",
       "away": "wolves",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "20:40",
       "location": "Campo Nord",
       "sh": null,
@@ -1182,7 +1182,7 @@
       "group": "B",
       "home": "dragons",
       "away": "legends",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "21:20",
       "location": "Campo Sud",
       "sh": null,
@@ -1196,7 +1196,7 @@
       "group": "B",
       "home": "titans",
       "away": "sparta",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "22:00",
       "location": "Campo Sud",
       "sh": null,
@@ -1210,7 +1210,7 @@
       "group": "C",
       "home": "phoenix",
       "away": "kings",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "22:40",
       "location": "Campo Est",
       "sh": null,
@@ -1224,7 +1224,7 @@
       "group": "C",
       "home": "falcons",
       "away": "sharks",
-      "date": "?? Lug",
+      "date": "18 Mag",
       "time": "23:20",
       "location": "Campo Est",
       "sh": null,
@@ -1238,7 +1238,7 @@
       "group": "A",
       "home": "redstorm",
       "away": "wolves",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "20:00",
       "location": "Campo Nord",
       "sh": null,
@@ -1252,7 +1252,7 @@
       "group": "A",
       "home": "bluefire",
       "away": "golden",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "20:40",
       "location": "Campo Nord",
       "sh": null,
@@ -1266,7 +1266,7 @@
       "group": "B",
       "home": "dragons",
       "away": "sparta",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "21:20",
       "location": "Campo Sud",
       "sh": null,
@@ -1280,7 +1280,7 @@
       "group": "B",
       "home": "titans",
       "away": "legends",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "22:00",
       "location": "Campo Sud",
       "sh": null,
@@ -1294,7 +1294,7 @@
       "group": "C",
       "home": "phoenix",
       "away": "sharks",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "22:40",
       "location": "Campo Est",
       "sh": null,
@@ -1308,7 +1308,7 @@
       "group": "C",
       "home": "falcons",
       "away": "kings",
-      "date": "?? Lug",
+      "date": "25 Mag",
       "time": "23:20",
       "location": "Campo Est",
       "sh": null,
@@ -1322,7 +1322,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "1 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
       "sh": null,
@@ -1336,7 +1336,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "1 Giugno",
       "time": "21:30",
       "location": "Campo Sud",
       "sh": null,
@@ -1350,7 +1350,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "2 Giugno",
       "time": "20:00",
       "location": "Campo Est",
       "sh": null,
@@ -1364,7 +1364,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "2 Giugno",
       "time": "21:30",
       "location": "Campo Nord",
       "sh": null,
@@ -1378,7 +1378,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "8 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
       "sh": null,
@@ -1392,7 +1392,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "8 Giugno",
       "time": "21:45",
       "location": "Campo Sud",
       "sh": null,
@@ -1406,7 +1406,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "15 Giugno",
       "time": "20:00",
       "location": "Campo Nord",
       "sh": null,
@@ -1415,138 +1415,354 @@
       "detailId": null
     }
   ],
-  "DETAILS": {},
+  "DETAILS": {
+    "d_c1": {
+      "scorers": [
+        {
+          "min": 8,
+          "team": "redstorm",
+          "name": "Giocatore 4",
+          "assist": {
+            "team": "redstorm",
+            "name": "Giocatore 3"
+          }
+        },
+        {
+          "min": 17,
+          "team": "bluefire",
+          "name": "Giocatore 12",
+          "assist": {
+            "team": "bluefire",
+            "name": "Giocatore 10"
+          }
+        },
+        {
+          "min": 31,
+          "team": "redstorm",
+          "name": "Giocatore 5",
+          "assist": {
+            "team": "redstorm",
+            "name": "Giocatore 4"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "min": 24,
+          "team": "bluefire",
+          "name": "Giocatore 9",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "d_c2": {
+      "scorers": [],
+      "cards": [
+        {
+          "min": 15,
+          "team": "golden",
+          "name": "Giocatore 16",
+          "type": "Y"
+        },
+        {
+          "min": 28,
+          "team": "wolves",
+          "name": "Giocatore 23",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "d_c3": {
+      "scorers": [
+        {
+          "min": 6,
+          "team": "titans",
+          "name": "Giocatore 40",
+          "assist": {
+            "team": "titans",
+            "name": "Giocatore 39"
+          }
+        },
+        {
+          "min": 19,
+          "team": "dragons",
+          "name": "Giocatore 33",
+          "assist": {
+            "team": "dragons",
+            "name": "Giocatore 32"
+          }
+        },
+        {
+          "min": 27,
+          "team": "titans",
+          "name": "Giocatore 38",
+          "assist": {
+            "team": "titans",
+            "name": "Giocatore 40"
+          }
+        },
+        {
+          "min": 34,
+          "team": "titans",
+          "name": "Giocatore 40",
+          "assist": {
+            "team": "titans",
+            "name": "Giocatore 38"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "min": 22,
+          "team": "dragons",
+          "name": "Giocatore 30",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "d_c4": {
+      "scorers": [
+        {
+          "min": 5,
+          "team": "legends",
+          "name": "Giocatore 47",
+          "assist": {
+            "team": "legends",
+            "name": "Giocatore 46"
+          }
+        },
+        {
+          "min": 13,
+          "team": "sparta",
+          "name": "Giocatore 54",
+          "assist": {
+            "team": "sparta",
+            "name": "Giocatore 53"
+          }
+        },
+        {
+          "min": 25,
+          "team": "legends",
+          "name": "Giocatore 46",
+          "assist": {
+            "team": "legends",
+            "name": "Giocatore 45"
+          }
+        },
+        {
+          "min": 38,
+          "team": "sparta",
+          "name": "Giocatore 52",
+          "assist": {
+            "team": "sparta",
+            "name": "Giocatore 54"
+          }
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    },
+    "d_c5": {
+      "scorers": [
+        {
+          "min": 4,
+          "team": "phoenix",
+          "name": "Giocatore 61",
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 60"
+          }
+        },
+        {
+          "min": 16,
+          "team": "phoenix",
+          "name": "Giocatore 60",
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 59"
+          }
+        },
+        {
+          "min": 23,
+          "team": "falcons",
+          "name": "Giocatore 68",
+          "assist": {
+            "team": "falcons",
+            "name": "Giocatore 66"
+          }
+        },
+        {
+          "min": 36,
+          "team": "phoenix",
+          "name": "Giocatore 61",
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 58"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "min": 30,
+          "team": "falcons",
+          "name": "Giocatore 65",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "d_c6": {
+      "scorers": [
+        {
+          "min": 11,
+          "team": "sharks",
+          "name": "Giocatore 82",
+          "assist": {
+            "team": "sharks",
+            "name": "Giocatore 81"
+          }
+        },
+        {
+          "min": 29,
+          "team": "sharks",
+          "name": "Giocatore 80",
+          "assist": {
+            "team": "sharks",
+            "name": "Giocatore 82"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "min": 18,
+          "team": "kings",
+          "name": "Giocatore 72",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    }
+  },
   "MVP_DATA": {
     "matchday": 1,
     "closed": false,
     "igHandle": "@terzotempocup",
-    "winner": null,
+    "winner": {
+      "name": null,
+      "team": null,
+      "pct": 0
+    },
     "candidates": []
   },
   "GALLERY": [
     {
       "matchday": 1,
-      "date": "01 Lug",
+      "date": "11 Mag",
       "matches": [
         {
           "name": "Squadra 1 vs Squadra 2",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 3 vs Squadra 4",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 5 vs Squadra 6",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 7 vs Squadra 8",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 9 vs Squadra 10",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 11 vs Squadra 12",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         }
       ]
     },
     {
       "matchday": 2,
-      "date": "?? Lug",
+      "date": "18 Mag",
       "matches": [
         {
           "name": "Squadra 1 vs Squadra 3",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 2 vs Squadra 4",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 5 vs Squadra 7",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 6 vs Squadra 8",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 9 vs Squadra 11",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 10 vs Squadra 12",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         }
       ]
     },
     {
       "matchday": 3,
-      "date": "?? Lug",
+      "date": "25 Mag",
       "matches": [
         {
           "name": "Squadra 1 vs Squadra 4",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 2 vs Squadra 3",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 5 vs Squadra 8",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 6 vs Squadra 7",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 9 vs Squadra 12",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         },
         {
           "name": "Squadra 10 vs Squadra 11",
           "link": "",
-          "count": 0,
-          "yt": "#"
+          "count": 0
         }
       ]
     }
@@ -1555,44 +1771,38 @@
     {
       "round": "Giornata 1",
       "label": "Giornata 1",
-      "lockAt": "2026-07-01T20:00:00+02:00",
-      "status": "open",
-      "message": "Pronostici aperti fino all’inizio della prima partita"
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
       "round": "Giornata 2",
       "label": "Giornata 2",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili"
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
       "round": "Giornata 3",
       "label": "Giornata 3",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili"
+      "lockAt": "2099-12-31T23:59:00+02:00",
+      "status": "open"
     },
     {
       "round": "Quarti di Finale",
       "label": "Quarti di Finale",
       "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "status": "draft"
     },
     {
       "round": "Semifinali",
       "label": "Semifinali",
       "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "status": "draft"
     },
     {
       "round": "Finale",
       "label": "Finale",
       "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "status": "draft"
     }
   ],
   "PREDICTION_FINAL_AWARDS": {

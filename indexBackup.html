@@ -718,336 +718,15 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
   }
 }
 
-
-/* =========================================================
-   UX v27: status pronostici + top giornata + share compatto
-   ========================================================= */
-.pred-share-btn{padding:.42rem .68rem!important;font-size:.8rem!important;display:inline-flex;align-items:center;gap:.28rem;white-space:nowrap}
-.pred-status-card{padding:.86rem .95rem;margin:.75rem 0 1rem;border-radius:18px;background:linear-gradient(135deg,rgba(24,112,32,.15),rgba(18,48,200,.12));border:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:center}
-.pred-status-title{font-family:var(--ft);font-size:1.02rem;color:#fff;margin-bottom:.16rem}.pred-status-text{color:var(--mu);font-weight:850;font-size:.82rem;line-height:1.35}.pred-status-badge{border-radius:999px;padding:.4rem .7rem;font-weight:950;font-size:.78rem;border:1px solid rgba(255,255,255,.16);white-space:nowrap}.pred-status-badge.open{background:rgba(24,112,32,.26);color:#95f6a9;border-color:rgba(24,112,32,.52)}.pred-status-badge.closed{background:rgba(200,0,0,.22);color:#ff9a9a;border-color:rgba(200,0,0,.50)}.pred-status-badge.draft{background:rgba(255,255,255,.08);color:var(--mu)}
-.pred-day-winners{display:grid;gap:.55rem;margin-bottom:.15rem}.pred-day-winner-row{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;padding:.75rem .85rem;border-radius:16px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10)}.pred-day-winner-icon{width:34px;height:34px;border-radius:13px;display:grid;place-items:center;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.34)}.pred-day-winner-title{font-weight:950;color:#fff}.pred-day-winner-sub{font-size:.74rem;color:var(--mu);font-weight:850;margin-top:.1rem}.pred-day-winner-points{font-family:var(--ft);font-size:1.24rem;color:#ffd080;text-align:right}.pred-day-winner-tie{font-size:.68rem;color:var(--mu);font-weight:850;text-align:right;margin-top:.05rem}
-@media(max-width:760px){.pred-share-btn{flex:0 0 auto!important}.pred-status-card{grid-template-columns:1fr;align-items:start}.pred-status-badge{justify-self:start}.pred-day-winner-row{grid-template-columns:auto 1fr auto}.pred-day-winner-points{font-size:1.08rem}}
-
-
-/* =========================================================
-   UX v28: pulsante condividi in navbar desktop/mobile
-   ========================================================= */
-.nav-share-btn{
-  margin-top:auto;
-  width:100%;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  font-family:var(--fb);
-  font-weight:950;
-  font-size:.84rem;
-  padding:.62rem .75rem;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:.35rem;
-  transition:.18s;
-}
-.nav-share-btn:hover{
-  background:rgba(200,0,0,.30);
-  border-color:rgba(200,0,0,.55);
-}
-.mobile-top-share,
-.mobile-top-rule{
-  margin-left:auto;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  border-radius:999px;
-  font-family:var(--fb);
-  font-weight:950;
-  font-size:.8rem;
-  padding:.42rem .62rem;
-  display:none;
-  align-items:center;
-  gap:.25rem;
-  white-space:nowrap;
-}
-@media(max-width:700px){
-  .mobile-top-share,.mobile-top-rule{display:inline-flex}
-  .nav-share-btn{display:none}
-}
-
-
-/* =========================================================
-   UX v30: pre-sorteggi, header pronostici centrato, highlights
-   ========================================================= */
-@media(min-width:761px){
-  #pronostici .pred-home-head{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
-    align-items:center!important;
-    gap:.85rem!important;
-  }
-  #pronostici .pred-home-left{
-    justify-self:start!important;
-  }
-  #pronostici .pred-home-actions{
-    display:contents!important;
-  }
-  #pronostici .pred-home-stats{
-    grid-column:2!important;
-    justify-self:center!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    gap:.45rem!important;
-  }
-  #pronostici .pred-logout{
-    grid-column:3!important;
-    justify-self:end!important;
-  }
-}
-@media(max-width:760px){
-  #pronostici .pred-home-head{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) auto!important;
-    align-items:center!important;
-    gap:.7rem!important;
-  }
-  #pronostici .pred-home-left{
-    grid-column:1!important;
-    min-width:0!important;
-  }
-  #pronostici .pred-home-actions{
-    display:contents!important;
-  }
-  #pronostici .pred-logout{
-    grid-column:2!important;
-    justify-self:end!important;
-    align-self:center!important;
-    white-space:nowrap!important;
-  }
-  #pronostici .pred-home-stats{
-    grid-column:1 / -1!important;
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:.45rem!important;
-    width:100%!important;
-  }
-}
-.pred-empty{
-  padding:1rem;
-  border-radius:18px;
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.10);
-  color:#fff;
-}
-.pred-empty b{display:block;margin-bottom:.25rem;color:#ffd080;font-family:var(--ft)}
-.gal-actions{
-  display:flex;
-  gap:.4rem;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-top:.2rem;
-}
-.gal-action-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.25rem;
-  text-decoration:none;
-  border-radius:999px;
-  padding:.32rem .58rem;
-  font-size:.68rem;
-  font-weight:950;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-}
-.gal-action-btn.hl{
-  color:#ffb0b0;
-  border-color:rgba(200,0,0,.45);
-  background:rgba(200,0,0,.20);
-}
-.gal-action-btn:hover{background:rgba(255,255,255,.14)}
-.gal-action-btn.hl:hover{background:rgba(200,0,0,.34);border-color:rgba(200,0,0,.7)}
-
-
-/* =========================================================
-   UX v30: header pronostici centrato + highlights galleria
-   ========================================================= */
-@media(min-width:761px){
-  #pronostici .pred-home-head{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important;gap:.85rem!important}
-  #pronostici .pred-home-left{justify-self:start!important}
-  #pronostici .pred-home-actions{display:contents!important}
-  #pronostici .pred-home-stats{grid-column:2!important;justify-self:center!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:.45rem!important}
-  #pronostici .pred-logout{grid-column:3!important;justify-self:end!important}
-}
-@media(max-width:760px){
-  #pronostici .pred-home-head{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:.7rem!important}
-  #pronostici .pred-home-left{grid-column:1!important;min-width:0!important}
-  #pronostici .pred-home-actions{display:contents!important}
-  #pronostici .pred-logout{grid-column:2!important;justify-self:end!important;align-self:center!important;white-space:nowrap!important}
-  #pronostici .pred-home-stats{grid-column:1 / -1!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:.45rem!important;width:100%!important}
-}
-.pred-empty{padding:1rem;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);color:#fff}
-.pred-empty b{display:block;margin-bottom:.25rem;color:#ffd080;font-family:var(--ft)}
-.gal-actions{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center;margin-top:.2rem}
-.gal-action-btn{display:inline-flex;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;border-radius:999px;padding:.32rem .58rem;font-size:.68rem;font-weight:950;color:#fff;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08)}
-.gal-action-btn.hl{color:#ffb0b0;border-color:rgba(200,0,0,.45);background:rgba(200,0,0,.20)}
-.gal-action-btn:hover{background:rgba(255,255,255,.14)}
-.gal-action-btn.hl:hover{background:rgba(200,0,0,.34);border-color:rgba(200,0,0,.7)}
-
-
-
-/* =========================================================
-   UX v32: fix mobile header pronostici + testi disponibilità
-   ========================================================= */
-@media(max-width:760px){
-  #pronostici .pred-home-head{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) auto!important;
-    grid-template-rows:auto auto!important;
-    align-items:center!important;
-    gap:.7rem!important;
-  }
-  #pronostici .pred-home-left{
-    grid-column:1!important;
-    grid-row:1!important;
-    min-width:0!important;
-  }
-  #pronostici .pred-home-actions{
-    display:contents!important;
-  }
-  #pronostici .pred-logout{
-    grid-column:2!important;
-    grid-row:1!important;
-    justify-self:end!important;
-    align-self:center!important;
-    white-space:nowrap!important;
-  }
-  #pronostici .pred-home-stats{
-    grid-column:1 / -1!important;
-    grid-row:2!important;
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:.45rem!important;
-    width:100%!important;
-  }
-}
-
-
-/* =========================================================
-   UX v33: regolamento rapido su mobile vicino a condividi
-   ========================================================= */
-.mobile-top-rule{
-  display:none;
-}
-.mobile-top-share{
-  margin-left:0;
-}
-.mobile-top-rule{
-  margin-left:auto;
-}
-@media(max-width:700px){
-  .mobile-brand-name{
-    min-width:0;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-  .mobile-top-rule,
-  .mobile-top-share{
-    flex:0 0 auto;
-  }
-}
-@media(max-width:390px){
-  .mobile-top-rule,
-  .mobile-top-share{
-    font-size:.72rem!important;
-    padding:.38rem .48rem!important;
-  }
-}
-
-
-/* =========================================================
-   UX v34: fix visibilità Regolamento + bottoni mobile più piccoli
-   - Solo mobile: desktop invariato.
-   ========================================================= */
-.mobile-top-actions{
-  display:none;
-}
-@media(max-width:700px){
-  .mobile-topbar{
-    display:flex!important;
-    align-items:center!important;
-    gap:.45rem!important;
-    padding:.62rem .65rem!important;
-  }
-  .mobile-topbar img{
-    width:1.85rem!important;
-    height:1.85rem!important;
-    flex:0 0 auto!important;
-  }
-  .mobile-brand-name{
-    flex:1 1 0!important;
-    min-width:0!important;
-    overflow:hidden!important;
-    text-overflow:ellipsis!important;
-    white-space:nowrap!important;
-    font-size:.9rem!important;
-  }
-  .mobile-top-actions{
-    margin-left:auto!important;
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:flex-end!important;
-    gap:.28rem!important;
-    flex:0 0 auto!important;
-  }
-  .mobile-top-actions .mobile-top-rule,
-  .mobile-top-actions .mobile-top-share{
-    margin-left:0!important;
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    border:1px solid rgba(255,255,255,.16)!important;
-    background:rgba(255,255,255,.08)!important;
-    color:#fff!important;
-    border-radius:999px!important;
-    font-family:var(--fb)!important;
-    font-weight:950!important;
-    font-size:.70rem!important;
-    line-height:1!important;
-    padding:.34rem .46rem!important;
-    min-height:1.72rem!important;
-    gap:.16rem!important;
-    white-space:nowrap!important;
-    cursor:pointer!important;
-  }
-  .mobile-top-actions .mobile-top-rule:hover,
-  .mobile-top-actions .mobile-top-share:hover{
-    background:rgba(200,0,0,.30)!important;
-    border-color:rgba(200,0,0,.55)!important;
-  }
-}
-@media(max-width:370px){
-  .mobile-brand-name{
-    font-size:.82rem!important;
-  }
-  .mobile-top-actions .mobile-top-rule,
-  .mobile-top-actions .mobile-top-share{
-    font-size:.66rem!important;
-    padding:.32rem .38rem!important;
-  }
-}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-<div class="mobile-topbar" onclick="showSec('home')"><img src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.6rem>🏆</span>'"><div class="mobile-brand-name">Terzo Tempo Cup</div><div class="mobile-top-actions"><button class="mobile-top-rule" onclick="event.stopPropagation();showSec('regolamento')">📋 Regolamento</button><button class="mobile-top-share" onclick="event.stopPropagation();shareSite()">↗ Condividi</button></div></div>
-<nav class="topnav"><div class="nav-brand" onclick="showSec('home')"><img src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:2rem>🏆</span>'"><div class="nav-brand-name">Terzo Tempo Cup</div></div><ul class="nav-links"><li><a href="#" class="act" data-sec="home" onclick="showSec('home');return false">🏠 Home</a></li><li><a href="#" data-sec="squadre" onclick="showSec('squadre');return false">👕 Squadre</a></li><li><a href="#" data-sec="calendario" onclick="showSec('calendario');return false">📅 Calendario</a></li><li><a href="#" data-sec="statistiche" onclick="showSec('statistiche');return false">📊 Statistiche</a></li><li><a href="#" data-sec="pronostici" onclick="showSec('pronostici');return false">🔮 Pronostici</a></li><li><a href="#" data-sec="galleria" onclick="showSec('galleria');return false">📸 Galleria</a></li><li><a href="#" data-sec="regolamento" onclick="showSec('regolamento');return false">📋 Regolamento</a></li></ul><button class="nav-share-btn" onclick="shareSite()">↗ Condividi sito</button></nav>
+<div class="mobile-topbar" onclick="showSec('home')"><img src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:1.6rem>🏆</span>'"><div class="mobile-brand-name">Terzo Tempo Cup</div></div>
+<nav class="topnav"><div class="nav-brand" onclick="showSec('home')"><img src="logo.png" alt="TTC" onerror="this.outerHTML='<span style=font-size:2rem>🏆</span>'"><div class="nav-brand-name">Terzo Tempo Cup</div></div><ul class="nav-links"><li><a href="#" class="act" data-sec="home" onclick="showSec('home');return false">🏠 Home</a></li><li><a href="#" data-sec="squadre" onclick="showSec('squadre');return false">👕 Squadre</a></li><li><a href="#" data-sec="calendario" onclick="showSec('calendario');return false">📅 Calendario</a></li><li><a href="#" data-sec="statistiche" onclick="showSec('statistiche');return false">📊 Statistiche</a></li><li><a href="#" data-sec="pronostici" onclick="showSec('pronostici');return false">🔮 Pronostici</a></li><li><a href="#" data-sec="galleria" onclick="showSec('galleria');return false">📸 Galleria</a></li><li><a href="#" data-sec="regolamento" onclick="showSec('regolamento');return false">📋 Regolamento</a></li></ul></nav>
 <nav class="botnav"><div class="botnav-items"><div class="botnav-item act" data-sec="home" onclick="showSec('home')"><span class="bi">🏠</span>Home</div><div class="botnav-item" data-sec="squadre" onclick="showSec('squadre')"><span class="bi">👕</span>Squadre</div><div class="botnav-item" data-sec="calendario" onclick="showSec('calendario')"><span class="bi">📅</span>Calendario</div><div class="botnav-item" data-sec="statistiche" onclick="showSec('statistiche')"><span class="bi">📊</span>Stats</div><div class="botnav-item" data-sec="pronostici" onclick="showSec('pronostici')"><span class="bi">🔮</span>Pron.</div><div class="botnav-item" data-sec="galleria" onclick="showSec('galleria')"><span class="bi">📸</span>Foto</div></div></nav>
 <main>
-<section id="home" class="sec act"><div class="hero"><img src="logo.png" alt="Terzo Tempo Cup" onerror="this.outerHTML='<div style=font-size:4.5rem>🏆</div>'"><h1>Terzo Tempo Cup</h1><div class="hero-pill"><span class="dot-live"></span> In attesa dei sorteggi</div></div><div class="home-qnav"><button class="hqbtn" onclick="homeJumpTo('s-gironi')">🏆 Classifiche</button><button class="hqbtn" onclick="homeJumpTo('s-upcoming')">📅 Prossime Partite</button><button class="hqbtn" onclick="homeJumpTo('s-recent')">⚽ Ultimi Risultati</button></div><div id="s-gironi" class="sec-title">🏆 Classifiche Gironi</div><div class="gironi-wrap" id="gironiWrap"></div><div id="s-upcoming" class="sec-title">📅 Prossime Partite</div><div class="match-grid" id="upcomingGrid"></div><div id="s-recent" class="sec-title">⚽ Ultimi Risultati</div><div class="match-grid" id="recentGrid"></div></section>
+<section id="home" class="sec act"><div class="hero"><img src="logo.png" alt="Terzo Tempo Cup" onerror="this.outerHTML='<div style=font-size:4.5rem>🏆</div>'"><h1>Terzo Tempo Cup</h1><div class="hero-pill"><span class="dot-live"></span> Torneo in corso</div></div><div class="home-qnav"><button class="hqbtn" onclick="homeJumpTo('s-gironi')">🏆 Classifiche</button><button class="hqbtn" onclick="homeJumpTo('s-upcoming')">📅 Prossime Partite</button><button class="hqbtn" onclick="homeJumpTo('s-recent')">⚽ Ultimi Risultati</button></div><div id="s-gironi" class="sec-title">🏆 Classifiche Gironi</div><div class="gironi-wrap" id="gironiWrap"></div><div id="s-upcoming" class="sec-title">📅 Prossime Partite</div><div class="match-grid" id="upcomingGrid"></div><div id="s-recent" class="sec-title">⚽ Ultimi Risultati</div><div class="match-grid" id="recentGrid"></div></section>
 <section id="squadre" class="sec"><div class="td-list" id="teamsList"><div class="sec-title">👕 Squadre Iscritte</div><div class="sq-filter"><button class="sq-fbtn act" onclick="filterTeams('all',this)">Tutte</button><button class="sq-fbtn" onclick="filterTeams('A',this)">Girone A</button><button class="sq-fbtn" onclick="filterTeams('B',this)">Girone B</button><button class="sq-fbtn" onclick="filterTeams('C',this)">Girone C</button></div><div id="teamsGrid"></div></div><div class="td-view" id="teamDetail"></div></section>
 <section id="calendario" class="sec"><div class="sec-title">📅 Calendario</div><div class="cal-tabs" id="calTabs"></div><div class="cal-mobile-list" id="calMobileList"></div><div class="cal-desktop-shell"><div class="cal-desk-toolbar"><button class="cal-arrow" onclick="scrollCal(-1)">‹</button><div class="cal-desk-nav" id="calDeskNav"></div><button class="cal-arrow" onclick="scrollCal(1)">›</button></div><div class="cal-stage-line" id="calStageLine"></div><div class="cal-desktop" id="calDesktop"></div></div></section>
 <section id="statistiche" class="sec"><div class="sec-title">📊 Statistiche</div><div class="tabs"><button class="tab-btn act" onclick="showTab('gol',this)">⚽ Capocannonieri</button><button class="tab-btn" onclick="showTab('assist',this)">🅰️ Assist</button><button class="tab-btn" onclick="showTab('cartellini',this)">🟨 Cartellini</button><button class="tab-btn" onclick="showTab('porta',this)">🧤 Porta inviolata</button><button class="tab-btn" onclick="showTab('disciplina',this)">🛡️ Disciplina Squadre</button></div><div id="tab-gol" class="tab-pane act"></div><div id="tab-assist" class="tab-pane"></div><div id="tab-cartellini" class="tab-pane"></div><div id="tab-porta" class="tab-pane"></div><div id="tab-disciplina" class="tab-pane"></div></section>
@@ -1061,8 +740,6 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 const DATA_SOURCE='data.json';const SUPABASE_URL='https://qhxxszbobeduzqwzhrab.supabase.co';const SUPABASE_KEY='sb_publishable_e7o8RcjK4t7E9xqBwJ8i_Q_vT7ijBYy';let sb=null,currentUser=null,currentProfile=null,allPredictions=[],allPrePredictions=[],publicProfiles=[];let TEAM_NAMES={},PLAYER_NAMES={},TEAMS=[],TEAM_RESERVES={},GROUPS={},RECENT=[],DETAILS={},UPCOMING=[],MVP_DATA={},GALLERY=[],CALENDAR=[],PREDICTION_ROUNDS=[],PREDICTION_FINAL_AWARDS={},KNOCKOUT={qualified:null,quarterfinals:[],semifinals:[],final:{}};
 const teamLogo='<img src="logo_squadre.png" alt="" style="height:1.2em;width:1.2em;object-fit:contain;vertical-align:text-bottom;" onerror="this.outerHTML=\'⚽\'">';
 const getTeam=id=>TEAMS.find(t=>t.id===id||t.name===id);const tName=id=>{const t=getTeam(id);return t?t.name:(TEAM_NAMES[id]||id||'Da definire')};const lastName=n=>String(n||'').split(' ').filter(Boolean).pop()||'';const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-
-
 async function loadExternalData(){try{const res=await fetch(DATA_SOURCE);if(!res.ok)throw new Error(res.status);const data=await res.json();TEAM_NAMES=data.TEAM_NAMES||{};PLAYER_NAMES=data.PLAYER_NAMES||{};TEAMS=data.TEAMS||[];TEAM_RESERVES=data.TEAM_RESERVES||{};GROUPS=data.GROUPS||{};RECENT=data.RECENT||[];DETAILS=data.DETAILS||{};UPCOMING=data.UPCOMING||[];MVP_DATA=data.MVP_DATA||{};GALLERY=data.GALLERY||[];CALENDAR=data.CALENDAR||[];PREDICTION_ROUNDS=data.PREDICTION_ROUNDS||[];PREDICTION_FINAL_AWARDS=data.PREDICTION_FINAL_AWARDS||{};KNOCKOUT=data.KNOCKOUT||KNOCKOUT;console.log('Data loaded from',DATA_SOURCE)}catch(e){console.error('Errore caricamento data.json',e);document.body.insertAdjacentHTML('afterbegin','<div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#c80000;color:#fff;padding:1rem;text-align:center;font-weight:900">Errore nel caricamento di data.json. Controlla console e formato JSON.</div>')}}
 function showSec(id){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));document.querySelectorAll('[data-sec]').forEach(a=>a.classList.remove('act'));document.getElementById(id)?.classList.add('act');document.querySelectorAll('[data-sec="'+id+'"]').forEach(a=>a.classList.add('act'));window.scrollTo(0,0)}function jumpTo(id){const el=document.getElementById(id);if(el)window.scrollTo({top:el.getBoundingClientRect().top+scrollY-90,behavior:'smooth'})}function homeJumpTo(id){showSec('home');setTimeout(()=>jumpTo(id),50)}
 function renderGironi(){const wrap=document.getElementById('gironiWrap');wrap.innerHTML=['A','B','C'].map(g=>{const rows=(GROUPS[g]||[]).slice().sort((a,b)=>b.pts-a.pts||((b.gf-b.ga)-(a.gf-a.ga))||b.gf-a.gf);return '<div class="card girone-card"><div class="girone-head"><div class="gir-b g'+g.toLowerCase()+'">'+g+'</div>Girone '+g+'</div><table class="st"><thead><tr><th>Squadra</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>Pt</th></tr></thead><tbody>'+rows.map((r,i)=>'<tr><td><span class="rk rk'+(i+1)+'">'+(i+1)+'</span>'+teamLogo+' '+esc(tName(r.id))+'</td><td>'+((r.w||0)+(r.d||0)+(r.l||0))+'</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td class="pts">'+r.pts+'</td></tr>').join('')+'</tbody></table></div>'}).join('')}
@@ -1282,19 +959,10 @@ function showGalMatchday(md,btn){
   const gd=GALLERY.find(g=>g.matchday===md)||GALLERY[0];
   galGrid.innerHTML=gd
     ? gd.matches.map(m=>{
-        const photoLink=String(m.link||'').trim();
-        const hlLink=String(m.yt||m.highlight||m.highlights||m.highlightsLink||'').trim();
-        const hasPhoto=!!photoLink;
-        const hasHl=!!hlLink && hlLink !== '#';
-        return '<div class="card gal-item '+((hasPhoto||hasHl)?'':'empty-link')+'">'
-          + '<div class="gal-icon">📁</div>'
-          + '<div class="gal-name">'+esc(m.name)+'</div>'
-          + '<div class="gal-count">'+(hasPhoto?'📷 '+(m.count||0)+' foto':'Link cartella da inserire')+'</div>'
-          + '<div class="gal-actions">'
-            + (hasPhoto?'<a class="gal-action-btn" href="'+esc(photoLink)+'" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">📸 Foto</a>':'')
-            + (hasHl?'<a class="gal-action-btn hl" href="'+esc(hlLink)+'" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶ Highlights</a>':'')
-          + '</div>'
-        + '</div>';
+        const hasLink=!!String(m.link||'').trim();
+        const tag=hasLink?'a':'div';
+        const href=hasLink?' href="'+esc(m.link)+'" target="_blank" rel="noopener noreferrer"':'';
+        return '<'+tag+' class="card gal-item '+(hasLink?'':'empty-link')+'"'+href+'><div class="gal-icon">📁</div><div class="gal-name">'+esc(m.name)+'</div><div class="gal-count">'+(hasLink?'📷 '+(m.count||0)+' foto':'Link cartella da inserire')+'</div></'+tag+'>';
       }).join('')
     : '<div class="md-noevent">Nessuna cartella configurata.</div>';
 }
@@ -1612,7 +1280,7 @@ function playerKey(team,name){return encodeURIComponent(team)+'|'+encodeURICompo
 function parsePlayerKey(v){if(!v)return{name:null,team:null};if(v===NONE_SCORER_KEY)return{name:'Nessuno',team:'__none__'};const [team,name]=String(v).split('|');return{team:decodeURIComponent(team||''),name:decodeURIComponent(name||'')}}
 function getRoundCfg(round){return(PREDICTION_ROUNDS||[]).find(r=>r.round===round)||{round,label:round,lockAt:null,status:'draft'}}
 function isRoundLocked(round){const cfg=getRoundCfg(round);if(!cfg.lockAt)return true;return new Date()>=new Date(cfg.lockAt)}
-function roundLockText(round){const cfg=getRoundCfg(round);if(!cfg||!cfg.lockAt)return (cfg&&cfg.message)?cfg.message:'Pronostici non disponibili';const d=new Date(cfg.lockAt);return isRoundLocked(round)?'Pronostici chiusi':'Modificabile fino al '+d.toLocaleString('it-IT',{dateStyle:'short',timeStyle:'short'})}
+function roundLockText(round){const cfg=getRoundCfg(round);if(!cfg.lockAt)return'Pronostici non ancora aperti';const d=new Date(cfg.lockAt);return isRoundLocked(round)?'Pronostici chiusi':'Modificabile fino al '+d.toLocaleString('it-IT',{dateStyle:'short',timeStyle:'short'})}
 function playedMatch(m){return m&&m.sh!==null&&m.sa!==null&&m.sh!==undefined&&m.sa!==undefined}
 function outcome(h,a){h=Number(h);a=Number(a);return h>a?'1':h<a?'2':'X'}
 function calcMatchPoints(pred){
@@ -1664,18 +1332,12 @@ function togglePredMatch(matchId){window.predOpenMatchIds=window.predOpenMatchId
 
 function matchPredCard(m){const locked=isRoundLocked(m.round);const pred=allPredictions.find(p=>p.user_id===currentUser?.participant_id&&p.match_id===m.id)||{};window.predScorers=window.predScorers||{};if(pred.predicted_scorer_team&&pred.predicted_scorer_name&&!window.predScorers[m.id])window.predScorers[m.id]=(pred.predicted_scorer_name==='Nessuno'||pred.predicted_scorer_team==='__none__')?NONE_SCORER_KEY:playerKey(pred.predicted_scorer_team,pred.predicted_scorer_name);const chosen=window.predScorers[m.id]||'';const ch=parsePlayerKey(chosen);const chosenText=ch.name?(ch.name+(ch.team&&ch.team!=='__none__'?' · '+tName(ch.team):'')):'Nessun marcatore selezionato';const players=[{name:'Nessuno',team:'__none__',none:true},...allPlayers(m.home),...allPlayers(m.away)];const hv=draftScoreValue(m.id,'h',pred.home_score),av=draftScoreValue(m.id,'a',pred.away_score);const editing=window.predEditMatchId===m.id;const open=isPredMatchOpen(m.id);const saved=(pred.home_score!==undefined&&pred.home_score!==null&&pred.away_score!==undefined&&pred.away_score!==null);const savedText=saved?('Salvato: '+pred.home_score+' - '+pred.away_score+(pred.predicted_scorer_name?' · '+pred.predicted_scorer_name:'')):'Tocca per inserire il pronostico';const head='<div class="pred-match-top" onclick="event.stopPropagation();togglePredMatch(\''+m.id+'\')"><div><div class="pred-vs">'+esc(predTeamLabel(m.home))+' vs '+esc(predTeamLabel(m.away))+'</div><div class="pred-msg">'+esc(m.date||'')+' · '+esc(m.time||'')+' · '+esc(m.location||'')+'</div></div><div style="display:flex;align-items:center;gap:.55rem"><div class="pred-lock">'+esc(roundLockText(m.round))+'</div><button type="button" class="pred-toggle" onclick="event.stopPropagation();togglePredMatch(\''+m.id+'\')">'+(open?'−':'+')+'</button></div></div>';if(!open){return '<div id="predmatch_'+m.id+'" class="card pred-match-card closed '+(editing?'editing ':'')+(!m.home||!m.away?'tbd':'')+'" onclick="togglePredMatch(\''+m.id+'\')">'+head+'<div class="pred-collapsed-hint"><span>🔮</span><span>'+esc(savedText)+'</span></div>'+(window.predSaveMsg&&window.predSaveMsg[m.id]?'<div class="pred-save-msg">'+esc(window.predSaveMsg[m.id])+'</div>':'')+'</div>'}return '<div id="predmatch_'+m.id+'" class="card pred-match-card open '+(editing?'editing ':'')+(!m.home||!m.away?'tbd':'')+'">'+head+(locked?'<div class="pred-card-body"><div class="pred-msg">Pronostici non ancora aperti: squadre ancora TBD oppure giornata bloccata.</div></div>':'<div class="pred-card-body"><div class="pred-score"><label>Risultato</label><input class="pred-input" id="ph_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(hv)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'h\',this.value)"><span style="text-align:center;font-weight:950">-</span><input class="pred-input" id="pa_'+m.id+'" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="'+esc(av)+'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\').slice(0,2);updateDraftScore(\''+m.id+'\',\'a\',this.value)"></div><div class="pred-selected-scorer '+(ch.name?'has':'')+'"><span>🎯 Marcatore scelto</span><b>'+esc(chosenText)+'</b></div><div class="pred-scorer-title">Scegli marcatore</div><div class="pred-player-grid">'+players.map(p=>{const key=p.none?NONE_SCORER_KEY:playerKey(p.team,p.name);return '<button class="pred-player '+(p.none?'none-option ':'')+(chosen===key?'sel':'')+'" onclick="selectPredScorer(\''+m.id+'\',\''+key+'\')">'+esc(p.name)+'<small>'+(p.none?'se finisce 0-0':esc(tName(p.team)))+'</small></button>'}).join('')+'</div><div class="pred-actions"><button class="pred-btn" onclick="saveMatchPrediction(\''+m.id+'\')">Salva pronostico</button></div></div>'+(window.predSaveMsg&&window.predSaveMsg[m.id]?'<div class="pred-save-msg">'+esc(window.predSaveMsg[m.id])+'</div>':'') )+'</div>'}
 
-
-function predRoundStatusCard(round,matches){if(!round)return '<div class="pred-status-card"><div><div class="pred-status-title">Stato pronostici</div><div class="pred-status-text">Pronostici non disponibili</div></div><span class="pred-status-badge draft">In attesa</span></div>';const cfg=getRoundCfg(round);const locked=isRoundLocked(round);const count=matches?matches.length:0;let badge='draft',label='In attesa',text=(cfg&&cfg.message)?cfg.message:'Pronostici non disponibili';if(cfg&&cfg.lockAt){const d=new Date(cfg.lockAt);if(locked){badge='closed';label='Chiusi';text='Pronostici chiusi per '+esc(round)+'. Le scelte salvate restano valide in classifica.';}else{badge='open';label='Aperti';text='Puoi modificare i pronostici fino al '+d.toLocaleString('it-IT',{dateStyle:'short',timeStyle:'short'})+'. '+count+' partite disponibili.';}}return '<div class="pred-status-card"><div><div class="pred-status-title">Stato '+esc(round)+'</div><div class="pred-status-text">'+text+'</div></div><span class="pred-status-badge '+badge+'">'+label+'</span></div>'}
-function buildRoundWinners(){const profiles={};(publicProfiles||[]).forEach(p=>profiles[p.user_id]=p.nickname||p.username||'Utente');const rounds=roundsForMatches((CALENDAR||[]).filter(m=>m.round));return rounds.map(round=>{const playedIds=(CALENDAR||[]).filter(m=>m.round===round&&playedMatch(m)).map(m=>m.id);if(!playedIds.length)return null;const map={};(allPredictions||[]).filter(p=>playedIds.includes(p.match_id)).forEach(p=>{const pts=calcMatchPoints(p).points;if(!map[p.user_id])map[p.user_id]={user_id:p.user_id,nickname:profiles[p.user_id]||p.username||'Utente',points:0,count:0};map[p.user_id].points+=pts;map[p.user_id].count++;});const rows=Object.values(map).filter(r=>r.count>0).sort((a,b)=>b.points-a.points||b.count-a.count||String(a.nickname).localeCompare(String(b.nickname)));if(!rows.length)return null;const top=rows[0].points;return{round,winner:rows[0],ties:rows.filter(r=>r.points===top).length,played:playedIds.length};}).filter(Boolean)}
-function roundWinnersWidget(){const winners=buildRoundWinners();if(!winners.length)return '';return '<div class="card pred-card"><h3>🏅 Migliori di giornata</h3><div class="pred-day-winners">'+winners.map(w=>'<div class="pred-day-winner-row"><div class="pred-day-winner-icon">🏆</div><div><div class="pred-day-winner-title">'+esc(w.round)+'</div><div class="pred-day-winner-sub">'+esc(w.winner.nickname)+' · '+w.winner.count+' pronostici validi</div></div><div><div class="pred-day-winner-points">'+w.winner.points+' pt</div>'+(w.ties>1?'<div class="pred-day-winner-tie">pari merito</div>':'')+'</div></div>').join('')+'</div></div>'}
-async function shareSite(){const url=location.origin+location.pathname;const title='Terzo Tempo Cup';const text='Segui risultati, classifiche, squadre e pronostici della Terzo Tempo Cup.';try{if(navigator.share){await navigator.share({title,text,url});return;}if(navigator.clipboard){await navigator.clipboard.writeText(url);alert('Link copiato negli appunti');return;}}catch(e){}prompt('Copia il link del sito:',url)}
-
-function pronosticaOraTab(){const matches=openPredictableMatches();const rounds=roundsForMatches(matches);if(!window.predRound||!rounds.includes(window.predRound))window.predRound=rounds[0]||null;const active=window.predRound;const filtered=active?matches.filter(m=>m.round===active):[];const cfg=active?getRoundCfg(active):null;const unavailable=!active||!cfg||!cfg.lockAt;return '<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">⚽ Pronostica ora</div><div class="pred-muted">I pronostici saranno disponibili dopo i sorteggi ufficiali.</div></div></div>'+roundButtons(rounds,active,'predRound')+predRoundStatusCard(active,filtered)+(unavailable?'<div class="pred-empty"><b>Pronostici non ancora disponibili</b><div class="pred-msg">In attesa dei sorteggi: appena saranno definiti calendario e blocchi, potrai inserire risultato e marcatore.</div></div>':(filtered.length?filtered.map(matchPredCard).join(''):'<div class="pred-empty"><b>Nessuna partita pronosticabile.</b><div class="pred-msg">Controlla PREDICTION_ROUNDS in data.json.</div></div>'))+'</div>'}
+function pronosticaOraTab(){const matches=openPredictableMatches();const rounds=roundsForMatches(matches);if(!window.predRound||!rounds.includes(window.predRound))window.predRound=rounds[0]||null;const active=window.predRound;const filtered=active?matches.filter(m=>m.round===active):[];return '<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">⚽ Pronostica ora</div><div class="pred-muted">Scegli una giornata e compila risultato + marcatore. Dopo il salvataggio vedrai un messaggio di conferma.</div></div></div>'+roundButtons(rounds,active,'predRound')+(filtered.length?filtered.map(matchPredCard).join(''):'<div class="pred-empty"><b>Nessuna partita pronosticabile.</b><div class="pred-msg">Controlla PREDICTION_ROUNDS in data.json.</div></div>')+'</div>'}
 function savedPredictionRow(p){const m=CALENDAR.find(x=>x.id===p.match_id);if(!m)return'';return '<div class="pred-saved-row"><div><div class="pred-saved-match">'+esc(predTeamLabel(m.home))+' vs '+esc(predTeamLabel(m.away))+'</div><div class="pred-saved-extra">'+esc(m.round)+' · '+esc(m.date||'')+'</div><div class="pred-saved-scorer">🎯 '+(p.predicted_scorer_name?esc(p.predicted_scorer_name+' · '+tName(p.predicted_scorer_team)):'Nessun marcatore')+'</div></div><div><div class="pred-saved-value">'+p.home_score+' - '+p.away_score+'</div><button class="pred-btn secondary" style="margin-top:.45rem" onclick="editSavedPrediction(\''+m.id+'\',\''+esc(m.round)+'\')">Modifica</button></div></div>'}
 function savedPredictionsTab(){const mine=allPredictions.filter(p=>p.user_id===currentUser?.participant_id&&CALENDAR.find(m=>m.id===p.match_id)).sort((a,b)=>String(a.round).localeCompare(String(b.round))||String(a.match_id).localeCompare(String(b.match_id)));const rounds=roundsForMatches(mine.map(p=>CALENDAR.find(m=>m.id===p.match_id)).filter(Boolean));if(!window.predSavedRound||!rounds.includes(window.predSavedRound))window.predSavedRound=rounds[0]||null;const active=window.predSavedRound;const filtered=active?mine.filter(p=>p.round===active):mine;return preCard()+'<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">🧾 I miei pronostici</div><div class="pred-muted">Qui puoi verificare e modificare i pronostici partita che hai già salvato.</div></div></div>'+roundButtons(rounds,active,'predSavedRound')+(filtered.length?'<div class="pred-saved-list">'+filtered.map(savedPredictionRow).join('')+'</div>':'<div class="pred-empty"><b>Non hai ancora pronostici partita salvati.</b><div class="pred-msg">Vai su “Pronostica ora”, salva una partita e tornerà qui.</div></div>')+'</div>'}
-function rankingTab(){const rows=buildRanking();return roundWinnersWidget()+'<div class="card pred-card"><h3>📈 Classifica generale</h3>'+(rows.length?rows.map((r,i)=>'<div class="card pred-rank-row"><div class="pred-rank-pos">'+(i+1)+'</div><div class="pred-rank-info"><div class="pred-rank-name">'+esc(r.nickname)+'</div><div class="pred-rank-meta">'+r.count+' pronostici · '+r.exact+' risultati esatti · '+r.scorers+' marcatori · '+r.pre+' pt pre-torneo</div></div><div class="pred-rank-points">'+r.points+'</div></div>').join(''):'<div class="md-noevent">Classifica ancora vuota.</div>')+'</div>'}
-function rulesTab(){return '<div class="card pred-card"><h3>📋 Regolamento pronostici</h3><div class="pred-rule-list"><p><strong>Pronostici:</strong> 3 punti per il segno corretto, +5 punti per il risultato esatto. Se il marcatore scelto segna almeno un gol, i punti ottenuti nella partita vengono raddoppiati.</p><p><strong>Esempio concreto:</strong> pronostichi 2-1 e la partita finisce 2-0: hai preso il segno, quindi fai 3 punti. Se il marcatore scelto segna, diventano 6. Se invece pronostichi 2-0 e finisce 2-0, fai 8 punti; con marcatore corretto diventano 16.</p><p><strong>Pre-torneo:</strong> squadra vincitrice 15 punti, capocannoniere 10 punti, miglior portiere 10 punti, miglior giocatore 10 punti.</p><p><strong>Blocco:</strong> i pronostici di ogni giornata si chiudono all’inizio della prima partita della giornata. I pre-torneo si chiudono all’inizio della prima partita del torneo.</p></div></div>'}
-function renderPronostici(){const root=document.getElementById('predictionsContent');if(!root)return;initSupabase();if(!sb){root.innerHTML='<div class="card pred-card"><div class="pred-msg err">Supabase non caricato.</div></div>';return}const isLogged=!!(currentUser&&currentProfile);const rank=ownRankInfo();const tab=window.predTab||'now';let content='<div class="pred-shell">';if(!isLogged){root.innerHTML=content+predIntroOverlay()+'</div>';return}content+='<div class="pred-home-head"><div class="pred-home-left"><div class="pred-avatar">🔮</div><div><div class="pred-home-name">Ciao '+esc(currentProfile.nickname)+'</div><div class="pred-home-sub">Area pronostici TTC</div></div></div><div class="pred-home-actions"><div class="pred-home-stats"><span class="pred-small-pill"><b>'+rank.points+'</b> punti</span><span class="pred-small-pill"><b>'+rank.position+'</b> posizione</span></div><button class="pred-btn ghost pred-logout" onclick="predLogout()">Logout</button></div></div>';const preOpen=!!getRoundCfg('Giornata 1').lockAt&&!isRoundLocked('Giornata 1');if((!getOwnPre()&&preOpen)||window.predWizardStep!==null&&window.predWizardStep!==undefined){root.innerHTML=content+'<div class="pred-overlay"><div class="pred-pop"><div class="pred-pop-title">🏆 Pronostici pre-torneo</div><p>Completa queste scelte iniziali. Potrai modificarle fino all’inizio della prima partita.</p>'+preTournamentWizard()+'</div></div></div>';return}content+='<div class="pred-tabs"><button class="pred-tab '+(tab==='now'?'act':'')+'" onclick="window.predTab=\'now\';renderPronostici()">Pronostica ora</button><button class="pred-tab '+(tab==='saved'?'act':'')+'" onclick="window.predTab=\'saved\';renderPronostici()">I miei pronostici</button><button class="pred-tab '+(tab==='rank'?'act':'')+'" onclick="window.predTab=\'rank\';renderPronostici()">Classifica</button><button class="pred-tab '+(tab==='rules'?'act':'')+'" onclick="window.predTab=\'rules\';renderPronostici()">Regolamento</button></div>'+(tab==='saved'?savedPredictionsTab():tab==='rank'?rankingTab():tab==='rules'?rulesTab():pronosticaOraTab())+'</div>';root.innerHTML=content;}
+function rankingTab(){const rows=buildRanking();return '<div class="card pred-card"><h3>📈 Classifica generale</h3>'+(rows.length?rows.map((r,i)=>'<div class="card pred-rank-row"><div class="pred-rank-pos">'+(i+1)+'</div><div class="pred-rank-info"><div class="pred-rank-name">'+esc(r.nickname)+'</div><div class="pred-rank-meta">'+r.count+' pronostici · '+r.exact+' risultati esatti · '+r.scorers+' marcatori · '+r.pre+' pt pre-torneo</div></div><div class="pred-rank-points">'+r.points+'</div></div>').join(''):'<div class="md-noevent">Classifica ancora vuota.</div>')+'</div>'}
+function rulesTab(){return '<div class="card pred-card"><h3>📋 Regolamento pronostici</h3><div class="pred-rule-list"><p><strong>Partite:</strong> 3 punti per il segno corretto, +5 punti per il risultato esatto. Se il marcatore scelto segna almeno un gol, i punti ottenuti nella partita vengono raddoppiati.</p><p><strong>Pre-torneo:</strong> squadra vincitrice 15 punti, capocannoniere 10 punti, miglior portiere 10 punti, miglior giocatore 10 punti.</p><p><strong>Blocco:</strong> i pronostici di ogni giornata si chiudono all’inizio della prima partita della giornata. I pre-torneo si chiudono all’inizio della prima partita del torneo.</p><p><strong>Privacy:</strong> in classifica compare solo il nome utente. Nome e cognome restano privati e servono solo per un eventuale premio.</p></div></div>'}
+function renderPronostici(){const root=document.getElementById('predictionsContent');if(!root)return;initSupabase();if(!sb){root.innerHTML='<div class="card pred-card"><div class="pred-msg err">Supabase non caricato.</div></div>';return}const isLogged=!!(currentUser&&currentProfile);const rank=ownRankInfo();const tab=window.predTab||'now';let content='<div class="pred-shell">';if(!isLogged){root.innerHTML=content+predIntroOverlay()+'</div>';return}content+='<div class="pred-home-head"><div class="pred-home-left"><div class="pred-avatar">🔮</div><div><div class="pred-home-name">Ciao '+esc(currentProfile.nickname)+'</div><div class="pred-home-sub">Area pronostici TTC</div></div></div><div class="pred-home-actions"><span class="pred-small-pill"><b>'+rank.points+'</b> punti</span><span class="pred-small-pill"><b>'+rank.position+'</b> posizione</span><button class="pred-btn ghost" onclick="predLogout()">Logout</button></div></div>';if(!getOwnPre()||window.predWizardStep!==null&&window.predWizardStep!==undefined){root.innerHTML=content+'<div class="pred-overlay"><div class="pred-pop"><div class="pred-pop-title">🏆 Pronostici pre-torneo</div><p>Completa queste scelte iniziali. Potrai modificarle fino all’inizio della prima partita.</p>'+preTournamentWizard()+'</div></div></div>';return}content+='<div class="pred-tabs"><button class="pred-tab '+(tab==='now'?'act':'')+'" onclick="window.predTab=\'now\';renderPronostici()">Pronostica ora</button><button class="pred-tab '+(tab==='saved'?'act':'')+'" onclick="window.predTab=\'saved\';renderPronostici()">I miei pronostici</button><button class="pred-tab '+(tab==='rank'?'act':'')+'" onclick="window.predTab=\'rank\';renderPronostici()">Classifica</button><button class="pred-tab '+(tab==='rules'?'act':'')+'" onclick="window.predTab=\'rules\';renderPronostici()">Regolamento</button></div>'+(tab==='saved'?savedPredictionsTab():tab==='rank'?rankingTab():tab==='rules'?rulesTab():pronosticaOraTab())+'</div>';root.innerHTML=content;}
 function renderMvpInline(){const mv=MVP_DATA||{},w=mv.winner||{};if(!w.name)return '';return '<div class="card mvp-inline"><div class="mvp-inline-title">⭐ Giocatore della giornata</div><div class="mvp-inline-main">'+esc(w.name)+'</div><div class="mvp-inline-sub">'+(w.team?teamLogo+' '+esc(tName(w.team)):'')+(w.pct?' · '+w.pct+'% dei voti':'')+'</div></div>'}
 
 async function init(){await loadExternalData();buildDerivedData();syncStats();renderGironi();renderUpcoming();renderRecent();renderTeams('all');renderStats();renderGalleryTabs();if(GALLERY.length)showGalMatchday(GALLERY[0].matchday,null);renderCalendario();await refreshAuth();renderPronostici();if(sb)sb.auth.onAuthStateChange(async()=>{await refreshAuth();renderPronostici();});}document.addEventListener('DOMContentLoaded',init);
