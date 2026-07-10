@@ -1107,10 +1107,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": 2,
-      "sa": 1,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c1"
+      "detailId": null
     },
     {
       "id": "c2",
@@ -1121,10 +1121,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": 0,
-      "sa": 0,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c2"
+      "detailId": null
     },
     {
       "id": "c3",
@@ -1135,10 +1135,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": 1,
-      "sa": 0,
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c3"
+      "detailId": null
     },
     {
       "id": "c4",
@@ -1449,68 +1449,8 @@
       "detailId": null
     }
   ],
-  "DETAILS": {
-    "d_c1": {
-      "scorers": [
-        {
-          "team": "redstorm",
-          "name": "Angelo Mastroianni",
-          "min": 12
-        },
-        {
-          "team": "redstorm",
-          "name": "Davide Orlando",
-          "min": 33
-        },
-        {
-          "team": "bluefire",
-          "name": "Giocatore 12",
-          "min": 41
-        }
-      ],
-      "cards": [
-
-      ],
-      "penalties": [
-
-      ]
-    },
-    "d_c2": {
-      "scorers": [
-
-      ],
-      "cards": [
-
-      ],
-      "penalties": [
-
-      ]
-    },
-    "d_c3": {
-      "scorers": [
-        {
-          "team": "dragons",
-          "name": "Giocatore 33",
-          "min": 27
-        }
-      ],
-      "cards": [
-
-      ],
-      "penalties": [
-
-      ]
-    }
-  },
-  "MVP_DATA": {
-    "matchday": null,
-    "closed": false,
-    "igHandle": "@terzotempocup",
-    "winner": null,
-    "candidates": [
-
-    ]
-  },
+  "DETAILS": {},
+  "MVP_DATA": {},
   "GALLERY": [
     {
       "matchday": 1,
