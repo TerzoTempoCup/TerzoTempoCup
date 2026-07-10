@@ -1,6 +1,6 @@
 {
   "TEAM_NAMES": {
-    "redstorm": "Squadra 1",
+    "redstorm": "ZEKEKE",
     "bluefire": "Squadra 2",
     "golden": "Squadra 3",
     "wolves": "Squadra 4",
@@ -102,13 +102,15 @@
   "TEAMS": [
     {
       "id": "redstorm",
-      "name": "Squadra 1",
+      "name": "ZEKEKE",
       "group": "A",
       "emoji": "🏆",
+      "logo": "Loghi Squadre/zekeke.png",
+      "coach": "Antonio Ciuffo",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 1",
+          "name": "Pasquale Carlomagno",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -117,8 +119,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 2",
+          "n": 2,
+          "name": "Simone Supino",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -127,8 +129,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 3",
+          "n": 3,
+          "name": "Felice Falabella",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -137,8 +139,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 4",
+          "n": 4,
+          "name": "Davide Orlando",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -147,8 +149,8 @@
           "gp": 0
         },
         {
-          "n": 9,
-          "name": "Giocatore 5",
+          "n": 5,
+          "name": "Angelo Mastroianni",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -163,6 +165,7 @@
       "name": "Squadra 2",
       "group": "A",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -221,6 +224,7 @@
       "name": "Squadra 3",
       "group": "A",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -279,6 +283,7 @@
       "name": "Squadra 4",
       "group": "A",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -337,6 +342,7 @@
       "name": "Squadra 5",
       "group": "B",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -395,6 +401,7 @@
       "name": "Squadra 6",
       "group": "B",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -453,6 +460,7 @@
       "name": "Squadra 7",
       "group": "B",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -511,6 +519,7 @@
       "name": "Squadra 8",
       "group": "B",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -569,6 +578,7 @@
       "name": "Squadra 9",
       "group": "C",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -627,6 +637,7 @@
       "name": "Squadra 10",
       "group": "C",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -685,6 +696,7 @@
       "name": "Squadra 11",
       "group": "C",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -743,6 +755,7 @@
       "name": "Squadra 12",
       "group": "C",
       "emoji": "🏆",
+      "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
@@ -800,8 +813,8 @@
   "TEAM_RESERVES": {
     "redstorm": [
       {
-        "n": 12,
-        "name": "Giocatore 6",
+        "n": 6,
+        "name": "Davide Filipi",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -810,9 +823,19 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 7",
+        "n": 7,
+        "name": "Felice Gulfo",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 8,
+        "name": "Raffaele Cascelli",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
@@ -1073,10 +1096,10 @@
       "date": "01 Lug",
       "time": "20:00",
       "location": "Campo Nord",
-      "sh": null,
-      "sa": null,
+      "sh": 3,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c1"
     },
     {
       "id": "c2",
@@ -1087,10 +1110,10 @@
       "date": "01 Lug",
       "time": "20:40",
       "location": "Campo Nord",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c2"
     },
     {
       "id": "c3",
@@ -1101,10 +1124,10 @@
       "date": "01 Lug",
       "time": "21:20",
       "location": "Campo Sud",
-      "sh": null,
-      "sa": null,
+      "sh": 1,
+      "sa": 0,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c3"
     },
     {
       "id": "c4",
@@ -1115,10 +1138,10 @@
       "date": "01 Lug",
       "time": "22:00",
       "location": "Campo Sud",
-      "sh": null,
-      "sa": null,
+      "sh": 0,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c4"
     },
     {
       "id": "c5",
@@ -1129,10 +1152,10 @@
       "date": "01 Lug",
       "time": "22:40",
       "location": "Campo Est",
-      "sh": null,
-      "sa": null,
+      "sh": 4,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c5"
     },
     {
       "id": "c6",
@@ -1143,10 +1166,10 @@
       "date": "01 Lug",
       "time": "23:20",
       "location": "Campo Est",
-      "sh": null,
-      "sa": null,
+      "sh": 1,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d_c6"
     },
     {
       "id": "c7",
@@ -1415,7 +1438,260 @@
       "detailId": null
     }
   ],
-  "DETAILS": {},
+  "DETAILS": {
+    "d_c1": {
+      "scorers": [
+        {
+          "team": "redstorm",
+          "name": "Angelo Mastroianni",
+          "min": 8,
+          "assist": {
+            "team": "redstorm",
+            "name": "Davide Orlando"
+          }
+        },
+        {
+          "team": "redstorm",
+          "name": "Simone Supino",
+          "min": 22,
+          "assist": {
+            "team": "redstorm",
+            "name": "Felice Falabella"
+          }
+        },
+        {
+          "team": "bluefire",
+          "name": "Giocatore 12",
+          "min": 31,
+          "assist": {
+            "team": "bluefire",
+            "name": "Giocatore 11"
+          }
+        },
+        {
+          "team": "redstorm",
+          "name": "Raffaele Cascelli",
+          "min": 44,
+          "assist": {
+            "team": "redstorm",
+            "name": "Felice Gulfo"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "redstorm",
+          "name": "Simone Supino",
+          "type": "Y",
+          "min": 17
+        },
+        {
+          "team": "bluefire",
+          "name": "Giocatore 9",
+          "type": "Y",
+          "min": 35
+        }
+      ],
+      "penalties": []
+    },
+    "d_c2": {
+      "scorers": [
+        {
+          "team": "golden",
+          "name": "Giocatore 19",
+          "min": 6,
+          "assist": {
+            "team": "golden",
+            "name": "Giocatore 18"
+          }
+        },
+        {
+          "team": "wolves",
+          "name": "Giocatore 24",
+          "min": 14,
+          "assist": {
+            "team": "wolves",
+            "name": "Giocatore 26"
+          }
+        },
+        {
+          "team": "golden",
+          "name": "Giocatore 17",
+          "min": 29,
+          "assist": {
+            "team": "golden",
+            "name": "Giocatore 16"
+          }
+        },
+        {
+          "team": "wolves",
+          "name": "Giocatore 26",
+          "min": 41,
+          "assist": {
+            "team": "wolves",
+            "name": "Giocatore 25"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "wolves",
+          "name": "Giocatore 23",
+          "type": "Y",
+          "min": 23
+        }
+      ],
+      "penalties": []
+    },
+    "d_c3": {
+      "scorers": [
+        {
+          "team": "dragons",
+          "name": "Giocatore 33",
+          "min": 27,
+          "assist": {
+            "team": "dragons",
+            "name": "Giocatore 31"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "titans",
+          "name": "Giocatore 37",
+          "type": "Y",
+          "min": 12
+        }
+      ],
+      "penalties": []
+    },
+    "d_c4": {
+      "scorers": [
+        {
+          "team": "sparta",
+          "name": "Giocatore 54",
+          "min": 33,
+          "assist": {
+            "team": "sparta",
+            "name": "Giocatore 52"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "legends",
+          "name": "Giocatore 45",
+          "type": "Y",
+          "min": 19
+        },
+        {
+          "team": "sparta",
+          "name": "Giocatore 51",
+          "type": "Y",
+          "min": 38
+        }
+      ],
+      "penalties": []
+    },
+    "d_c5": {
+      "scorers": [
+        {
+          "team": "phoenix",
+          "name": "Giocatore 61",
+          "min": 5,
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 60"
+          }
+        },
+        {
+          "team": "falcons",
+          "name": "Giocatore 68",
+          "min": 11,
+          "assist": {
+            "team": "falcons",
+            "name": "Giocatore 67"
+          }
+        },
+        {
+          "team": "phoenix",
+          "name": "Giocatore 59",
+          "min": 20,
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 58"
+          }
+        },
+        {
+          "team": "phoenix",
+          "name": "Giocatore 61",
+          "min": 33,
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 59"
+          }
+        },
+        {
+          "team": "falcons",
+          "name": "Giocatore 67",
+          "min": 39,
+          "assist": {
+            "team": "falcons",
+            "name": "Giocatore 66"
+          }
+        },
+        {
+          "team": "phoenix",
+          "name": "Giocatore 60",
+          "min": 43,
+          "assist": {
+            "team": "phoenix",
+            "name": "Giocatore 61"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "phoenix",
+          "name": "Giocatore 58",
+          "type": "Y",
+          "min": 16
+        }
+      ],
+      "penalties": []
+    },
+    "d_c6": {
+      "scorers": [
+        {
+          "team": "kings",
+          "name": "Giocatore 75",
+          "min": 18,
+          "assist": {
+            "team": "kings",
+            "name": "Giocatore 73"
+          }
+        },
+        {
+          "team": "sharks",
+          "name": "Giocatore 82",
+          "min": 36,
+          "assist": {
+            "team": "sharks",
+            "name": "Giocatore 80"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "team": "kings",
+          "name": "Giocatore 72",
+          "type": "Y",
+          "min": 41
+        }
+      ],
+      "penalties": []
+    }
+  },
   "MVP_DATA": {
     "matchday": 1,
     "closed": false,
@@ -1562,9 +1838,9 @@
     {
       "round": "Giornata 2",
       "label": "Giornata 2",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili"
+      "lockAt": "2026-07-12T20:00:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti fino all’inizio della prima partita di Giornata 2"
     },
     {
       "round": "Giornata 3",
