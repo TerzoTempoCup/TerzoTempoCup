@@ -105,7 +105,7 @@
       "name": "ZEKEKE",
       "group": "A",
       "emoji": "🏆",
-      "logo": "Loghi Squadre/zekeke.png",
+      "logo": "zekeke.png",
       "coach": "Antonio Ciuffo",
       "players": [
         {
@@ -119,7 +119,7 @@
           "gp": 0
         },
         {
-          "n": 2,
+          "n": 23,
           "name": "Simone Supino",
           "role": "Difensore",
           "g": 0,
@@ -129,7 +129,7 @@
           "gp": 0
         },
         {
-          "n": 3,
+          "n": 99,
           "name": "Felice Falabella",
           "role": "Centrocampista",
           "g": 0,
@@ -139,7 +139,7 @@
           "gp": 0
         },
         {
-          "n": 4,
+          "n": 22,
           "name": "Davide Orlando",
           "role": "Centrocampista",
           "g": 0,
@@ -149,7 +149,7 @@
           "gp": 0
         },
         {
-          "n": 5,
+          "n": 10,
           "name": "Angelo Mastroianni",
           "role": "Attaccante",
           "g": 0,
@@ -165,6 +165,7 @@
       "name": "Squadra 2",
       "group": "A",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -224,6 +225,7 @@
       "name": "Squadra 3",
       "group": "A",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -283,6 +285,7 @@
       "name": "Squadra 4",
       "group": "A",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -342,6 +345,7 @@
       "name": "Squadra 5",
       "group": "B",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -401,6 +405,7 @@
       "name": "Squadra 6",
       "group": "B",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -460,6 +465,7 @@
       "name": "Squadra 7",
       "group": "B",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -519,6 +525,7 @@
       "name": "Squadra 8",
       "group": "B",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -578,6 +585,7 @@
       "name": "Squadra 9",
       "group": "C",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -637,6 +645,7 @@
       "name": "Squadra 10",
       "group": "C",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -696,6 +705,7 @@
       "name": "Squadra 11",
       "group": "C",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -755,6 +765,7 @@
       "name": "Squadra 12",
       "group": "C",
       "emoji": "🏆",
+      "logo": "logo_squadre_generico.png",
       "coach": "Da assegnare",
       "players": [
         {
@@ -813,8 +824,8 @@
   "TEAM_RESERVES": {
     "redstorm": [
       {
-        "n": 6,
-        "name": "Davide Filipi",
+        "n": 14,
+        "name": "Davide Filpi",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -823,7 +834,7 @@
         "gp": 0
       },
       {
-        "n": 7,
+        "n": 33,
         "name": "Felice Gulfo",
         "role": "Centrocampista",
         "g": 0,
@@ -833,7 +844,7 @@
         "gp": 0
       },
       {
-        "n": 8,
+        "n": 45,
         "name": "Raffaele Cascelli",
         "role": "Attaccante",
         "g": 0,
@@ -1093,10 +1104,10 @@
       "group": "A",
       "home": "redstorm",
       "away": "bluefire",
-      "date": "01 Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
-      "sh": 3,
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
+      "sh": 2,
       "sa": 1,
       "yt": "#",
       "detailId": "d_c1"
@@ -1107,11 +1118,11 @@
       "group": "A",
       "home": "golden",
       "away": "wolves",
-      "date": "01 Lug",
-      "time": "20:40",
-      "location": "Campo Nord",
-      "sh": 2,
-      "sa": 2,
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
+      "sh": 0,
+      "sa": 0,
       "yt": "#",
       "detailId": "d_c2"
     },
@@ -1121,9 +1132,9 @@
       "group": "B",
       "home": "dragons",
       "away": "titans",
-      "date": "01 Lug",
-      "time": "21:20",
-      "location": "Campo Sud",
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": 1,
       "sa": 0,
       "yt": "#",
@@ -1135,13 +1146,13 @@
       "group": "B",
       "home": "legends",
       "away": "sparta",
-      "date": "01 Lug",
-      "time": "22:00",
-      "location": "Campo Sud",
-      "sh": 0,
-      "sa": 1,
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c4"
+      "detailId": null
     },
     {
       "id": "c5",
@@ -1149,13 +1160,13 @@
       "group": "C",
       "home": "phoenix",
       "away": "falcons",
-      "date": "01 Lug",
-      "time": "22:40",
-      "location": "Campo Est",
-      "sh": 4,
-      "sa": 2,
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c5"
+      "detailId": null
     },
     {
       "id": "c6",
@@ -1163,13 +1174,13 @@
       "group": "C",
       "home": "kings",
       "away": "sharks",
-      "date": "01 Lug",
-      "time": "23:20",
-      "location": "Campo Est",
-      "sh": 1,
-      "sa": 1,
+      "date": "20 Lug",
+      "time": "Da Definire",
+      "location": "Campo Sportivo Trecchina",
+      "sh": null,
+      "sa": null,
       "yt": "#",
-      "detailId": "d_c6"
+      "detailId": null
     },
     {
       "id": "c7",
@@ -1178,8 +1189,8 @@
       "home": "redstorm",
       "away": "golden",
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1192,8 +1203,8 @@
       "home": "bluefire",
       "away": "wolves",
       "date": "?? Lug",
-      "time": "20:40",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1206,8 +1217,8 @@
       "home": "dragons",
       "away": "legends",
       "date": "?? Lug",
-      "time": "21:20",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1220,8 +1231,8 @@
       "home": "titans",
       "away": "sparta",
       "date": "?? Lug",
-      "time": "22:00",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1234,8 +1245,8 @@
       "home": "phoenix",
       "away": "kings",
       "date": "?? Lug",
-      "time": "22:40",
-      "location": "Campo Est",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1248,8 +1259,8 @@
       "home": "falcons",
       "away": "sharks",
       "date": "?? Lug",
-      "time": "23:20",
-      "location": "Campo Est",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1262,8 +1273,8 @@
       "home": "redstorm",
       "away": "wolves",
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1276,8 +1287,8 @@
       "home": "bluefire",
       "away": "golden",
       "date": "?? Lug",
-      "time": "20:40",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1290,8 +1301,8 @@
       "home": "dragons",
       "away": "sparta",
       "date": "?? Lug",
-      "time": "21:20",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1304,8 +1315,8 @@
       "home": "titans",
       "away": "legends",
       "date": "?? Lug",
-      "time": "22:00",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1318,8 +1329,8 @@
       "home": "phoenix",
       "away": "sharks",
       "date": "?? Lug",
-      "time": "22:40",
-      "location": "Campo Est",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1332,8 +1343,8 @@
       "home": "falcons",
       "away": "kings",
       "date": "?? Lug",
-      "time": "23:20",
-      "location": "Campo Est",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1346,8 +1357,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1360,8 +1371,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "21:30",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1374,8 +1385,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Est",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1388,8 +1399,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "21:30",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1402,8 +1413,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1416,8 +1427,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "21:45",
-      "location": "Campo Sud",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1430,8 +1441,8 @@
       "home": null,
       "away": null,
       "date": "?? Lug",
-      "time": "20:00",
-      "location": "Campo Nord",
+      "time": "Da definire",
+      "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
       "yt": "#",
@@ -1444,260 +1455,61 @@
         {
           "team": "redstorm",
           "name": "Angelo Mastroianni",
-          "min": 8,
-          "assist": {
-            "team": "redstorm",
-            "name": "Davide Orlando"
-          }
+          "min": 12
         },
         {
           "team": "redstorm",
-          "name": "Simone Supino",
-          "min": 22,
-          "assist": {
-            "team": "redstorm",
-            "name": "Felice Falabella"
-          }
+          "name": "Davide Orlando",
+          "min": 33
         },
         {
           "team": "bluefire",
           "name": "Giocatore 12",
-          "min": 31,
-          "assist": {
-            "team": "bluefire",
-            "name": "Giocatore 11"
-          }
-        },
-        {
-          "team": "redstorm",
-          "name": "Raffaele Cascelli",
-          "min": 44,
-          "assist": {
-            "team": "redstorm",
-            "name": "Felice Gulfo"
-          }
+          "min": 41
         }
       ],
       "cards": [
-        {
-          "team": "redstorm",
-          "name": "Simone Supino",
-          "type": "Y",
-          "min": 17
-        },
-        {
-          "team": "bluefire",
-          "name": "Giocatore 9",
-          "type": "Y",
-          "min": 35
-        }
+
       ],
-      "penalties": []
+      "penalties": [
+
+      ]
     },
     "d_c2": {
       "scorers": [
-        {
-          "team": "golden",
-          "name": "Giocatore 19",
-          "min": 6,
-          "assist": {
-            "team": "golden",
-            "name": "Giocatore 18"
-          }
-        },
-        {
-          "team": "wolves",
-          "name": "Giocatore 24",
-          "min": 14,
-          "assist": {
-            "team": "wolves",
-            "name": "Giocatore 26"
-          }
-        },
-        {
-          "team": "golden",
-          "name": "Giocatore 17",
-          "min": 29,
-          "assist": {
-            "team": "golden",
-            "name": "Giocatore 16"
-          }
-        },
-        {
-          "team": "wolves",
-          "name": "Giocatore 26",
-          "min": 41,
-          "assist": {
-            "team": "wolves",
-            "name": "Giocatore 25"
-          }
-        }
+
       ],
       "cards": [
-        {
-          "team": "wolves",
-          "name": "Giocatore 23",
-          "type": "Y",
-          "min": 23
-        }
+
       ],
-      "penalties": []
+      "penalties": [
+
+      ]
     },
     "d_c3": {
       "scorers": [
         {
           "team": "dragons",
           "name": "Giocatore 33",
-          "min": 27,
-          "assist": {
-            "team": "dragons",
-            "name": "Giocatore 31"
-          }
+          "min": 27
         }
       ],
       "cards": [
-        {
-          "team": "titans",
-          "name": "Giocatore 37",
-          "type": "Y",
-          "min": 12
-        }
+
       ],
-      "penalties": []
-    },
-    "d_c4": {
-      "scorers": [
-        {
-          "team": "sparta",
-          "name": "Giocatore 54",
-          "min": 33,
-          "assist": {
-            "team": "sparta",
-            "name": "Giocatore 52"
-          }
-        }
-      ],
-      "cards": [
-        {
-          "team": "legends",
-          "name": "Giocatore 45",
-          "type": "Y",
-          "min": 19
-        },
-        {
-          "team": "sparta",
-          "name": "Giocatore 51",
-          "type": "Y",
-          "min": 38
-        }
-      ],
-      "penalties": []
-    },
-    "d_c5": {
-      "scorers": [
-        {
-          "team": "phoenix",
-          "name": "Giocatore 61",
-          "min": 5,
-          "assist": {
-            "team": "phoenix",
-            "name": "Giocatore 60"
-          }
-        },
-        {
-          "team": "falcons",
-          "name": "Giocatore 68",
-          "min": 11,
-          "assist": {
-            "team": "falcons",
-            "name": "Giocatore 67"
-          }
-        },
-        {
-          "team": "phoenix",
-          "name": "Giocatore 59",
-          "min": 20,
-          "assist": {
-            "team": "phoenix",
-            "name": "Giocatore 58"
-          }
-        },
-        {
-          "team": "phoenix",
-          "name": "Giocatore 61",
-          "min": 33,
-          "assist": {
-            "team": "phoenix",
-            "name": "Giocatore 59"
-          }
-        },
-        {
-          "team": "falcons",
-          "name": "Giocatore 67",
-          "min": 39,
-          "assist": {
-            "team": "falcons",
-            "name": "Giocatore 66"
-          }
-        },
-        {
-          "team": "phoenix",
-          "name": "Giocatore 60",
-          "min": 43,
-          "assist": {
-            "team": "phoenix",
-            "name": "Giocatore 61"
-          }
-        }
-      ],
-      "cards": [
-        {
-          "team": "phoenix",
-          "name": "Giocatore 58",
-          "type": "Y",
-          "min": 16
-        }
-      ],
-      "penalties": []
-    },
-    "d_c6": {
-      "scorers": [
-        {
-          "team": "kings",
-          "name": "Giocatore 75",
-          "min": 18,
-          "assist": {
-            "team": "kings",
-            "name": "Giocatore 73"
-          }
-        },
-        {
-          "team": "sharks",
-          "name": "Giocatore 82",
-          "min": 36,
-          "assist": {
-            "team": "sharks",
-            "name": "Giocatore 80"
-          }
-        }
-      ],
-      "cards": [
-        {
-          "team": "kings",
-          "name": "Giocatore 72",
-          "type": "Y",
-          "min": 41
-        }
-      ],
-      "penalties": []
+      "penalties": [
+
+      ]
     }
   },
   "MVP_DATA": {
-    "matchday": 1,
+    "matchday": null,
     "closed": false,
     "igHandle": "@terzotempocup",
     "winner": null,
-    "candidates": []
+    "candidates": [
+
+    ]
   },
   "GALLERY": [
     {
@@ -1831,23 +1643,23 @@
     {
       "round": "Giornata 1",
       "label": "Giornata 1",
-      "lockAt": "2026-07-01T20:00:00+02:00",
-      "status": "open",
-      "message": "Pronostici aperti fino all’inizio della prima partita"
+      "lockAt": null,
+      "status": "draft",
+      "message": "Pronostici non disponibili, in attesa dei sorteggi"
     },
     {
       "round": "Giornata 2",
       "label": "Giornata 2",
-      "lockAt": "2026-07-12T20:00:00+02:00",
-      "status": "open",
-      "message": "Pronostici aperti fino all’inizio della prima partita di Giornata 2"
+      "lockAt": null,
+      "status": "draft",
+      "message": "Pronostici non disponibili, in attesa dei sorteggi"
     },
     {
       "round": "Giornata 3",
       "label": "Giornata 3",
       "lockAt": null,
       "status": "draft",
-      "message": "Pronostici non disponibili"
+      "message": "Pronostici non disponibili, in attesa dei sorteggi"
     },
     {
       "round": "Quarti di Finale",
