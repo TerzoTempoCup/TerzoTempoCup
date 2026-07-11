@@ -1,8 +1,8 @@
 {
   "TEAM_NAMES": {
     "redstorm": "ZEKEKE",
-    "bluefire": "Squadra 2",
-    "golden": "Squadra 3",
+    "bluefire": "SETTORE RIBELLE FC",
+    "golden": "3P NEXT GEN",
     "wolves": "Squadra 4",
     "dragons": "Squadra 5",
     "titans": "Squadra 6",
@@ -162,15 +162,15 @@
     },
     {
       "id": "bluefire",
-      "name": "Squadra 2",
+      "name": "SETTORE RIBELLE FC",
       "group": "A",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "settoreribelle.png",
+      "coach": "X",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 8",
+          "name": "Leonardo Brotac",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -179,8 +179,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 9",
+          "n": 11,
+          "name": "Gaetano Surace",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -190,7 +190,17 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 10",
+          "name": "Domenico Fabiano",
+          "role": "Centrocampista",
+          "g": 0,
+          "a": 0,
+          "y": 0,
+          "r": 0,
+          "gp": 0
+        },
+        {
+          "n": 8,
+          "name": "Daniel Bocchino",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -200,17 +210,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 11",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 9,
-          "name": "Giocatore 12",
+          "name": "Amine Bejaoui",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -222,15 +222,15 @@
     },
     {
       "id": "golden",
-      "name": "Squadra 3",
+      "name": "3P NEXT GEN",
       "group": "A",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "3pnextgen.png",
+      "coach": "Enrico Musa",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 15",
+          "name": "Biagio Scotellaro",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -239,8 +239,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 16",
+          "n": 11,
+          "name": "Ferdinando Sisca",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -250,7 +250,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 17",
+          "name": "Davide Supino",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -259,8 +259,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 18",
+          "n": 3,
+          "name": "Enrico Olivieri",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -270,7 +270,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 19",
+          "name": "Gennaro Agrelli",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -856,8 +856,8 @@
     ],
     "bluefire": [
       {
-        "n": 12,
-        "name": "Giocatore 13",
+        "n": 21,
+        "name": "Giovanni Schettino",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -866,9 +866,19 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 14",
+        "n": 17,
+        "name": "Ernesto Speranza",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 9,
+        "name": "Fausto Corinto",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
@@ -878,8 +888,8 @@
     ],
     "golden": [
       {
-        "n": 12,
-        "name": "Giocatore 20",
+        "n": 23,
+        "name": "Luca Supino",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -888,9 +898,19 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 21",
+        "n": 5,
+        "name": "Francesco Iannotti",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 10,
+        "name": "Rosario Colombo",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
