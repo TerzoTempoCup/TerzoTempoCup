@@ -3,9 +3,9 @@
     "redstorm": "ZEKEKE",
     "bluefire": "SETTORE RIBELLE FC",
     "golden": "3P NEXT GEN",
-    "wolves": "Squadra 4",
-    "dragons": "Squadra 5",
-    "titans": "Squadra 6",
+    "wolves": "CECCHINI BOYS",
+    "dragons": "LA BANDA DI SPIGOLIN",
+    "titans": "BLACKOUT",
     "legends": "Squadra 7",
     "sparta": "Squadra 8",
     "phoenix": "Squadra 9",
@@ -129,8 +129,8 @@
           "gp": 0
         },
         {
-          "n": 99,
-          "name": "Felice Falabella",
+          "n": 77,
+          "name": "Alessandro Colombo",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -282,15 +282,15 @@
     },
     {
       "id": "wolves",
-      "name": "Squadra 4",
+      "name": "CECCHINI BOYS",
       "group": "A",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "cecchiniboys.png",
+      "coach": "Massimo D'Agostino",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 22",
+          "name": "Domenico Sersale",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -299,8 +299,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 23",
+          "n": 3,
+          "name": "Raffaele D'Agostino",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -309,8 +309,18 @@
           "gp": 0
         },
         {
+          "n": 8,
+          "name": "Salvatore Corinto",
+          "role": "Centrocampista",
+          "g": 0,
+          "a": 0,
+          "y": 0,
+          "r": 0,
+          "gp": 0
+        },
+        {
           "n": 7,
-          "name": "Giocatore 24",
+          "name": "Pietro Filardi",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -320,17 +330,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 25",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 9,
-          "name": "Giocatore 26",
+          "name": "Osvaldo Giffuni",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -342,15 +342,15 @@
     },
     {
       "id": "dragons",
-      "name": "Squadra 5",
+      "name": "LA BANDA DI SPIGOLIN",
       "group": "B",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "spigolin.png",
+      "coach": "Spigolin",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 29",
+          "name": "Renato Agrello",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -360,7 +360,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 30",
+          "name": "Leonardo Filardi",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -369,8 +369,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 31",
+          "n": 45,
+          "name": "Dauda Bah",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -379,8 +379,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 32",
+          "n": 11,
+          "name": "Angelo Mastropierro",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -389,8 +389,8 @@
           "gp": 0
         },
         {
-          "n": 9,
-          "name": "Giocatore 33",
+          "n": 21,
+          "name": "Michele Schettini",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -402,15 +402,15 @@
     },
     {
       "id": "titans",
-      "name": "Squadra 6",
+      "name": "BLACKOUT",
       "group": "B",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "blackout.png",
+      "coach": "Giuseppe Sisca",
       "players": [
         {
-          "n": 1,
-          "name": "Giocatore 36",
+          "n": 22,
+          "name": "Michele Fusco",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -419,8 +419,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 37",
+          "n": 17,
+          "name": "Giuseppe Sisca",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -429,8 +429,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 38",
+          "n": 10,
+          "name": "Alessandro Spagnolo",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -439,8 +439,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 39",
+          "n": 95,
+          "name": "Michele Lentini",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -450,7 +450,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 40",
+          "name": "Giuseppe Brando",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -844,6 +844,16 @@
         "gp": 0
       },
       {
+        "n": 99,
+        "name": "Felice Falabella",
+        "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
         "n": 45,
         "name": "Raffaele Cascelli",
         "role": "Attaccante",
@@ -920,8 +930,8 @@
     ],
     "wolves": [
       {
-        "n": 12,
-        "name": "Giocatore 27",
+        "n": 4,
+        "name": "Giampiero Labanca",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -930,9 +940,19 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 28",
-        "role": "Centrocampista",
+        "n": 11,
+        "name": "Antonio Nobile",
+        "role": "Difensore",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 9,
+        "name": "Antonio Lammoglia",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
@@ -942,8 +962,8 @@
     ],
     "dragons": [
       {
-        "n": 12,
-        "name": "Giocatore 34",
+        "n": 6,
+        "name": "Massimino Schettini",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -952,20 +972,31 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 35",
+        "n": 8,
+        "name": "Pasquale Marino",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 10,
+        "name": "Alessandro Cozzi",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
         "r": 0,
         "gp": 0
       }
+        
     ],
     "titans": [
       {
-        "n": 12,
-        "name": "Giocatore 41",
+        "n": 8,
+        "name": "Nicolò Carlomagno",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -974,9 +1005,59 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Giocatore 42",
+        "n": 4,
+        "name": "Luis Iannotti",
+        "role": "Difensore",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 8,
+        "name": "Giacomo Ricciardi",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 94,
+        "name": "Davide Agrelli",
+        "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 5,
+        "name": "Pierfrancesco Conte",
+        "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 21,
+        "name": "Umberto Nasta",
+        "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 20,
+        "name": "Boris Maimone",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
