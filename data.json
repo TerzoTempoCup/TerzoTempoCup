@@ -963,7 +963,7 @@
     "dragons": [
       {
         "n": 6,
-        "name": "Massimino Schettini",
+        "name": "Massimo Schettini",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1005,7 +1005,7 @@
         "gp": 0
       },
       {
-        "n": 8,
+        "n": 18,
         "name": "Giacomo Ricciardi",
         "role": "Centrocampista",
         "g": 0,
@@ -1055,7 +1055,7 @@
         "gp": 0
       },
       {
-        "n": 21,
+        "n": 8,
         "name": "Nicolò Carlomagno",
         "role": "Bomber",
         "g": 0,
