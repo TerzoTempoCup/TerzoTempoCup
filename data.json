@@ -406,7 +406,7 @@
       "group": "B",
       "emoji": "🏆",
       "logo": "blackout.png",
-      "coach": "Giuseppe Sisca",
+      "coach": "Pepè Sisca",
       "players": [
         {
           "n": 22,
@@ -995,16 +995,6 @@
     ],
     "titans": [
       {
-        "n": 8,
-        "name": "Nicolò Carlomagno",
-        "role": "Difensore",
-        "g": 0,
-        "a": 0,
-        "y": 0,
-        "r": 0,
-        "gp": 0
-      },
-      {
         "n": 4,
         "name": "Luis Iannotti",
         "role": "Difensore",
@@ -1058,6 +1048,16 @@
         "n": 20,
         "name": "Boris Maimone",
         "role": "Attaccante",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 21,
+        "name": "Nicolò Carlomagno",
+        "role": "Bomber",
         "g": 0,
         "a": 0,
         "y": 0,
@@ -1208,10 +1208,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
+      "sh": 2,
+      "sa": 1,
+      "yt": "https://www.youtube.com/watch?v=ttc-g1-c1",
+      "detailId": "d-c1"
     },
     {
       "id": "c2",
@@ -1222,10 +1222,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 1,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "d-c2"
     },
     {
       "id": "c3",
@@ -1236,10 +1236,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
+      "sh": 0,
+      "sa": 2,
+      "yt": "https://www.youtube.com/watch?v=ttc-g1-c3",
+      "detailId": "d-c3"
     },
     {
       "id": "c4",
@@ -1250,10 +1250,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "d-c4"
     },
     {
       "id": "c5",
@@ -1264,10 +1264,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 1,
+      "sa": 0,
       "yt": "#",
-      "detailId": null
+      "detailId": "d-c5"
     },
     {
       "id": "c6",
@@ -1278,10 +1278,10 @@
       "date": "20 Lug",
       "time": "Da Definire",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
+      "sh": 3,
+      "sa": 2,
+      "yt": "https://www.youtube.com/watch?v=ttc-g1-c6",
+      "detailId": "d-c6"
     },
     {
       "id": "c7",
@@ -1550,7 +1550,157 @@
       "detailId": null
     }
   ],
-  "DETAILS": {},
+  "DETAILS": {
+    "d-c1": {
+      "scorers": [
+        {
+          "team": "redstorm",
+          "name": "Angelo Mastroianni",
+          "min": 7
+        },
+        {
+          "team": "bluefire",
+          "name": "Amine Bejaoui",
+          "min": 12
+        },
+        {
+          "team": "redstorm",
+          "name": "Davide Orlando",
+          "min": 22
+        }
+      ],
+      "cards": [
+        {
+          "team": "bluefire",
+          "name": "Gaetano Surace",
+          "type": "Y",
+          "min": 18
+        }
+      ],
+      "penalties": []
+    },
+    "d-c2": {
+      "scorers": [
+        {
+          "team": "golden",
+          "name": "Gennaro Agrelli",
+          "min": 10
+        },
+        {
+          "team": "wolves",
+          "name": "Osvaldo Giffuni",
+          "min": 24
+        }
+      ],
+      "cards": [
+        {
+          "team": "wolves",
+          "name": "Raffaele D'Agostino",
+          "type": "Y",
+          "min": 20
+        }
+      ],
+      "penalties": []
+    },
+    "d-c3": {
+      "scorers": [
+        {
+          "team": "titans",
+          "name": "Giuseppe Brando",
+          "min": 9
+        },
+        {
+          "team": "titans",
+          "name": "Alessandro Spagnolo",
+          "min": 27
+        }
+      ],
+      "cards": [
+        {
+          "team": "dragons",
+          "name": "Leonardo Filardi",
+          "type": "Y",
+          "min": 14
+        }
+      ],
+      "penalties": []
+    },
+    "d-c4": {
+      "scorers": [
+        {
+          "team": "legends",
+          "name": "Giocatore 47",
+          "min": 6
+        },
+        {
+          "team": "sparta",
+          "name": "Giocatore 54",
+          "min": 11
+        },
+        {
+          "team": "legends",
+          "name": "Giocatore 45",
+          "min": 19
+        },
+        {
+          "team": "sparta",
+          "name": "Giocatore 53",
+          "min": 28
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    },
+    "d-c5": {
+      "scorers": [
+        {
+          "team": "phoenix",
+          "name": "Giocatore 61",
+          "min": 16
+        }
+      ],
+      "cards": [
+        {
+          "team": "falcons",
+          "name": "Giocatore 65",
+          "type": "Y",
+          "min": 23
+        }
+      ],
+      "penalties": []
+    },
+    "d-c6": {
+      "scorers": [
+        {
+          "team": "kings",
+          "name": "Giocatore 75",
+          "min": 5
+        },
+        {
+          "team": "sharks",
+          "name": "Giocatore 82",
+          "min": 8
+        },
+        {
+          "team": "kings",
+          "name": "Giocatore 74",
+          "min": 17
+        },
+        {
+          "team": "kings",
+          "name": "Giocatore 73",
+          "min": 25
+        },
+        {
+          "team": "sharks",
+          "name": "Giocatore 81",
+          "min": 29
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    }
+  },
   "MVP_DATA": {},
   "GALLERY": [
     {
