@@ -6,7 +6,7 @@
     "wolves": "CECCHINI BOYS",
     "dragons": "LA BANDA DI SPIGOLIN",
     "titans": "BLACKOUT",
-    "legends": "Squadra 7",
+    "legends": "VALHALLA",
     "sparta": "Squadra 8",
     "phoenix": "Squadra 9",
     "falcons": "Squadra 10",
@@ -462,15 +462,15 @@
     },
     {
       "id": "legends",
-      "name": "Squadra 7",
+      "name": "VALHALLA",
       "group": "B",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
+      "logo": "valhalla.png",
+      "coach": "X",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 43",
+          "name": "Vittorio De Brasi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -480,7 +480,7 @@
         },
         {
           "n": 4,
-          "name": "Giocatore 44",
+          "name": "Salvatore Sorace",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -490,7 +490,7 @@
         },
         {
           "n": 7,
-          "name": "Giocatore 45",
+          "name": "Giancarllo Selucio",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -500,7 +500,7 @@
         },
         {
           "n": 10,
-          "name": "Giocatore 46",
+          "name": "Juan Carlos Rondon",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -510,7 +510,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 47",
+          "name": "Marco Petrosino",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -1067,8 +1067,8 @@
     ],
     "legends": [
       {
-        "n": 12,
-        "name": "Giocatore 48",
+        "n": 21,
+        "name": "Pietro Speranza",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1078,8 +1078,18 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 49",
+        "name": "Brandon Posteraro",
         "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 90,
+        "name": "Fortunato Sorace",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
