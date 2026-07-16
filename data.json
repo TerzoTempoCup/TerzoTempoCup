@@ -7,7 +7,7 @@
     "dragons": "LA BANDA DI SPIGOLIN",
     "titans": "BLACKOUT",
     "legends": "VALHALLA",
-    "sparta": "Squadra 8",
+    "sparta": "ZEUS UNITED",
     "phoenix": "Squadra 9",
     "falcons": "Squadra 10",
     "kings": "Squadra 11",
@@ -522,15 +522,15 @@
     },
     {
       "id": "sparta",
-      "name": "Squadra 8",
+      "name": "ZEUS UNITED",
       "group": "B",
       "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
+      "logo": "zeus.png",
       "coach": "Da assegnare",
       "players": [
         {
           "n": 1,
-          "name": "Giocatore 50",
+          "name": "Paolo Aliberti",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -539,8 +539,8 @@
           "gp": 0
         },
         {
-          "n": 4,
-          "name": "Giocatore 51",
+          "n": 7,
+          "name": "Nicola Ielpo",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -549,8 +549,8 @@
           "gp": 0
         },
         {
-          "n": 7,
-          "name": "Giocatore 52",
+          "n": 11,
+          "name": "Emmanuel Iannotti",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -559,8 +559,8 @@
           "gp": 0
         },
         {
-          "n": 10,
-          "name": "Giocatore 53",
+          "n": 3,
+          "name": "Emiliano Brando",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -570,7 +570,7 @@
         },
         {
           "n": 9,
-          "name": "Giocatore 54",
+          "name": "Michelangelo Schettini",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -1099,8 +1099,8 @@
     ],
     "sparta": [
       {
-        "n": 12,
-        "name": "Giocatore 55",
+        "n": 10,
+        "name": "Francesco Olivieri",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1110,8 +1110,8 @@
       },
       {
         "n": 14,
-        "name": "Giocatore 56",
-        "role": "Centrocampista",
+        "name": "Davide D'Andrea",
+        "role": "Attaccante",
         "g": 0,
         "a": 0,
         "y": 0,
