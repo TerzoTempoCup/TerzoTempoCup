@@ -1213,6 +1213,17 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
   #calendario .cal-card .cal-status{
     color:#fff;
   }
+
+  #calendario .cal-tabs{
+    gap:.3rem;
+    margin-bottom:.85rem;
+    padding-bottom:.15rem;
+  }
+
+  #calendario .cal-tab-btn{
+    font-size:.76rem;
+    padding:.32rem .62rem;
+  }
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -1233,7 +1244,7 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 <div class="modal-bg" id="mainModal" onclick="closeModalBg(event)"><div class="modal" id="modalBox"></div></div>
 <footer style="position:relative;z-index:1;text-align:center;color:var(--mu);font-size:.78rem;font-weight:800;padding:1.4rem">Terzo Tempo Cup 2026 · Made by <span style="color:var(--rd)">Umberto Nasta</span></footer>
 <script>
-const DATA_SOURCE='data.json';const SUPABASE_URL='https://qhxxszbobeduzqwzhrab.supabase.co';const SUPABASE_KEY='sb_publishable_e7o8RcjK4t7E9xqBwJ8i_Q_vT7ijBYy';let sb=null,currentUser=null,currentProfile=null,allPredictions=[],allPrePredictions=[],publicProfiles=[];let TEAM_NAMES={},PLAYER_NAMES={},TEAMS=[],TEAM_RESERVES={},GROUPS={},RECENT=[],DETAILS={},UPCOMING=[],MVP_DATA={},GALLERY=[],CALENDAR=[],PREDICTION_ROUNDS=[],PREDICTION_FINAL_AWARDS={},KNOCKOUT={qualified:null,quarterfinals:[],semifinals:[],final:{}};const TOURNAMENT_TEAM_LIMIT=10;
+const DATA_SOURCE='data.json';const SUPABASE_URL='https://qhxxszbobeduzqwzhrab.supabase.co';const SUPABASE_KEY='sb_publishable_e7o8RcjK4t7E9xqBwJ8i_Q_vT7ijBYy';let sb=null,currentUser=null,currentProfile=null,allPredictions=[],allPrePredictions=[],publicProfiles=[];let TEAM_NAMES={},PLAYER_NAMES={},TEAMS=[],TEAM_RESERVES={},GROUPS={},RECENT=[],DETAILS={},UPCOMING=[],MVP_DATA={},GALLERY=[],CALENDAR=[],PREDICTION_ROUNDS=[],PREDICTION_FINAL_AWARDS={},KNOCKOUT={qualified:null,quarterfinals:[],semifinals:[],final:{}};const TOURNAMENT_TEAM_LIMIT=12;
 const getTournamentTeams=()=>TEAMS.slice(0,TOURNAMENT_TEAM_LIMIT);
 const getTournamentTeamIds=()=>new Set(getTournamentTeams().map(t=>t.id));
 const teamLogo='<img src="logo_squadre_generico.png" alt="" style="height:1.2em;width:1.2em;object-fit:contain;vertical-align:text-bottom;" onerror="this.outerHTML=\'⚽\'">';
@@ -1244,7 +1255,7 @@ const getTeamLogoImg=id=>{
   const extraStyle=isSettoreRibelle?'transform:scale(1.24);transform-origin:center;display:inline-block;':'';
   return '<img src="'+src+'" alt="" style="height:1.2em;width:1.2em;object-fit:contain;vertical-align:text-bottom;'+extraStyle+'" onerror="this.outerHTML=\'⚽\'">';
 };
-const getTeam=id=>TEAMS.find(t=>t.id===id||t.name===id);const tName=id=>{const t=getTeam(id);return t?t.name:(TEAM_NAMES[id]||id||'Da definire')};const lastName=n=>String(n||'').split(' ').filter(Boolean).pop()||'';const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const getTeam=id=>TEAMS.find(t=>t.id===id||t.name===id);const tName=id=>{const t=getTeam(id);return t?t.name:(TEAM_NAMES[id]||id||'Da definire')};const lastName=n=>String(n||'').split(' ').filter(Boolean).pop()||'';const shortPitchName=n=>{const parts=String(n||'').trim().split(/\s+/).filter(Boolean);if(!parts.length)return'';if(parts.length===1)return parts[0];const initial=(parts[0][0]||'').toUpperCase();const surname=parts[parts.length-1];return initial?(surname+' '+initial+'.'):surname};const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 
 
 async function loadExternalData(){try{const res=await fetch(DATA_SOURCE);if(!res.ok)throw new Error(res.status);const data=await res.json();TEAM_NAMES=data.TEAM_NAMES||{};PLAYER_NAMES=data.PLAYER_NAMES||{};TEAMS=data.TEAMS||[];TEAM_RESERVES=data.TEAM_RESERVES||{};GROUPS=data.GROUPS||{};RECENT=data.RECENT||[];DETAILS=data.DETAILS||{};UPCOMING=data.UPCOMING||[];MVP_DATA=data.MVP_DATA||{};GALLERY=data.GALLERY||[];CALENDAR=data.CALENDAR||[];PREDICTION_ROUNDS=data.PREDICTION_ROUNDS||[];PREDICTION_FINAL_AWARDS=data.PREDICTION_FINAL_AWARDS||{};KNOCKOUT=data.KNOCKOUT||KNOCKOUT;console.log('Data loaded from',DATA_SOURCE)}catch(e){console.error('Errore caricamento data.json',e);document.body.insertAdjacentHTML('afterbegin','<div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#c80000;color:#fff;padding:1rem;text-align:center;font-weight:900">Errore nel caricamento di data.json. Controlla console e formato JSON.</div>')}}
@@ -1370,7 +1381,7 @@ function renderTeamGroupMini(teamId){const rows=(GROUPS.UNICO||[]).slice().sort(
 function renderTeamSidePanel(teamId){const t=getTeam(teamId);if(!t)return'';const bomber=teamEventStats(teamId,'goal');const assist=teamEventStats(teamId,'assist');return '<aside class="td-side-panel"><div class="td-side-card"><div class="td-side-title">Girone Unico</div>'+renderTeamGroupMini(teamId)+'</div><div class="td-side-card"><div class="td-side-title">Statistiche squadra</div><div class="td-player-stat"><div><b>Miglior marcatore</b><small>'+(bomber?esc(bomber.name):'Nessun gol registrato')+'</small></div><span class="num">'+(bomber?bomber.value:0)+'</span></div><div style="height:.6rem"></div><div class="td-player-stat"><div><b>Miglior assistman</b><small>'+(assist?esc(assist.name):'Nessun assist registrato')+'</small></div><span class="num">'+(assist?assist.value:0)+'</span></div></div></aside>'}
 
 function showTeam(id){const t=getTeam(id);if(!t)return;teamsList.classList.add('hidden');const st=(GROUPS.UNICO||[]).find(r=>r.id===id)||{};teamDetail.classList.add('act');const reserves=TEAM_RESERVES[t.id]||[];const teamLogo=getTeamLogoImg(t.id);const coachHtml='<div class="card coach-wrap"><div class="sq-group-head">👔 Allenatore</div><div class="coach-info">'+esc(t.coach||'Da assegnare')+'</div></div>';const reservesHtml='<div class="card reserves-wrap"><div class="sq-group-head">Panchina</div>'+(reserves.length?'<div class="reserve-list">'+reserves.map((r,i)=>'<div class="reserve-item" onclick="showReserveModal(\''+t.id+'\','+i+')"><span class="reserve-num">'+r.n+'</span><div><strong>'+esc(r.name)+'</strong><div>'+esc(mapRole(r.role))+'</div></div></div>').join('')+'</div>':'<div class="md-noevent">Panchina non disponibile</div>')+'</div>';teamDetail.innerHTML='<button class="back-btn" onclick="hideTeam()">← Torna alle Squadre</button><div class="td-header"><div class="td-em">'+teamLogo+'</div><div><div class="td-name">'+esc(t.name)+'</div><div class="td-meta"><span class="td-pill">Girone Unico</span><span class="td-pill">🏆 '+(st.pts||0)+' pt</span><span class="td-pill">'+(st.w||0)+'V '+(st.d||0)+'N '+(st.l||0)+'P</span></div></div></div><div class="team-detail-body v15"><div class="team-main-col"><div class="pitch-wrap"><div class="pitch-lbl">⚽ Formazione 1-2-1</div><div class="pitch">'+buildPitch(t)+'</div></div>'+coachHtml+reservesHtml+'</div>'+renderTeamSidePanel(t.id)+'</div>'}
-function buildPitch(t){const p=t.players||[];const byRole=s=>p.find(x=>String(x.role).toLowerCase().includes(s));const gk=byRole('portiere')||p[0];const def=byRole('difensore')||p[1]||p[0];const mids=p.filter(x=>String(x.role).toLowerCase().includes('centrocampista'));const m1=mids[0]||p[2]||p[0],m2=mids[1]||p[3]||p[0];const att=byRole('attaccante')||p[4]||p[p.length-1]||p[0];const node=pl=>'<div class="pnode" onclick="showPlayerModal(\''+t.id+'\','+p.indexOf(pl)+')"><div class="pcirc '+(pl===gk?'gk':'')+'"><span class="pnum">'+(pl.n||'-')+'</span></div><div class="ptag">'+esc(lastName(pl.name))+'</div><div class="prole">'+esc(mapRole(pl.role))+'</div></div>';return '<div class="pitch-row">'+node(att)+'</div><div class="pitch-row">'+node(m1)+node(m2)+'</div><div class="pitch-row">'+node(def)+'</div><div class="pitch-row">'+node(gk)+'</div>'}
+function buildPitch(t){const p=t.players||[];const byRole=s=>p.find(x=>String(x.role).toLowerCase().includes(s));const gk=byRole('portiere')||p[0];const def=byRole('difensore')||p[1]||p[0];const mids=p.filter(x=>String(x.role).toLowerCase().includes('centrocampista'));const m1=mids[0]||p[2]||p[0],m2=mids[1]||p[3]||p[0];const att=byRole('attaccante')||p[4]||p[p.length-1]||p[0];const node=pl=>'<div class="pnode" onclick="showPlayerModal(\''+t.id+'\','+p.indexOf(pl)+')"><div class="pcirc '+(pl===gk?'gk':'')+'"><span class="pnum">'+(pl.n||'-')+'</span></div><div class="ptag">'+esc(shortPitchName(pl.name))+'</div><div class="prole">'+esc(mapRole(pl.role))+'</div></div>';return '<div class="pitch-row">'+node(att)+'</div><div class="pitch-row">'+node(m1)+node(m2)+'</div><div class="pitch-row">'+node(def)+'</div><div class="pitch-row">'+node(gk)+'</div>'}
 function hideTeam(){teamDetail.classList.remove('act');teamDetail.innerHTML='';teamsList.classList.remove('hidden')}
 
 function isGoalkeeperRole(role){
