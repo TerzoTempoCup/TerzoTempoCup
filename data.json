@@ -1,17 +1,15 @@
 {
   "TEAM_NAMES": {
     "redstorm": "ZEKEKE",
-    "bluefire": "SETTORE RIBELLE FC",
+    "bluefire": "SETTORE RIBELLE",
     "golden": "3P NEXT GEN",
     "wolves": "CECCHINI BOYS",
     "dragons": "LA BANDA DI SPIGOLIN",
     "titans": "BLACKOUT",
     "legends": "VALHALLA",
-    "sparta": "ZEUS UNITED",
     "phoenix": "ENOTRIA REVELIA",
     "falcons": "LA BELLA LUCANIA",
-    "kings": "KING OF GARBAGE",
-    "sharks": "Squadra 12"
+    "kings": "KING OF GARBAGE"
   },
   "PLAYER_NAMES": {
     "Giocatore 1": "Giocatore 1",
@@ -162,7 +160,7 @@
     },
     {
       "id": "bluefire",
-      "name": "SETTORE RIBELLE FC",
+      "name": "SETTORE RIBELLE",
       "group": "A",
       "emoji": "🏆",
       "logo": "settoreribelle.png",
@@ -521,66 +519,6 @@
       ]
     },
     {
-      "id": "sparta",
-      "name": "ZEUS UNITED",
-      "group": "B",
-      "emoji": "🏆",
-      "logo": "zeus.png",
-      "coach": "Simone Ielpo",
-      "players": [
-        {
-          "n": 1,
-          "name": "Paolo Aliberti",
-          "role": "Portiere",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 7,
-          "name": "Nicola Ielpo",
-          "role": "Difensore",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 11,
-          "name": "Emmanuel Iannotti",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 3,
-          "name": "Emiliano Brando",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 9,
-          "name": "Michelangelo Schettini",
-          "role": "Attaccante",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        }
-      ]
-    },
-    {
       "id": "phoenix",
       "name": "ENOTRIA REVELIA",
       "group": "C",
@@ -680,7 +618,7 @@
         },
         {
           "n": 7,
-          "name": "Domenico Esposito",
+          "name": "Salvatore Glosa",
           "role": "Centrocampista",
           "g": 0,
           "a": 0,
@@ -751,66 +689,6 @@
         {
           "n": 9,
           "name": "Mario Dulcetti",
-          "role": "Attaccante",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        }
-      ]
-    },
-    {
-      "id": "sharks",
-      "name": "Squadra 12",
-      "group": "C",
-      "emoji": "🏆",
-      "logo": "logo_squadre_generico.png",
-      "coach": "Da assegnare",
-      "players": [
-        {
-          "n": 1,
-          "name": "Giocatore 78",
-          "role": "Portiere",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 4,
-          "name": "Giocatore 79",
-          "role": "Difensore",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 7,
-          "name": "Giocatore 80",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 10,
-          "name": "Giocatore 81",
-          "role": "Centrocampista",
-          "g": 0,
-          "a": 0,
-          "y": 0,
-          "r": 0,
-          "gp": 0
-        },
-        {
-          "n": 9,
-          "name": "Giocatore 82",
           "role": "Attaccante",
           "g": 0,
           "a": 0,
@@ -1152,7 +1030,7 @@
       },
       {
         "n": 9,
-        "name": "Simone Calderaro",
+        "name": "Ali Badra",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1173,9 +1051,9 @@
     ],
     "falcons": [
       {
-        "n": 12,
-        "name": "Salvatore Glosa",
-        "role": "Difensore",
+        "n": 14,
+        "name": "Daniele Altamura",
+        "role": "Centrocampista",
         "g": 0,
         "a": 0,
         "y": 0,
@@ -1183,8 +1061,8 @@
         "gp": 0
       },
       {
-        "n": 14,
-        "name": "Daniele Altamura",
+        "n": 11,
+        "name": "Domenico Esposito",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1234,28 +1112,6 @@
         "r": 0,
         "gp": 0
       }
-    ],
-    "sharks": [
-      {
-        "n": 12,
-        "name": "Giocatore 83",
-        "role": "Difensore",
-        "g": 0,
-        "a": 0,
-        "y": 0,
-        "r": 0,
-        "gp": 0
-      },
-      {
-        "n": 14,
-        "name": "Giocatore 84",
-        "role": "Centrocampista",
-        "g": 0,
-        "a": 0,
-        "y": 0,
-        "r": 0,
-        "gp": 0
-      }
     ]
   },
   "CALENDAR": [
@@ -1263,10 +1119,10 @@
       "id": "c1",
       "round": "Giornata 1",
       "group": "A",
-      "home": "redstorm",
-      "away": "bluefire",
+      "home": "VALHALLA",
+      "away": "SETTORE RIBELLE",
       "date": "20 Lug",
-      "time": "Da Definire",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1277,10 +1133,10 @@
       "id": "c2",
       "round": "Giornata 1",
       "group": "A",
-      "home": "golden",
-      "away": "wolves",
+      "home": "3P NEXT GEN",
+      "away": "BLACKOUT",
       "date": "20 Lug",
-      "time": "Da Definire",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1291,10 +1147,10 @@
       "id": "c3",
       "round": "Giornata 1",
       "group": "B",
-      "home": "dragons",
-      "away": "titans",
+      "home": "KING OF GARBAGE",
+      "away": "ZEKEKE",
       "date": "20 Lug",
-      "time": "Da Definire",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1305,10 +1161,10 @@
       "id": "c4",
       "round": "Giornata 1",
       "group": "B",
-      "home": "legends",
-      "away": "sparta",
+      "home": "LA BANDA DI SPIGOLIN",
+      "away": "CECCHINI BOYS",
       "date": "20 Lug",
-      "time": "Da Definire",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1319,10 +1175,10 @@
       "id": "c5",
       "round": "Giornata 1",
       "group": "C",
-      "home": "phoenix",
-      "away": "falcons",
+      "home": "LA BELLA LUCANIA",
+      "away": "ENOTRIA REVELIA",
       "date": "20 Lug",
-      "time": "Da Definire",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1331,12 +1187,12 @@
     },
     {
       "id": "c6",
-      "round": "Giornata 1",
+      "round": "Giornata 2",
       "group": "C",
-      "home": "kings",
-      "away": "sharks",
-      "date": "20 Lug",
-      "time": "Da Definire",
+      "home": "SETTORE RIBELLE",
+      "away": "LA BELLA LUCANIA",
+      "date": "21 Lug",
+      "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1347,9 +1203,9 @@
       "id": "c7",
       "round": "Giornata 2",
       "group": "A",
-      "home": "redstorm",
-      "away": "golden",
-      "date": "?? Lug",
+      "home": "VALHALA",
+      "away": "KING OF GARBAGE",
+      "date": "21 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1361,9 +1217,9 @@
       "id": "c8",
       "round": "Giornata 2",
       "group": "A",
-      "home": "bluefire",
-      "away": "wolves",
-      "date": "?? Lug",
+      "home": "3P NEXT GEN",
+      "away": "ZEKEKE",
+      "date": "21 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1375,9 +1231,9 @@
       "id": "c9",
       "round": "Giornata 2",
       "group": "B",
-      "home": "dragons",
-      "away": "legends",
-      "date": "?? Lug",
+      "home": "LA BANDA DI SPIGOLIN",
+      "away": "BLACKOUT",
+      "date": "21 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1389,9 +1245,9 @@
       "id": "c10",
       "round": "Giornata 2",
       "group": "B",
-      "home": "titans",
-      "away": "sparta",
-      "date": "?? Lug",
+      "home": "ENOTRIA REVELIA",
+      "away": "CECCHINI BOYS",
+      "date": "21 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1401,11 +1257,11 @@
     },
     {
       "id": "c11",
-      "round": "Giornata 2",
+      "round": "Giornata 3",
       "group": "C",
-      "home": "phoenix",
-      "away": "kings",
-      "date": "?? Lug",
+      "home": "SETTORE RIBELLE",
+      "away": "ZEKEKE",
+      "date": "22 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1415,11 +1271,11 @@
     },
     {
       "id": "c12",
-      "round": "Giornata 2",
+      "round": "Giornata 3",
       "group": "C",
-      "home": "falcons",
-      "away": "sharks",
-      "date": "?? Lug",
+      "home": "VALHALLA",
+      "away": "LA BANDA DI SPIGOLIN",
+      "date": "22 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1431,9 +1287,9 @@
       "id": "c13",
       "round": "Giornata 3",
       "group": "A",
-      "home": "redstorm",
-      "away": "wolves",
-      "date": "?? Lug",
+      "home": "3P NEXT GEN",
+      "away": "LA BELLA LUCANIA",
+      "date": "22 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1445,9 +1301,9 @@
       "id": "c14",
       "round": "Giornata 3",
       "group": "A",
-      "home": "bluefire",
-      "away": "golden",
-      "date": "?? Lug",
+      "home": "BLACKOUT",
+      "away": "ENOTRIA REVELIA",
+      "date": "22 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1459,51 +1315,9 @@
       "id": "c15",
       "round": "Giornata 3",
       "group": "B",
-      "home": "dragons",
-      "away": "sparta",
-      "date": "?? Lug",
-      "time": "Da definire",
-      "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
-    },
-    {
-      "id": "c16",
-      "round": "Giornata 3",
-      "group": "B",
-      "home": "titans",
-      "away": "legends",
-      "date": "?? Lug",
-      "time": "Da definire",
-      "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
-    },
-    {
-      "id": "c17",
-      "round": "Giornata 3",
-      "group": "C",
-      "home": "phoenix",
-      "away": "sharks",
-      "date": "?? Lug",
-      "time": "Da definire",
-      "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
-      "yt": "#",
-      "detailId": null
-    },
-    {
-      "id": "c18",
-      "round": "Giornata 3",
-      "group": "C",
-      "home": "falcons",
-      "away": "kings",
-      "date": "?? Lug",
+      "home": "KING OF GARBAGE",
+      "away": "CECCHINI BOYS",
+      "date": "22 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1517,7 +1331,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1531,7 +1345,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1545,7 +1359,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1559,7 +1373,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1573,7 +1387,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1587,7 +1401,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1601,7 +1415,7 @@
       "group": null,
       "home": null,
       "away": null,
-      "date": "?? Lug",
+      "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1618,37 +1432,31 @@
       "date": "20 Lug",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 2",
+          "name": "VALHALLA vs SETTORE RIBELLE",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 3 vs Squadra 4",
+          "name": "3P NEXT GEN vs BLACKOUT",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 5 vs Squadra 6",
+          "name": "KING OF GARBAGE vs ZEKEKE",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 7 vs Squadra 8",
+          "name": "LA BANDA DI SPIGOLIN vs CECCHINI BOYS",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 9 vs Squadra 10",
-          "link": "",
-          "count": 0,
-          "yt": "#"
-        },
-        {
-          "name": "Squadra 11 vs Squadra 12",
+          "name": "LA BELLA LUCANIA vs ENOTRIA REVELIA",
           "link": "",
           "count": 0,
           "yt": "#"
@@ -1657,40 +1465,34 @@
     },
     {
       "matchday": 2,
-      "date": "?? Lug",
+      "date": "21 Lug",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 3",
+          "name": "SETTORE RIBELLE vs LA BELLA LUCANIA",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 2 vs Squadra 4",
+          "name": "VALHALLA vs KING OF GARBAGE",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 5 vs Squadra 7",
+          "name": "3P NEXT GEN vs ZEKEKE",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 6 vs Squadra 8",
+          "name": "LA BANDA DI SPIGOLIN vs BLACKOUT",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 9 vs Squadra 11",
-          "link": "",
-          "count": 0,
-          "yt": "#"
-        },
-        {
-          "name": "Squadra 10 vs Squadra 12",
+          "name": "ENOTRIA REVELIA vs CECCHINI BOYS",
           "link": "",
           "count": 0,
           "yt": "#"
@@ -1699,40 +1501,34 @@
     },
     {
       "matchday": 3,
-      "date": "?? Lug",
+      "date": "22 Lug",
       "matches": [
         {
-          "name": "Squadra 1 vs Squadra 4",
+          "name": "SETTORE RIBELLE vs ZEKEKE",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 2 vs Squadra 3",
+          "name": "VALHALLA vs LA BANDA DI SPIGOLIN",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 5 vs Squadra 8",
+          "name": "3P NEXT GEN vs LA BELLA LUCANIA",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 6 vs Squadra 7",
+          "name": "BLACKOUT vs ENOTRIA REVELIA",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Squadra 9 vs Squadra 12",
-          "link": "",
-          "count": 0,
-          "yt": "#"
-        },
-        {
-          "name": "Squadra 10 vs Squadra 11",
+          "name": "KING OF GARBAGE vs CECCHINI BOYS",
           "link": "",
           "count": 0,
           "yt": "#"
@@ -1744,23 +1540,23 @@
     {
       "round": "Giornata 1",
       "label": "Giornata 1",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "lockAt": "2026-07-20T20:30:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     },
     {
       "round": "Giornata 2",
       "label": "Giornata 2",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "lockAt": "2026-07-21T20:30:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     },
     {
       "round": "Giornata 3",
       "label": "Giornata 3",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "lockAt": "2026-07-22T20:30:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     },
     {
       "round": "Quarti di Finale",
