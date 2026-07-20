@@ -1614,6 +1614,17 @@ function buildDerivedData(){
   GROUPS={UNICO:[]};RECENT=[];UPCOMING=[];
   const tournamentTeams=getTournamentTeams();
   const tournamentIds=new Set(tournamentTeams.map(t=>t.id));
+  const monthMap={gen:0,feb:1,mar:2,apr:3,mag:4,giu:5,lug:6,ago:7,set:8,ott:9,nov:10,dic:11};
+  const parseShortItDate=(value)=>{
+    const m=String(value||'').trim().toLowerCase().match(/^(\d{1,2})\s+([a-z]+)/i);
+    if(!m)return null;
+    const day=Number(m[1]);
+    const month=monthMap[m[2].slice(0,3)];
+    if(!Number.isFinite(day)||month===undefined)return null;
+    const y=(new Date()).getFullYear();
+    return new Date(y,month,day);
+  };
+  const isSameDay=(a,b)=>a&&b&&a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate();
   GROUPS.UNICO=tournamentTeams.map(t=>({id:t.id,pts:0,w:0,d:0,l:0,gf:0,ga:0}));
   const norm=(m)=>({
     ...m,
@@ -1624,7 +1635,11 @@ function buildDerivedData(){
   const played=normalized.filter(m=>m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&m.sh!==null&&m.sa!==null&&m.sh!==undefined&&m.sa!==undefined);
   played.forEach(m=>{const h=GROUPS.UNICO.find(x=>x.id===m.home),a=GROUPS.UNICO.find(x=>x.id===m.away);if(!h||!a)return;const sh=Number(m.sh),sa=Number(m.sa);h.gf+=sh;h.ga+=sa;a.gf+=sa;a.ga+=sh;if(sh>sa){h.w++;h.pts+=3;a.l++;}else if(sa>sh){a.w++;a.pts+=3;h.l++;}else{h.d++;a.d++;h.pts++;a.pts++;}});
   RECENT=played.filter(m=>m.detailId).slice().reverse().slice(0,8).map(m=>({id:m.detailId,label:m.round||'',home:m.home,away:m.away,sh:m.sh,sa:m.sa,date:m.date||'',yt:m.yt||'#'}));
-  UPCOMING=normalized.filter(m=>m.round==='Giornata 1'&&m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&(m.sh===null||m.sa===null||m.sh===undefined||m.sa===undefined)).map(m=>({label:m.round||'',home:m.home,away:m.away,date:m.date||'',time:m.time||'--:--'}));
+  const allUpcoming=normalized.filter(m=>m.round==='Giornata 1'&&m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&(m.sh===null||m.sa===null||m.sh===undefined||m.sa===undefined));
+  const today=new Date();
+  const todayUpcoming=allUpcoming.filter(m=>isSameDay(parseShortItDate(m.date),today));
+  const visibleUpcoming=todayUpcoming.length?todayUpcoming:allUpcoming;
+  UPCOMING=visibleUpcoming.map(m=>({label:m.round||'',home:m.home,away:m.away,date:m.date||'',time:m.time||'--:--'}));
 }
 function syncStats(){
   const normName = v => String(v || '').trim().toLowerCase();

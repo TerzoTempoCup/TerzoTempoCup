@@ -1151,7 +1151,7 @@
       "id": "c4",
       "round": "Giornata 1",
       "group": "B",
-      "home": "LA BELA LUCANIA",
+      "home": "LA BELLA LUCANIA",
       "away": "SETTORE RIBELLE",
       "date": "20 Lug",
       "time": "23:15",
@@ -1163,7 +1163,7 @@
     },
     {
       "id": "c5",
-      "round": "Giornata 1",
+      "round": "Giornata 2",
       "group": "C",
       "home": "ZEKEKE",
       "away": "KING OF GARBAGE",
@@ -1444,12 +1444,6 @@
           "link": "",
           "count": 0,
           "yt": "#"
-        },
-        {
-          "name": "ZEKEKE vs KING OF GARBAGE",
-          "link": "",
-          "count": 0,
-          "yt": "#"
         }
       ]
     },
@@ -1457,6 +1451,12 @@
       "matchday": 2,
       "date": "21 Lug",
       "matches": [
+        {
+          "name": "ZEKEKE vs KING OF GARBAGE",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        },
         {
           "name": "KING OF GARBAGE vs CECCHINI BOYS",
           "link": "",
