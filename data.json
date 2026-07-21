@@ -468,7 +468,7 @@
       "players": [
         {
           "n": 1,
-          "name": "Paolo Aliberti",
+          "name": "Pierfrancesco Ricciardi",
           "role": "Portiere",
           "g": 0,
           "a": 0,
@@ -478,7 +478,7 @@
         },
         {
           "n": 4,
-          "name": "Samuele Aliberti",
+          "name": "Giacomo Zuardi",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -724,6 +724,16 @@
       {
         "n": 99,
         "name": "Felice Falabella",
+        "role": "Centrocampista",
+        "g": 0,
+        "a": 0,
+        "y": 0,
+        "r": 0,
+        "gp": 0
+      },
+      {
+        "n": 9,
+        "name": "Marco Petrosino",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
