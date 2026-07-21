@@ -906,34 +906,9 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
   color:#fff;
 }
 .pred-empty b{display:block;margin-bottom:.25rem;color:#ffd080;font-family:var(--ft)}
-.gal-actions{
-  display:flex;
-  gap:.4rem;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-top:.2rem;
-}
-.gal-action-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.25rem;
-  text-decoration:none;
-  border-radius:999px;
-  padding:.32rem .58rem;
-  font-size:.68rem;
-  font-weight:950;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-}
-.gal-action-btn.hl{
-  color:#ffb0b0;
-  border-color:rgba(200,0,0,.45);
-  background:rgba(200,0,0,.20);
-}
-.gal-action-btn:hover{background:rgba(255,255,255,.14)}
-.gal-action-btn.hl:hover{background:rgba(200,0,0,.34);border-color:rgba(200,0,0,.7)}
+.gal-item.clickable{cursor:pointer}
+.gal-item.empty-link{cursor:default}
+.gal-item.empty-link:hover{transform:none;background:var(--gl);border-color:var(--glb)}
 
 
 /* =========================================================
@@ -955,11 +930,6 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 }
 .pred-empty{padding:1rem;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);color:#fff}
 .pred-empty b{display:block;margin-bottom:.25rem;color:#ffd080;font-family:var(--ft)}
-.gal-actions{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center;margin-top:.2rem}
-.gal-action-btn{display:inline-flex;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;border-radius:999px;padding:.32rem .58rem;font-size:.68rem;font-weight:950;color:#fff;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08)}
-.gal-action-btn.hl{color:#ffb0b0;border-color:rgba(200,0,0,.45);background:rgba(200,0,0,.20)}
-.gal-action-btn:hover{background:rgba(255,255,255,.14)}
-.gal-action-btn.hl:hover{background:rgba(200,0,0,.34);border-color:rgba(200,0,0,.7)}
 
 
 
@@ -1539,6 +1509,7 @@ function renderStats(){
 }
 function renderMVP(){const mv=MVP_DATA||{},winner=mv.winner||{},cands=mv.candidates||[];mvpContent.innerHTML='<div class="mvp-wrap"><div class="card mvp-card"><div class="mvp-bg">⭐</div><div class="mvp-gday">🏆 Giocatore della Giornata '+(mv.matchday||1)+'</div><div class="mvp-name">'+esc(winner.name||'Da definire')+'</div><div class="mvp-team">'+(winner.team?getTeamLogoImg(winner.team)+' '+esc(tName(winner.team)):'')+'</div>'+(mv.closed?'<div class="mvp-bar-w"><div class="mvp-bar" id="mvpBar" style="width:0%"></div></div><div class="mvp-pct">'+(winner.pct||0)+'% dei voti</div>':'')+'<div class="mvp-note">Segui '+esc(mv.igHandle||'@terzotempocup')+'</div></div><div class="cands-head">Candidati</div><div class="cands-grid">'+cands.map(c=>'<div class="card cand-card"><div class="cand-name">'+esc(c.name)+'</div><div class="cand-team">'+getTeamLogoImg(c.team)+' '+esc(tName(c.team))+'</div><div class="cand-note">'+esc(c.note||'')+'</div></div>').join('')+'</div></div>';setTimeout(()=>{const b=document.getElementById('mvpBar');if(b)b.style.width=(winner.pct||0)+'%'},100)}
 function renderGalleryTabs(){galTabs.innerHTML=(GALLERY||[]).map((g,i)=>'<button class="gal-btn '+(i===0?'act':'')+'" onclick="showGalMatchday('+g.matchday+',this)">Giornata '+g.matchday+' · '+esc(g.date||'')+'</button>').join('')}
+function openGalleryLink(el){const url=String(el?.dataset?.link||'').trim();if(!url||url==='#')return;window.open(url,'_blank','noopener,noreferrer')}
 function showGalMatchday(md,btn){
   document.querySelectorAll('.gal-btn').forEach(b=>b.classList.remove('act'));
   if(btn)btn.classList.add('act');
@@ -1547,16 +1518,14 @@ function showGalMatchday(md,btn){
     ? gd.matches.map(m=>{
         const photoLink=String(m.link||'').trim();
         const hlLink=String(m.yt||m.highlight||m.highlights||m.highlightsLink||'').trim();
-        const hasPhoto=!!photoLink;
+        const hasPhoto=!!photoLink && photoLink !== '#';
         const hasHl=!!hlLink && hlLink !== '#';
-        return '<div class="card gal-item '+((hasPhoto||hasHl)?'':'empty-link')+'">'
+        const targetLink=hasPhoto?photoLink:(hasHl?hlLink:'');
+        const hasLink=!!targetLink;
+        return '<div class="card gal-item '+(hasLink?'clickable':'empty-link')+'"'+(hasLink?' data-link="'+esc(targetLink)+'" onclick="openGalleryLink(this)"':'')+'>'
           + '<div class="gal-icon">📁</div>'
           + '<div class="gal-name">'+esc(m.name)+'</div>'
           + '<div class="gal-count">'+(hasPhoto?'📷 '+(m.count||0)+' foto':'Link cartella da inserire')+'</div>'
-          + '<div class="gal-actions">'
-            + (hasPhoto?'<a class="gal-action-btn" href="'+esc(photoLink)+'" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">📸 Foto</a>':'')
-            + (hasHl?'<a class="gal-action-btn hl" href="'+esc(hlLink)+'" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶ Highlights</a>':'')
-          + '</div>'
         + '</div>';
       }).join('')
     : '<div class="md-noevent">Nessuna cartella configurata.</div>';
