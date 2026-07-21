@@ -1134,10 +1134,10 @@
       "date": "20 Lug",
       "time": "21:00",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 5,
+      "sa": 5,
       "yt": "#",
-      "detailId": null
+      "detailId": "c1"
     },
     {
       "id": "c2",
@@ -1148,10 +1148,10 @@
       "date": "20 Lug",
       "time": "21:45",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 5,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "c2"
     },
     {
       "id": "c3",
@@ -1162,10 +1162,10 @@
       "date": "20 Lug",
       "time": "22:30",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "c3"
     },
     {
       "id": "c4",
@@ -1176,10 +1176,10 @@
       "date": "20 Lug",
       "time": "23:15",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 5,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "c4"
     },
     {
       "id": "c5",
@@ -1434,8 +1434,219 @@
       "detailId": null
     }
   ],
-  "DETAILS": {},
-  "MVP_DATA": {},
+  "DETAILS": {
+    "c1": {
+      "scorers": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Davide Supino",
+          "min": 1,
+          "assist": "Rosario Colombo"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 2
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 5,
+          "assist": "Rosario Colombo"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Ferdinando Sisca",
+          "min": 11,
+          "assist": "Luca Supino"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 11,
+          "assist": "Alessandro Colombo"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Autogol",
+          "min": 18
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 19,
+          "assist": "Alessandro Colombo"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 20
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Davide Filpi",
+          "min": 28
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Rosario Colombo",
+          "min": 30,
+          "assist": "Davide Supino"
+        }
+      ],
+      "cards": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Biagio Scotellaro",
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c2": {
+      "scorers": [
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Dauda Bah",
+          "min": 2,
+          "assist": "Michele Schettini"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Michele Schettini",
+          "min": 3
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Michele Schettini",
+          "min": 4
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 10,
+          "assist": "Dauda Bah"
+        },
+        {
+          "team": "ZEUS UNITED",
+          "name": "Giuseppe Aliberti",
+          "min": 12
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Michele Schettini",
+          "min": 24,
+          "assist": "Leonardo Filardi"
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    },
+    "c3": {
+      "scorers": [
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Riccardo Ferrari",
+          "min": 10
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ismaele Ferrari",
+          "min": 12,
+          "assist": "Riccardo Ferrari"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Brando",
+          "min": 21,
+          "assist": "Davide Agrelli"
+        }
+      ],
+      "cards": [
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Sisca",
+          "min": 31,
+          "type": "Y"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Fabio Ferrari",
+          "min": 32,
+          "type": "Y"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Nocera",
+          "min": 33,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c4": {
+      "scorers": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 4,
+          "assist": "Antonio Velardi"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Michelangelo Maimone",
+          "min": 8
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Domenico Esposito",
+          "min": 10,
+          "assist": "Paolo Laino"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 11
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 12,
+          "assist": "Amine Bejaoui"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Teodoro Verdone",
+          "min": 13,
+          "assist": "Paolo Laino"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 13
+        }
+      ],
+      "cards": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Salvatore Glosa",
+          "min": 30,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    }
+  },
+  "MVP_DATA": {
+    "matchday": 1,
+    "winner": {
+      "name": "Paolo Laino",
+      "team": "falcons"
+    },
+    "candidates": [],
+    "closed": false,
+    "igHandle": "@terzotempocup"
+  },
   "GALLERY": [
     {
       "matchday": 1,

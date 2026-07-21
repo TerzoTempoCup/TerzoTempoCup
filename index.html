@@ -1305,8 +1305,8 @@ function showMatchDetail(id){
         + '<div class="tl-ha">'+esc(tName(m.away))+'</div>'
       + '</div>'
       + evs.map(ev => {
-        const h = ev.team === m.home;
-        const lb = icon(ev)+' '+esc(lastName(ev.name));
+        const h = normalizeTeamId(ev.team) === normalizeTeamId(m.home);
+        const lb = icon(ev)+' '+esc(shortPitchName(ev.name));
 
         return '<div class="tl-row">'
           + '<div class="tl-h">'+(h ? lb : '')+'</div>'
@@ -1432,8 +1432,9 @@ function syncStats(){
   const isPlayed = m => !!(m && m.home && m.away && m.sh !== null && m.sa !== null && m.sh !== undefined && m.sa !== undefined && !Number.isNaN(Number(m.sh)) && !Number.isNaN(Number(m.sa)));
   const allTeamPlayers = teamId => {
     const t = getTeam(teamId);
+    const resolvedTeamId = t?.id || teamId;
     if(!t) return [];
-    return [...(t.players || []), ...(TEAM_RESERVES?.[teamId] || [])];
+    return [...(t.players || []), ...(TEAM_RESERVES?.[resolvedTeamId] || [])];
   };
   const findPlayer = (teamId, name) => allTeamPlayers(teamId).find(p => normName(p.name) === normName(name));
 
@@ -1490,8 +1491,8 @@ function syncStats(){
   });
 }
 
-function penaltyInfoForTeam(teamId){let against=0,saved=0;(CALENDAR||[]).forEach(m=>{if(m.sh==null||m.sa==null||!m.detailId)return;const d=DETAILS[m.detailId]||{};(d.penalties||[]).forEach(p=>{const txt=String(p.outcome||p.result||p.esito||'').toLowerCase();const isAgainst=(p.goalkeeperTeam===teamId||p.against===teamId||p.againstTeam===teamId||p.defTeam===teamId||(p.team&&p.team!==teamId&&(m.home===teamId||m.away===teamId)));if(!isAgainst)return;against++;if(p.saved===true||p.parato===true||txt.includes('parat')||txt.includes('saved'))saved++;});});return{against,saved}}
-function goalkeeperStats(){const rows=[];TEAMS.forEach(t=>{const keepers=[...(t.players||[]),...(TEAM_RESERVES[t.id]||[])].filter(p=>String(p.role||'').toLowerCase().includes('portiere'));if(!keepers.length)return;let ga=0,cs=0,played=0;(CALENDAR||[]).forEach(m=>{if(m.sh==null||m.sa==null)return;if(m.home!==t.id&&m.away!==t.id)return;played++;const conceded=m.home===t.id?Number(m.sa):Number(m.sh);ga+=conceded;if(conceded===0)cs++;});const pen=penaltyInfoForTeam(t.id);keepers.forEach(k=>rows.push({...k,tName:t.name,tEmoji:getTeamLogoImg(t.id),teamId:t.id,ga,cs,played,penSaved:pen.saved,penAgainst:pen.against}))});return rows.sort((a,b)=>a.ga-b.ga||b.cs-a.cs||b.penSaved-a.penSaved||a.name.localeCompare(b.name))}
+function penaltyInfoForTeam(teamId){let against=0,saved=0;(CALENDAR||[]).forEach(m=>{if(m.sh==null||m.sa==null||!m.detailId)return;const homeId=normalizeTeamId(m.home),awayId=normalizeTeamId(m.away);const d=DETAILS[m.detailId]||{};(d.penalties||[]).forEach(p=>{const txt=String(p.outcome||p.result||p.esito||'').toLowerCase();const gkTeam=normalizeTeamId(p.goalkeeperTeam),againstTeam=normalizeTeamId(p.against||p.againstTeam||p.defTeam),eventTeam=normalizeTeamId(p.team);const isAgainst=(gkTeam===teamId||againstTeam===teamId||(eventTeam&&eventTeam!==teamId&&(homeId===teamId||awayId===teamId)));if(!isAgainst)return;against++;if(p.saved===true||p.parato===true||txt.includes('parat')||txt.includes('saved'))saved++;});});return{against,saved}}
+function goalkeeperStats(){const rows=[];TEAMS.forEach(t=>{const keepers=[...(t.players||[]),...(TEAM_RESERVES[t.id]||[])].filter(p=>String(p.role||'').toLowerCase().includes('portiere'));if(!keepers.length)return;let ga=0,cs=0,played=0;(CALENDAR||[]).forEach(m=>{if(m.sh==null||m.sa==null)return;const homeId=normalizeTeamId(m.home),awayId=normalizeTeamId(m.away);if(homeId!==t.id&&awayId!==t.id)return;played++;const conceded=homeId===t.id?Number(m.sa):Number(m.sh);ga+=conceded;if(conceded===0)cs++;});const pen=penaltyInfoForTeam(t.id);keepers.forEach(k=>rows.push({...k,tName:t.name,tEmoji:getTeamLogoImg(t.id),teamId:t.id,ga,cs,played,penSaved:pen.saved,penAgainst:pen.against}))});return rows.sort((a,b)=>a.ga-b.ga||b.cs-a.cs||b.penSaved-a.penSaved||a.name.localeCompare(b.name))}
 function renderGoalkeepers(){const list=goalkeeperStats();const el=document.getElementById('tab-porta');if(!el)return;el.innerHTML=(list.length?'<div class="keeper-list">'+list.map((p,i)=>'<div class="card keeper-item"><div class="ri-pos '+(i<3?'top':'')+'">'+(i+1)+'</div><div class="keeper-main"><div class="keeper-name">'+esc(p.name)+'</div><div class="keeper-team">'+p.tEmoji+' '+esc(p.tName)+' · '+(p.played||0)+' partite considerate</div></div><div class="keeper-metrics"><div class="keeper-metric"><b>'+p.ga+'</b><small>gol subiti</small></div><div class="keeper-metric"><b>'+p.penSaved+' / '+p.penAgainst+'</b><small>rigori parati</small></div><div class="keeper-metric"><b>'+p.cs+'</b><small>porte inviolate</small></div></div></div>').join('')+'</div>':'<div class="md-noevent">Nessun portiere trovato</div>')}
 
 function renderStats(){
@@ -1499,8 +1500,10 @@ function renderStats(){
   const all=[];
   TEAMS.forEach(t=>[...(t.players||[]), ...(TEAM_RESERVES?.[t.id]||[])].forEach(p=>all.push({...p,tName:t.name,tId:t.id,tEmoji:getTeamLogoImg(t.id)})));
   const rnk=(list,unit,vf)=>'<div class="rank-list">'+list.map((p,i)=>'<div class="card rank-item"><div class="ri-pos '+(i<3?'top':'')+'">'+(i+1)+'</div><div class="ri-info"><div class="ri-name">'+esc(p.name)+'</div><div class="ri-team">'+p.tEmoji+' '+esc(p.tName)+'</div></div><div class="ri-val"><div class="ri-num">'+vf(p)+'</div><div class="ri-unit">'+unit+'</div></div></div>').join('')+'</div>';
-  document.getElementById('tab-gol').innerHTML=rnk([...all].sort((a,b)=>(Number(b.g)||0)-(Number(a.g)||0)||(Number(b.a)||0)-(Number(a.a)||0)||a.name.localeCompare(b.name)).slice(0,10),'Gol',p=>p.g||0);
-  document.getElementById('tab-assist').innerHTML=rnk([...all].sort((a,b)=>(Number(b.a)||0)-(Number(a.a)||0)||(Number(b.g)||0)-(Number(a.g)||0)||a.name.localeCompare(b.name)).slice(0,10),'Assist',p=>p.a||0);
+  const topGoals=[...all].filter(p=>(Number(p.g)||0)>0).sort((a,b)=>(Number(b.g)||0)-(Number(a.g)||0)||(Number(b.a)||0)-(Number(a.a)||0)||a.name.localeCompare(b.name)).slice(0,10);
+  const topAssists=[...all].filter(p=>(Number(p.a)||0)>0).sort((a,b)=>(Number(b.a)||0)-(Number(a.a)||0)||(Number(b.g)||0)-(Number(a.g)||0)||a.name.localeCompare(b.name)).slice(0,10);
+  document.getElementById('tab-gol').innerHTML=topGoals.length?rnk(topGoals,'Gol',p=>p.g||0):'<div class="md-noevent">Nessun gol registrato</div>';
+  document.getElementById('tab-assist').innerHTML=topAssists.length?rnk(topAssists,'Assist',p=>p.a||0):'<div class="md-noevent">Nessun assist registrato</div>';
   const cds=[...all].map(p=>({...p,sc:(Number(p.y)||0)+(Number(p.r)||0)*2})).filter(p=>p.sc>0).sort((a,b)=>b.sc-a.sc||(Number(b.r)||0)-(Number(a.r)||0)||(Number(b.y)||0)-(Number(a.y)||0)||a.name.localeCompare(b.name)).slice(0,10);
   document.getElementById('tab-cartellini').innerHTML=cds.length?'<div class="rank-list">'+cds.map((p,i)=>'<div class="card rank-item"><div class="ri-pos '+(i<3?'top':'')+'">'+(i+1)+'</div><div class="ri-info"><div class="ri-name">'+esc(p.name)+'</div><div class="ri-team">'+p.tEmoji+' '+esc(p.tName)+'</div></div><div class="ri-val ri-cards"><div class="cbadge cy">🟨 '+(p.y||0)+'</div><div class="cbadge cr">🟥 '+(p.r||0)+'</div><div style="font-family:var(--ft);font-size:1.4rem;color:#ffd080">'+p.sc+'</div></div></div>').join('')+'</div>':'<div class="md-noevent">Nessun cartellino registrato</div>';
   renderGoalkeepers();
@@ -1604,7 +1607,17 @@ function buildDerivedData(){
   const played=normalized.filter(m=>m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&m.sh!==null&&m.sa!==null&&m.sh!==undefined&&m.sa!==undefined);
   played.forEach(m=>{const h=GROUPS.UNICO.find(x=>x.id===m.home),a=GROUPS.UNICO.find(x=>x.id===m.away);if(!h||!a)return;const sh=Number(m.sh),sa=Number(m.sa);h.gf+=sh;h.ga+=sa;a.gf+=sa;a.ga+=sh;if(sh>sa){h.w++;h.pts+=3;a.l++;}else if(sa>sh){a.w++;a.pts+=3;h.l++;}else{h.d++;a.d++;h.pts++;a.pts++;}});
   RECENT=played.filter(m=>m.detailId).slice().reverse().slice(0,8).map(m=>({id:m.detailId,label:m.round||'',home:m.home,away:m.away,sh:m.sh,sa:m.sa,date:m.date||'',yt:m.yt||'#'}));
-  const allUpcoming=normalized.filter(m=>m.round==='Giornata 1'&&m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&(m.sh===null||m.sa===null||m.sh===undefined||m.sa===undefined));
+  const unplayedUpcoming=normalized.filter(m=>m.home&&m.away&&tournamentIds.has(m.home)&&tournamentIds.has(m.away)&&(m.sh===null||m.sa===null||m.sh===undefined||m.sa===undefined));
+  const roundOrder=['Giornata 1','Giornata 2','Giornata 3','Quarti di Finale','Semifinali','Finale'];
+  const upcomingRounds=[...new Set(unplayedUpcoming.map(m=>m.round).filter(Boolean))].sort((a,b)=>{
+    const ia=roundOrder.indexOf(a),ib=roundOrder.indexOf(b);
+    if(ia===-1&&ib===-1)return String(a).localeCompare(String(b));
+    if(ia===-1)return 1;
+    if(ib===-1)return -1;
+    return ia-ib;
+  });
+  const targetRound=upcomingRounds[0]||null;
+  const allUpcoming=targetRound?unplayedUpcoming.filter(m=>m.round===targetRound):[];
   const today=new Date();
   const todayUpcoming=allUpcoming.filter(m=>isSameDay(parseShortItDate(m.date),today));
   const visibleUpcoming=todayUpcoming.length?todayUpcoming:allUpcoming;
@@ -1615,8 +1628,9 @@ function syncStats(){
   const isPlayed = m => !!(m && m.home && m.away && m.sh !== null && m.sa !== null && m.sh !== undefined && m.sa !== undefined && !Number.isNaN(Number(m.sh)) && !Number.isNaN(Number(m.sa)));
   const allTeamPlayers = teamId => {
     const t = getTeam(teamId);
+    const resolvedTeamId = t?.id || teamId;
     if(!t) return [];
-    return [...(t.players || []), ...(TEAM_RESERVES?.[teamId] || [])];
+    return [...(t.players || []), ...(TEAM_RESERVES?.[resolvedTeamId] || [])];
   };
   const findPlayer = (teamId, name) => allTeamPlayers(teamId).find(p => normName(p.name) === normName(name));
 
@@ -1743,16 +1757,16 @@ function buildInlineMatchTabellino(m){
   evs.sort((a,b)=>(a.min||0)-(b.min||0));
   const icon = ev => ev.et === 'goal' ? '⚽' : ev.et === 'card' ? (ev.type === 'R' ? '🟥' : '🟨') : '❌';
   const eventLabel = ev => {
-    if(ev.et !== 'goal') return icon(ev)+' '+esc(lastName(ev.name));
-    const goalText = '⚽ '+esc(lastName(ev.name));
-    const assistText = ev.assist && ev.assist.name ? '<span class="goal-assist">🅰️ '+esc(lastName(ev.assist.name))+'</span>' : '';
-    if(ev.team === m.home) return assistText ? assistText+' <span class="goal-main">'+goalText+'</span>' : '<span class="goal-main">'+goalText+'</span>';
+    if(ev.et !== 'goal') return icon(ev)+' '+esc(shortPitchName(ev.name));
+    const goalText = '⚽ '+esc(shortPitchName(ev.name));
+    const assistText = ev.assist && ev.assist.name ? '<span class="goal-assist">🅰️ '+esc(shortPitchName(ev.assist.name))+'</span>' : '';
+    if(normalizeTeamId(ev.team) === normalizeTeamId(m.home)) return assistText ? assistText+' <span class="goal-main">'+goalText+'</span>' : '<span class="goal-main">'+goalText+'</span>';
     return assistText ? '<span class="goal-main">'+goalText+'</span> '+assistText : '<span class="goal-main">'+goalText+'</span>';
   };
   const timeline = evs.length
     ? '<div class="tl-heads"><div class="tl-hh">'+esc(tName(m.home))+'</div><div class="tl-hm"></div><div class="tl-ha">'+esc(tName(m.away))+'</div></div>'
       + evs.map(ev => {
-        const h = ev.team === m.home;
+        const h = normalizeTeamId(ev.team) === normalizeTeamId(m.home);
         const lb = eventLabel(ev);
         return '<div class="tl-row"><div class="tl-h">'+(h ? lb : '')+'</div><div class="tl-m">'+(ev.min ? ev.min+'\'' : '')+'</div><div class="tl-a">'+(!h ? lb : '')+'</div></div>';
       }).join('')
