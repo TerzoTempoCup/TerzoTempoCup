@@ -1595,17 +1595,6 @@
           "penalty": true
         },
         {
-          "team": "SETTORE RIBELLE",
-          "name": "Giovanni Schettino",
-          "min": 12
-        },
-        {
-          "team": "SETTORE RIBELLE",
-          "name": "Amine Bejaoui",
-          "min": 13,
-          "assist": "Daniel Bocchino"
-        },
-        {
           "team": "LA BELLA LUCANIA",
           "name": "Teodoro Verdone",
           "min": 13,
@@ -1628,6 +1617,17 @@
           "name": "Domenico Esposito",
           "min": 25,
           "assist": "Paolo Laino"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 27
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 28,
+          "assist": "Daniel Bocchino"
         }
       ],
       "cards": [
