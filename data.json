@@ -1591,7 +1591,8 @@
         {
           "team": "LA BELLA LUCANIA",
           "name": "Paolo Laino",
-          "min": 11
+          "min": 11,
+          "penalty": true
         },
         {
           "team": "SETTORE RIBELLE",
@@ -1637,7 +1638,16 @@
           "type": "Y"
         }
       ],
-      "penalties": []
+      "penalties": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 11,
+          "outcome": "gol",
+          "against": "SETTORE RIBELLE",
+          "saved": false
+        }
+      ]
     }
   },
   "MVP_DATA": {

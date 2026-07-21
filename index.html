@@ -1284,19 +1284,29 @@ function showMatchDetail(id){
   };
 
   const evs = [];
-
-  (d.scorers || []).forEach(s => evs.push({...s, et:'goal'}));
+  const scoredPenaltyKeys=new Set();
+  (d.scorers || []).forEach(s => {
+    const key=[normalizeTeamId(s.team),String(s.name||'').trim().toLowerCase(),Number(s.min)||0].join('|');
+    if(s.penalty===true||s.isPenalty===true||s.rigore===true)scoredPenaltyKeys.add(key);
+    evs.push({...s, et:'goal'});
+  });
   (d.cards || []).forEach(c => evs.push({...c, et:'card'}));
-  (d.penalties || []).forEach(p => evs.push({...p, et:'pen'}));
+  (d.penalties || []).forEach(p => {
+    const txt=String(p.outcome||p.result||p.esito||'').toLowerCase();
+    const isScored=txt.includes('gol')||txt.includes('segn')||txt.includes('score');
+    const key=[normalizeTeamId(p.team),String(p.name||'').trim().toLowerCase(),Number(p.min)||0].join('|');
+    if(isScored&&scoredPenaltyKeys.has(key))return;
+    evs.push({...p, et:'pen'});
+  });
 
   evs.sort((a,b)=>(a.min || 0) - (b.min || 0));
 
   const icon = ev =>
     ev.et === 'goal'
-      ? '⚽'
+      ? ((ev.penalty===true||ev.isPenalty===true||ev.rigore===true) ? '🥅' : '⚽')
       : ev.et === 'card'
         ? (ev.type === 'R' ? '🟥' : '🟨')
-        : '❌';
+        : (()=>{const txt=String(ev.outcome||ev.result||ev.esito||'').toLowerCase();const isSaved=ev.saved===true||ev.parato===true||txt.includes('parat')||txt.includes('saved');const isScored=txt.includes('gol')||txt.includes('segn')||txt.includes('score');return isSaved?'🧤':(isScored?'🥅':'❌');})();
 
   const tl = evs.length
     ? '<div class="tl-heads">'
@@ -1740,6 +1750,7 @@ function buildInlineMatchTabellino(m){
   const legacyAssists = d.assists || [];
   const cards = d.cards || [];
   const penalties = d.penalties || [];
+  const scoredPenaltyKeys=new Set();
   function getAssistForGoal(goal, goalIndex){
     if(goal.assist){
       if(typeof goal.assist === 'object') return {team: goal.assist.team || goal.team, name: goal.assist.name, min: goal.min};
@@ -1752,14 +1763,31 @@ function buildInlineMatchTabellino(m){
     return teamAssists[teamGoalsBefore] || null;
   }
   const evs = [];
-  scorers.forEach((s, index) => evs.push({...s, et:'goal', assist:getAssistForGoal(s,index)}));
+  scorers.forEach((s, index) => {
+    const key=[normalizeTeamId(s.team),String(s.name||'').trim().toLowerCase(),Number(s.min)||0].join('|');
+    if(s.penalty===true||s.isPenalty===true||s.rigore===true)scoredPenaltyKeys.add(key);
+    evs.push({...s, et:'goal', assist:getAssistForGoal(s,index)});
+  });
   cards.forEach(c => evs.push({...c, et:'card'}));
-  penalties.forEach(p => evs.push({...p, et:'pen'}));
+  penalties.forEach(p => {
+    const txt=String(p.outcome||p.result||p.esito||'').toLowerCase();
+    const isScored=txt.includes('gol')||txt.includes('segn')||txt.includes('score');
+    const key=[normalizeTeamId(p.team),String(p.name||'').trim().toLowerCase(),Number(p.min)||0].join('|');
+    if(isScored&&scoredPenaltyKeys.has(key))return;
+    evs.push({...p, et:'pen'});
+  });
   evs.sort((a,b)=>(a.min||0)-(b.min||0));
-  const icon = ev => ev.et === 'goal' ? '⚽' : ev.et === 'card' ? (ev.type === 'R' ? '🟥' : '🟨') : '❌';
+  const icon = ev => {
+    if(ev.et === 'goal') return (ev.penalty===true||ev.isPenalty===true||ev.rigore===true) ? '🥅' : '⚽';
+    if(ev.et === 'card') return ev.type === 'R' ? '🟥' : '🟨';
+    const txt=String(ev.outcome||ev.result||ev.esito||'').toLowerCase();
+    const isSaved=ev.saved===true||ev.parato===true||txt.includes('parat')||txt.includes('saved');
+    const isScored=txt.includes('gol')||txt.includes('segn')||txt.includes('score');
+    return isSaved?'🧤':(isScored?'🥅':'❌');
+  };
   const eventLabel = ev => {
     if(ev.et !== 'goal') return icon(ev)+' '+esc(shortPitchName(ev.name));
-    const goalText = '⚽ '+esc(shortPitchName(ev.name));
+    const goalText = icon(ev)+' '+esc(shortPitchName(ev.name));
     const assistText = ev.assist && ev.assist.name ? '<span class="goal-assist">🅰️ '+esc(shortPitchName(ev.assist.name))+'</span>' : '';
     if(normalizeTeamId(ev.team) === normalizeTeamId(m.home)) return assistText ? assistText+' <span class="goal-main">'+goalText+'</span>' : '<span class="goal-main">'+goalText+'</span>';
     return assistText ? '<span class="goal-main">'+goalText+'</span> '+assistText : '<span class="goal-main">'+goalText+'</span>';
