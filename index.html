@@ -1346,6 +1346,7 @@ function filterTeams(f,btn){document.querySelectorAll('.sq-fbtn').forEach(b=>b.c
 
 function teamEventStats(teamId,type){
   const counts={};
+  const teamNorm=normalizeTeamId(teamId);
   const add=(name)=>{if(name)counts[name]=(counts[name]||0)+1};
   (CALENDAR||[]).forEach(m=>{
     if(m.sh==null||m.sa==null||!m.detailId)return;
@@ -1356,12 +1357,12 @@ function teamEventStats(teamId,type){
         if(!assist)return;
         const assistTeam=typeof assist==='object'?(assist.team||goal.team):goal.team;
         const assistName=typeof assist==='object'?assist.name:assist;
-        if(assistTeam===teamId)add(assistName);
+        if(normalizeTeamId(assistTeam)===teamNorm)add(assistName);
       });
       // Compatibilità vecchio formato
-      (d.assists||[]).forEach(ev=>{if(ev.team===teamId)add(ev.name)});
+      (d.assists||[]).forEach(ev=>{if(normalizeTeamId(ev.team)===teamNorm)add(ev.name)});
     }else{
-      (d.scorers||[]).forEach(ev=>{if(ev.team===teamId)add(ev.name)});
+      (d.scorers||[]).forEach(ev=>{if(normalizeTeamId(ev.team)===teamNorm)add(ev.name)});
     }
   });
   const all=[...(getTeam(teamId)?.players||[]),...(TEAM_RESERVES[teamId]||[])];
@@ -1500,8 +1501,8 @@ function renderStats(){
   const all=[];
   TEAMS.forEach(t=>[...(t.players||[]), ...(TEAM_RESERVES?.[t.id]||[])].forEach(p=>all.push({...p,tName:t.name,tId:t.id,tEmoji:getTeamLogoImg(t.id)})));
   const rnk=(list,unit,vf)=>'<div class="rank-list">'+list.map((p,i)=>'<div class="card rank-item"><div class="ri-pos '+(i<3?'top':'')+'">'+(i+1)+'</div><div class="ri-info"><div class="ri-name">'+esc(p.name)+'</div><div class="ri-team">'+p.tEmoji+' '+esc(p.tName)+'</div></div><div class="ri-val"><div class="ri-num">'+vf(p)+'</div><div class="ri-unit">'+unit+'</div></div></div>').join('')+'</div>';
-  const topGoals=[...all].filter(p=>(Number(p.g)||0)>0).sort((a,b)=>(Number(b.g)||0)-(Number(a.g)||0)||(Number(b.a)||0)-(Number(a.a)||0)||a.name.localeCompare(b.name)).slice(0,10);
-  const topAssists=[...all].filter(p=>(Number(p.a)||0)>0).sort((a,b)=>(Number(b.a)||0)-(Number(a.a)||0)||(Number(b.g)||0)-(Number(a.g)||0)||a.name.localeCompare(b.name)).slice(0,10);
+  const topGoals=[...all].filter(p=>(Number(p.g)||0)>0).sort((a,b)=>(Number(b.g)||0)-(Number(a.g)||0)||(Number(b.a)||0)-(Number(a.a)||0)||a.name.localeCompare(b.name));
+  const topAssists=[...all].filter(p=>(Number(p.a)||0)>0).sort((a,b)=>(Number(b.a)||0)-(Number(a.a)||0)||(Number(b.g)||0)-(Number(a.g)||0)||a.name.localeCompare(b.name));
   document.getElementById('tab-gol').innerHTML=topGoals.length?rnk(topGoals,'Gol',p=>p.g||0):'<div class="md-noevent">Nessun gol registrato</div>';
   document.getElementById('tab-assist').innerHTML=topAssists.length?rnk(topAssists,'Assist',p=>p.a||0):'<div class="md-noevent">Nessun assist registrato</div>';
   const cds=[...all].map(p=>({...p,sc:(Number(p.y)||0)+(Number(p.r)||0)*2})).filter(p=>p.sc>0).sort((a,b)=>b.sc-a.sc||(Number(b.r)||0)-(Number(a.r)||0)||(Number(b.y)||0)-(Number(a.y)||0)||a.name.localeCompare(b.name)).slice(0,10);
@@ -1897,11 +1898,13 @@ function calcMatchPoints(pred){
   if(okOutcome)base+=3;
   if(exact)base+=7;
   const d=DETAILS[m.detailId]||{};
+  const predScorerName=String(pred.predicted_scorer_name||'').trim().toLowerCase();
+  const predScorerTeam=normalizeTeamId(pred.predicted_scorer_team);
   const predictedNone=pred.predicted_scorer_name==='Nessuno'||pred.predicted_scorer_team==='__none__';
   const noActualScorers=!(d.scorers||[]).length;
   const scorer=predictedNone
     ? (rh===0&&ra===0&&noActualScorers)
-    : !!(pred.predicted_scorer_name&&pred.predicted_scorer_team&&(d.scorers||[]).some(s=>s.name===pred.predicted_scorer_name&&s.team===pred.predicted_scorer_team));
+    : !!(predScorerName&&predScorerTeam&&(d.scorers||[]).some(s=>String(s.name||'').trim().toLowerCase()===predScorerName&&normalizeTeamId(s.team)===predScorerTeam));
   return{points:base>0&&scorer?base*2:base,base,exact,outcome:okOutcome,scorer};
 }
 function computeWinnerTeam(){const final=(CALENDAR||[]).find(m=>String(m.round).toLowerCase()==='finale'&&playedMatch(m));if(!final||Number(final.sh)===Number(final.sa))return null;return Number(final.sh)>Number(final.sa)?final.home:final.away}
@@ -1939,7 +1942,7 @@ function matchPredCard(m){const locked=isRoundLocked(m.round);const pred=allPred
 
 function predRoundStatusCard(round,matches){if(!round)return '<div class="pred-status-card"><div><div class="pred-status-title">Stato pronostici</div><div class="pred-status-text">Pronostici non disponibili</div></div><span class="pred-status-badge draft">In attesa</span></div>';const cfg=getRoundCfg(round);const locked=isRoundLocked(round);const count=matches?matches.length:0;let badge='draft',label='In attesa',text=(cfg&&cfg.message)?cfg.message:'Pronostici non disponibili';if(cfg&&cfg.lockAt){const d=new Date(cfg.lockAt);if(locked){badge='closed';label='Chiusi';text='Pronostici chiusi per '+esc(round)+'. Le scelte salvate restano valide in classifica.';}else{badge='open';label='Aperti';text='Puoi modificare i pronostici fino al '+d.toLocaleString('it-IT',{dateStyle:'short',timeStyle:'short'})+'. '+count+' partite disponibili.';}}return '<div class="pred-status-card"><div><div class="pred-status-title">Stato '+esc(round)+'</div><div class="pred-status-text">'+text+'</div></div><span class="pred-status-badge '+badge+'">'+label+'</span></div>'}
 function buildRoundWinners(){const profiles={};(publicProfiles||[]).forEach(p=>profiles[p.user_id]=p.nickname||p.username||'Utente');const rounds=roundsForMatches((CALENDAR||[]).filter(m=>m.round));return rounds.map(round=>{const playedIds=(CALENDAR||[]).filter(m=>m.round===round&&playedMatch(m)).map(m=>m.id);if(!playedIds.length)return null;const map={};(allPredictions||[]).filter(p=>playedIds.includes(p.match_id)).forEach(p=>{const pts=calcMatchPoints(p).points;if(!map[p.user_id])map[p.user_id]={user_id:p.user_id,nickname:profiles[p.user_id]||p.username||'Utente',points:0,count:0};map[p.user_id].points+=pts;map[p.user_id].count++;});const rows=Object.values(map).filter(r=>r.count>0).sort((a,b)=>b.points-a.points||b.count-a.count||String(a.nickname).localeCompare(String(b.nickname)));if(!rows.length)return null;const top=rows[0].points;return{round,winner:rows[0],ties:rows.filter(r=>r.points===top).length,played:playedIds.length};}).filter(Boolean)}
-function roundWinnersWidget(){const winners=buildRoundWinners();if(!winners.length)return '';return '<div class="card pred-card"><h3>🏅 Migliori di giornata</h3><div class="pred-day-winners">'+winners.map(w=>'<div class="pred-day-winner-row"><div class="pred-day-winner-icon">🏆</div><div><div class="pred-day-winner-title">'+esc(w.round)+'</div><div class="pred-day-winner-sub">'+esc(w.winner.nickname)+' · '+w.winner.count+' pronostici validi</div></div><div><div class="pred-day-winner-points">'+w.winner.points+' pt</div>'+(w.ties>1?'<div class="pred-day-winner-tie">pari merito</div>':'')+'</div></div>').join('')+'</div></div>'}
+function roundWinnersWidget(){const winners=buildRoundWinners();if(!winners.length)return '';return '<div class="card pred-card"><h3>🏅 Migliore di giornata</h3><div class="pred-day-winners">'+winners.map(w=>'<div class="pred-day-winner-row"><div class="pred-day-winner-icon">🏆</div><div><div class="pred-day-winner-title">'+esc(w.winner.nickname)+'</div><div class="pred-day-winner-sub">'+esc(w.round)+'</div></div><div><div class="pred-day-winner-points">'+w.winner.points+' pt</div>'+(w.ties>1?'<div class="pred-day-winner-tie">pari merito</div>':'')+'</div></div>').join('')+'</div></div>'}
 async function shareSite(){const url=location.origin+location.pathname;const title='Terzo Tempo Cup';const text='Segui risultati, classifiche, squadre e pronostici della Terzo Tempo Cup.';try{if(navigator.share){await navigator.share({title,text,url});return;}if(navigator.clipboard){await navigator.clipboard.writeText(url);alert('Link copiato negli appunti');return;}}catch(e){}prompt('Copia il link del sito:',url)}
 
 function pronosticaOraTab(){const matches=openPredictableMatches();const rounds=roundsForMatches(matches);if(!window.predRound||!rounds.includes(window.predRound))window.predRound=rounds[0]||null;const active=window.predRound;const filtered=active?matches.filter(m=>m.round===active):[];const cfg=active?getRoundCfg(active):null;const unavailable=!active||!cfg||!cfg.lockAt;window.predOpenMatchIds=window.predOpenMatchIds||{};return '<div class="card pred-section-card"><div class="pred-section-head"><div><div class="pred-section-title">⚽ Pronostica ora</div><div class="pred-muted">I pronostici saranno disponibili dopo i sorteggi ufficiali.</div></div></div>'+roundButtons(rounds,active,'predRound')+predRoundStatusCard(active,filtered)+(unavailable?'<div class="pred-empty"><b>Pronostici non ancora disponibili</b><div class="pred-msg">In attesa dei sorteggi: appena saranno definiti calendario e blocchi, potrai inserire risultato e marcatore.</div></div>':(filtered.length?filtered.map(matchPredCard).join(''):'<div class="pred-empty"><b>Nessuna partita pronosticabile.</b><div class="pred-msg">Controlla PREDICTION_ROUNDS in data.json.</div></div>'))+'</div>'}
