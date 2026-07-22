@@ -1352,7 +1352,7 @@
       "group": "Q1",
       "home": "ENOTRIA REVELIA",
       "away": "BLACKOUT",
-      "date": "24 Lug",
+      "date": "23 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1366,7 +1366,7 @@
       "group": "Q2",
       "home": "3P NEXT GEN",
       "away": "SETTORE RIBELLE",
-      "date": "24 Lug",
+      "date": "23 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1380,7 +1380,7 @@
       "group": "Q3",
       "home": "KING OF GARBAGE",
       "away": "LA BELLA LUCANIA",
-      "date": "24 Lug",
+      "date": "23 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1394,7 +1394,7 @@
       "group": "Q4",
       "home": "LA BANDA DI SPIGOLIN",
       "away": "ZEKEKE",
-      "date": "24 Lug",
+      "date": "23 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1408,7 +1408,7 @@
       "group": "S1",
       "home": "Vincente Q1",
       "away": "Vincente Q4",
-      "date": "25 Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1422,7 +1422,7 @@
       "group": "S2",
       "home": "Vincente Q2",
       "away": "Vincente Q3",
-      "date": "25 Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -1436,7 +1436,7 @@
       "group": "F",
       "home": "Vincente S1",
       "away": "Vincente S2",
-      "date": "25 Lug",
+      "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
@@ -2373,7 +2373,7 @@
     },
     {
       "matchday": 4,
-      "date": "24 Lug",
+      "date": "23 Lug",
       "matches": [
         {
           "name": "ENOTRIA REVELIA vs BLACKOUT",
@@ -2403,7 +2403,7 @@
     },
     {
       "matchday": 5,
-      "date": "25 Lug",
+      "date": "24 Lug",
       "matches": [
         {
           "name": "Vincente Q1 vs Vincente Q4",
@@ -2421,7 +2421,7 @@
     },
     {
       "matchday": 6,
-      "date": "25 Lug",
+      "date": "24 Lug",
       "matches": [
         {
           "name": "Vincente S1 vs Vincente S2",
