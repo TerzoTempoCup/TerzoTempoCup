@@ -1349,9 +1349,9 @@
     {
       "id": "qf1",
       "round": "Quarti di Finale",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "Q1",
+      "home": "ENOTRIA REVELIA",
+      "away": "BLACKOUT",
       "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1363,9 +1363,9 @@
     {
       "id": "qf2",
       "round": "Quarti di Finale",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "Q2",
+      "home": "3P NEXT GEN",
+      "away": "SETTORE RIBELLE",
       "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1377,9 +1377,9 @@
     {
       "id": "qf3",
       "round": "Quarti di Finale",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "Q3",
+      "home": "KING OF GARBAGE",
+      "away": "LA BELLA LUCANIA",
       "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1391,9 +1391,9 @@
     {
       "id": "qf4",
       "round": "Quarti di Finale",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "Q4",
+      "home": "LA BANDA DI SPIGOLIN",
+      "away": "ZEKEKE",
       "date": "24 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1405,9 +1405,9 @@
     {
       "id": "sf1",
       "round": "Semifinali",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "S1",
+      "home": "Vincente Q1",
+      "away": "Vincente Q4",
       "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1419,9 +1419,9 @@
     {
       "id": "sf2",
       "round": "Semifinali",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "S2",
+      "home": "Vincente Q2",
+      "away": "Vincente Q3",
       "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -1433,9 +1433,9 @@
     {
       "id": "final",
       "round": "Finale",
-      "group": null,
-      "home": null,
-      "away": null,
+      "group": "F",
+      "home": "Vincente S1",
+      "away": "Vincente S2",
       "date": "25 Lug",
       "time": "Da definire",
       "location": "Campo Sportivo Trecchina",
@@ -2262,16 +2262,6 @@
       "penalties": []
     }
   },
-  "MVP_DATA": {
-    "matchday": 3,
-    "winner": {
-      "name": "Amine Bejaoui",
-      "team": "phoenix"
-    },
-    "candidates": [],
-    "closed": false,
-    "igHandle": "@terzotempocup"
-  },
   "GALLERY": [
     {
       "matchday": 1,
@@ -2375,6 +2365,66 @@
         },
         {
           "name": "ENOTRIA REVELIA vs CECCHINI BOYS",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        }
+      ]
+    },
+    {
+      "matchday": 4,
+      "date": "24 Lug",
+      "matches": [
+        {
+          "name": "ENOTRIA REVELIA vs BLACKOUT",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        },
+        {
+          "name": "3P NEXT GEN vs SETTORE RIBELLE",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        },
+        {
+          "name": "KING OF GARBAGE vs LA BELLA LUCANIA",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        },
+        {
+          "name": "LA BANDA DI SPIGOLIN vs ZEKEKE",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        }
+      ]
+    },
+    {
+      "matchday": 5,
+      "date": "25 Lug",
+      "matches": [
+        {
+          "name": "Vincente Q1 vs Vincente Q4",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        },
+        {
+          "name": "Vincente Q2 vs Vincente Q3",
+          "link": "",
+          "count": 0,
+          "yt": "#"
+        }
+      ]
+    },
+    {
+      "matchday": 6,
+      "date": "25 Lug",
+      "matches": [
+        {
+          "name": "Vincente S1 vs Vincente S2",
           "link": "",
           "count": 0,
           "yt": "#"
