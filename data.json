@@ -298,7 +298,7 @@
         },
         {
           "n": 3,
-          "name": "Raffaele D'Agostino",
+          "name": "Raffaele Lammoglia",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -478,7 +478,7 @@
         },
         {
           "n": 4,
-          "name": "Giacomo Zuardi",
+          "name": "Domenico Zuardi",
           "role": "Difensore",
           "g": 0,
           "a": 0,
@@ -819,7 +819,7 @@
     "wolves": [
       {
         "n": 4,
-        "name": "Giampiero Labanca",
+        "name": "Antonio Glosa",
         "role": "Difensore",
         "g": 0,
         "a": 0,
@@ -1123,8 +1123,8 @@
         "gp": 0
       },
       {
-        "n": 90,
-        "name": "Riccardo Campagna",
+        "n": 6,
+        "name": "Mario Prezioso",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1200,10 +1200,10 @@
       "date": "21 Lug",
       "time": "20:00",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 6,
+      "sa": 3,
       "yt": "#",
-      "detailId": null
+      "detailId": "c5"
     },
     {
       "id": "c6",
@@ -1214,10 +1214,10 @@
       "date": "21 Lug",
       "time": "20:45",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 4,
       "yt": "#",
-      "detailId": null
+      "detailId": "c6"
     },
     {
       "id": "c7",
@@ -1228,10 +1228,10 @@
       "date": "21 Lug",
       "time": "21:30",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 1,
       "yt": "#",
-      "detailId": null
+      "detailId": "c7"
     },
     {
       "id": "c8",
@@ -1242,10 +1242,10 @@
       "date": "21 Lug",
       "time": "22:15",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 5,
+      "sa": 3,
       "yt": "#",
-      "detailId": null
+      "detailId": "c8"
     },
     {
       "id": "c9",
@@ -1256,10 +1256,10 @@
       "date": "21 Lug",
       "time": "23:00",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "c9"
     },
     {
       "id": "c10",
@@ -1270,10 +1270,10 @@
       "date": "21 Lug",
       "time": "23:45",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 3,
+      "sa": 5,
       "yt": "#",
-      "detailId": null
+      "detailId": "c10"
     },
     {
       "id": "c11",
@@ -1658,13 +1658,317 @@
           "saved": false
         }
       ]
+    },
+    "c5": {
+      "scorers": [
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Giacomo Brancato",
+          "min": 9,
+          "assist": "Nicolò Di Lascio"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 10,
+          "assist": "Davide Orlando"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 10
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Carmine Filardi",
+          "min": 12
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 13
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 21,
+          "assist": "Simone Supino"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 22,
+          "assist": "Simone Supino"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 23
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Carmine Filardi",
+          "min": 28,
+          "assist": "Nicolò Di Lascio"
+        }
+      ],
+      "cards": [
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 14,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c6": {
+      "scorers": [
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Osvaldo Giffuni",
+          "min": 3,
+          "assist": "Salvatore Corinto"
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Lorenzo Mastroianni",
+          "min": 8
+        },
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Antonio Glosa",
+          "min": 13
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Nicolò Di Lascio",
+          "min": 14
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Carmine Filardi",
+          "min": 29,
+          "assist": "Mario Prezioso"
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Carmine Filardi",
+          "min": 30,
+          "assist": "Nicolò Di Lascio"
+        }
+      ],
+      "cards": [
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Antonio Lammoglia",
+          "min": 29,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c7": {
+      "scorers": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 3,
+          "assist": "Ferdinando Sisca"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Sisca",
+          "min": 18
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 26,
+          "assist": "Ferdinando Sisca"
+        }
+      ],
+      "cards": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Biagio Scotellaro",
+          "min": 20,
+          "type": "Y"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Biagio Scotellaro",
+          "min": 20,
+          "type": "Y"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Ferdinando Sisca",
+          "min": 33,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c8": {
+      "scorers": [
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Osvaldo Giffuni",
+          "min": 4
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 6,
+          "assist": "Alessandro Cozzi"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Massimo Schettini",
+          "min": 8,
+          "assist": "Pasquale Marino"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 9,
+          "assist": "Angelo Mastropierro"
+        },
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Antonio Glosa",
+          "min": 9
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Angelo Mastropierro",
+          "min": 10,
+          "assist": "Alessandro Cozzi"
+        },
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Antonio Lammoglia",
+          "min": 11,
+          "assist": "Antonio Glosa"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Alessandro Cozzi",
+          "min": 13,
+          "assist": "Angelo Mastropierro"
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    },
+    "c9": {
+      "scorers": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 6
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 16
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 25
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 29
+        }
+      ],
+      "cards": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Michelangelo Maimone",
+          "min": 30,
+          "type": "Y"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 31,
+          "type": "Y"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Fabio Ferrari",
+          "min": 32,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c10": {
+      "scorers": [
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Fausto Corinto",
+          "min": 4
+        },
+        {
+          "team": "ZEUS UNITED",
+          "name": "Giuseppe Aliberti",
+          "min": 10
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 17
+        },
+        {
+          "team": "ZEUS UNITED",
+          "name": "Davide d'Andrea",
+          "min": 20,
+          "assist": "Emiliano Brando"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Ernesto Speranza",
+          "min": 22
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 25,
+          "assist": "Ernesto Speranza"
+        },
+        {
+          "team": "ZEUS UNITED",
+          "name": "Emiliano Brando",
+          "min": 26,
+          "assist": "Michelangelo Schettini"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 27
+        }
+      ],
+      "cards": [
+        {
+          "team": "ZEUS UNITED",
+          "name": "Nicola Ielpo",
+          "min": 1,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
     }
   },
   "MVP_DATA": {
-    "matchday": 1,
+    "matchday": 2,
     "winner": {
-      "name": "Paolo Laino",
-      "team": "falcons"
+      "name": "Giovanni Schettino",
+      "team": "bluefire"
     },
     "candidates": [],
     "closed": false,
