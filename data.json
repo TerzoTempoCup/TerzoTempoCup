@@ -1825,18 +1825,6 @@
         {
           "team": "LA BANDA DI SPIGOLIN",
           "name": "Leonardo Filardi",
-          "min": 6,
-          "assist": "Alessandro Cozzi"
-        },
-        {
-          "team": "LA BANDA DI SPIGOLIN",
-          "name": "Massimo Schettini",
-          "min": 8,
-          "assist": "Pasquale Marino"
-        },
-        {
-          "team": "LA BANDA DI SPIGOLIN",
-          "name": "Leonardo Filardi",
           "min": 9,
           "assist": "Angelo Mastropierro"
         },
@@ -1847,12 +1835,6 @@
           "assist": "Salvatore Corinto"
         },
         {
-          "team": "LA BANDA DI SPIGOLIN",
-          "name": "Angelo Mastropierro",
-          "min": 10,
-          "assist": "Alessandro Cozzi"
-        },
-        {
           "team": "CECCHINI BOYS",
           "name": "Antonio Lammoglia",
           "min": 11,
@@ -1860,8 +1842,26 @@
         },
         {
           "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 17,
+          "assist": "Alessandro Cozzi"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Massimo Schettini",
+          "min": 23,
+          "assist": "Pasquale Marino"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Angelo Mastropierro",
+          "min": 25,
+          "assist": "Alessandro Cozzi"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
           "name": "Alessandro Cozzi",
-          "min": 13,
+          "min": 28,
           "assist": "Angelo Mastropierro"
         }
       ],
