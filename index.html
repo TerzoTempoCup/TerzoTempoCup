@@ -1514,12 +1514,28 @@ function syncStats(){
       if(assister) assister.a = (Number(assister.a) || 0) + 1;
     });
 
-    (d.cards || []).forEach(ev => {
+    const cards = d.cards || [];
+    const plainYellowKeys = new Set(
+      cards
+        .filter(ev => {
+          const t = String(ev.type || '').trim().toUpperCase();
+          return t === 'Y' || t === 'GIALLO' || t === 'YELLOW';
+        })
+        .map(ev => [normalizeTeamId(ev.team), normName(ev.name), Number(ev.min) || 0].join('|'))
+    );
+
+    cards.forEach(ev => {
       const player = findPlayer(ev.team, ev.name);
       if(!player) return;
       const type = String(ev.type || '').trim().toUpperCase();
+      const evKey = [normalizeTeamId(ev.team), normName(ev.name), Number(ev.min) || 0].join('|');
       if(type === 'Y' || type === 'GIALLO' || type === 'YELLOW') player.y = (Number(player.y) || 0) + 1;
       if(type === 'R' || type === 'ROSSO' || type === 'RED') player.r = (Number(player.r) || 0) + 1;
+      if(type === 'YR' || type === 'RY' || type === '2Y'){
+        // Se nello stesso evento esiste già un giallo separato, YR aggiunge solo il rosso.
+        if(!plainYellowKeys.has(evKey)) player.y = (Number(player.y) || 0) + 1;
+        player.r = (Number(player.r) || 0) + 1;
+      }
     });
   });
 }
@@ -1712,12 +1728,28 @@ function syncStats(){
       if(assister) assister.a = (Number(assister.a) || 0) + 1;
     });
 
-    (d.cards || []).forEach(ev => {
+    const cards = d.cards || [];
+    const plainYellowKeys = new Set(
+      cards
+        .filter(ev => {
+          const t = String(ev.type || '').trim().toUpperCase();
+          return t === 'Y' || t === 'GIALLO' || t === 'YELLOW';
+        })
+        .map(ev => [normalizeTeamId(ev.team), normName(ev.name), Number(ev.min) || 0].join('|'))
+    );
+
+    cards.forEach(ev => {
       const player = findPlayer(ev.team, ev.name);
       if(!player) return;
       const type = String(ev.type || '').trim().toUpperCase();
+      const evKey = [normalizeTeamId(ev.team), normName(ev.name), Number(ev.min) || 0].join('|');
       if(type === 'Y' || type === 'GIALLO' || type === 'YELLOW') player.y = (Number(player.y) || 0) + 1;
       if(type === 'R' || type === 'ROSSO' || type === 'RED') player.r = (Number(player.r) || 0) + 1;
+      if(type === 'YR' || type === 'RY' || type === '2Y'){
+        // Se nello stesso evento esiste già un giallo separato, YR aggiunge solo il rosso.
+        if(!plainYellowKeys.has(evKey)) player.y = (Number(player.y) || 0) + 1;
+        player.r = (Number(player.r) || 0) + 1;
+      }
     });
   });
 }
@@ -1803,7 +1835,11 @@ function buildInlineMatchTabellino(m){
   evs.sort((a,b)=>(a.min||0)-(b.min||0));
   const icon = ev => {
     if(ev.et === 'goal') return (ev.penalty===true||ev.isPenalty===true||ev.rigore===true) ? '🥅' : '⚽';
-    if(ev.et === 'card') return ev.type === 'R' ? '🟥' : '🟨';
+    if(ev.et === 'card'){
+      const type=String(ev.type||'').trim().toUpperCase();
+      if(type === 'YR' || type === 'RY' || type === '2Y') return '🟨🟥';
+      return type === 'R' ? '🟥' : '🟨';
+    }
     const txt=String(ev.outcome||ev.result||ev.esito||'').toLowerCase();
     const isSaved=ev.saved===true||ev.parato===true||txt.includes('parat')||txt.includes('saved');
     const isScored=txt.includes('gol')||txt.includes('segn')||txt.includes('score');
