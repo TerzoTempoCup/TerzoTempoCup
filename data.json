@@ -1631,7 +1631,8 @@
         {
           "team": "SETTORE RIBELLE",
           "name": "Giovanni Schettino",
-          "min": 27
+          "min": 27,
+          "assist": "Amine Bejaoui"
         },
         {
           "team": "SETTORE RIBELLE",
@@ -1692,7 +1693,7 @@
           "team": "ZEKEKE",
           "name": "Alessandro Colombo",
           "min": 21,
-          "assist": "Simone Supino"
+          "assist": "Felice Falabella"
         },
         {
           "team": "ZEKEKE",
@@ -1703,7 +1704,8 @@
         {
           "team": "ZEKEKE",
           "name": "Angelo Mastroianni",
-          "min": 23
+          "min": 23,
+          "assist": "Alessandro Colombo"
         },
         {
           "team": "KING OF GARBAGE",
@@ -1733,12 +1735,14 @@
         {
           "team": "KING OF GARBAGE",
           "name": "Lorenzo Mastroianni",
-          "min": 8
+          "min": 8,
+          "assist": "Nicolò Di Lascio"
         },
         {
           "team": "CECCHINI BOYS",
           "name": "Antonio Glosa",
-          "min": 13
+          "min": 13,
+          "assist": "Antonio Lammoglia"
         },
         {
           "team": "KING OF GARBAGE",
@@ -1815,7 +1819,8 @@
         {
           "team": "CECCHINI BOYS",
           "name": "Osvaldo Giffuni",
-          "min": 4
+          "min": 4,
+          "assist": "Salvatore Corinto"
         },
         {
           "team": "LA BANDA DI SPIGOLIN",
@@ -1838,7 +1843,8 @@
         {
           "team": "CECCHINI BOYS",
           "name": "Antonio Glosa",
-          "min": 9
+          "min": 9,
+          "assist": "Salvatore Corinto"
         },
         {
           "team": "LA BANDA DI SPIGOLIN",
@@ -1872,7 +1878,8 @@
         {
           "team": "ENOTRIA REVELIA",
           "name": "Antonio Altieri",
-          "min": 16
+          "min": 16,
+          "assist": "Manuel Chiarelli"
         },
         {
           "team": "LA BELLA LUCANIA",
@@ -1922,7 +1929,8 @@
         {
           "team": "SETTORE RIBELLE",
           "name": "Giovanni Schettino",
-          "min": 17
+          "min": 17,
+          "assist": "Amine Bejaoui"
         },
         {
           "team": "ZEUS UNITED",
@@ -1933,7 +1941,8 @@
         {
           "team": "SETTORE RIBELLE",
           "name": "Ernesto Speranza",
-          "min": 22
+          "min": 22,
+          "assist": "Amine Bejaoui"
         },
         {
           "team": "SETTORE RIBELLE",
@@ -1950,7 +1959,8 @@
         {
           "team": "SETTORE RIBELLE",
           "name": "Giovanni Schettino",
-          "min": 27
+          "min": 27,
+          "assist": "Gaetano Surace"
         }
       ],
       "cards": [
@@ -2013,37 +2023,37 @@
           "name": "ZEKEKE vs KING OF GARBAGE",
           "link": "https://drive.google.com/drive/folders/14G14BUC0dyHTaaohn8karF-TcOxZQydA?usp=drive_link",
           "count": 64,
-          "yt": "#"
+          "yt": "https://youtu.be/XIqzDA1FEjs?si=tbwM171Q0rDdhZES"
         },
         {
           "name": "KING OF GARBAGE vs CECCHINI BOYS",
           "link": "https://drive.google.com/drive/folders/1SNjsRDDtJrJupb4mNBzKPMEfSax1fK1p?usp=drive_link",
           "count": 30,
-          "yt": "#"
+          "yt": "https://www.youtube.com/watch?v=OAoF8CKJzcc"
         },
         {
           "name": "3P NEXT GEN vs BLACKOUT",
           "link": "https://drive.google.com/drive/folders/1-im8S_A_aaQ_h8cbV6u2uZqgXWpvN5jQ?usp=drive_link",
           "count": 53,
-          "yt": "#"
+          "yt": "https://youtu.be/VtD6dm_mO-I?si=7IE6adIimpKL8iDm"
         },
         {
           "name": "LA BANDA DI SPIGOLIN vs CECCHINI BOYS",
           "link": "https://drive.google.com/drive/folders/1Qjy00S7-Vr-VsyYrR8ArVPrtAT2_2CCj?usp=drive_link",
           "count": 41,
-          "yt": "#"
+          "yt": "https://youtu.be/JkLbW9bB2CE?si=hYT8aeyrAIozAFHZ"
         },
         {
           "name": "ENOTRIA REVELIA vs LA BELLA LUCANIA",
           "link": "https://drive.google.com/drive/folders/1Q8smt6bebeKvbYmdJSZ4aoFoxOTAdy-t?usp=drive_link",
           "count": 37,
-          "yt": "#"
+          "yt": "https://youtu.be/mZcU2sxO--0?si=C_ccMq4D0KGCyade"
         },
         {
           "name": "ZEUS UNITED vs SETTORE RIBELLE",
           "link": "https://drive.google.com/drive/folders/13f-cfbvoyaJcDtyHoQT8OwTag6vqLBA1?usp=drive_link",
           "count": 38,
-          "yt": "#"
+          "yt": "https://youtu.be/4nVv1BJtjcU?si=9_-uZR1yTwfTAGKd"
         }
       ]
     },
