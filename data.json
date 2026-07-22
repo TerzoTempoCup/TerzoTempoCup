@@ -2457,23 +2457,23 @@
     {
       "round": "Quarti di Finale",
       "label": "Quarti di Finale",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "lockAt": "2026-07-23T20:00:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     },
     {
       "round": "Semifinali",
       "label": "Semifinali",
       "lockAt": null,
       "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "message": "Pronostici non disponibili, in attesa dei quarti di finale"
     },
     {
       "round": "Finale",
       "label": "Finale",
       "lockAt": null,
       "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei sorteggi"
+      "message": "Pronostici non disponibili, in attesa delle semifinali"
     }
   ],
   "PREDICTION_FINAL_AWARDS": {
