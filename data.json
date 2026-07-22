@@ -1050,7 +1050,7 @@
       },
       {
         "n": 9,
-        "name": "Ali Badra",
+        "name": "Ali Diarra",
         "role": "Centrocampista",
         "g": 0,
         "a": 0,
@@ -1284,10 +1284,10 @@
       "date": "22 Lug",
       "time": "20:30",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 7,
+      "sa": 7,
       "yt": "#",
-      "detailId": null
+      "detailId": "c11"
     },
     {
       "id": "c12",
@@ -1298,10 +1298,10 @@
       "date": "22 Lug",
       "time": "21:15",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 6,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "c12"
     },
     {
       "id": "c13",
@@ -1312,10 +1312,10 @@
       "date": "22 Lug",
       "time": "22:00",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 3,
+      "sa": 4,
       "yt": "#",
-      "detailId": null
+      "detailId": "c13"
     },
     {
       "id": "c14",
@@ -1326,10 +1326,11 @@
       "date": "22 Lug",
       "time": "22:45",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 0,
+      "sa": 6,
       "yt": "#",
-      "detailId": null
+      "detailId": "c14",
+      "message": "Vittoria a tavolino per KING OF GARBAGE"
     },
     {
       "id": "c15",
@@ -1340,10 +1341,10 @@
       "date": "22 Lug",
       "time": "23:30",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 9,
+      "sa": 2,
       "yt": "#",
-      "detailId": null
+      "detailId": "c15"
     },
     {
       "id": "qf1",
@@ -1972,13 +1973,300 @@
         }
       ],
       "penalties": []
+    },
+    "c11": {
+      "scorers": [
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 1,
+          "assist": "Felice Falabella"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Simone Supino",
+          "min": 6,
+          "assist": "Angelo Mastroianni"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 10
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Autogol",
+          "min": 14
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 15,
+          "assist": "Felice Gulfo"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Fausto Corinto",
+          "min": 15,
+          "assist": "Amine Bejaoui"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 17,
+          "assist": "Angelo Mastroianni"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 19,
+          "assist": "Daniel Bocchino"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 21,
+          "assist": "Angelo Mastroianni"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 24
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 25,
+          "assist": "Daniel Bocchino"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 26,
+          "assist": "Giovanni Schettino"
+        },
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 29
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 30
+        }
+      ],
+      "cards": [
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Giovanni Schettino",
+          "min": 26,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c12": {
+      "scorers": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 5,
+          "assist": "Luca Supino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 8,
+          "penalty": true
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Ferdinando Sisca",
+          "min": 10,
+          "assist": "Gennaro Agrelli"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 16,
+          "assist": "Enrico Olivieri"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Domenico Esposito",
+          "min": 16,
+          "assist": "Paolo Laino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 20
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Francesco Iannotti",
+          "min": 21,
+          "assist": "Enrico Olivieri"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 25
+        }
+      ],
+      "cards": [],
+      "penalties": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 8,
+          "outcome": "gol",
+          "against": "LA BELLA LUCANIA",
+          "saved": false
+        }
+      ]
+    },
+    "c13": {
+      "scorers": [
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Michele Schettini",
+          "min": 1,
+          "assist": "Leonardo Filardi"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Alessandro Spagnolo",
+          "min": 12,
+          "assist": "Davide Agrelli"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Alessandro Spagnolo",
+          "min": 13
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Alessandro Spagnolo",
+          "min": 19
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Michele Schettini",
+          "min": 23,
+          "assist": "Alessandro Cozzi"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 27
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Davide Agrelli",
+          "min": 29,
+          "assist": "Pierfrancesco Conte"
+        }
+      ],
+      "cards": [
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Leonardo Filardi",
+          "min": 14,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "c14": {
+      "scorers": [],
+      "cards": [],
+      "penalties": [],
+      "note": "Vittoria a tavolino per KING OF GARBAGE",
+      "message": "Partita assegnata a tavolino: ZEUS UNITED 0-6 KING OF GARBAGE"
+    },
+    "c15": {
+      "scorers": [
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 6,
+          "assist": "Vito Agrello"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 10
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ali Diarra",
+          "min": 16
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ali Diarra",
+          "min": 21,
+          "assist": "Samuel Fabozzi"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ali Diarra",
+          "min": 23
+        },
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Pietro Filardi",
+          "min": 24,
+          "assist": "Raffaele Lammoglia"
+        },
+        {
+          "team": "CECCHINI BOYS",
+          "name": "Raffaele Lammoglia",
+          "min": 25
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 26,
+          "assist": "Manuel Chiarelli"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 27,
+          "assist": "Samuel Fabozzi"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Samuel Fabozzi",
+          "min": 30,
+          "assist": "Antonio Nocera"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Fabio Ferrari",
+          "min": 31,
+          "assist": "Ali Diarra"
+        }
+      ],
+      "cards": [
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Vito Agrello",
+          "min": 9,
+          "type": "R"
+        }
+      ],
+      "penalties": []
     }
   },
   "MVP_DATA": {
-    "matchday": 2,
+    "matchday": 3,
     "winner": {
-      "name": "Giovanni Schettino",
-      "team": "bluefire"
+      "name": "Amine Bejaoui",
+      "team": "phoenix"
     },
     "candidates": [],
     "closed": false,

@@ -84,6 +84,22 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
   color:#ffd080;
 }
 
+.cal-inline-msg{
+  text-align:center;
+  color:var(--mu);
+  padding:1rem;
+  font-weight:900;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+}
+
+.cal-inline-msg.walkover{
+  color:#ffe2a8;
+  border-color:rgba(245,158,11,.55);
+  background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(200,0,0,.12));
+}
+
 .cal-inline-assists{
   margin-top:1rem;
   padding-top:.75rem;
@@ -1802,6 +1818,8 @@ function buildInlineMatchTabellino(m){
     return '<div class="card cal-inline-tab"><div class="md-noevent">Tabellino non disponibile</div></div>';
   }
   const d = DETAILS[m.detailId] || {};
+  const inlineMessage = String(d.message || m.message || d.note || '').trim();
+  const isWalkoverMessage = /tavolino/i.test(inlineMessage);
   const scorers = d.scorers || [];
   const legacyAssists = d.assists || [];
   const cards = d.cards || [];
@@ -1859,7 +1877,9 @@ function buildInlineMatchTabellino(m){
         const lb = eventLabel(ev);
         return '<div class="tl-row"><div class="tl-h">'+(h ? lb : '')+'</div><div class="tl-m">'+(ev.min ? ev.min+'\'' : '')+'</div><div class="tl-a">'+(!h ? lb : '')+'</div></div>';
       }).join('')
-    : '<div class="md-noevent">Nessun evento registrato</div>';
+    : (inlineMessage
+      ? '<div class="cal-inline-msg'+(isWalkoverMessage?' walkover':'')+'">'+esc(inlineMessage)+'</div>'
+      : '<div class="md-noevent">Nessun evento registrato</div>');
   return '<div class="card cal-inline-tab"><div class="cal-inline-title">Tabellino</div>'+timeline+'</div>';
 }
 
