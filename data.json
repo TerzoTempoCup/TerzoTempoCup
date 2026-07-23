@@ -1999,16 +1999,16 @@
           "min": 14
         },
         {
-          "team": "ZEKEKE",
-          "name": "Angelo Mastroianni",
-          "min": 15,
-          "assist": "Felice Gulfo"
-        },
-        {
           "team": "SETTORE RIBELLE",
           "name": "Fausto Corinto",
           "min": 15,
           "assist": "Amine Bejaoui"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 15,
+          "assist": "Felice Gulfo"
         },
         {
           "team": "ZEKEKE",
@@ -2048,12 +2048,14 @@
         {
           "team": "SETTORE RIBELLE",
           "name": "Giovanni Schettino",
-          "min": 29
+          "min": 29,
+          "assist": "Daniel Bocchino"
         },
         {
           "team": "ZEKEKE",
           "name": "Alessandro Colombo",
-          "min": 30
+          "min": 30,
+          "assist": "Simone Supino"  
         }
       ],
       "cards": [
@@ -2093,26 +2095,27 @@
           "assist": "Enrico Olivieri"
         },
         {
-          "team": "LA BELLA LUCANIA",
-          "name": "Domenico Esposito",
-          "min": 16,
-          "assist": "Paolo Laino"
-        },
-        {
           "team": "3P NEXT GEN",
           "name": "Enrico Olivieri",
-          "min": 20
-        },
-        {
-          "team": "3P NEXT GEN",
-          "name": "Francesco Iannotti",
-          "min": 21,
-          "assist": "Enrico Olivieri"
+          "min": 20,
+          "assist": "Gennaro Agrelli"
         },
         {
           "team": "LA BELLA LUCANIA",
           "name": "Paolo Laino",
-          "min": 25
+          "min": 21
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Domenico Esposito",
+          "min": 24,
+          "assist": "Paolo Laino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Francesco Iannotti",
+          "min": 26,
+          "assist": "Enrico Olivieri"
         }
       ],
       "cards": [],
@@ -2197,23 +2200,26 @@
         {
           "team": "ENOTRIA REVELIA",
           "name": "Antonio Altieri",
-          "min": 10
-        },
-        {
-          "team": "ENOTRIA REVELIA",
-          "name": "Ali Diarra",
-          "min": 16
-        },
-        {
-          "team": "ENOTRIA REVELIA",
-          "name": "Ali Diarra",
-          "min": 21,
+          "min": 10,
           "assist": "Samuel Fabozzi"
         },
         {
           "team": "ENOTRIA REVELIA",
           "name": "Ali Diarra",
-          "min": 23
+          "min": 16,
+          "assist": "Antonio Altieri"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ali Diarra",
+          "min": 21,
+          "assist": "Fabio Ferrari"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Ali Diarra",
+          "min": 23,
+          "assist": "Samuel Fabozzi"
         },
         {
           "team": "CECCHINI BOYS",
