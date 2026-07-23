@@ -52,6 +52,10 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 .cal-match-team.home{text-align:right}.cal-match-team.away{text-align:left}
 .cal-match-score{font-family:var(--ft);font-size:clamp(2rem,6vw,3.2rem);color:#ffd080;min-width:5.6rem;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:.5rem .75rem}
 .cal-match-sub{color:var(--mu);font-weight:900;font-size:.8rem}
+.cal-match-mvp{padding:.85rem 1rem;margin:0 0 1rem;text-align:center;background:rgba(245,158,11,.09);border-color:rgba(245,158,11,.24)}
+.cal-match-mvp-kicker{font-size:.68rem;color:#ffd080;font-weight:950;text-transform:uppercase;letter-spacing:.12em}
+.cal-match-mvp-name{font-family:var(--ft);font-size:1.15rem;margin:.2rem 0}
+.cal-match-mvp-team{font-size:.8rem;color:var(--mu);font-weight:900}
 .cal-match-teams-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
 .cal-team-panel{padding:1rem}
 .cal-team-panel-head{display:flex;align-items:center;justify-content:center;gap:.45rem;font-family:var(--ft);margin-bottom:.8rem;text-align:center}
@@ -756,6 +760,20 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
     grid-template-columns:repeat(2,minmax(0,1fr));
     max-height:180px;
   }
+  #statistiche .tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:.1rem;
+  }
+  #statistiche .tabs::-webkit-scrollbar{
+    display:none;
+  }
+  #statistiche .tab-btn{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
 }
 
 
@@ -1244,7 +1262,7 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 <section id="home" class="sec act"><div class="hero"><img src="logo_torneo.png" alt="Terzo Tempo Cup" onerror="this.outerHTML='<div style=font-size:4.5rem>🏆</div>'"><h1>Terzo Tempo Cup</h1><div class="hero-pill"><span class="dot-live"></span> In attesa dei Quarti di Finale</div></div><div class="home-qnav"><button class="hqbtn" onclick="homeJumpTo('s-gironi')">🏆 Classifica</button><button class="hqbtn" onclick="homeJumpTo('s-upcoming')">📅 Prossime Partite</button><button class="hqbtn" onclick="homeJumpTo('s-recent')">⚽ Ultimi Risultati</button></div><div id="s-gironi" class="sec-title centered">🏆 Classifica</div><div class="gironi-wrap" id="gironiWrap"></div><div id="s-upcoming" class="sec-title">📅 Prossime Partite</div><div class="match-grid" id="upcomingGrid"></div><div id="s-recent" class="sec-title">⚽ Ultimi Risultati</div><div class="match-grid" id="recentGrid"></div></section>
 <section id="squadre" class="sec"><div class="td-list" id="teamsList"><div class="sec-title">👕 Squadre Iscritte</div><div class="sq-filter"><button class="sq-fbtn act" onclick="filterTeams('all',this)">Girone Unico</button></div><div id="teamsGrid"></div></div><div class="td-view" id="teamDetail"></div></section>
 <section id="calendario" class="sec"><div class="sec-title">📅 Calendario</div><div class="cal-tabs" id="calTabs"></div><div class="cal-mobile-list" id="calMobileList"></div><div class="cal-desktop-shell"><div class="cal-desk-toolbar"><button class="cal-arrow" onclick="scrollCal(-1)">‹</button><div class="cal-desk-nav" id="calDeskNav"></div><button class="cal-arrow" onclick="scrollCal(1)">›</button></div><div class="cal-stage-line" id="calStageLine"></div><div class="cal-desktop" id="calDesktop"></div></div></section>
-<section id="statistiche" class="sec"><div class="sec-title">📊 Statistiche</div><div class="tabs"><button class="tab-btn act" onclick="showTab('gol',this)">⚽ Capocannonieri</button><button class="tab-btn" onclick="showTab('assist',this)">🅰️ Assist</button><button class="tab-btn" onclick="showTab('cartellini',this)">🟨 Cartellini</button><button class="tab-btn" onclick="showTab('porta',this)">🧤 Porta inviolata</button><button class="tab-btn" onclick="showTab('disciplina',this)">🛡️ Disciplina Squadre</button></div><div id="tab-gol" class="tab-pane act"></div><div id="tab-assist" class="tab-pane"></div><div id="tab-cartellini" class="tab-pane"></div><div id="tab-porta" class="tab-pane"></div><div id="tab-disciplina" class="tab-pane"></div></section>
+<section id="statistiche" class="sec"><div class="sec-title">📊 Statistiche</div><div class="tabs"><button class="tab-btn act" onclick="showTab('gol',this)">⚽ Capocannonieri</button><button class="tab-btn" onclick="showTab('assist',this)">🅰️ Assist</button><button class="tab-btn" onclick="showTab('cartellini',this)">🟨 Cartellini</button><button class="tab-btn" onclick="showTab('porta',this)">🧤 Porta inviolata</button><button class="tab-btn" onclick="showTab('mvp',this)">⭐ MVP</button><button class="tab-btn" onclick="showTab('disciplina',this)">🛡️ Disciplina Squadre</button></div><div id="tab-gol" class="tab-pane act"></div><div id="tab-assist" class="tab-pane"></div><div id="tab-cartellini" class="tab-pane"></div><div id="tab-porta" class="tab-pane"></div><div id="tab-mvp" class="tab-pane"></div><div id="tab-disciplina" class="tab-pane"></div></section>
 <section id="pronostici" class="sec"><div class="sec-title">🔮 Pronostici</div><div id="predictionsContent"></div></section>
 <section id="galleria" class="sec"><div class="sec-title">📸 Galleria Foto</div><div class="gal-tabs" id="galTabs"></div><div class="gal-grid" id="galGrid"></div></section>
 <section id="regolamento" class="sec"><div class="sec-title">📋 Regolamento</div><div class="reg-layout"><aside class="reg-legend"><div class="reg-legend-title">Legenda</div><div class="reg-legend-links"><a class="reg-legend-link" href="#reg-formato-torneo">Formato del torneo</a><a class="reg-legend-link" href="#reg-regole-campo">Regole di campo</a><a class="reg-legend-link" href="#reg-regole-disciplinari">Regole disciplinari</a><a class="reg-legend-link" href="#reg-premi">Premi</a><a class="reg-legend-link" href="#reg-pronostica-vinci">Pronostica e Vinci</a><a class="reg-legend-link" href="#reg-premi-pronostica-vinci">Premi Pronostica e Vinci</a></div></aside><div class="card reg-card"><div id="reg-formato-torneo" class="reg-h">🏆 Formato del torneo</div><ul><li>Girone unico da 10 squadre in stile Champions League.</li><li>Nella fase a gironi, ogni squadra gioca 3 partite e si qualificano le prime 8 classificate.</li><li>In caso di posizionamento a pari punti nella fase a gironi, si terrà conto di: 1 - Scontro diretto ; 2 - Differenza Reti ; 3 - Gol Fatti ; 4 - Gol Subiti ; 5 - Sanzioni Disciplinari (Cartellino Giallo = 1 Punto, Cartellino Rosso = 2 Punti).</li><li>Al termine del girone unico vengono disputati i Quarti di Finale, con accoppiamenti determinati dal posizionamento nel girone (1° vs 8°, 2° vs 7°, 3° vs 6°, 4° vs 5°), seguiti dalla Semifinale e dalla Finale. </li></ul><div id="reg-regole-campo" class="reg-h">🏟️ Regole di campo</div><ul><li>Le partite sono composte da 2 tempi da 15 minuti.</li><li>In caso di pareggio nelle partite ad eliminazione diretta sono previsti due tempi supplementari da 5 minuti.</li><li>Il retropassaggio può essere sempre effettuato ma il portiere non può prendere la palla con le mani.</li><li>Le scivolate sono ammesse.</li><li>Per battere rimesse laterali e calci d'angolo si hanno a disposizione 4 secondi che vengono contati dal momento in cui il giocatore è in condizione di battere.</li><li>In caso vengono superati i 4 secondi o la palla non è correttamente sulla linea, viene considerato controfallo, invertendo la battuta a favore della squadra avversaria.</li></ul><div id="reg-regole-disciplinari" class="reg-h">🟨 Regole disciplinari</div><ul><li>In caso di espulsione la squadra giocherà 1 uomo in meno per 3 minuti.</li><li>Il giocatore espulso non potrà rientrare in campo per il resto della partita e la squalifica avrà effetto anche per la partita successiva.</li><li>Episodi di violenza o eccessive proteste potranno comportare la definitiva esclusione dal torneo per l'intera squadra.</li><li>All'interno del terreno di gioco è consentito l'ingresso ai giocatori + 2 elementi esterni (allenatore/staff).</li></ul><div id="reg-premi" class="reg-h">🏆 Premi</div><ul><li>Al termine di ogni gara verrà assegnato il "MOTM", premiato con tela "MOTM" ed un buono di 10 Euro presso Farmacia Petta.</li><li>Al termine del torneo verranno assegnati i premi individuali: Capocannoniere (premiato con trofeo Scarpa d'Oro ed un buono di 30 Euro presso Farmacia Petta), Miglior Portiere (premiato con trofeo Guanto d'Oro ed un buono di 30 Euro presso Farmacia Petta) e Miglior Giocatore (premiato con trofeo Pallone d'Oro ed un buono di 30 Euro presso Farmacia Petta).</li><li>I premi individuali sono decisi dall'organizzazione</li></ul><div class="reg-h-award reg-h-award-1">🥇 1 Classificato</div><ul><li>Premio in denaro del valore di 500 Euro</li></ul><div class="reg-h-award reg-h-award-2">🥈 2 Classificato</div><ul><li>Pizza + Bibita presso il Ristorante La Quiete</li></ul><div id="reg-pronostica-vinci" class="reg-h">🎯 Pronostica e Vinci</div><p><strong>Pronostici:</strong> 3 punti per il segno corretto, +7 punti per il risultato esatto. Se il marcatore scelto segna almeno un gol, i punti ottenuti nella partita vengono raddoppiati.</p><p><strong>Esempio concreto:</strong> pronostichi 2-1 e la partita finisce 2-0: hai preso il segno, quindi fai 3 punti. Se il marcatore scelto segna, diventano 6. Se invece pronostichi 2-0 e finisce 2-0, fai 10 punti; con marcatore corretto diventano 20.</p><p><strong>Pre-torneo:</strong> squadra vincitrice 15 punti, capocannoniere 10 punti, miglior portiere 10 punti, miglior giocatore 10 punti.</p><p><strong>Blocco:</strong> i pronostici di ogni giornata si chiudono all'inizio della prima partita della giornata. I pre-torneo si chiudono all'inizio della prima partita del torneo.</p><div id="reg-premi-pronostica-vinci" class="reg-h">🏅 Premi Pronostica e Vinci</div><div class="reg-h-award reg-h-award-1">🥇 1 Classificato</div><p>Cena per due persone presso I Sapori di Marianna, Maratea(PZ)</p><div class="reg-h-award reg-h-award-2">🥈 2 Classificato</div><p>Aperitivo per due persone presso Bar Marathia, Maratea (PZ)</p><div class="reg-h-award reg-h-award-2">🥉 3 Classificato</div><p>1 bottiglia di prosecco offerta dal bar Terzo Tempo, Trecchina (PZ)</p></div></div></section>
@@ -1596,6 +1614,8 @@ function renderStats(){
   const cds=[...all].map(p=>({...p,sc:(Number(p.y)||0)+(Number(p.r)||0)*2})).filter(p=>p.sc>0).sort((a,b)=>b.sc-a.sc||(Number(b.r)||0)-(Number(a.r)||0)||(Number(b.y)||0)-(Number(a.y)||0)||a.name.localeCompare(b.name)).slice(0,10);
   document.getElementById('tab-cartellini').innerHTML=cds.length?'<div class="rank-list">'+cds.map((p,i)=>'<div class="card rank-item"><div class="ri-pos '+(i<3?'top':'')+'">'+(i+1)+'</div><div class="ri-info"><div class="ri-name">'+esc(p.name)+'</div><div class="ri-team">'+p.tEmoji+' '+esc(p.tName)+'</div></div><div class="ri-val ri-cards"><div class="cbadge cy">🟨 '+(p.y||0)+'</div><div class="cbadge cr">🟥 '+(p.r||0)+'</div><div style="font-family:var(--ft);font-size:1.4rem;color:#ffd080">'+p.sc+'</div></div></div>').join('')+'</div>':'<div class="md-noevent">Nessun cartellino registrato</div>';
   renderGoalkeepers();
+  const mvps=collectMvpStandings();
+  document.getElementById('tab-mvp').innerHTML=mvps.length?rnk(mvps,'MVP',p=>p.count||0):'<div class="md-noevent">Nessun MVP registrato</div>';
   const disciplinaList=getTournamentTeams().map(t=>{const players=[...(t.players||[]), ...(TEAM_RESERVES?.[t.id]||[])];const y=players.reduce((s,p)=>s+(Number(p.y)||0),0), r=players.reduce((s,p)=>s+(Number(p.r)||0),0);return{name:t.name,emoji:getTeamLogoImg(t.id),y,r,tot:y+r*2};}).sort((a,b)=>b.tot-a.tot||b.r-a.r||b.y-a.y||a.name.localeCompare(b.name));
   document.getElementById('tab-disciplina').innerHTML='<div class="card" style="overflow:hidden;margin-bottom:1rem"><div class="sq-group-head" style="padding:.75rem .875rem">Girone Unico</div><table class="disc-table"><thead><tr><th>Squadra</th><th>🟨 Gialli</th><th>🟥 Rossi</th><th>Totale</th></tr></thead><tbody>'+disciplinaList.map((t,i)=>'<tr><td><span class="rk rk'+(i<3?i+1:4)+'">'+(i+1)+'</span>'+t.emoji+' '+esc(t.name)+'</td><td>'+t.y+'</td><td>'+t.r+'</td><td class="tot">'+t.tot+'</td></tr>').join('')+'</tbody></table></div>';
 }
@@ -1903,6 +1923,41 @@ function buildInlineMatchTabellino(m){
   return '<div class="card cal-inline-tab"><div class="cal-inline-title">Tabellino</div>'+timeline+'</div>';
 }
 
+function getMatchMvpData(m){
+  if(!m||!m.detailId||!DETAILS[m.detailId]||!DETAILS[m.detailId].mvp) return null;
+  const raw=DETAILS[m.detailId].mvp;
+  if(typeof raw==='string') return raw.trim()?{name:raw.trim(),team:null}:null;
+  const name=String(raw.name||'').trim();
+  if(!name) return null;
+  return {name,team:raw.team||null};
+}
+
+function renderMatchMvp(m){
+  const mv=getMatchMvpData(m);
+  if(!mv) return '';
+  return '<div class="card cal-match-mvp"><div class="cal-match-mvp-kicker">⭐ MVP della partita</div><div class="cal-match-mvp-name">'+esc(mv.name)+'</div><div class="cal-match-mvp-team">'+(mv.team?(getTeamLogoImg(mv.team)+' '+esc(tName(mv.team))):'')+'</div></div>';
+}
+
+function collectMatchMvps(){
+  return (CALENDAR||[]).map(m=>{
+    const mv=getMatchMvpData(m);
+    if(!mv) return null;
+    return {...mv,round:m.round||'',date:m.date||'',home:m.home,away:m.away,detailId:m.detailId};
+  }).filter(Boolean);
+}
+
+function collectMvpStandings(){
+  const counts=new Map();
+  collectMatchMvps().forEach(mv=>{
+    const key=[normalizeTeamId(mv.team),String(mv.name||'').trim().toLowerCase()].join('|');
+    const teamId=normalizeTeamId(mv.team);
+    const current=counts.get(key)||{name:mv.name,team:teamId,tName:tName(teamId),tEmoji:getTeamLogoImg(teamId),count:0};
+    current.count++;
+    counts.set(key,current);
+  });
+  return [...counts.values()].filter(x=>x.count>0).sort((a,b)=>b.count-a.count||String(a.name).localeCompare(String(b.name)));
+}
+
 function showCalendarMatchPage(detailId){
 
   const m = (CALENDAR || []).find(c => c.detailId === detailId);
@@ -1967,6 +2022,7 @@ function showCalendarMatchPage(detailId){
       + renderHighlightsButton(m)
 
     + '</div>'
+  + renderMatchMvp(m)
     + buildInlineMatchTabellino(m)
 
     + '<div class="cal-match-teams-grid">'
