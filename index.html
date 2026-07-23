@@ -1068,8 +1068,12 @@ main{padding-left:220px;position:relative;z-index:1}.sec{display:none;min-height
 
   #galleria .gal-item{
     width:100%;
-    overflow:hidden;
+    min-height:0;
+    height:auto;
+    aspect-ratio:auto;
+    overflow:visible;
     padding:.85rem;
+    justify-content:flex-start;
   }
 
   #galleria .gal-name,
