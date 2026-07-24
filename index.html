@@ -1318,6 +1318,8 @@ function getMatchHighlightsLink(m){
       // If the fixture exists in its own matchday but has no link yet, do not fallback to other days.
       if(candidates.length)return '';
     }
+    // For knockout rounds, never fallback to other matchdays by team name.
+    if(md>=4)return '';
   }
 
   for(const day of (GALLERY||[])){
