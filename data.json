@@ -2531,7 +2531,7 @@
           "team": "KING OF GARBAGE",
           "name": "Giampaolo Lentini",
           "min": 17,
-          "assist": "Giacomo Brancato"
+          "assist": "Nicolò Di Lascio"
         },
         {
           "team": "KING OF GARBAGE",
@@ -2542,7 +2542,8 @@
         {
           "team": "LA BELLA LUCANIA",
           "name": "Paolo Laino",
-          "min": 19
+          "min": 19,
+          "penalty": true
         },
         {
           "team": "LA BELLA LUCANIA",
@@ -2557,59 +2558,75 @@
         {
           "team": "LA BELLA LUCANIA",
           "name": "Paolo Laino",
-          "min": 35
+          "min": 34,
+          "assist": "Antonio Velardi"
         },
         {
           "team": "KING OF GARBAGE",
           "name": "Nicolò Di Lascio",
-          "min": 36,
-          "assist": "Carmine Filardi"
-        },
-        {
-          "team": "LA BELLA LUCANIA",
-          "name": "Daniele Altamura",
-          "min": 39,
-          "assist": "Michelangelo Maimone"
+          "min": 35,
+          "assist": "Flavio Mastroianni"
         },
         {
           "team": "KING OF GARBAGE",
           "name": "Carmine Filardi",
           "min": 39,
-          "assist": "Giampaolo Lentini"
-        },
-        {
-          "team": "LA BELLA LUCANIA",
-          "name": "Paolo Laino",
-          "min": 40
+          "assist": "Nicolò Di Lascio"
         },
         {
           "team": "KING OF GARBAGE",
           "name": "Mario Prezioso",
           "min": 40,
           "assist": "Carmine Filardi"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Daniele Altamura",
+          "min": 41,
+          "assist": "Michelangelo Maimone"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 42
         }
       ],
       "cards": [
         {
           "team": "LA BELLA LUCANIA",
+          "name": "Aldo Toma",
+          "min": 22,
+          "type": "Y"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
           "name": "Paolo Laino",
-          "min": 20,
+          "min": 29,
           "type": "Y"
         },
         {
           "team": "LA BELLA LUCANIA",
           "name": "Domenico Esposito",
-          "min": 20,
+          "min": 30,
           "type": "Y"
         },
         {
           "team": "LA BELLA LUCANIA",
           "name": "Domenico Esposito",
-          "min": 21,
+          "min": 31,
           "type": "YR"
         }
       ],
-      "penalties": [],
+      "penalties": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 19,
+          "outcome": "gol",
+          "against": "KING OF GARBAGE",
+          "saved": false
+        }
+      ],
       "note": "3-3 nei tempi regolamentari, 7-6 dopo i tempi supplementari"
     }
   },
