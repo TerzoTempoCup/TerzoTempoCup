@@ -2120,10 +2120,11 @@ function calcMatchPoints(pred){
   const predScorerTeam=normalizeTeamId(parsedScorer.team);
   const predictedNone=predScorerNameRaw==='Nessuno'||predScorerTeam==='__none__';
   const predictedPenaltyWinner=!!decoded.penaltyTeam;
+  const predictedTieAfterEt=ph===pa;
   const shootoutWinner=resolveShootoutWinner(m);
   const knockoutTie=isKnockoutRound(m.round)&&rh===ra;
   const okOutcome=knockoutTie&&shootoutWinner
-    ? (predictedPenaltyWinner&&decoded.penaltyTeam===shootoutWinner)
+    ? (predictedTieAfterEt&&predictedPenaltyWinner&&decoded.penaltyTeam===shootoutWinner)
     : outcome(ph,pa)===outcome(rh,ra);
   let base=0;
   if(okOutcome)base+=3;
