@@ -1355,10 +1355,10 @@
       "date": "23 Lug",
       "time": "20:30",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 4,
+      "sa": 3,
       "yt": "#",
-      "detailId": null
+      "detailId": "qf1"
     },
     {
       "id": "qf2",
@@ -1369,10 +1369,10 @@
       "date": "23 Lug",
       "time": "21:15",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 6,
+      "sa": 0,
       "yt": "#",
-      "detailId": null
+      "detailId": "qf2"
     },
     {
       "id": "qf4",
@@ -1383,10 +1383,10 @@
       "date": "23 Lug",
       "time": "22:00",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 2,
+      "sa": 7,
       "yt": "#",
-      "detailId": null
+      "detailId": "qf4"
     },
     {
       "id": "qf3",
@@ -1397,10 +1397,10 @@
       "date": "23 Lug",
       "time": "22:45",
       "location": "Campo Sportivo Trecchina",
-      "sh": null,
-      "sa": null,
+      "sh": 6,
+      "sa": 7,
       "yt": "#",
-      "detailId": null
+      "detailId": "qf3"
     },
     {
       "id": "sf1",
@@ -2322,6 +2322,295 @@
         }
       ],
       "penalties": []
+    },
+    "qf1": {
+      "mvp": {
+        "name": "Riccardo Ferrari",
+        "team": "phoenix"
+      },
+      "scorers": [
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Riccardo Ferrari",
+          "min": 3
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Brando",
+          "min": 8
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Brando",
+          "min": 13
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 15
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Alessandro Spagnolo",
+          "min": 16,
+          "assist": "Umberto Nasta"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Fabio Ferrari",
+          "min": 21,
+          "assist": "Ismaele Ferrari"
+        },
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Antonio Altieri",
+          "min": 27,
+          "assist": "Riccardo Ferrari"
+        }
+      ],
+      "cards": [
+        {
+          "team": "ENOTRIA REVELIA",
+          "name": "Fabio Ferrari",
+          "min": 20,
+          "type": "Y"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Giuseppe Brando",
+          "min": 15,
+          "type": "Y"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Michele Fusco",
+          "min": 23,
+          "type": "Y"
+        },
+        {
+          "team": "BLACKOUT",
+          "name": "Alessandro Spagnolo",
+          "min": 27,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "qf2": {
+      "mvp": {
+        "name": "Rosario Colombo",
+        "team": "golden"
+      },
+      "scorers": [
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 5,
+          "assist": "Davide Supino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Enrico Olivieri",
+          "min": 9,
+          "assist": "Gennaro Agrelli"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Davide Supino",
+          "min": 11,
+          "assist": "Rosario Colombo"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Rosario Colombo",
+          "min": 13,
+          "assist": "Luca Supino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 27,
+          "assist": "Davide Supino"
+        },
+        {
+          "team": "3P NEXT GEN",
+          "name": "Gennaro Agrelli",
+          "min": 29,
+          "assist": "Enrico Olivieri"
+        }
+      ],
+      "cards": [
+        {
+          "team": "SETTORE RIBELLE",
+          "name": "Amine Bejaoui",
+          "min": 25,
+          "type": "Y"
+        }
+      ],
+      "penalties": []
+    },
+    "qf4": {
+      "mvp": {
+        "name": "Felice Gulfo",
+        "team": "redstorm"
+      },
+      "scorers": [
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 2
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Autogol",
+          "min": 3
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Felice Gulfo",
+          "min": 5,
+          "assist": "Simone Supino"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Dauda Bah",
+          "min": 8,
+          "assist": "Leonardo Filardi"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Felice Gulfo",
+          "min": 21,
+          "assist": "Angelo Mastroianni"
+        },
+        {
+          "team": "LA BANDA DI SPIGOLIN",
+          "name": "Dauda Bah",
+          "min": 22,
+          "assist": "Angelo Mastropierro"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Alessandro Colombo",
+          "min": 24,
+          "assist": "Davide Filpi"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Angelo Mastroianni",
+          "min": 25,
+          "assist": "Simone Supino"
+        },
+        {
+          "team": "ZEKEKE",
+          "name": "Autogol",
+          "min": 26
+        }
+      ],
+      "cards": [],
+      "penalties": []
+    },
+    "qf3": {
+      "mvp": {
+        "name": "Paolo Laino",
+        "team": "falcons"
+      },
+      "scorers": [
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Nicolò Di Lascio",
+          "min": 1
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 9,
+          "assist": "Aldo Toma"
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Giampaolo Lentini",
+          "min": 17,
+          "assist": "Giacomo Brancato"
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Nicolò Di Lascio",
+          "min": 18,
+          "assist": "Lorenzo Mastroianni"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 19
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 31
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 32
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 35
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Nicolò Di Lascio",
+          "min": 36,
+          "assist": "Carmine Filardi"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Daniele Altamura",
+          "min": 39,
+          "assist": "Michelangelo Maimone"
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Carmine Filardi",
+          "min": 39,
+          "assist": "Giampaolo Lentini"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 40
+        },
+        {
+          "team": "KING OF GARBAGE",
+          "name": "Mario Prezioso",
+          "min": 40,
+          "assist": "Carmine Filardi"
+        }
+      ],
+      "cards": [
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Paolo Laino",
+          "min": 20,
+          "type": "Y"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Domenico Esposito",
+          "min": 20,
+          "type": "Y"
+        },
+        {
+          "team": "LA BELLA LUCANIA",
+          "name": "Domenico Esposito",
+          "min": 21,
+          "type": "YR"
+        }
+      ],
+      "penalties": [],
+      "note": "3-3 nei tempi regolamentari, 7-6 dopo i tempi supplementari"
     }
   },
   "GALLERY": [
