@@ -1626,7 +1626,14 @@ function renderStats(){
   const disciplinaList=getTournamentTeams().map(t=>{const players=[...(t.players||[]), ...(TEAM_RESERVES?.[t.id]||[])];const y=players.reduce((s,p)=>s+(Number(p.y)||0),0), r=players.reduce((s,p)=>s+(Number(p.r)||0),0);return{name:t.name,emoji:getTeamLogoImg(t.id),y,r,tot:y+r*2};}).sort((a,b)=>b.tot-a.tot||b.r-a.r||b.y-a.y||a.name.localeCompare(b.name));
   document.getElementById('tab-disciplina').innerHTML='<div class="card" style="overflow:hidden;margin-bottom:1rem"><div class="sq-group-head" style="padding:.75rem .875rem">Girone Unico</div><table class="disc-table"><thead><tr><th>Squadra</th><th>🟨 Gialli</th><th>🟥 Rossi</th><th>Totale</th></tr></thead><tbody>'+disciplinaList.map((t,i)=>'<tr><td><span class="rk rk'+(i<3?i+1:4)+'">'+(i+1)+'</span>'+t.emoji+' '+esc(t.name)+'</td><td>'+t.y+'</td><td>'+t.r+'</td><td class="tot">'+t.tot+'</td></tr>').join('')+'</tbody></table></div>';
 }
-function renderGalleryTabs(){galTabs.innerHTML=(GALLERY||[]).map((g,i)=>'<button class="gal-btn '+(i===0?'act':'')+'" onclick="showGalMatchday('+g.matchday+',this)">Giornata '+g.matchday+' · '+esc(g.date||'')+'</button>').join('')}
+function galleryTabLabel(g){
+  const md=Number(g?.matchday);
+  if(md===4)return 'Quarti di Finale';
+  if(md===5)return 'Semifinali';
+  if(md===6)return 'Finale';
+  return 'Giornata '+md;
+}
+function renderGalleryTabs(){galTabs.innerHTML=(GALLERY||[]).map((g,i)=>'<button class="gal-btn '+(i===0?'act':'')+'" onclick="showGalMatchday('+g.matchday+',this)">'+esc(galleryTabLabel(g))+' · '+esc(g.date||'')+'</button>').join('')}
 function openGalleryLink(el){const url=String(el?.dataset?.link||'').trim();if(!url||url==='#')return;window.open(url,'_blank','noopener,noreferrer')}
 function showGalMatchday(md,btn){
   document.querySelectorAll('.gal-btn').forEach(b=>b.classList.remove('act'));
@@ -1635,7 +1642,7 @@ function showGalMatchday(md,btn){
   galGrid.innerHTML=gd
     ? gd.matches.map(m=>{
         const photoLink=String(m.link||'').trim();
-        const hlLink=getMatchHighlightsLink(m);
+        const hlLink=getMatchHighlightsLink({...m,round:'Giornata '+md});
         const hasPhoto=!!photoLink && photoLink !== '#';
         const hasHl=!!hlLink && hlLink !== '#';
         return '<div class="card gal-item '+((hasPhoto||hasHl)?'':'empty-link')+'">'
