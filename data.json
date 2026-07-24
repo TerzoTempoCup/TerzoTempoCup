@@ -1409,7 +1409,7 @@
       "home": "ENOTRIA REVELIA",
       "away": "ZEKEKE",
       "date": "24 Lug",
-      "time": "Da definire",
+      "time": "21:30",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1423,7 +1423,7 @@
       "home": "3P NEXT GEN",
       "away": "LA BELLA LUCANIA",
       "date": "24 Lug",
-      "time": "Da definire",
+      "time": "22:15",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -1437,7 +1437,7 @@
       "home": "Vincente S1",
       "away": "Vincente S2",
       "date": "24 Lug",
-      "time": "Da definire",
+      "time": "23:15",
       "location": "Campo Sportivo Trecchina",
       "sh": null,
       "sa": null,
@@ -2730,25 +2730,25 @@
           "name": "ENOTRIA REVELIA vs BLACKOUT",
           "link": "https://drive.google.com/drive/folders/1M7ZmguMA1Kp39FgytB6pcO8q5HtMk-H5?usp=drive_link",
           "count": 74,
-          "yt": "#"
+          "yt": "https://youtu.be/3izCB9igzGA?si=hLoZo37s0a-Qg_Sd"
         },
         {
           "name": "3P NEXT GEN vs SETTORE RIBELLE",
           "link": "https://drive.google.com/drive/folders/1UVv8oJcJleqGeR1GsnmSWcZt1lPGi7P4?usp=drive_link",
           "count": 61,
-          "yt": "#"
+          "yt": "https://youtu.be/yvlqSLsmeLQ?si=aUKAWX2o7efLpAPa"
         },
         {
           "name": "KING OF GARBAGE vs LA BELLA LUCANIA",
           "link": "https://drive.google.com/drive/folders/1SkXZZJ65PPMcBPZ9-5Y_bFXmjwwh1bpt?usp=drive_link",
           "count": 45,
-          "yt": "#"
+          "yt": "https://youtu.be/jT6XyeR1_Hc?si=9Yx_3OuazBxNab9I"
         },
         {
           "name": "LA BANDA DI SPIGOLIN vs ZEKEKE",
           "link": "https://drive.google.com/drive/folders/1xJo08mW0zN0O93JWSSdWqccVxbS6YwtG?usp=drive_link",
           "count": 44,
-          "yt": "#"
+          "yt": "https://youtu.be/X2l4tl4iwfo?si=n2jblQQ1dmx8ECTB"
         }
       ]
     },
@@ -2757,13 +2757,13 @@
       "date": "24 Lug",
       "matches": [
         {
-          "name": "Vincente Q1 vs Vincente Q4",
+          "name": "ZEKEKE vs ENOTRIA REVELIA",
           "link": "",
           "count": 0,
           "yt": "#"
         },
         {
-          "name": "Vincente Q2 vs Vincente Q3",
+          "name": "3P NEXT GEN vs LA BELLA LUCANIA",
           "link": "",
           "count": 0,
           "yt": "#"
@@ -2815,16 +2815,16 @@
     {
       "round": "Semifinali",
       "label": "Semifinali",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa dei quarti di finale"
+      "lockAt": "2026-07-24T21:30:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     },
     {
       "round": "Finale",
       "label": "Finale",
-      "lockAt": null,
-      "status": "draft",
-      "message": "Pronostici non disponibili, in attesa delle semifinali"
+      "lockAt": "2026-07-24T23:15:00+02:00",
+      "status": "open",
+      "message": "Pronostici aperti"
     }
   ],
   "PREDICTION_FINAL_AWARDS": {
